@@ -3,6 +3,23 @@ module namespace pjson = "http://keeleleek.ee/pextract/pjson";
 declare namespace map  = "http://www.w3.org/2005/xpath-functions/map";
 declare namespace json = "http://basex.org/modules/json";
 
+(:~
+ : This module provides the basic functionality to read and extract
+ : information from the lexical tool Karp's json exports.
+ :
+ : It mainly provides conversion to Lexical Markup Framework XML.
+ :
+ : @author Kristian Kankainen
+ : @version 1.0
+ :)
+
+
+(:~
+ : Represents a map with variable instances as an AttestedParadigmVariableSet
+ : element.
+ : 
+ : @since 1.0
+ :)
 declare function pjson:variable-instance-to-lmf($variableinstance as map(*)) {
   <AttestedParadigmVariableSet>
     {
@@ -14,6 +31,12 @@ declare function pjson:variable-instance-to-lmf($variableinstance as map(*)) {
   </AttestedParadigmVariableSet>
 };
 
+
+(:~
+ : Represents a paradigm map as a LMF MorphologicalPattern.
+ :
+ : @since 1.0
+ :)
 declare function pjson:paradigm-map-to-lmf($paradigm) {
   <MorphologicalPattern>
     <feat att="id" val='{$paradigm?("MorphologicalPatternID")}'/>
@@ -51,6 +74,12 @@ declare function pjson:paradigm-map-to-lmf($paradigm) {
   </MorphologicalPattern>
 };
 
+
+(:~
+ : Simple translation table holding Giellatekno specific vocabulary.
+ : 
+ : @since 1.0
+ :)
 declare function pjson:get-giellatekno-msd($msd-string as xs:string) {
   let $msds := tokenize($msd-string)
   let $translate := map {
@@ -75,6 +104,12 @@ declare function pjson:get-giellatekno-msd($msd-string as xs:string) {
   (: , " ") :)
 };
 
+
+(:~
+ : Represents an array as WordForm elements.
+ : 
+ : @since 1.0
+ :)
 declare function pjson:wordforms-to-lmf($array as array(map(xs:string,xs:string)*)) {
   $array?* !
       ((: if pos = noun :)
@@ -90,6 +125,12 @@ declare function pjson:wordforms-to-lmf($array as array(map(xs:string,xs:string)
           )
 };
 
+
+(:~
+ : Represents a map as a LexicalEntry element.
+ : 
+ : @since 1.0
+ :)
 declare function pjson:lexicalentry-map-to-lmf($lexicalentry as map(*)) {
   <LexicalEntry morphologicalPatterns='{string-join(($lexicalentry?("paradigm")), " ")}'>
     <feat att="partOfSpeech" val='{$lexicalentry?("partOfSpeech")}'/>
@@ -101,6 +142,12 @@ declare function pjson:lexicalentry-map-to-lmf($lexicalentry as map(*)) {
   </LexicalEntry>
 };
 
+
+(:~
+ : Represents an entire Karp json as a LMF LexicalResource.
+ : 
+ : @since 1.0
+ :)
 declare function pjson:karp-pjson2lmf($lexicon-json, $paradigms-json) {
   let $json-paradigms := json-doc($paradigms-json)
   let $json-lexicon   := json-doc($lexicon-json)
