@@ -142,39 +142,50 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
   let $lemma := $entry/Lemma/feat[@att = "writtenForm"]/@val/data()
   let $pos := $entry//feat[@att = "partOfSpeech"]/@val/data()
   let $fst-pos := $get-fst-pos($pos)
-  (: @TODO rename $up or use $lemma instead :)
-  let $up := $lemma
   let $paradigm-ids := $entry/@morphologicalPatterns/string() => tokenize()
   return
     <e>
       <lg>
-        <l pos="{$fst-pos}">{$up}</l>
-        {
-        for $paradigm-id in $paradigm-ids
-	  (: @TODO remove duplicate paradigms :)
-          let $paradigm := $lmf//MorphologicalPattern[
+        <l pos="{$fst-pos}">{$lemma}</l>
+          <stg>
+          {
+          for $paradigm-id in $paradigm-ids
+	    (: @TODO remove duplicate paradigms :)
+            let $paradigm := $lmf//MorphologicalPattern[
 	                      ./feat[./@att="id"
 			      and
 			      @val=string($paradigm-id)]][1]
-          (: @TODO what to do if several lemma forms are possible? now only the first is selected :)
-          let $lemma-transformset := lmf:get-transformsets-with-feats($paradigm, $lemma-feats)[1]
-          let $fst-pos := "+" || $get-fst-pos($pos)
-          (: @TODO remove old code
-	       let $fst-lemma := $pextract-technical-stem($lemma, $paradigm,
-	                    map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"})
-	  :)
-          let $lemma-parts := lmf:split-by-processes($lemma, reverse($lemma-transformset/Process), ())
-          let $fst-lemma := $pextract-technical-stem($lemma-parts, $lemma-transformset/Process)
+            (: @TODO what to do if several lemma forms are possible? now only the first is selected :)
+            let $lemma-transformset := lmf:get-transformsets-with-feats($paradigm, $lemma-feats)[1]
+            let $fst-pos := "+" || $get-fst-pos($pos)
+            (: @TODO remove old code
+	         let $fst-lemma := $pextract-technical-stem($lemma, $paradigm,
+	                      map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"})
+  	    :)
+            let $lemma-parts := lmf:split-by-processes($lemma, reverse($lemma-transformset/Process), ())
+            let $fst-lemma := $pextract-technical-stem($lemma-parts, $lemma-transformset/Process)
           
-          let $down := $fst-lemma
-          let $cont-class := string-join(($get-fst-pos($pos), "_", $paradigm-id))
-  
-          return
-          <stg>
-            <st Contlex="{$cont-class}">{$down}</st>
+            let $cont-class := string-join(($get-fst-pos($pos), "_", $paradigm-id))
+    
+            return
+              <st Contlex="{$cont-class}">{$fst-lemma}</st>
+          }
           </stg>
-        }
       </lg>
+      
+      {(: the sources section is simply added statically :)}
+      <sources>
+        <book name="votic-paradigm-extract" type="db"/>
+      </sources>
+      
+      {(: Giellatekno interlingua translation equivalents are not yet available in the LMF :)}
+      <mg relId="0">
+        <semantics></semantics>
+	<tg xml:lang="fin">
+	  <!-- Giellatekno interlingua translation equivalent not yet in LMF -->
+	  <t pos=""></t>
+	</tg>
+      </mg>
     </e>
 }
 </r>
