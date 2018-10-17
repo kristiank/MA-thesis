@@ -65,30 +65,6 @@ let $get-giella-term := $mkTranslator(map{
 })
 
 
-(:~
- : File name ASCIIfier for Giellateknos infrastructure.
- : @since 1.0
- :)
-let $get-file-name := function ($name as xs:string) {
-  $name => translate("ü", "ue")
-        => translate("ö", "oe")
-        => translate("ä", "ae")
-        => translate("õ", "w")
-}
-
-
-(:~
- : Placeholder for needed code in the future.
- :)
-let $escape-fst-special-chars := function ($string) {
-  $string
-}
-
-
-
-(: @TODO remove this
-let $paradigm-names := distinct-values($lmf//MorphologicalPattern/feat[@att="id"]/@val/data()) :)
-
 
 (:~
  : Function for matching a wordform to its extracted technical stem
@@ -158,10 +134,6 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
             (: @TODO what to do if several lemma forms are possible? now only the first is selected :)
             let $lemma-transformset := lmf:get-transformsets-with-feats($paradigm, $lemma-feats)[1]
             let $fst-pos := "+" || $get-fst-pos($pos)
-            (: @TODO remove old code
-	         let $fst-lemma := $pextract-technical-stem($lemma, $paradigm,
-	                      map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"})
-  	    :)
             let $lemma-parts := lmf:split-by-processes($lemma, reverse($lemma-transformset/Process), ())
             let $fst-lemma := $pextract-technical-stem($lemma-parts, $lemma-transformset/Process)
           
@@ -191,12 +163,11 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
 </r>
 
 
-
+(: @TODO remove all this code :)
 (: fst paradigms lists the continuation codes for each pextract paradigm :)
 (: it simply adds the tags for the grammatical features and the name of
    the paradigm used in the rewrite rules
 :)
-(: @TODO remove all this code :)
 let $fst-paradigms :=
 for $paradigm in $lmf//MorphologicalPattern
   let $id := $paradigm/feat[@att="id"]/@val/data()
