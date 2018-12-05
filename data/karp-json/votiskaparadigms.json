@@ -958,57 +958,6 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_trams",
-      "Top_VariableInstances": [
-        {
-          "1": "mariatest2",
-          "first-attest": "mariatest2..nn.1"
-        }
-      ],
-      "TransformSet": [
-        {
-          "GrammaticalFeatures": {
-            "msd": "singular nominative"
-          },
-          "Process": [
-            {
-              "operator": "addAfter",
-              "processType": "pextractAddVariable",
-              "variableNum": "1"
-            }
-          ]
-        },
-        {
-          "GrammaticalFeatures": {
-            "msd": "plural nominative"
-          },
-          "Process": [
-            {
-              "operator": "addAfter",
-              "processType": "pextractAddVariable",
-              "variableNum": "1"
-            },
-            {
-              "operator": "addAfter",
-              "processType": "pextractAddConstant",
-              "stringValue": "et"
-            }
-          ]
-        }
-      ],
-      "VariableInstances": [
-        {
-          "1": "mariatest2",
-          "first-attest": "mariatest2..nn.1"
-        }
-      ],
-      "_entries": 1,
-      "_lexiconName": "votiskaparadigms",
-      "_partOfSpeech": "nn",
-      "_uuid": "5bf060c6-784d-11e8-b25d-5254000922d7",
-      "lexiconName": "votiskaparadigms"
-    },
-    {
       "MorphologicalPatternID": "p2_aik\u00f5..nn.1",
       "Top_VariableInstances": [
         {
@@ -2044,11 +1993,6 @@
           "1": "kat",
           "2": "i",
           "first-attest": "katti..nn.1"
-        },
-        {
-          "1": "maria",
-          "2": "est",
-          "first-attest": "mariatest..nn.1"
         }
       ],
       "TransformSet": [
@@ -2715,11 +2659,6 @@
           "1": "kat",
           "2": "i",
           "first-attest": "katti..nn.1"
-        },
-        {
-          "1": "maria",
-          "2": "est",
-          "first-attest": "mariatest..nn.1"
         }
       ],
       "_entries": 3,
