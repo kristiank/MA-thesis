@@ -78,15 +78,100 @@ Morfeemi ei käsitleta siin töös levinust lingvistilisest seisukohast kui \tex
 \newpage
 \section{Ekstraktmorfoloogia meetod}
 \label{sec:ekstraktmorfoloogia-meetod}
-See osa kirjeldab töös rakendatud meetodit. Töö kasutab ekstraktmorfoloogiat kaheks otstarbeks, esiteks vadja keele morfoloogiliste tüüpsõnade väljaselgitamiseks ja kirjeldamiseks ja teisalt programmkoodi automaatseks tuletamiseks saadud kirjelduse põhjal.
-
-Meetodi kaks rakendust on lähemalt kirjeldatud järgnevates peatükkides \nameref{sec:analüüs} ja \nameref{sec:programmkoodi-tuletamine} vastavalt.
+See osa kirjeldab töös rakendatud ekstraktmorfoloogia meetodit. Töö kasutab ekstraktmorfoloogiat kaheks otstarbeks, esiteks vadja keele morfoloogiliste tüüpsõnade väljaselgitamiseks ja kirjeldamiseks ja teisalt programmkoodi automaatseks tuletamiseks saadud kirjelduse põhjal. Neid kahte rakendust kirjeldatatakse lähemalt vastavates peatükkides \textit{\nameref{sec:analüüs}} ja \textit{\nameref{sec:programmkoodi-tuletamine}}.
 
 
 
 
 \subsection{Sissejuhatus}
 \label{sec:ekstraktmorfoloogia-sissejuhatus}
+
+Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis üldistab lekseemide muutvormitabelid tüüpsõnamallideks.
+
+% tüüpsõnamalli kohta
+Tüüpsõna\-mall koosneb muutvormide mallidest ja vastab seega morfoloogilise paradigma mõistele
+Tüüpsõna\-malli abil on võimalik moodustada ka tundmatu sõna kõik muutvormid.
+% produktiivsusmalli kohta
+Kuna kaks või enam lekseemi võivad jagada üht ja sama tüüpsõna\-malli (s.o paradigma), on võimalik ekstrakt\-morfoloogia meetodiga üldistada lekseemide iseärasusi ja luua nendest tüüpsõnade produktiivsuse mudeli. Produktiivsus\-mudeliga on võimalik ennustada uue ja tundmatu sõnavormi kuuluvust ühe või teise tüüpsõna alla. 
+
+
+Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi sisendit ja väljundit. Sisendiks on ühe lekseemi muutvormitabel tervikuna (vt tabel\nobreakspace \ref{tab:sisendtabel_katto}). Väljundiks on meetodi poolt leitud tüüpsõnamall (vt tabel\nobreakspace \ref{tab:väljundtabel_katto}). Tabelitele viidatakse alljärgnevas tekstis mitmel korral.
+
+\spacing{1.0}
+\begin{table}[H] %[!htbp] % kuvab tabelit definiitselt enne neile järgnevat teksti
+      \footnotesize
+  \begin{minipage}[t]{.40\textwidth}
+%    \centering
+    \begin{tabular}[t]{l l}
+      muutvorm            & tunnused \\ \hline
+      \textit{katto}      & \textsc{sg nom} \\
+      \textit{katod}      & \textsc{pl nom} \\
+      \textit{kato}       & \textsc{sg gen} \\
+      \textit{kattoi}     & \textsc{pl gen} \\
+      \textit{kattoje}    & \textsc{pl gen} \\
+      \textit{kattoa}     & \textsc{sg part} \\
+      \textit{kattoi}     & \textsc{pl part} \\
+      \textit{kattoite}   & \textsc{pl part} \\
+      \textit{kattose}    & \textsc{sg ill} \\
+      \textit{kattoise}   & \textsc{pl ill} \\
+      \textit{kattoz}     & \textsc{sg ine} \\
+      \textit{kattoiz}    & \textsc{pl ine} \\
+      \textit{katosse}    & \textsc{sg ela} \\
+      \textit{kattoisse}  & \textsc{pl ela} \\
+      \textit{katolle}    & \textsc{sg all} \\
+      \textit{kattoille}  & \textsc{pl all} \\
+      \textit{katol}      & \textsc{sg ade} \\
+      \textit{kattoil}    & \textsc{pl ade} \\
+      \textit{katolte}    & \textsc{sg abl} \\
+      \textit{kattoilte}  & \textsc{pl abl} \\
+      \textit{katossi}    & \textsc{sg tran} \\
+      \textit{kattoissi}  & \textsc{pl tran} \\
+      \textit{kattossaa}  & \textsc{sg term} \\
+      \textit{kattoissaa} & \textsc{pl term} \\
+      \textit{katoka}     & \textsc{sg com} \\
+      \textit{kattoika}   & \textsc{pl com} \\
+    \end{tabular}
+    \caption{Sisendi muutvormide tabel koos morfo\-loogiliste tunnustega.}
+    \label{tab:sisendtabel_katto}
+  \end{minipage}
+  \hfill
+  \begin{minipage}[t]{.55\textwidth}
+    \centering
+    \begin{tabular}[t]{l l l}
+      ühisosajada                     & muutvormi\-mall           & tunnused \\
+      \hline
+      \textbf{kat} t \textbf{o}       & $x_1$ + t + $x_2$         & \textsc{sg nom} \\
+      \textbf{kat}   \textbf{o} d     & $x_1$ + $x_2$ + d         & \textsc{pl nom} \\
+      \textbf{kat}   \textbf{o}       & $x_1$ + $x_2$             & \textsc{sg gen} \\
+      \textbf{kat} t \textbf{o} i     & $x_1$ + t + $x_2$ + i     & \textsc{pl gen} \\
+      \textbf{kat} t \textbf{o} je    & $x_1$ + t + $x_2$ + je    & \textsc{pl gen} \\
+      \textbf{kat} t \textbf{o} a     & $x_1$ + t + $x_2$ + a     & \textsc{sg part} \\
+      \textbf{kat} t \textbf{o} i     & $x_1$ + t + $x_2$ + i     & \textsc{pl part} \\
+      \textbf{kat} t \textbf{o} ite   & $x_1$ + t + $x_2$ + ite   & \textsc{pl part} \\
+      \textbf{kat} t \textbf{o} se    & $x_1$ + t + $x_2$ + se    & \textsc{sg ill} \\
+      \textbf{kat} t \textbf{o} ise   & $x_1$ + t + $x_2$ + ise   & \textsc{pl ill} \\
+      \textbf{kat} t \textbf{o} z     & $x_1$ + t + $x_2$ + z     & \textsc{sg ine} \\
+      \textbf{kat} t \textbf{o} iz    & $x_1$ + t + $x_2$ + iz    & \textsc{pl ine} \\
+      \textbf{kat}   \textbf{o} sse   & $x_1$ + $x_2$ + sse       & \textsc{sg ela} \\
+      \textbf{kat} t \textbf{o} isse  & $x_1$ + t + $x_2$ + isse  & \textsc{pl ela} \\
+      \textbf{kat}   \textbf{o} lle   & $x_1$ + $x_2$ + lle       & \textsc{sg all} \\
+      \textbf{kat} t \textbf{o} ille  & $x_1$ + t + $x_2$ + ille  & \textsc{pl all} \\
+      \textbf{kat}   \textbf{o} l     & $x_1$ + $x_2$ + l         & \textsc{sg ade} \\
+      \textbf{kat} t \textbf{o} il    & $x_1$ + t + $x_2$ + il    & \textsc{pl ade} \\
+      \textbf{kat}   \textbf{o} lte   & $x_1$ + $x_2$ + lte       & \textsc{sg abl} \\
+      \textbf{kat} t \textbf{o} ilte  & $x_1$ + t + $x_2$ + ilte  & \textsc{pl abl} \\
+      \textbf{kat}   \textbf{o} ssi   & $x_1$ + $x_2$ + ssi       & \textsc{sg tran} \\
+      \textbf{kat} t \textbf{o} issi  & $x_1$ + t + $x_2$ + issi  & \textsc{pl tran} \\
+      \textbf{kat} t \textbf{o} ssaa  & $x_1$ + t + $x_2$ + ssaa  & \textsc{sg term} \\
+      \textbf{kat} t \textbf{o} issaa & $x_1$ + t + $x_2$ + issaa & \textsc{pl term} \\
+      \textbf{kat}   \textbf{o} ka    & $x_1$ + $x_2$ + ka        & \textsc{sg com} \\
+      \textbf{kat} t \textbf{o} ika   & $x_1$ + t + $x_2$ + ika   & \textsc{pl com} \\
+    \end{tabular}
+    \caption{Väljundi tüüpsõnamall (kus\-juures $x_1 = $ \textit{kat} ja $x_2 = $ \textit{o} vastab leitud ühisosajadale).}
+    \label{tab:väljundtabel_katto}
+  \end{minipage}
+\end{table}
+\spacing{1.5}
 
 
 
@@ -100,10 +185,6 @@ Meetodi kaks rakendust on lähemalt kirjeldatud järgnevates peatükkides \namer
 \label{sec:analüüs}
 
 See osa kirjeldab ekstraktmorfoloogiaga leitud vadja keele morfoloogilisi tüüpsõnu ja analüüsib nende vastavust vadja keele grammatikatega ja ajaloolise morfoloogiaga.
-
-
-
-
 
 
 
