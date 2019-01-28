@@ -1,0 +1,223 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[top=4cm, bottom=3cm, left=4cm, right=2.5cm]{geometry}
+\usepackage{setspace}
+
+\usepackage{float}
+
+\usepackage{enumerate}
+
+\usepackage{booktabs}
+
+% Sõnastik
+\usepackage[toc,nopostdot]{glossaries}
+\makeglossaries
+
+% Babel
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[estonian]{babel}
+
+\usepackage{csquotes}
+
+% Polyglossias miskipärast ei tööta poolitamine
+% \usepackage{polyglossia}
+% \setdefaultlanguage{german}
+
+% @todo: vormistada kirjanduse loetelu õigesti
+% @todo: vormistada tekstis viited õigesti (nt lk kooloni järel jne)
+\usepackage[backend=biber,style=authoryear,natbib=true]{biblatex}
+\addbibresource{bibliography-mathesis.bib}
+\NewBibliographyString{langhungarian} % neid on vaja kuni dev versioon lastakse välja
+\NewBibliographyString{fromhungarian}
+
+\usepackage{hyperref}
+
+% sisukord
+% Bakalaureusetöös on soovitatav piirduda kolmeastmelise hierarhiaga, magistritöös neljaastmelisega
+\setcounter{tocdepth}{4}
+
+\begin{document}
+
+
+% @todo: lisada magistritöö, ülikool ja juhendaja jne
+% vaata siit https://tex.stackexchange.com/questions/184848/how-to-add-the-name-of-the-supervisor-in-a-thesis-field#184878
+% @todo: vormistada esileht eraldi
+\title{Ekstraktmorfoloogia meetodiga tuletatud keeletehnoloogia vadja noomeni näitel}
+\author{Kristian Kankainen}
+% \supervisor{Heinike Heinsoo, Heli Uibo, Michael Rießler}
+% \university{Tartu Ülikool}
+% \department{Eesti ja üldkeeleteaduse õppetool}
+\date{2019}
+\maketitle
+
+
+\newpage
+\tableofcontents
+
+
+
+\newpage
+\spacing{1.5}
+\section{Sissejuhatus}
+
+Magistritöö loob viisi ehitada arvutimorfoloogia puhtalt lekseemide sõnavormide esitamise teel ning teisendada ehitatud arvutimorfoloogilise mudeli automaatselt kahte keeletehnoloogilisse raamistikku.
+
+Magistritöö kasutab loodud süsteemi selleks, et kirjeldada vadja keele normatiivsed morfoloogilised tüüpsõnad.
+
+Tööd ajendab mõtteviis minimeerida tööd: loodud normatiivne morfoloogiline tüübistik on aluseks automaatselt tuletatud keeletehnoloogiale, kui normatiiv muutub, muutub ka keeletehnoloogia. Töö paneb leksikaalse ressursi esikohale ja kõik leitud sisulised vead õiendatakse otse ressursis, mitte keeletehnoloogilistes tarkvarades eraldi.
+
+
+
+
+\subsection{Teoreetilised lähtekohad}
+
+Morfeemi ei käsitleta siin töös levinust lingvistilisest seisukohast kui \textit{väikseimat tähenduslikku üksust}, vaid klassikalistele paradigmaatilistele lähenemistele omaselt kui \textit{mistahes tähtkoostise muutust, millega kaasneb tähenduslik muutus} (\cite{beard_morpheme_1987}, \cite{beard_lexeme-morpheme_1995}).
+
+
+
+
+\newpage
+\section{Ekstraktmorfoloogia meetod}
+\label{sec:ekstraktmorfoloogia-meetod}
+See osa kirjeldab töös rakendatud meetodit. Töö kasutab ekstraktmorfoloogiat kaheks otstarbeks, esiteks vadja keele morfoloogiliste tüüpsõnade väljaselgitamiseks ja kirjeldamiseks ja teisalt programmkoodi automaatseks tuletamiseks saadud kirjelduse põhjal.
+
+Meetodi kaks rakendust on lähemalt kirjeldatud järgnevates peatükkides \nameref{sec:analüüs} ja \nameref{sec:programmkoodi-tuletamine} vastavalt.
+
+
+
+
+\subsection{Sissejuhatus}
+\label{sec:ekstraktmorfoloogia-sissejuhatus}
+
+
+
+
+
+
+
+
+\newpage
+\section{Vadja morfoloogiliste tüüpsõnade analüüs}
+\label{sec:analüüs}
+
+See osa kirjeldab ekstraktmorfoloogiaga leitud vadja keele morfoloogilisi tüüpsõnu ja analüüsib nende vastavust vadja keele grammatikatega ja ajaloolise morfoloogiaga.
+
+
+
+
+
+
+
+
+\newpage
+\section{Programmkoodi tuletamine}
+\label{sec:programmkoodi-tuletamine}
+
+Programmkoodi tuletamise all peetakse siin töös silmas mistahes protsessi, mille käigus tuletatakse mingi üldisema kirjelduse põhjal programmkoodi ühe või mitme konkreetse programmeerimiskeskkona jaoks.
+
+Üldine kirjeldus (või teisisõnu ontoloogia) kirjeldab faktuaalselt \textit{mida} ning tuletatud programmkood kirjeldab konkreetselt \textit{kuidas} seda teadmist rakendada.
+
+Töös kasutatakse keskseks kirjelduseks leksikaalset ressurssi, mille peamine osa koosneb ekstraktmorfoloogiaga leitud tüüpsõnade mallidest.
+
+Keskse kirjelduse leksikaalset ressurssi hoitakse rahvusvahelise standardi vormingus \textit{Lexical Markup Framework} (\cite{iso/tc_37/sc_4_language_2007}).
+
+Programmkoodi tuletavad nn generaatorid. Töös esitatakse kaht generaatorit, üks programmeerimiskeele Grammatical Framework jaoks ning teine keeletehnoloogilise taristu Giellatekno integreerimise jaoks.
+
+
+
+
+\subsection{Keskse kirjelduse hoidmine Lexical Markup Framework vormingus}
+
+Sissejuhatav tekst, mis on e-sõnastike rahvusvaheline standard Lexical Markup Framework (\cite{iso/tc_37/sc_4_language_2007}) ja milleks seda kasutatakse.
+
+LMF koosneb mitmest laiendimoodulist (vt nt \cite{francopoulo_lmf_2013}), millest siinne töö kasutab kahte: morfoloogia moodul (\textit{LMF Morphology Extension}) ja morfoloogiliste paradigmade moodul (\textit{LMF Morphological Pattern Extension}).
+
+
+
+
+\subsection{Grammatical Framework morfoloogiakomponent}
+
+Mis on programmeerimiskeel Grammatical Framework ja milleks seda kasutatakse.
+
+
+
+
+\subsection{Giellatekno taristuga integreerimine}
+
+Mis on keeletehnoloogiline taristu Giellatekno ja milleks seda kasutatakse. Kes seda kasutavad.
+
+
+
+
+
+
+
+
+\newpage
+\section{Kokkuvõte}
+
+Magistritöö on kirjeldanud süsteemi, millega on ühelt poolt defineeritud vadja keele normatiivne morfoloogia ja mille põhjal teisalt tuletatakse automaatselt morfoloogiline keeletehnoloogia.
+
+Morfoloogiline normatiiv põhineb Heinike Heinsoo läbiviidud keelekümbluskoolis Ämmesse Vunukassaa õpetatud keelel.
+
+Saadud morfoloogilist tüübistikku on analüüsitud vadja keele grammatikatega ja põhjendatud ajaloolise morfoloogiaga.
+
+
+
+
+
+
+
+
+\newpage
+\section{Põhimõisted ja lühendid}
+Siin loetletakse töös kasutatud mõisted ja lühendid koos nende tähendustega.
+
+\spacing{1}
+\glsaddall
+% \makeglossaries
+\printglossary[title={},toctitle={}]
+\spacing{1.5}
+
+
+
+
+
+
+
+
+\newpage
+\section{Kirjandus}
+\label{sec:kirjandus}
+% @TODO: kuidas määrata biblatex-i keele eesti keelele?
+\spacing{1}
+{
+  %\renewcommand*{\bibfont}{\small}
+  \printbibliography[heading=none]
+}
+\spacing{1.5}
+
+
+
+
+
+
+
+\newpage
+\section{The use of Extract Morphology for Automatic Derivation of Language Technology for Votic}
+
+An English language summary of this work.
+
+
+
+
+
+
+
+
+\end{document}
+
+% Local Variables:
+% TeX-engine: xelatex
+% End:
