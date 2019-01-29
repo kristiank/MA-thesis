@@ -27,6 +27,9 @@
 
 \usepackage{hyperref}
 
+% koodiplokkide esitamiseks
+\usepackage{minted}
+
 % Sõnastik
 \usepackage[toc,nopostdot,xindy]{glossaries}
 \makeglossaries
@@ -272,6 +275,29 @@ Peale sõnaartiklite ja morfoloogilise informatsiooni hoitakse leksikaalses ress
 \subsubsection{Sõnaartiklite esitamine LMFis}
 Iga sõnaartikkel ehk leksikaalne kirje kannab informatsiooni lekseemi sõnaliigi kohta, selle valitud lemma vorm ning morfoloogiamooduliga esitatud muutvormitabeli.
 
+\begin{figure} %[p]
+  \center
+\begin{minted}[frame=single,fontsize=\small,framesep=10pt]{XML}
+<LexicalEntry morphologicalPatterns="asKatto">
+  <feat att="partOfSpeech" val="nn"/>
+  <Lemma>
+    <feat att="writtenForm" val="katto"/>
+  </Lemma>
+  <WordForm>
+    <feat att="writtenForm" val="katto"/>
+    <feat att="grammaticalNumber" val="singular"/>
+    <feat att="grammaticalCase" val="nominative"/>
+  </WordForm>
+  <WordForm>
+    <feat att="writtenForm" val="katod"/>
+    <feat att="grammaticalNumber" val="plural"/>
+    <feat att="grammaticalCase" val="nominative"/>
+  </WordForm>
+</LexicalEntry>
+\end{minted}
+\caption{Sõnaartikli \textit{katto} esitamine LMFis (muutvormid kajastatud vaid osaliselt).
+  \label{code:lmf-lexicalentry}}
+\end{figure}
 
 
 
