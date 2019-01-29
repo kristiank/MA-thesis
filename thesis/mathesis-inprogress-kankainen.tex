@@ -65,6 +65,25 @@ Magistritöö kasutab loodud süsteemi selleks, et kirjeldada vadja keele normat
 
 Tööd ajendab mõtteviis minimeerida tööd: loodud normatiivne morfoloogiline tüübistik on aluseks automaatselt tuletatud keeletehnoloogiale, kui normatiiv muutub, muutub ka keeletehnoloogia. Töö paneb leksikaalse ressursi esikohale ja kõik leitud sisulised vead õiendatakse otse ressursis, mitte keeletehnoloogilistes tarkvarades eraldi.
 
+---
+
+% töö tuumik on tüüpsõnakirjeldused
+Töö keskseks osaks on ekstraktmorfoloogiameetodiga saadud tüüpsõnakirjeldused.
+% kirjeldused LMFi ja neist genereeritakse kood
+Kirjeldused kodeeritakse koos sõnastikuga ümber standardsesse vormingusse ja saadud leksikaalse ressursi järgi tuletatakse automaatselt programmkoodi kahe keeletehnoloogilise platvormi jaoks, ja tagatakse seega vadja keele tugi nendes platvormides.
+
+% seetõttu töötab ekstraktmorfoloogia liidesena
+Niivisii kasutatakse ekstraktmorfoloogia meetodit kasutaja\-liidesena, mille abil koostatakse arvutimorfoloogia ainult tüüpsõnade muutvormitabeleid sedastades -- mitte programmeerides.
+
+% kirjeldus kesksel kohal, parandused õigesse kohta
+Magistritöös esitatud töövoog paneb leksikaalse ressursi kesksele kohale ja tuletatud tehnoloogia sellest teiseseks. Uue sõnavara ja vigade parandused tehakse ressursis, mitte mitmes tehnoloogias eraldi.
+
+% standardi kasutamine tagab pikaajalise loetavus
+Kuna nii tüüpsõnade kirjeldused, kui ka ülejäänud sõnastik kodeeritakse rahvusvahelise standardi Lexical Markup Framework vormingusse, tagatakse võimaluse ressursi pikaajaliseks arhiveerimiseks. Leksikaalne ressurss on loetav ja arusaadav palju kauem, kui seda on programmeerimiskood.
+
+% panus dokumentaalsele lingvistikale
+Viimase tõttu püüab magistritöö ühendada arvutuslingvistika ja dokumenteeriva lingvistika valdkondi.
+
 
 
 
@@ -86,13 +105,18 @@ See osa kirjeldab töös rakendatud ekstraktmorfoloogia meetodit. Töö kasutab 
 \subsection{Sissejuhatus}
 \label{sec:ekstraktmorfoloogia-sissejuhatus}
 
-Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis üldistab lekseemide muutvormitabelid tüüpsõnamallideks.
+% juhendatud masinõppe meetod -- aga masinõppe ei kõla minu jaoks hästi
+Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis üldistab lekseemide muutvormitabelid tüüpsõnamallideks. See on \textit{juhendatud}, sest sisendiks olevad muutvormitabelid peavad olema korrektselt koostatud. %Ja see on \textit{masinõppe}, sest sisendist analüüsitud mudel on laiendatav ka uuele ja tundmatule sisendile.
+
+% masinõppe asemel kasutan ma seda kirjeldusena ja pealdisena paradigmadele ning liidesena arvutimorfoloogia deklareerimiseks
+Selles töös käsitletakse meetodi abil saadud mudelit siiski pigem kirjeldusena. See on tüüpsõnakirjeldus, mis on osa sõnastikust -- lekseemi paradigma kirjeldusena. Ja sellest kirjeldusest 
+% kirjeldus on inimloetav (viidatav fakt)
 
 % tüüpsõnamalli kohta
-Tüüpsõna\-mall koosneb muutvormide mallidest ja vastab seega morfoloogilise paradigma mõistele
+Tüüpsõna\-mall koosneb muutvormide mallidest ja vastab seega morfoloogilise paradigma mõistele. 
 Tüüpsõna\-malli abil on võimalik moodustada ka tundmatu sõna kõik muutvormid.
 % produktiivsusmalli kohta
-Kuna kaks või enam lekseemi võivad jagada üht ja sama tüüpsõna\-malli (s.o paradigma), on võimalik ekstrakt\-morfoloogia meetodiga üldistada lekseemide iseärasusi ja luua nendest tüüpsõnade produktiivsuse mudeli. Produktiivsus\-mudeliga on võimalik ennustada uue ja tundmatu sõnavormi kuuluvust ühe või teise tüüpsõna alla. 
+Kuna kaks või enam lekseemi võivad jagada üht ja sama tüüpsõna\-malli (s.o kuuluda sama paradigmasse), on võimalik ekstrakt\-morfoloogia meetodiga üldistada lekseemide iseärasusi ja luua nendest tüüpsõnade produktiivsuse mudeli. Produktiivsus\-mudeliga on võimalik ennustada uue ja tundmatu sõnavormi kuuluvust ühe või teise tüüpsõna alla. 
 
 
 Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi sisendit ja väljundit. Sisendiks on ühe lekseemi muutvormitabel tervikuna (vt tabel\nobreakspace \ref{tab:sisendtabel_katto}). Väljundiks on meetodi poolt leitud tüüpsõnamall (vt tabel\nobreakspace \ref{tab:väljundtabel_katto}). Tabelitele viidatakse alljärgnevas tekstis mitmel korral.
