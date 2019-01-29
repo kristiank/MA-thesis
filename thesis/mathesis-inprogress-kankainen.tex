@@ -9,10 +9,6 @@
 
 \usepackage{booktabs}
 
-% Sõnastik
-\usepackage[toc,nopostdot]{glossaries}
-\makeglossaries
-
 % Babel
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -31,9 +27,23 @@
 
 \usepackage{hyperref}
 
+% Sõnastik
+\usepackage[toc,nopostdot,xindy]{glossaries}
+\makeglossaries
+
 % sisukord
 % Bakalaureusetöös on soovitatav piirduda kolmeastmelise hierarhiaga, magistritöös neljaastmelisega
 \setcounter{tocdepth}{4}
+
+
+% kasutatud mõisted ja lühendid
+\newglossaryentry{tüüpsõnamall}
+{
+  name=tüüpsõnamall,
+  description={on ekstraktmorfoloogiaga leitud paradigma kirjeldus, mis koosneb iga muutvormi koostamisskeemist}
+}
+
+
 
 \begin{document}
 
@@ -106,7 +116,7 @@ See osa kirjeldab töös rakendatud ekstraktmorfoloogia meetodit. Töö kasutab 
 \label{sec:ekstraktmorfoloogia-sissejuhatus}
 
 % juhendatud masinõppe meetod -- aga masinõppe ei kõla minu jaoks hästi
-Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis üldistab lekseemide muutvormitabelid tüüpsõnamallideks. See on \textit{juhendatud}, sest sisendiks olevad muutvormitabelid peavad olema korrektselt koostatud. %Ja see on \textit{masinõppe}, sest sisendist analüüsitud mudel on laiendatav ka uuele ja tundmatule sisendile.
+Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis üldistab lekseemide muutvormitabelid \glslink{tüüpsõnamall}{tüüpsõnamallideks}. See on \textit{juhendatud}, sest sisendiks olevad muutvormitabelid peavad olema korrektselt koostatud. %Ja see on \textit{masinõppe}, sest sisendist analüüsitud mudel on laiendatav ka uuele ja tundmatule sisendile.
 
 % masinõppe asemel kasutan ma seda kirjeldusena ja pealdisena paradigmadele ning liidesena arvutimorfoloogia deklareerimiseks
 Selles töös käsitletakse meetodi abil saadud mudelit siiski pigem kirjeldusena. See on tüüpsõnakirjeldus, mis on osa sõnastikust -- lekseemi paradigma kirjeldusena. Ja sellest kirjeldusest 
