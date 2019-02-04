@@ -162,39 +162,4 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
 </r>
 
 
-(: @TODO remove all this code :)
-(: fst paradigms lists the continuation codes for each pextract paradigm :)
-(: it simply adds the tags for the grammatical features and the name of
-   the paradigm used in the rewrite rules
-:)
-let $fst-paradigms :=
-for $paradigm in $lmf//MorphologicalPattern
-  let $id := $paradigm/feat[@att="id"]/@val/data()
-  let $name := $id
-  let $pos := $paradigm/feat[@att="partOfSpeech"]/@val/data() => $get-fst-pos()
-  let $comment := "!! This code was automatically generated. More info at" || out:nl()
-               || "!! https://github.com/keeleleek/pextract2gf-votic/"
-  let $cases :=
-    for $unique-msd in $paradigm/TransformSet
-      let $msd := string-join($unique-msd/GrammaticalFeatures/feat/@val/data())
-      (: the group by clause removes duplicates :)
-      group by $msd
-    return string-join((
-      (: the part of speech tag :)
-      "+" || $pos,
-      (: the paradigm name for the rewrite rules :)
-      "+" || $id,
-      (: the msd tags like +Sg+Ill:)
-      (for $feat in $unique-msd[1]/GrammaticalFeatures/feat/@val/data()
-        return "+" || $get-giella-term($feat)),
-      (: the end :)
-      " # ;"
-    ))
-  let $entries := string-join((
-    "LEXICON " || $name, $comment, $cases, ""
-    ), out:nl())
-  return $entries
-
-
-
-return ($sanat-lexicon)
+return $sanat-lexicon
