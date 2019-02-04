@@ -1,5 +1,5 @@
 xquery version "3.0" encoding "UTF-8";
-import module namespace pjson = "http://keeleleek.ee/pextract/pjson" at "/home/kristian/Projektid/MA-thesis/code/karp-json.xqm";
+import module namespace pjson = "http://keeleleek.ee/pextract/pjson" at "./karp-json.xqm";
 
 (:~
  : This script converts Karp's json data into a holistic LexicalResource
@@ -9,8 +9,8 @@ import module namespace pjson = "http://keeleleek.ee/pextract/pjson" at "/home/k
  : @version 1.0
  :)
 
-let $lexicon-json   := "/home/kristian/Projektid/MA-thesis/data/karp-json/votiska.json"
-let $paradigms-json := "/home/kristian/Projektid/MA-thesis/data/karp-json/votiskaparadigms.json"
+let $lexicon-json   := "../data/karp-json/votiska.json"
+let $paradigms-json := "../data/karp-json/votiskaparadigms.json"
 
 let $out-folder := "/home/kristian/Projektid/MA-thesis/data/"
 let $file-name := "lmf.xml"
