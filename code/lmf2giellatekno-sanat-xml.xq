@@ -114,10 +114,10 @@ let $sanat-lexicon :=
 (: @TODO use language from LMF and populate xml:lang="vot" :)
 for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
   (: @TODO choose lemma form same way as the technical stem :)
-  let $lemma-feats := map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"}
-  let $lemma := $entry/Lemma/feat[@att = "writtenForm"]/@val/data()
-  let $pos := $entry//feat[@att = "partOfSpeech"]/@val/data()
-  let $fst-pos := $get-fst-pos($pos)
+  let $lemma-feats  := map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"}
+  let $lemma        := $entry/Lemma/feat[@att = "writtenForm"]/@val/data()
+  let $pos          := $entry//feat[@att = "partOfSpeech"]/@val/data()
+  let $fst-pos      := $get-fst-pos($pos)
   let $paradigm-ids := $entry/@morphologicalPatterns/string() => tokenize()
   return
     <e>
@@ -126,11 +126,11 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
           <stg>
           {
           for $paradigm-id in $paradigm-ids
-	    (: @TODO remove duplicate paradigms :)
+            (: @TODO remove duplicate paradigms :)
             let $paradigm := $lmf//MorphologicalPattern[
-	                      ./feat[./@att="id"
-			      and
-			      @val=string($paradigm-id)]][1]
+                                   ./feat[./@att="id"
+                                   and
+                                   @val=string($paradigm-id)]][1]
             (: @TODO what to do if several lemma forms are possible? now only the first is selected :)
             let $lemma-transformset := lmf:get-transformsets-with-feats($paradigm, $lemma-feats)[1]
             let $fst-pos := "+" || $get-fst-pos($pos)
