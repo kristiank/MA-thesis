@@ -17657,25 +17657,6 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_trams">
-      <feat att="partOfSpeech" val="nn"/>
-      <feat att="karp-lemgram" val="trams..nn.1"/>
-      <Lemma>
-        <feat att="writtenForm" val="trams"/>
-      </Lemma>
-      <WordForm>
-        <feat att="writtenForm" val="trams"/>
-        <feat att="msd" val="singular nominative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="nominative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="tramset"/>
-        <feat att="msd" val="plural nominative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="nominative"/>
-      </WordForm>
-    </LexicalEntry>
     <LexicalEntry morphologicalPatterns="p_koirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="muudrõ..nn.1"/>

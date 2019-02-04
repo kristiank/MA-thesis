@@ -4708,23 +4708,6 @@
       "WordForms": [
         {
           "msd": "singular nominative",
-          "writtenForm": "trams"
-        },
-        {
-          "msd": "plural nominative",
-          "writtenForm": "tramset"
-        }
-      ],
-      "baseform": "trams",
-      "lemgram": "trams..nn.1",
-      "lexiconName": "votiska",
-      "paradigm": "p_trams",
-      "partOfSpeech": "nn"
-    },
-    {
-      "WordForms": [
-        {
-          "msd": "singular nominative",
           "writtenForm": "muudr\u00f5"
         },
         {
