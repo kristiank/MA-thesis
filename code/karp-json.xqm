@@ -50,25 +50,25 @@ declare function pjson:paradigm-map-to-lmf($paradigm) {
       let $msds := $transformset?("GrammaticalFeatures")?("msd") => tokenize()
       return
         <TransformSet>
-	  <GrammaticalFeatures>
-	    <feat att="grammaticalNumber" val="{$msds[1]}"/>
-	    <feat att="grammaticalCase" val="{$msds[2]}"/>
-	  </GrammaticalFeatures>
-	  {
-	  (: iterate the array of Process maps :)
-	  for $process in $transformset?("Process")?*
-	    return
+          <GrammaticalFeatures>
+            <feat att="grammaticalNumber" val="{$msds[1]}"/>
+            <feat att="grammaticalCase" val="{$msds[2]}"/>
+          </GrammaticalFeatures>
+          {
+          (: iterate the array of Process maps :)
+          for $process in $transformset?("Process")?*
+            return
               <Process>
-	        {
-		(: this keeps the feat-elements in the correct order :)
-		for $possible-key in ("operator", "processType", "variableNum", "stringValue")
-		  return
-		    if(map:contains($process, $possible-key))
-		    then(<feat att="{$possible-key}" val="{$process?($possible-key)}"/>)
-		    else()
-		}
+              {
+              (: this keeps the feat-elements in the correct order :)
+              for $possible-key in ("operator", "processType", "variableNum", "stringValue")
+                return
+                  if(map:contains($process, $possible-key))
+                  then(<feat att="{$possible-key}" val="{$process?($possible-key)}"/>)
+                  else()
+              }
               </Process>
-	  }
+          }
         </TransformSet>
     }
   </MorphologicalPattern>
