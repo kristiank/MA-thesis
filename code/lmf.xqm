@@ -1,0 +1,129 @@
+xquery version "3.0" encoding "UTF-8";
+module namespace lmf = "http://keeleleek.ee/lmf";
+import module namespace functx = 'http://www.functx.com';
+
+
+(:~
+ : Module for working with pextract-enhanced Lexical Markup Framework.
+ :
+ : @author Kristian Kankainen
+ : @copyright MTÜ Keeleleek, 2018
+ : @date 2018
+ : @version 1.1
+ : @see https://github.com/keeleleek/pextract2gf-votic/
+ :)
+
+
+(:~
+ : Returns all TransformSet elements that contain the specified GrammaticalFeatures feats.
+ : @since 1.0
+ : @param $paradigm The MorphologicalPattern element
+ : @param $grammaticalfeatures A map specifying the feature attributes and values
+ : @return Sequnce of TransformSet elements
+ :)
+declare function lmf:get-transformsets-with-feats(
+  $paradigm as element(MorphologicalPattern),
+  $grammaticalfeatures as map(xs:string, xs:string)
+) as element(TransformSet)*
+{
+  $paradigm/TransformSet[
+    every $key in map:keys($grammaticalfeatures)
+    satisfies ./GrammaticalFeatures/feat[@att=$key and @val=$grammaticalfeatures($key)]
+  ]
+};
+
+
+(:~
+ : Returns the wordform as split by pextract processes
+ : @since 1.1
+ : @param $processes A list of Process elements
+ : @param $wordform The wordform to split
+ : @param $suffixes List of suffixes (empty)
+ : @return The sequence of the wordform split into parts
+ :)
+declare function lmf:split-by-processes($wordform, $processes, $suffixes) {
+  (: base conditions :)
+  if(count($processes)=0 or string-length($wordform)=0)
+  then(for $part in ($wordform, $suffixes)
+       where $part != ("", ())
+       return $part
+  )
+  
+  else( (: recurse conditions:)
+    let $process := head($processes)
+    return 
+    if($process/feat[@att="processType" and @val="pextractAddConstant"])
+    (: processType is a constant :)
+    then(
+      let $constant := $process/feat[@att="stringValue"]/@val/data()
+      let $prefix   := functx:substring-before-last($wordform, $constant)
+      
+      return 
+      (: make sure the substring-before-last was actually matched :)
+      if(contains($wordform, $constant))
+      then(
+        let $suffix := substring($wordform, string-length($prefix)+string-length($constant)+1)
+        return lmf:split-by-processes($prefix, tail($processes), ($constant, $suffix, $suffixes))
+      )
+      else(
+        lmf:split-by-processes($wordform, tail($processes), ($suffixes))
+      )
+    )
+    (: processType is not a constant :)
+    else(
+      lmf:split-by-processes($wordform, tail($processes), ($suffixes))
+    )
+  )
+};
+
+
+
+(:~ Returns the attested variable value sets of given paradigm :)
+declare function lmf:get-attested-var-values(
+  $paradigm as element(MorphologicalPattern)
+) as element(AttestedParadigmVariableSet)*
+{
+  $paradigm/AttestedParadigmVariableSets/AttestedParadigmVariableSet
+};
+
+
+
+(:~ Returns a list of recreated word-forms of given TransformationSet (e.g. paradigm cell) :)
+declare function lmf:get-attested-wordforms(
+  $cell as element(TransformSet),
+  $attested-values as element(AttestedParadigmVariableSet)+
+) as xs:string+ {
+  let $wordform-list :=
+    for $attested-value-set in $attested-values
+      let $wordform-parts := 
+        for $process in $cell/Process
+	  let $process-type := $process/feat[@att="processType"]/@val/data()
+          return
+	    switch ($process-type)
+	    case "pextractAddConstant"
+	      return $process/feat[@att="stringValue"]/@val/data()
+	    case "pextractAddVariable"
+	      return
+	      let $var-num := $process/feat[@att="variableNum"]/@val/data()
+	      return $attested-value-set/feat[@att=$var-num]/@val/data()
+	    default return ("ERROR") (: @todo: throw error :)
+	    
+        return string-join($wordform-parts)
+      return $wordform-list
+};
+
+
+
+
+
+(:~
+ : Checks for consistency between listed paradigm patterns for lemmas and whether
+ : they actually exist.
+ : @since 1.1
+ : @param  $lmf The resource to check
+ : @return List of paradigm pattern names not existing or empty list for consistency
+ :)
+declare function lmf:check-if-listed-patterns-exist($lmf) {
+  let $listed-patterns := distinct-values($lmf//LexicalEntry/@morphologicalPattern/data())
+  return $listed-patterns
+};
