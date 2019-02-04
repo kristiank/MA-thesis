@@ -160,5 +160,11 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
 }
 </r>
 
+return 
 
-return $sanat-lexicon
+  let $file-name := "/home/kristian/Projektid/MA-thesis/data/giellatekno-sanat.xml"
+  (: write the file :)
+  return file:write(
+           $file-name,
+           $sanat-lexicon
+         )
