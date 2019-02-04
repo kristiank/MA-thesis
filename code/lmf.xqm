@@ -124,6 +124,14 @@ declare function lmf:get-attested-wordforms(
  : @return List of paradigm pattern names not existing or empty list for consistency
  :)
 declare function lmf:check-if-listed-patterns-exist($lmf) {
-  let $listed-patterns := distinct-values($lmf//LexicalEntry/@morphologicalPattern/data())
-  return $listed-patterns
+  let $listed-patterns := $lmf//LexicalEntry/@morphologicalPatterns/data()
+  let $distinct-listed-patterns := distinct-values(
+        for $pattern-ids in $listed-patterns
+          for $pattern-id in tokenize($pattern-ids, " ")
+            return if(exists($lmf//MorphologicalPattern[./feat[@att="id" and @val=$pattern-id]]))
+                   then()
+                   else($pattern-id)
+        )
+  for $pattern-id in $distinct-listed-patterns
+    return $pattern-id
 };
