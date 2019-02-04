@@ -134,8 +134,7 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
             (: @TODO what to do if several lemma forms are possible? now only the first is selected :)
             let $lemma-transformset := lmf:get-transformsets-with-feats($paradigm, $lemma-feats)[1]
             let $fst-pos := "+" || $get-fst-pos($pos)
-            let $lemma-parts := lmf:split-by-processes($lemma, reverse($lemma-transformset/Process), ())
-            let $fst-lemma := $pextract-technical-stem($lemma-parts, $lemma-transformset/Process)
+            let $fst-lemma := $lemma
           
             let $cont-class := string-join(($get-fst-pos($pos), "_", $paradigm-id))
     
@@ -153,10 +152,10 @@ for $entry in $lmf/Lexicon[feat[@att="language" and @val="vot"]]/LexicalEntry
       {(: Giellatekno interlingua translation equivalents are not yet available in the LMF :)}
       <mg relId="0">
         <semantics></semantics>
-	<tg xml:lang="fin">
-	  <!-- Giellatekno interlingua translation equivalent not yet in LMF -->
-	  <t pos=""></t>
-	</tg>
+        <tg xml:lang="fin">
+          <!-- Giellatekno interlingua translation equivalent not yet in LMF -->
+          <t pos=""></t>
+        </tg>
       </mg>
     </e>
 }
