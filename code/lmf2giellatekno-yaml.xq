@@ -55,7 +55,7 @@ let $paradigm-names := distinct-values($lmf//MorphologicalPattern/feat[@att="id"
 (: for each paradigm-name, print its first lexical entry as a yaml test in a file. :)
 return 
 for $paradigm-name in $paradigm-names
-let $model-word := $paradigm-name => replace("^(.+)_([^._]+)([.].*)?$", "$2")
+let $model-word := $paradigm-name => substring-after("as") => lower-case()
 for $lexentry in ($lmf//LexicalEntry[@morphologicalPatterns = $paradigm-name
                                      and
                                     ./Lemma/feat[@att="writtenForm"]/@val = $model-word])
@@ -86,7 +86,7 @@ return
     " :   # should decline like the paradigm '" || $paradigm-name || "'"
   let $test-entry := $header || out:nl() || $wordforms || out:nl()
   
-  let $base-path := "/tmp/"
+  let $base-path := "/home/kristian/Projektid/MA-thesis/data/giellatekno/gt-norm-yamls/"
   let $file-name := $base-path || $giellatekno:get-fst-pos($pos) || 
                     "-" || $giellatekno:get-file-name($lemma) || "_gt-norm.yaml"
 
