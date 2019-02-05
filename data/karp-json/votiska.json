@@ -118,7 +118,7 @@
       "baseform": "noorikk\u00f5",
       "lemgram": "noorikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -243,7 +243,7 @@
       "baseform": "rokk\u00f5",
       "lemgram": "rokk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_kukk\u00f5",
+      "paradigm": "asKukk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -365,7 +365,7 @@
       "bklass": "b",
       "lemgram": "pliitt\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_pliitt\u00f5",
+      "paradigm": "asPliitt\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -490,7 +490,7 @@
       "baseform": "lehme",
       "lemgram": "lehme..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -615,7 +615,7 @@
       "baseform": "piime",
       "lemgram": "piime..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -736,7 +736,7 @@
       "baseform": "fartukk\u00f5",
       "lemgram": "fartukk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -861,7 +861,7 @@
       "baseform": "sukk\u00f5",
       "lemgram": "sukk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_kukk\u00f5",
+      "paradigm": "asKukk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -970,7 +970,7 @@
       "baseform": "v\u00f5rkko",
       "lemgram": "v\u00f5rkko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -1095,7 +1095,7 @@
       "baseform": "jurm\u00f5",
       "lemgram": "jurm\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -1220,7 +1220,7 @@
       "baseform": "bobr\u00f5",
       "lemgram": "bobr\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -1341,7 +1341,7 @@
       "baseform": "joo\u017eikk\u00f5",
       "lemgram": "joo\u017eikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -1466,7 +1466,7 @@
       "baseform": "l\u00e4sive",
       "lemgram": "l\u00e4sive..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -1591,7 +1591,7 @@
       "baseform": "tuim\u00f5",
       "lemgram": "tuim\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -1716,7 +1716,7 @@
       "baseform": "t\u0161\u00fclme",
       "lemgram": "t\u0161\u00fclme..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -1837,7 +1837,7 @@
       "baseform": "v\u00f5lk\u00f5",
       "lemgram": "v\u00f5lk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p2_aik\u00f5..nn.1",
+      "paradigm": "asAik\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -1962,7 +1962,7 @@
       "baseform": "kumm\u00f5",
       "lemgram": "kumm\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -2083,7 +2083,7 @@
       "baseform": "kr\u00f5\u017eovnikk\u00f5",
       "lemgram": "kr\u00f5\u017eovnikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -2196,7 +2196,7 @@
       "baseform": "deel\u00f5",
       "lemgram": "deel\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -2305,7 +2305,7 @@
       "baseform": "luikko",
       "lemgram": "luikko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -2430,7 +2430,7 @@
       "baseform": "pet\u00e4je",
       "lemgram": "pet\u00e4je..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -2555,7 +2555,7 @@
       "baseform": "tuttav\u00f5",
       "lemgram": "tuttav\u00f5..nn.2",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -2680,7 +2680,7 @@
       "baseform": "k\u00f5rv\u00f5",
       "lemgram": "k\u00f5rv\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -2789,7 +2789,7 @@
       "baseform": "seukko",
       "lemgram": "seukko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -2914,7 +2914,7 @@
       "baseform": "f\u00f6kle",
       "lemgram": "f\u00f6kle..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -3027,7 +3027,7 @@
       "baseform": "dobr\u00f5",
       "lemgram": "dobr\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -3148,7 +3148,7 @@
       "baseform": "part\u00f5",
       "lemgram": "part\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_part\u00f5",
+      "paradigm": "asPart\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -3273,7 +3273,7 @@
       "baseform": "eine",
       "lemgram": "eine..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -3382,7 +3382,7 @@
       "baseform": "\u00f5zrikko",
       "lemgram": "\u00f5zrikko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -3495,7 +3495,7 @@
       "baseform": "tuttav\u00f5",
       "lemgram": "tuttav\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -3608,7 +3608,7 @@
       "baseform": "film\u00f5",
       "lemgram": "film\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -3721,7 +3721,7 @@
       "baseform": "vihm\u00f5",
       "lemgram": "vihm\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -3846,7 +3846,7 @@
       "baseform": "rehtele",
       "lemgram": "rehtele..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -3971,7 +3971,7 @@
       "baseform": "konn\u00f5",
       "lemgram": "konn\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -4096,7 +4096,7 @@
       "baseform": "\u00f5zr\u00f5",
       "lemgram": "\u00f5zr\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -4221,7 +4221,7 @@
       "baseform": "kuhj\u00f5",
       "lemgram": "kuhj\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -4334,7 +4334,7 @@
       "baseform": "nagl\u00f5",
       "lemgram": "nagl\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -4459,7 +4459,7 @@
       "baseform": "\u00f5rav\u00f5",
       "lemgram": "\u00f5rav\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -4580,7 +4580,7 @@
       "baseform": "om\u00f5n",
       "lemgram": "om\u00f5n..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_om\u00f5n",
+      "paradigm": "asOm\u00f5n",
       "partOfSpeech": "nn"
     },
     {
@@ -4701,7 +4701,7 @@
       "baseform": "luzikk\u00f5",
       "lemgram": "luzikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -4826,7 +4826,7 @@
       "baseform": "muudr\u00f5",
       "lemgram": "muudr\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -4939,7 +4939,7 @@
       "baseform": "bruud\u00f5",
       "lemgram": "bruud\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -5060,7 +5060,7 @@
       "baseform": "rankk\u00f5",
       "lemgram": "rankk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -5181,7 +5181,7 @@
       "baseform": "paikk\u00f5",
       "lemgram": "paikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -5302,7 +5302,7 @@
       "baseform": "tihakk\u00f5",
       "lemgram": "tihakk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -5427,7 +5427,7 @@
       "baseform": "k\u00f5ikk",
       "lemgram": "k\u00f5ikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_k\u00f5ikk",
+      "paradigm": "asK\u00f5ikk",
       "partOfSpeech": "nn"
     },
     {
@@ -5536,7 +5536,7 @@
       "baseform": "naizikko",
       "lemgram": "naizikko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -5661,7 +5661,7 @@
       "baseform": "luukk\u00f5",
       "lemgram": "luukk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_kukk\u00f5",
+      "paradigm": "asKukk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -5770,7 +5770,7 @@
       "baseform": "t\u00fctt\u00e4rikko",
       "lemgram": "t\u00fctt\u00e4rikko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -5879,7 +5879,7 @@
       "baseform": "vad\u0315d\u0315akko",
       "lemgram": "vad\u0315d\u0315akko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -6000,7 +6000,7 @@
       "baseform": "harakk\u00f5",
       "lemgram": "harakk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -6121,7 +6121,7 @@
       "baseform": "tikk\u00f5",
       "lemgram": "tikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -6246,7 +6246,7 @@
       "baseform": "silme",
       "lemgram": "silme..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -6355,7 +6355,7 @@
       "baseform": "kukko",
       "lemgram": "kukko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -6476,7 +6476,7 @@
       "baseform": "tarkk\u00f5",
       "lemgram": "tarkk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -6597,7 +6597,7 @@
       "baseform": "gribanikk\u00f5",
       "lemgram": "gribanikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -6722,7 +6722,7 @@
       "baseform": "sool\u00f5",
       "lemgram": "sool\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -6843,7 +6843,7 @@
       "baseform": "urokk\u00f5",
       "lemgram": "urokk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -6968,7 +6968,7 @@
       "baseform": "k\u00f6\u00fche",
       "lemgram": "k\u00f6\u00fche..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -7081,7 +7081,7 @@
       "baseform": "duum\u00f5",
       "lemgram": "duum\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -7198,7 +7198,7 @@
       "baseform": "sinin",
       "lemgram": "sinin..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_sinin",
+      "paradigm": "asSinin",
       "partOfSpeech": "nn"
     },
     {
@@ -7323,7 +7323,7 @@
       "baseform": "kuiv\u00f5",
       "lemgram": "kuiv\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -7436,7 +7436,7 @@
       "baseform": "katti",
       "lemgram": "katti..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p5_t\u00fctt\u00f6..nn.1",
+      "paradigm": "asT\u00fctt\u00f6",
       "partOfSpeech": "nn"
     },
     {
@@ -7561,7 +7561,7 @@
       "baseform": "kaval\u00f5",
       "lemgram": "kaval\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -7686,7 +7686,7 @@
       "baseform": "p\u00e4ive",
       "lemgram": "p\u00e4ive..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -7795,7 +7795,7 @@
       "baseform": "pettelikko",
       "lemgram": "pettelikko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -7904,7 +7904,7 @@
       "baseform": "sokko",
       "lemgram": "sokko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -8029,7 +8029,7 @@
       "baseform": "koir\u00f5",
       "lemgram": "koir\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -8142,7 +8142,7 @@
       "baseform": "borkkan\u00f5",
       "lemgram": "borkkan\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -8263,7 +8263,7 @@
       "baseform": "nu\u017enikk\u00f5",
       "lemgram": "nu\u017enikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -8372,7 +8372,7 @@
       "baseform": "t\u0161erikko",
       "lemgram": "t\u0161erikko..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luikko",
+      "paradigm": "asLuikko",
       "partOfSpeech": "nn"
     },
     {
@@ -8493,7 +8493,7 @@
       "baseform": "kopekk\u00f5",
       "lemgram": "kopekk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -8614,7 +8614,7 @@
       "baseform": "vunukk\u00f5",
       "lemgram": "vunukk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -8735,7 +8735,7 @@
       "baseform": "pet\u0161nikk\u00f5",
       "lemgram": "pet\u0161nikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -8860,7 +8860,7 @@
       "baseform": "seine",
       "lemgram": "seine..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -8985,7 +8985,7 @@
       "baseform": "\u00e4mme",
       "lemgram": "\u00e4mme..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -9110,7 +9110,7 @@
       "baseform": "ikolookk\u00f5",
       "lemgram": "ikolookk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_kukk\u00f5",
+      "paradigm": "asKukk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -9223,7 +9223,7 @@
       "baseform": "iiv\u00f5",
       "lemgram": "iiv\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -9348,7 +9348,7 @@
       "baseform": "sool\u00f5",
       "lemgram": "sool\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -9473,7 +9473,7 @@
       "baseform": "bukv\u00f5",
       "lemgram": "bukv\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -9598,7 +9598,7 @@
       "baseform": "vohm\u00f5",
       "lemgram": "vohm\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -9719,7 +9719,7 @@
       "baseform": "vakk\u00f5",
       "lemgram": "vakk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -9844,7 +9844,7 @@
       "baseform": "v\u00f5im\u00f5",
       "lemgram": "v\u00f5im\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -9969,7 +9969,7 @@
       "baseform": "kukk\u00f5",
       "lemgram": "kukk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_kukk\u00f5",
+      "paradigm": "asKukk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -10094,7 +10094,7 @@
       "baseform": "nelle",
       "lemgram": "nelle..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -10215,7 +10215,7 @@
       "baseform": "obakk\u00f5",
       "lemgram": "obakk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -10340,7 +10340,7 @@
       "baseform": "film\u00f5",
       "lemgram": "film\u00f5..nn.2",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -10465,7 +10465,7 @@
       "baseform": "kuuluv\u00f5",
       "lemgram": "kuuluv\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_koir\u00f5",
+      "paradigm": "asKoir\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -10578,7 +10578,7 @@
       "baseform": "gramm\u00f5",
       "lemgram": "gramm\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p1_ahk\u00f5r\u00f5..nn.1",
+      "paradigm": "asAhk\u00f5r\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -10699,7 +10699,7 @@
       "baseform": "domovikk\u00f5",
       "lemgram": "domovikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_luzikk\u00f5",
+      "paradigm": "asLuzikk\u00f5",
       "partOfSpeech": "nn"
     },
     {
@@ -10808,7 +10808,7 @@
       "baseform": "katti",
       "lemgram": "katti..nn.2",
       "lexiconName": "votiska",
-      "paradigm": "p_katti",
+      "paradigm": "asKatti",
       "partOfSpeech": "nn"
     },
     {
@@ -10933,7 +10933,7 @@
       "baseform": "\u00e4jje",
       "lemgram": "\u00e4jje..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_p\u00e4ive",
+      "paradigm": "asP\u00e4ive",
       "partOfSpeech": "nn"
     },
     {
@@ -11058,7 +11058,7 @@
       "baseform": "hoikk\u00f5",
       "lemgram": "hoikk\u00f5..nn.1",
       "lexiconName": "votiska",
-      "paradigm": "p_kukk\u00f5",
+      "paradigm": "asKukk\u00f5",
       "partOfSpeech": "nn"
     }
   ]

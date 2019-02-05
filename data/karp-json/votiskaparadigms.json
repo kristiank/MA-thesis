@@ -1,7 +1,7 @@
 {
   "votiskaparadigms": [
     {
-      "MorphologicalPatternID": "p6_aap\u00f5..nn.1",
+      "MorphologicalPatternID": "asAap\u00f5",
       "TransformCategory": {},
       "TransformSet": [
         {
@@ -477,7 +477,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_sinin",
+      "MorphologicalPatternID": "asSinin",
       "Top_VariableInstances": [
         {
           "1": "sini",
@@ -958,7 +958,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p2_aik\u00f5..nn.1",
+      "MorphologicalPatternID": "asAik\u00f5",
       "Top_VariableInstances": [
         {
           "1": "ai",
@@ -1472,7 +1472,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p8_poik\u00f5..nn.1",
+      "MorphologicalPatternID": "asPoik\u00f5",
       "TransformCategory": {},
       "TransformSet": [
         {
@@ -1982,7 +1982,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p5_t\u00fctt\u00f6..nn.1",
+      "MorphologicalPatternID": "asT\u00fctt\u00f6",
       "Top_VariableInstances": [
         {
           "1": "t\u00fct",
@@ -2668,7 +2668,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p2_aik\u00f5..nn.1",
+      "MorphologicalPatternID": "asAik\u00f5",
       "TransformCategory": {},
       "TransformSet": [
         {
@@ -3165,7 +3165,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_koir\u00f5",
+      "MorphologicalPatternID": "asKoir\u00f5",
       "Top_VariableInstances": [
         {
           "1": "koir",
@@ -3776,7 +3776,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p3_lent\u00fcz..nn.1",
+      "MorphologicalPatternID": "asLent\u00fcz",
       "TransformCategory": {},
       "TransformSet": [
         {
@@ -4201,7 +4201,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_luzikk\u00f5",
+      "MorphologicalPatternID": "asLuzikk\u00f5",
       "Top_VariableInstances": [
         {
           "1": "luzik",
@@ -4791,7 +4791,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_luikko",
+      "MorphologicalPatternID": "asLuikko",
       "Top_VariableInstances": [
         {
           "1": "luik",
@@ -5294,7 +5294,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p4_ait\u00f5..nn.1",
+      "MorphologicalPatternID": "asAit\u00f5",
       "TransformCategory": {},
       "TransformSet": [
         {
@@ -5770,7 +5770,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p1_ahk\u00f5r\u00f5..nn.1",
+      "MorphologicalPatternID": "asAhk\u00f5r\u00f5",
       "TransformCategory": {},
       "TransformSet": [
         {
@@ -6237,7 +6237,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_om\u00f5n",
+      "MorphologicalPatternID": "asOm\u00f5n",
       "Top_VariableInstances": [
         {
           "1": "om\u00f5n",
@@ -6730,7 +6730,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_pliitt\u00f5",
+      "MorphologicalPatternID": "asPliitt\u00f5",
       "Top_VariableInstances": [
         {
           "1": "pliit",
@@ -7233,7 +7233,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_mansik\u00f5z",
+      "MorphologicalPatternID": "asMansik\u00f5z",
       "Top_VariableInstances": [
         {
           "1": "mansik",
@@ -7663,7 +7663,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_katti",
+      "MorphologicalPatternID": "asKatti",
       "Top_VariableInstances": [
         {
           "1": "kat",
@@ -8312,7 +8312,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p7_amm\u00f5z..nn.1",
+      "MorphologicalPatternID": "asAmm\u00f5z",
       "TransformCategory": {},
       "TransformSet": [
         {
@@ -8737,7 +8737,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_k\u00f5ikk",
+      "MorphologicalPatternID": "asK\u00f5ikk",
       "Top_VariableInstances": [
         {
           "1": "k\u00f5ik",
@@ -9252,7 +9252,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p5_t\u00fctt\u00f6..nn.1",
+      "MorphologicalPatternID": "asT\u00fctt\u00f6",
       "Top_VariableInstances": [
         {
           "1": "t\u00fct",
@@ -9938,7 +9938,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_kukk\u00f5",
+      "MorphologicalPatternID": "asKukk\u00f5",
       "Top_VariableInstances": [
         {
           "1": "kuk",
@@ -10489,7 +10489,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_p\u00e4ive",
+      "MorphologicalPatternID": "asP\u00e4ive",
       "Top_VariableInstances": [
         {
           "1": "p\u00e4iv",
@@ -11076,7 +11076,7 @@
       "lexiconName": "votiskaparadigms"
     },
     {
-      "MorphologicalPatternID": "p_part\u00f5",
+      "MorphologicalPatternID": "asPart\u00f5",
       "Top_VariableInstances": [
         {
           "1": "par",
