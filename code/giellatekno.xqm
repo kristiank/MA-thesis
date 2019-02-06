@@ -120,9 +120,11 @@ declare function giellatekno:paradigm-to-lexc-tag(
   $paradigm as element(MorphologicalPattern)
 ) as xs:string {
   let $paradigm-id  := $paradigm/feat[@att="id"]/@val/data()
+                       => substring-after("as")
+                       => lower-case()
   let $paradigm-pos := $paradigm/feat[@att="partOfSpeech"]/@val/data()
                        => $giellatekno:get-fst-pos()
-  return "+Paradigm=" || $paradigm-id || $paradigm-pos
+  return "+Paradigm/" || $paradigm-id || "_" || $paradigm-pos
 };
 
 
