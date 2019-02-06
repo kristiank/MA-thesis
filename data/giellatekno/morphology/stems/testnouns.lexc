@@ -1,0 +1,106 @@
+Multichar_Symbols +N +V +PastPart +Past +PresPart +3P +Sg +Pl
++Paradigm=asAapõN +Paradigm=asAhkõrõN +Paradigm=asAikõN +Paradigm=asAitõN +Paradigm=asAmmõzN +Paradigm=asKattiN +Paradigm=asKoirõN +Paradigm=asKukkõN +Paradigm=asKõikkN +Paradigm=asLentüzN +Paradigm=asLuikkoN +Paradigm=asLuzikkõN +Paradigm=asMansikõzN +Paradigm=asOmõnN +Paradigm=asPartõN +Paradigm=asPliittõN +Paradigm=asPoikõN +Paradigm=asPäiveN +Paradigm=asSininN +Paradigm=asTüttöN
+
+!! Nominals are inflected for Number and Case
+
+!! !!Number
+ +Sg !!= * @CODE@ = singular
+ +Pl !!= * @CODE@ = plural
+
+!! !!Case
+ +Abe !!= * @CODE@ = abessive
+ +Acc !!= * @CODE@ = accusative
+ +Abl !!= * @CODE@ = ablative case
+ +Ade !!= * @CODE@ = adessive
+ +All !!= * @CODE@ = allative
+ +Dat !!= * @CODE@ = dative case
+ +Ela !!= * @CODE@ = elative
+ +Ess !!= * @CODE@ = essive
+ +Exe !!= * @CODE@ = essive
+ +Gen !!= * @CODE@ = genitive case
+ +Ill !!= * @CODE@ = illative
+ +Ine !!= * @CODE@ = inessive
+ +Ins !!= * @CODE@ = instrumental
+ +Instr !!= * @CODE@ = instructive -IN
+ +Lat !!= * @CODE@ = Lative
+ +Loc !!= * @CODE@ = Locative
+ +Nom !!= * @CODE@ = nominative case
+ +Par !!= * @CODE@ = partitive
+ +Prl !!= * @CODE@ = prolative
+ +Tra !!= * @CODE@ = translative
+ +Voc !!= * @CODE@ = Vocative
+
+
+
+LEXICON Root
+nouns ;
+
+
+LEXICON nouns
+jalkõ:jalkõ N_aikõ ;
+aikõ:aikõ N_aikõ ;
+tüttö:tüttö N_tüttö ;
+püttö:püttö N_tüttö ;
+poikõ:poikõ N_poikõ ;
+
+
+
+LEXICON N_aapõ
++Paradigm=asAapõN # ;
+
+LEXICON N_sinin
++Paradigm=asSininN # ;
+
+LEXICON N_aikõ
++Paradigm=asAikõN # ;
+
+LEXICON N_poikõ
++Paradigm=asPoikõN # ;
+
+LEXICON N_koirõ
++Paradigm=asKoirõN # ;
+
+LEXICON N_lentüz
++Paradigm=asLentüzN # ;
+
+LEXICON N_luzikkõ
++Paradigm=asLuzikkõN # ;
+
+LEXICON N_luikko
++Paradigm=asLuikkoN # ;
+
+LEXICON N_aitõ
++Paradigm=asAitõN # ;
+
+LEXICON N_ahkõrõ
++Paradigm=asAhkõrõN # ;
+
+LEXICON N_omõn
++Paradigm=asOmõnN # ;
+
+LEXICON N_pliittõ
++Paradigm=asPliittõN # ;
+
+LEXICON N_mansikõz
++Paradigm=asMansikõzN # ;
+
+LEXICON N_katti
++Paradigm=asKattiN # ;
+
+LEXICON N_ammõz
++Paradigm=asAmmõzN # ;
+
+LEXICON N_kõikk
++Paradigm=asKõikkN # ;
+
+LEXICON N_tüttö
++Paradigm=asTüttöN # ;
+
+LEXICON N_kukkõ
++Paradigm=asKukkõN # ;
+
+LEXICON N_päive
++Paradigm=asPäiveN # ;
+
+LEXICON N_partõ
++Paradigm=asPartõN # ;
