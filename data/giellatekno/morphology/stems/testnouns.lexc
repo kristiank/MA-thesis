@@ -1,5 +1,5 @@
 Multichar_Symbols +N +V +PastPart +Past +PresPart +3P +Sg +Pl
-+Paradigm=asAapõN +Paradigm=asAhkõrõN +Paradigm=asAikõN +Paradigm=asAitõN +Paradigm=asAmmõzN +Paradigm=asKattiN +Paradigm=asKoirõN +Paradigm=asKukkõN +Paradigm=asKõikkN +Paradigm=asLentüzN +Paradigm=asLuikkoN +Paradigm=asLuzikkõN +Paradigm=asMansikõzN +Paradigm=asOmõnN +Paradigm=asPartõN +Paradigm=asPliittõN +Paradigm=asPoikõN +Paradigm=asPäiveN +Paradigm=asSininN +Paradigm=asTüttöN
++Paradigm/aapõ_N +Paradigm/ahkõrõ_N +Paradigm/aikõ_N +Paradigm/aitõ_N +Paradigm/ammõz_N +Paradigm/katti_N +Paradigm/koirõ_N +Paradigm/kukkõ_N +Paradigm/kõikk_N +Paradigm/lentüz_N +Paradigm/luikko_N +Paradigm/luzikkõ_N +Paradigm/mansikõz_N +Paradigm/omõn_N +Paradigm/partõ_N +Paradigm/pliittõ_N +Paradigm/poikõ_N +Paradigm/päive_N +Paradigm/sinin_N +Paradigm/tüttöN
 
 !! Nominals are inflected for Number and Case
 
@@ -46,61 +46,61 @@ poikõ:poikõ N_poikõ ;
 
 
 LEXICON N_aapõ
-+Paradigm=asAapõN # ;
++Paradigm/aapõ_N # ;
 
 LEXICON N_sinin
-+Paradigm=asSininN # ;
++Paradigm/sinin_N # ;
 
 LEXICON N_aikõ
-+Paradigm=asAikõN # ;
++Paradigm/aikõ_N # ;
 
 LEXICON N_poikõ
-+Paradigm=asPoikõN # ;
++Paradigm/poikõ_N # ;
 
 LEXICON N_koirõ
-+Paradigm=asKoirõN # ;
++Paradigm/koirõ_N # ;
 
 LEXICON N_lentüz
-+Paradigm=asLentüzN # ;
++Paradigm/lentüz_N # ;
 
 LEXICON N_luzikkõ
-+Paradigm=asLuzikkõN # ;
++Paradigm/luzikkõ_N # ;
 
 LEXICON N_luikko
-+Paradigm=asLuikkoN # ;
++Paradigm/luikko_N # ;
 
 LEXICON N_aitõ
-+Paradigm=asAitõN # ;
++Paradigm/aitõ_N # ;
 
 LEXICON N_ahkõrõ
-+Paradigm=asAhkõrõN # ;
++Paradigm/ahkõrõ_N # ;
 
 LEXICON N_omõn
-+Paradigm=asOmõnN # ;
++Paradigm/omõn_N # ;
 
 LEXICON N_pliittõ
-+Paradigm=asPliittõN # ;
++Paradigm/pliittõ_N # ;
 
 LEXICON N_mansikõz
-+Paradigm=asMansikõzN # ;
++Paradigm/mansikõz_N # ;
 
 LEXICON N_katti
-+Paradigm=asKattiN # ;
++Paradigm/katti_N # ;
 
 LEXICON N_ammõz
-+Paradigm=asAmmõzN # ;
++Paradigm/ammõz_N # ;
 
 LEXICON N_kõikk
-+Paradigm=asKõikkN # ;
++Paradigm/kõikk_N # ;
 
 LEXICON N_tüttö
-+Paradigm=asTüttöN # ;
++Paradigm/tüttö_N # ;
 
 LEXICON N_kukkõ
-+Paradigm=asKukkõN # ;
++Paradigm/kukkõ_N # ;
 
 LEXICON N_päive
-+Paradigm=asPäiveN # ;
++Paradigm/päive_N # ;
 
 LEXICON N_partõ
-+Paradigm=asPartõN # ;
++Paradigm/partõ_N # ;
