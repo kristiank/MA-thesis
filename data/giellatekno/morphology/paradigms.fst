@@ -172,36 +172,6 @@ define asTüttöN [0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [0:0] 0:["
 [0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ika}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Com"];
 
 
-define asAikõN [0:0] [asAikõN=var1] [{kõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asAikõN=var1] [{gõd}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asAikõN=var1] [{ga}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asAikõN=var1] [{koi}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asAikõN=var1] [{kojõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asAikõN=var1] [{ka}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Par"] |
-[0:0] [asAikõN=var1] [{kaa}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Par"] |
-[0:0] [asAikõN=var1] [{koi}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Par"] |
-[0:0] [asAikõN=var1] [{koitõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Par"] |
-[0:0] [asAikõN=var1] [{ka}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asAikõN=var1] [{kasõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asAikõN=var1] [{koisõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asAikõN=var1] [{gõz}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asAikõN=var1] [{koiz}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asAikõN=var1] [{gõssõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asAikõN=var1] [{koissõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asAikõN=var1] [{gõllõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+All"] |
-[0:0] [asAikõN=var1] [{koillõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+All"] |
-[0:0] [asAikõN=var1] [{gõl}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asAikõN=var1] [{koil}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asAikõN=var1] [{gõltõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asAikõN=var1] [{koiltõ}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asAikõN=var1] [{gõssi}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asAikõN=var1] [{koissi}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asAikõN=var1] [{kassaa}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asAikõN=var1] [{koissaa}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asAikõN=var1] [{gaka}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Sg" "+Com"] |
-[0:0] [asAikõN=var1] [{koika}:{kõ}] 0:["+Paradigm/aikõ_N" "+N" "+Pl" "+Com"];
-
-
 define asKoirõN [0:0] [asKoirõN=var1] [{õ}:{õ}] 0:["+Paradigm/koirõ_N" "+N" "+Sg" "+Nom"] |
 [0:0] [asKoirõN=var1] [{õd}:{õ}] 0:["+Paradigm/koirõ_N" "+N" "+Pl" "+Nom"] |
 [0:0] [asKoirõN=var1] [{a}:{õ}] 0:["+Paradigm/koirõ_N" "+N" "+Sg" "+Gen"] |
@@ -543,34 +513,6 @@ define asKõikkN [0:0] [asKõikkN=var1] [{k}:{k}] 0:["+Paradigm/kõikk_N" "+N" "
 [0:0] [asKõikkN=var1] [{kika}:{k}] 0:["+Paradigm/kõikk_N" "+N" "+Pl" "+Com"];
 
 
-define asTüttöN [0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [0:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [{d}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [0:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{i}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{je}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ä}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Par"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{i}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Par"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ite}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Par"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{se}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ise}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{z}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{iz}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [{sse}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{isse}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [{lle}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+All"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ille}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+All"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [{l}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{il}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [{lte}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ilte}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [{ssi}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{issi}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ssaa}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{issaa}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asTüttöN=var1] [0:{t}] [asTüttöN=var2] [{ka}:0] 0:["+Paradigm/tüttö_N" "+N" "+Sg" "+Com"] |
-[0:0] [asTüttöN=var1] [{t}:{t}] [asTüttöN=var2] [{ika}:0] 0:["+Paradigm/tüttö_N" "+N" "+Pl" "+Com"];
-
-
 define asKukkõN [0:0] [asKukkõN=var1] [{kõ}:{kõ}] 0:["+Paradigm/kukkõ_N" "+N" "+Sg" "+Nom"] |
 [0:0] [asKukkõN=var1] [{õd}:{kõ}] 0:["+Paradigm/kukkõ_N" "+N" "+Pl" "+Nom"] |
 [0:0] [asKukkõN=var1] [{a}:{kõ}] 0:["+Paradigm/kukkõ_N" "+N" "+Sg" "+Gen"] |
@@ -664,6 +606,6 @@ define asPartõN [0:0] [asPartõN=var1] [{tõ}:{tõ}] 0:["+Paradigm/partõ_N" "+
 
 
 
-define Gconstrained asAapõN | asSininN | asAikõN | asPoikõN | asTüttöN | asAikõN | asKoirõN | asLentüzN | asLuzikkõN | asLuikkoN | asAitõN | asAhkõrõN | asOmõnN | asPliittõN | asMansikõzN | asKattiN | asAmmõzN | asKõikkN | asTüttöN | asKukkõN | asPäiveN | asPartõN;
+define Gconstrained asAapõN | asSininN | asAikõN | asPoikõN | asTüttöN | asKoirõN | asLentüzN | asLuzikkõN | asLuikkoN | asAitõN | asAhkõrõN | asOmõnN | asPliittõN | asMansikõzN | asKattiN | asAmmõzN | asKõikkN | asKukkõN | asPäiveN | asPartõN;
 regex Gconstrained;
 invert
