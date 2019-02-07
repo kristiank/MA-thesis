@@ -8,7 +8,7 @@
     </GlobalInformation>
     <feat att="language" val="vot"/>
     <MorphologicalPattern>
-      <feat att="id" val="p6_aapõ..nn.1"/>
+      <feat att="id" val="asAapõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -450,7 +450,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_sinin"/>
+      <feat att="id" val="asSinin"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -892,44 +892,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_trams"/>
-      <feat att="partOfSpeech" val="nn"/>
-      <AttestedParadigmVariableSets>
-        <AttestedParadigmVariableSet>
-          <feat att="first-attest" val="mariatest2..nn.1"/>
-          <feat att="1" val="mariatest2"/>
-        </AttestedParadigmVariableSet>
-      </AttestedParadigmVariableSets>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="nominative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="nominative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="et"/>
-        </Process>
-      </TransformSet>
-    </MorphologicalPattern>
-    <MorphologicalPattern>
-      <feat att="id" val="p2_aikõ..nn.1"/>
+      <feat att="id" val="asAikõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -1395,7 +1358,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p8_poikõ..nn.1"/>
+      <feat att="id" val="asPoikõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -1869,7 +1832,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p5_tüttö..nn.1"/>
+      <feat att="id" val="asTüttö"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -1881,11 +1844,6 @@
           <feat att="first-attest" val="katti..nn.1"/>
           <feat att="1" val="kat"/>
           <feat att="2" val="i"/>
-        </AttestedParadigmVariableSet>
-        <AttestedParadigmVariableSet>
-          <feat att="first-attest" val="mariatest..nn.1"/>
-          <feat att="1" val="maria"/>
-          <feat att="2" val="est"/>
         </AttestedParadigmVariableSet>
       </AttestedParadigmVariableSets>
       <TransformSet>
@@ -2516,469 +2474,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p2_aikõ..nn.1"/>
-      <feat att="partOfSpeech" val="nn"/>
-      <AttestedParadigmVariableSets>
-        <AttestedParadigmVariableSet>
-          <feat att="first-attest" val="aikõ..nn.1"/>
-          <feat att="1" val="ai"/>
-        </AttestedParadigmVariableSet>
-        <AttestedParadigmVariableSet>
-          <feat att="first-attest" val="jalkõ..nn.1"/>
-          <feat att="1" val="jal"/>
-        </AttestedParadigmVariableSet>
-      </AttestedParadigmVariableSets>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="nominative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="kõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="nominative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gõd"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="genitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ga"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="genitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koi"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="genitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="kojõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="partitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ka"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="partitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="kaa"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="partitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koi"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="partitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koitõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="illative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ka"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="illative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="kasõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="illative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koisõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="inessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gõz"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="inessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koiz"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="elative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gõssõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="elative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koissõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="allative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gõllõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="allative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koillõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="adessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gõl"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="adessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koil"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="ablative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gõltõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="ablative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koiltõ"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="translative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gõssi"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="translative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koissi"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="terminative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="kassaa"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="terminative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koissaa"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="comitative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="gaka"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="comitative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="koika"/>
-        </Process>
-      </TransformSet>
-    </MorphologicalPattern>
-    <MorphologicalPattern>
-      <feat att="id" val="p_koirõ"/>
+      <feat att="id" val="asKoirõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -3532,7 +3028,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p3_lentüz..nn.1"/>
+      <feat att="id" val="asLentüz"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -3926,7 +3422,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_luzikkõ"/>
+      <feat att="id" val="asLuzikkõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -4460,7 +3956,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_luikko"/>
+      <feat att="id" val="asLuikko"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -4910,7 +4406,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p4_aitõ..nn.1"/>
+      <feat att="id" val="asAitõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -5352,7 +4848,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p1_ahkõrõ..nn.1"/>
+      <feat att="id" val="asAhkõrõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -5786,7 +5282,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_omõn"/>
+      <feat att="id" val="asOmõn"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -6239,7 +5735,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_pliittõ"/>
+      <feat att="id" val="asPliittõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -6697,7 +6193,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_mansikõz"/>
+      <feat att="id" val="asMansikõz"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -7091,7 +6587,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_katti"/>
+      <feat att="id" val="asKatti"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -7702,7 +7198,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p7_ammõz..nn.1"/>
+      <feat att="id" val="asAmmõz"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -8096,7 +7592,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_kõikk"/>
+      <feat att="id" val="asKõikk"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -8570,649 +8066,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p5_tüttö..nn.1"/>
-      <feat att="partOfSpeech" val="nn"/>
-      <AttestedParadigmVariableSets>
-        <AttestedParadigmVariableSet>
-          <feat att="first-attest" val="tüttö..nn.1"/>
-          <feat att="1" val="tüt"/>
-          <feat att="2" val="ö"/>
-        </AttestedParadigmVariableSet>
-        <AttestedParadigmVariableSet>
-          <feat att="first-attest" val="katti..nn.1"/>
-          <feat att="1" val="kat"/>
-          <feat att="2" val="i"/>
-        </AttestedParadigmVariableSet>
-      </AttestedParadigmVariableSets>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="nominative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="nominative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="d"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="genitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="genitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="i"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="genitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="je"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="partitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ä"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="partitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="i"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="partitive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ite"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="illative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="se"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="illative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ise"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="inessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="z"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="inessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="iz"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="elative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="sse"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="elative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="isse"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="allative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="lle"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="allative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ille"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="adessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="l"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="adessive"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="il"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="ablative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="lte"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="ablative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ilte"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="translative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ssi"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="translative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="issi"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="terminative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ssaa"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="terminative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="issaa"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="singular"/>
-          <feat att="grammaticalCase" val="comitative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ka"/>
-        </Process>
-      </TransformSet>
-      <TransformSet>
-        <GrammaticalFeatures>
-          <feat att="grammaticalNumber" val="plural"/>
-          <feat att="grammaticalCase" val="comitative"/>
-        </GrammaticalFeatures>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="1"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="t"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddVariable"/>
-          <feat att="variableNum" val="2"/>
-        </Process>
-        <Process>
-          <feat att="operator" val="addAfter"/>
-          <feat att="processType" val="pextractAddConstant"/>
-          <feat att="stringValue" val="ika"/>
-        </Process>
-      </TransformSet>
-    </MorphologicalPattern>
-    <MorphologicalPattern>
-      <feat att="id" val="p_kukkõ"/>
+      <feat att="id" val="asKukkõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -9706,7 +8560,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_päive"/>
+      <feat att="id" val="asPäive"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -10236,7 +9090,7 @@
       </TransformSet>
     </MorphologicalPattern>
     <MorphologicalPattern>
-      <feat att="id" val="p_partõ"/>
+      <feat att="id" val="asPartõ"/>
       <feat att="partOfSpeech" val="nn"/>
       <AttestedParadigmVariableSets>
         <AttestedParadigmVariableSet>
@@ -10693,7 +9547,7 @@
         </Process>
       </TransformSet>
     </MorphologicalPattern>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="noorikkõ..nn.1"/>
       <Lemma>
@@ -10868,7 +9722,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_kukkõ">
+    <LexicalEntry morphologicalPatterns="asKukkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="rokkõ..nn.1"/>
       <Lemma>
@@ -11049,7 +9903,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_pliittõ">
+    <LexicalEntry morphologicalPatterns="asPliittõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="pliittõ..nn.1"/>
       <Lemma>
@@ -11224,7 +10078,7 @@
         <feat att="grammaticalCase" val="illative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="lehme..nn.1"/>
       <Lemma>
@@ -11405,7 +10259,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="piime..nn.1"/>
       <Lemma>
@@ -11586,7 +10440,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="fartukkõ..nn.1"/>
       <Lemma>
@@ -11761,7 +10615,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_kukkõ">
+    <LexicalEntry morphologicalPatterns="asKukkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="sukkõ..nn.1"/>
       <Lemma>
@@ -11942,7 +10796,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="võrkko..nn.1"/>
       <Lemma>
@@ -12099,7 +10953,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="jurmõ..nn.1"/>
       <Lemma>
@@ -12280,170 +11134,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p5_tüttö..nn.1">
-      <feat att="partOfSpeech" val="nn"/>
-      <feat att="karp-lemgram" val="mariatest..nn.1"/>
-      <Lemma>
-        <feat att="writtenForm" val="mariatest"/>
-      </Lemma>
-      <WordForm>
-        <feat att="writtenForm" val="mariatest"/>
-        <feat att="msd" val="singular nominative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="nominative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaestd"/>
-        <feat att="msd" val="plural nominative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="nominative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaest"/>
-        <feat att="msd" val="singular genitive"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="genitive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatesti"/>
-        <feat att="msd" val="plural genitive"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="genitive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestje"/>
-        <feat att="msd" val="plural genitive"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="genitive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestä"/>
-        <feat att="msd" val="singular partitive"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="partitive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatesti"/>
-        <feat att="msd" val="plural partitive"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="partitive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestite"/>
-        <feat att="msd" val="plural partitive"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="partitive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestse"/>
-        <feat att="msd" val="singular illative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="illative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestise"/>
-        <feat att="msd" val="plural illative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="illative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestz"/>
-        <feat att="msd" val="singular inessive"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="inessive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestiz"/>
-        <feat att="msd" val="plural inessive"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="inessive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaestsse"/>
-        <feat att="msd" val="singular elative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="elative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestisse"/>
-        <feat att="msd" val="plural elative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="elative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaestlle"/>
-        <feat att="msd" val="singular allative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="allative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestille"/>
-        <feat att="msd" val="plural allative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="allative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaestl"/>
-        <feat att="msd" val="singular adessive"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="adessive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestil"/>
-        <feat att="msd" val="plural adessive"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="adessive"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaestlte"/>
-        <feat att="msd" val="singular ablative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="ablative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestilte"/>
-        <feat att="msd" val="plural ablative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="ablative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaestssi"/>
-        <feat att="msd" val="singular translative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="translative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestissi"/>
-        <feat att="msd" val="plural translative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="translative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestssaa"/>
-        <feat att="msd" val="singular terminative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="terminative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestissaa"/>
-        <feat att="msd" val="plural terminative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="terminative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariaestka"/>
-        <feat att="msd" val="singular comitative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="comitative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestika"/>
-        <feat att="msd" val="plural comitative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="comitative"/>
-      </WordForm>
-    </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="bobrõ..nn.1"/>
       <Lemma>
@@ -12624,7 +11315,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="joožikkõ..nn.1"/>
       <Lemma>
@@ -12799,7 +11490,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="läsive..nn.1"/>
       <Lemma>
@@ -12980,7 +11671,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tuimõ..nn.1"/>
       <Lemma>
@@ -13161,7 +11852,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tšülme..nn.1"/>
       <Lemma>
@@ -13342,7 +12033,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p2_aikõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAikõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="võlkõ..nn.1"/>
       <Lemma>
@@ -13517,7 +12208,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kummõ..nn.1"/>
       <Lemma>
@@ -13698,7 +12389,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="krõžovnikkõ..nn.1"/>
       <Lemma>
@@ -13873,7 +12564,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="deelõ..nn.1"/>
       <Lemma>
@@ -14036,7 +12727,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="luikko..nn.1"/>
       <Lemma>
@@ -14193,7 +12884,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="petäje..nn.1"/>
       <Lemma>
@@ -14374,7 +13065,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tuttavõ..nn.2"/>
       <Lemma>
@@ -14555,7 +13246,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kõrvõ..nn.1"/>
       <Lemma>
@@ -14736,7 +13427,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="seukko..nn.1"/>
       <Lemma>
@@ -14893,7 +13584,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="fökle..nn.1"/>
       <Lemma>
@@ -15074,7 +13765,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="dobrõ..nn.1"/>
       <Lemma>
@@ -15237,7 +13928,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_partõ">
+    <LexicalEntry morphologicalPatterns="asPartõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="partõ..nn.1"/>
       <Lemma>
@@ -15412,7 +14103,7 @@
         <feat att="grammaticalCase" val="illative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="eine..nn.1"/>
       <Lemma>
@@ -15593,7 +14284,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="õzrikko..nn.1"/>
       <Lemma>
@@ -15750,7 +14441,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tuttavõ..nn.1"/>
       <Lemma>
@@ -15913,7 +14604,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="filmõ..nn.1"/>
       <Lemma>
@@ -16076,7 +14767,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="vihmõ..nn.1"/>
       <Lemma>
@@ -16239,7 +14930,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="rehtele..nn.1"/>
       <Lemma>
@@ -16420,7 +15111,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="konnõ..nn.1"/>
       <Lemma>
@@ -16601,7 +15292,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="õzrõ..nn.1"/>
       <Lemma>
@@ -16782,7 +15473,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kuhjõ..nn.1"/>
       <Lemma>
@@ -16963,7 +15654,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="naglõ..nn.1"/>
       <Lemma>
@@ -17126,7 +15817,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="õravõ..nn.1"/>
       <Lemma>
@@ -17307,7 +15998,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_omõn">
+    <LexicalEntry morphologicalPatterns="asOmõn">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="omõn..nn.1"/>
       <Lemma>
@@ -17482,7 +16173,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="luzikkõ..nn.1"/>
       <Lemma>
@@ -17657,7 +16348,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="muudrõ..nn.1"/>
       <Lemma>
@@ -17838,7 +16529,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="bruudõ..nn.1"/>
       <Lemma>
@@ -18001,7 +16692,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="rankkõ..nn.1"/>
       <Lemma>
@@ -18176,7 +16867,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="paikkõ..nn.1"/>
       <Lemma>
@@ -18351,7 +17042,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tihakkõ..nn.1"/>
       <Lemma>
@@ -18526,7 +17217,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_kõikk">
+    <LexicalEntry morphologicalPatterns="asKõikk">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kõikkõ..nn.1"/>
       <Lemma>
@@ -18707,7 +17398,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="naizikko..nn.1"/>
       <Lemma>
@@ -18864,7 +17555,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_kukkõ">
+    <LexicalEntry morphologicalPatterns="asKukkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="luukkõ..nn.1"/>
       <Lemma>
@@ -19045,7 +17736,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tüttärikko..nn.1"/>
       <Lemma>
@@ -19202,7 +17893,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="vad̕d̕akko..nn.1"/>
       <Lemma>
@@ -19359,7 +18050,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="harakkõ..nn.1"/>
       <Lemma>
@@ -19534,7 +18225,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tikkõ..nn.1"/>
       <Lemma>
@@ -19709,7 +18400,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="silme..nn.1"/>
       <Lemma>
@@ -19890,7 +18581,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kukko..nn.1"/>
       <Lemma>
@@ -20047,7 +18738,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tarkkõ..nn.1"/>
       <Lemma>
@@ -20222,7 +18913,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="gribanikkõ..nn.1"/>
       <Lemma>
@@ -20397,7 +19088,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="soolõ..nn.1"/>
       <Lemma>
@@ -20578,7 +19269,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="urokkõ..nn.1"/>
       <Lemma>
@@ -20753,7 +19444,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="köühe..nn.1"/>
       <Lemma>
@@ -20934,7 +19625,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="duumõ..nn.1"/>
       <Lemma>
@@ -21097,7 +19788,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_sinin">
+    <LexicalEntry morphologicalPatterns="asSinin">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="sinin..nn.1"/>
       <Lemma>
@@ -21266,7 +19957,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kuivõ..nn.1"/>
       <Lemma>
@@ -21447,7 +20138,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p5_tüttö..nn.1">
+    <LexicalEntry morphologicalPatterns="asTüttö">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="katti..nn.1"/>
       <Lemma>
@@ -21610,7 +20301,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kavalõ..nn.1"/>
       <Lemma>
@@ -21791,7 +20482,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="päive..nn.1"/>
       <Lemma>
@@ -21972,7 +20663,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="pettelikko..nn.1"/>
       <Lemma>
@@ -22129,7 +20820,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="sokko..nn.1"/>
       <Lemma>
@@ -22286,7 +20977,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="koirõ..nn.1"/>
       <Lemma>
@@ -22467,7 +21158,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="borkkanõ..nn.1"/>
       <Lemma>
@@ -22630,7 +21321,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="nužnikkõ..nn.1"/>
       <Lemma>
@@ -22805,7 +21496,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luikko">
+    <LexicalEntry morphologicalPatterns="asLuikko">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="tšerikko..nn.1"/>
       <Lemma>
@@ -22962,7 +21653,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kopekkõ..nn.1"/>
       <Lemma>
@@ -23137,26 +21828,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_trams">
-      <feat att="partOfSpeech" val="nn"/>
-      <feat att="karp-lemgram" val="mariatest..nn.2"/>
-      <Lemma>
-        <feat att="writtenForm" val="mariatest"/>
-      </Lemma>
-      <WordForm>
-        <feat att="writtenForm" val="mariatest"/>
-        <feat att="msd" val="singular nominative"/>
-        <feat att="grammaticalNumber" val="singular"/>
-        <feat att="grammaticalCase" val="nominative"/>
-      </WordForm>
-      <WordForm>
-        <feat att="writtenForm" val="mariatestet"/>
-        <feat att="msd" val="plural nominative"/>
-        <feat att="grammaticalNumber" val="plural"/>
-        <feat att="grammaticalCase" val="nominative"/>
-      </WordForm>
-    </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="vunukkõ..nn.1"/>
       <Lemma>
@@ -23331,7 +22003,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="petšnikkõ..nn.1"/>
       <Lemma>
@@ -23506,7 +22178,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="seine..nn.1"/>
       <Lemma>
@@ -23687,7 +22359,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="ämme..nn.1"/>
       <Lemma>
@@ -23868,7 +22540,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_kukkõ">
+    <LexicalEntry morphologicalPatterns="asKukkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="ikolookkõ..nn.1"/>
       <Lemma>
@@ -24049,7 +22721,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="iivõ..nn.1"/>
       <Lemma>
@@ -24212,7 +22884,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="soolõ..nn.1"/>
       <Lemma>
@@ -24393,7 +23065,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="bukvõ..nn.1"/>
       <Lemma>
@@ -24574,7 +23246,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="vohmõ..nn.1"/>
       <Lemma>
@@ -24755,7 +23427,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="vakkõ..nn.1"/>
       <Lemma>
@@ -24930,7 +23602,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="võimõ..nn.1"/>
       <Lemma>
@@ -25111,7 +23783,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_kukkõ">
+    <LexicalEntry morphologicalPatterns="asKukkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kukkõ..nn.1"/>
       <Lemma>
@@ -25292,7 +23964,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="nelle..nn.1"/>
       <Lemma>
@@ -25473,7 +24145,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="obakkõ..nn.1"/>
       <Lemma>
@@ -25648,7 +24320,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="filmõ..nn.2"/>
       <Lemma>
@@ -25829,7 +24501,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_koirõ">
+    <LexicalEntry morphologicalPatterns="asKoirõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="kuuluvõ..nn.1"/>
       <Lemma>
@@ -26010,7 +24682,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p1_ahkõrõ..nn.1">
+    <LexicalEntry morphologicalPatterns="asAhkõrõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="grammõ..nn.1"/>
       <Lemma>
@@ -26173,7 +24845,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_luzikkõ">
+    <LexicalEntry morphologicalPatterns="asLuzikkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="domovikkõ..nn.1"/>
       <Lemma>
@@ -26348,7 +25020,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_katti">
+    <LexicalEntry morphologicalPatterns="asKatti">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="katti..nn.2"/>
       <Lemma>
@@ -26505,7 +25177,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_päive">
+    <LexicalEntry morphologicalPatterns="asPäive">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="äjje..nn.1"/>
       <Lemma>
@@ -26686,7 +25358,7 @@
         <feat att="grammaticalCase" val="comitative"/>
       </WordForm>
     </LexicalEntry>
-    <LexicalEntry morphologicalPatterns="p_kukkõ">
+    <LexicalEntry morphologicalPatterns="asKukkõ">
       <feat att="partOfSpeech" val="nn"/>
       <feat att="karp-lemgram" val="hoikkõ..nn.1"/>
       <Lemma>
