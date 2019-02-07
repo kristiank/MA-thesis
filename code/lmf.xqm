@@ -9,7 +9,7 @@ import module namespace functx = 'http://www.functx.com';
  : @author Kristian Kankainen
  : @copyright MTÜ Keeleleek, 2018
  : @date 2018
- : @version 1.1
+ : @version 1.2
  : @see https://github.com/keeleleek/pextract2gf-votic/
  :)
 
@@ -134,4 +134,43 @@ declare function lmf:check-if-listed-patterns-exist($lmf) {
         )
   for $pattern-id in $distinct-listed-patterns
     return $pattern-id
+};
+
+
+
+
+(:~ 
+ : Returns the MorphologicalPattern with given id
+ : @since 1.2
+ : @param $pattern-id as xs:string
+ : @param $lmf
+ : @return element(MorphologicalPattern)
+ :)
+declare function lmf:get-morphologicalpattern-by-id(
+  $pattern-id as xs:string,
+  $lmf as element(LexicalResource)
+) as element(MorphologicalPattern)?
+{
+  $lmf//MorphologicalPattern[feat[@att="id" and @val=$pattern-id]]
+};
+
+
+
+
+(:~
+ : Returns the wordform(s) with the specified grammatical features.
+ : @since 1.2
+ : @param $feats-map A map specifying the feature attributes and values
+ : @param $lexicalentry the lexical entry
+ : @return zero or more wordforms as xs:string*
+ :)
+declare function lmf:get-wordform-by-feats(
+  $feats-map as map(xs:string, xs:string),
+  $lexicalentry as element(LexicalEntry)
+) as xs:string*
+{
+  $lexicalentry/WordForm[
+    every $key in map:keys($feats-map)
+    satisfies ./feat[@att=$key and @val=$feats-map($key)]
+  ]/feat[@att = "writtenForm"]/@val/data()
 };
