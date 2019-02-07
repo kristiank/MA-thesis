@@ -239,7 +239,7 @@ Töös kasutatakse keskseks kirjelduseks leksikaalset ressurssi, mille peamine o
 
 Keskse kirjelduse leksikaalset ressurssi hoitakse rahvusvahelise standardi vormingus \textit{Lexical Markup Framework} (\cite{iso/tc_37/sc_4_language_2007}).
 
-Programmkoodi tuletavad nn generaatorid. Töös esitatakse kaht generaatorit, üks programmeerimiskeele Grammatical Framework jaoks ning teine keeletehnoloogilise taristu Giellatekno integreerimise jaoks.
+Programmkoodi tuletavad nn generaatorid. Töös esitatakse kaht generaatorit, üks programmeerimiskeele Grammatical Framework jaoks ning teine Giella keeletehnoloogilise taristu integreerimise jaoks. Generaatorid on kirjutatud programmeerimiskeeles XQuery.
 
 
 
@@ -275,7 +275,7 @@ Peale sõnaartiklite ja morfoloogilise informatsiooni hoitakse leksikaalses ress
 \subsubsection{Sõnaartiklite esitamine LMFis}
 Iga sõnaartikkel ehk leksikaalne kirje kannab informatsiooni lekseemi sõnaliigi kohta, selle valitud lemma vorm ning morfoloogiamooduliga esitatud muutvormitabeli.
 
-\begin{figure} %[p]
+\begin{figure}[p]
   \center
 \begin{minted}[frame=single,fontsize=\small,framesep=10pt]{XML}
 <LexicalEntry morphologicalPatterns="asKatto">
@@ -305,20 +305,92 @@ Iga sõnaartikkel ehk leksikaalne kirje kannab informatsiooni lekseemi sõnaliig
 
 \subsubsection{Tüüpsõnamallide esitamine LMFis}
 
+\begin{figure}[p]
+  \center
+\begin{minted}[frame=single,fontsize=\footnotesize,framesep=10pt]{XML}
+<MorphologicalPattern>
+  <feat att="id" val="asTšiutto"/>
+  <feat att="partOfSpeech" val="nn"/>
+  <TransformSet>
+    <GrammaticalFeatures>
+      <feat att="grammaticalNumber" val="singular"/>
+      <feat att="grammaticalCase" val="nominative"/>
+    </GrammaticalFeatures>
+    <Process>
+      <feat att="operator" val="addAfter"/>
+      <feat att="processType" val="pextractAddVariable"/>
+      <feat att="variableNum" val="1"/>
+    </Process>
+    <Process>
+      <feat att="operator" val="addAfter"/>
+      <feat att="processType" val="pextractAddConstant"/>
+      <feat att="stringValue" val="t"/>
+    </Process>
+    <Process>
+      <feat att="operator" val="addAfter"/>
+      <feat att="processType" val="pextractAddVariable"/>
+      <feat att="variableNum" val="2"/>
+    </Process>
+  </TransformSet>
+  <TransformSet>
+    <GrammaticalFeatures>
+      <feat att="grammaticalNumber" val="plural"/>
+      <feat att="grammaticalCase" val="nominative"/>
+    </GrammaticalFeatures>
+    <Process>
+      <feat att="operator" val="addAfter"/>
+      <feat att="processType" val="pextractAddVariable"/>
+      <feat att="variableNum" val="1"/>
+    </Process>
+    <Process>
+      <feat att="operator" val="addAfter"/>
+      <feat att="processType" val="pextractAddVariable"/>
+      <feat att="variableNum" val="2"/>
+    </Process>
+    <Process>
+      <feat att="operator" val="addAfter"/>
+      <feat att="processType" val="pextractAddConstant"/>
+      <feat att="stringValue" val="d"/>
+    </Process>
+  </TransformSet>
+<MorphologicalPattern>
+\end{minted}
+\caption{Tüüpsõnamalli \texttt{tšiutto} (mille alla kuuluvad mh \textit{tšiutto} ja \textit{katto}) esitus LMFis. Esitus mudeldab konkatenatsioone $x_1 \oplus \textbf{t} \oplus x_2$ and $x_1 \oplus x_2 \oplus \textbf{d}$.
+  \label{code:lmf-paradigmpattern}}
+\end{figure}
+
 
 
 
 \subsection{Grammatical Framework morfoloogiakomponent}
 
-Mis on programmeerimiskeel Grammatical Framework ja milleks seda kasutatakse.
+Mis on see, mida mina teen. Seejärel, mis on programmeerimiskeel Grammatical Framework ja milleks seda kasutatakse.
 
 
 
 
-\subsection{Giellatekno taristuga integreerimine}
+\subsection{Integreerimine Giella-taristuga}
 
-Mis on keeletehnoloogiline taristu Giellatekno ja milleks seda kasutatakse. Kes seda kasutavad.
+Keeletehnoloogilise taristuga Giella integreeritakse selles töös peamiselt selleks, et saada kätte õigekirja\-kontrollija. Giella-taristu koosneb veel võimalustest. Taristut kasutavad peamiselt Giellatekno ja Divvun.
 
+Integreerimine on jagatav kaheks peamiseks osaks: leksikoni integreerimeerimine ja paradigmade ehk tüüpsõnamallide integreerimine.
+
+\subsubsection{Leksikon}
+
+``Formally, the lexc language is a kind of right-recursive phrase-structure 
+grammar.'' ja ``A lexc description compiles into a standard Xerox finite-state network, either a simple automaton or a transducer.'' (\cite[lk~203]{beesley_finite_2003}).
+
+Kuigi lexc fraasi\-struktuuri\-grammatikatega on võimalik paradigmasid (tüüpsõnamalle) mudeldada, ja tavaliselt selleks seda kasutataksegi Giella taristus, võtab see töö teise lähenemisnurga ja lihtsustab võimalikult palju leksikoni struktuuri.
+
+Leksikon koosneb selles töös ainult kahest andest: \textit{lemma} ja \textit{tüüpsõna}. 
+
+\subsubsection{Paradigmad}
+
+Paradigmade ehk tüüpsõnamallide esitus FST formalismis põhineb suuresti Forsbergi ja Huldeni (\citeyear{forsberg_learning_2016}) tööle.
+
+Paradigmad esitatakse relatsioonidena sõnavormi ja lemma koos analüüsiga vahel. Sellised relatsioonid sisaldavad lõpmatut hulka sõnalemmasid, millest mõistagi pole suurem osa vadjakeelsed. Mis on siiski tähtis, on see, et relatsioonid mudeldavad paradigmasid.
+
+Sõnade lõpmatu hulk piiratakse leksikonis antuga ja niiviisi saadakse leksikonis sisalduvate sõnade kõik sõnavormid. Nendest ja ainult nendest sõnavormidest koosnebki esialgne vadja õigekirja\-kontrollija.
 
 
 
@@ -366,7 +438,6 @@ Siin loetletakse töös kasutatud mõisted ja lühendid koos nende tähendustega
 
 \spacing{1}
 \glsaddall
-% \makeglossaries
 \printglossary[title={},toctitle={}]
 \spacing{1.5}
 
@@ -383,7 +454,7 @@ Siin loetletakse töös kasutatud mõisted ja lühendid koos nende tähendustega
 % @TODO: kuidas määrata biblatex-i keele eesti keelele?
 \spacing{1}
 {
-  %\renewcommand*{\bibfont}{\small}
+  \renewcommand*{\bibfont}{\small}
   \printbibliography[heading=none]
 }
 \spacing{1.5}
