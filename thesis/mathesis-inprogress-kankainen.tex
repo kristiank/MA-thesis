@@ -401,6 +401,19 @@ Iga sõnaartikkel ehk leksikaalne kirje kannab informatsiooni lekseemi sõnaliig
 
 Mis on see, mida mina teen. Seejärel, mis on programmeerimiskeel Grammatical Framework ja milleks seda kasutatakse.
 
+Morfoloogiakomponendi programmkood on jaotatav kaheks tükiks, leksikoniks ja muuttüüpide funktsioonid. Järgnevalt neist detailsemalt. Viimases alaosas on arutelu GFide võimalustest ja edasiarendusvõimalustest.
+
+\subsubsection{Leksikon}
+\label{sec:gf-leksikon}
+
+\subsubsection{Muuttüübid}
+\label{sec:gf-muuttüübid}
+
+\subsubsection{Arutelu}
+\label{sec:gf-arutelu}
+
+
+
 
 
 
@@ -408,9 +421,10 @@ Mis on see, mida mina teen. Seejärel, mis on programmeerimiskeel Grammatical Fr
 
 Keeletehnoloogilise taristuga Giella integreeritakse selles töös peamiselt selleks, et saada kätte õigekirja\-kontrollija. Giella-taristu koosneb veel võimalustest. Taristut kasutavad peamiselt Giellatekno ja Divvun.
 
-Integreerimine on jagatav kaheks peamiseks osaks: leksikoni integreerimeerimine ja paradigmade ehk tüüpsõnamallide integreerimine.
+Integreerimine on jagatav kaheks peamiseks osaks: leksikoni integreerimeerimine ja tüüpsõnamallide integreerimine. Seejärel kirjeldatakse taristu poolt loodud õigekirjakontrollija tööpõhimõtet ja lõpetuseks on arutelu.
 
 \subsubsection{Leksikon}
+\label{sec:giella-leksikon}
 
 ``Formally, the lexc language is a kind of right-recursive phrase-structure 
 grammar.'' ja ``A lexc description compiles into a standard Xerox finite-state network, either a simple automaton or a transducer.'' (\cite[lk~203]{beesley_finite_2003}).
@@ -419,7 +433,8 @@ Kuigi lexc fraasi\-struktuuri\-grammatikatega on võimalik paradigmasid (tüüps
 
 Leksikon koosneb selles töös ainult kahest andest: \textit{lemma} ja \textit{tüüpsõna}. 
 
-\subsubsection{Paradigmad}
+\subsubsection{Muuttüübid}
+\label{sec:giella-muuttüübid}
 
 Paradigmade ehk tüüpsõnamallide esitus FST formalismis põhineb suuresti Forsbergi ja Huldeni (\citeyear{forsberg_learning_2016}) tööle.
 
@@ -427,6 +442,15 @@ Paradigmad esitatakse relatsioonidena sõnavormi ja lemma koos analüüsiga vahe
 
 Sõnade lõpmatu hulk piiratakse leksikonis antuga ja niiviisi saadakse leksikonis sisalduvate sõnade kõik sõnavormid. Nendest ja ainult nendest sõnavormidest koosnebki esialgne vadja õigekirja\-kontrollija.
 
+\subsubsection{Õigekirjakontrollija}
+\label{sec:giella-õigekirjakontrollija}
+
+Eelnevalt kirjeldatud integreerimine Giella-taristusse võimaldab taristul luua õigekirjakontrollija. Mis on õigekirjakontrollija, kus seda kasutatakse ja mida see kontrollib?
+
+\subsubsection{Arutelu}
+\label{sec:giella-arutelu}
+
+Loodud õigekirjakontrollija on eesmärgipäraselt jäetud lihtsakoeliseks. See märgib kõik sõnad valeks, mis ei sisaldu sõnastikus. See on lühiajaliseks kasutamiseks ja mõeldud ärgitama kasutajaid ise pakkuma täiendusi ja sõnaloomet vadja sõnastikusse.
 
 
 
