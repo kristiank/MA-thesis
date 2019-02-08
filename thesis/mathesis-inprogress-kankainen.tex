@@ -51,12 +51,24 @@
 
 % kasutatud mõisted ja lühendid
 \newglossaryentry{tüüpsõnamall}{
-  name=tüüpsõnamall,
-  description={on ekstraktmorfoloogiaga leitud paradigma kirjeldus, mis koosneb iga muutvormi koostamisskeemist}
+  name=Tüüpsõnamall,
+  description={on ekstraktmorfoloogiaga leitud tüüpsõna paradigma kirjeldus, mis koosneb iga muutvormi koostamismallidest ehk muutvormimallidest. Tüüpsõnamall on relatsioon tehnilise tüve ja kõigi selle paradigmasse kuuluvate muutvormide vahel.}
+}
+\newglossaryentry{muutvormimall}{
+  name=Muutvormimall,
+  description={kirjeldab üksiku muutvormi koostamisskeemi ja kannab selle grammatilised tunnused. On integraalne osa tüüpsõnamallist. Koostamisskeem koosneb muutujatest ja konstantidest, mille tähtkoostised lükitakse üks-teise järele. Muutujate tähtkoostised võivad olla mingil moel piiratud.}
+}
+\newglossaryentry{lemma}{
+  name=Lemma,
+  description={on suvaliselt valitud grammatiliste tunnuste komplekt, mida kasutatakse lekseemi viitamiseks.}
+}
+\newglossaryentry{tehniline-tüvi}{
+  name=Tehniline tüvi,
+  description={on tähtkoostiste järjend, millega saab tüüpsõnamalli muutvormide muutujad asendada elik väärtustada ja niiviisi koostada ühe konkreetse sõna kõik vormid.}
 }
 \newglossaryentry{mikrostruktuur}{
-  name=mikrostruktuur,
-  description={on sõnastiku sõnaartikli sisemine struktuur}
+  name=Mikrostruktuur,
+  description={on sõnastiku sõnaartikli sisemine struktuur.}
 }
 
 
@@ -448,7 +460,9 @@ Siin loetletakse töös kasutatud mõisted ja lühendid koos nende tähendustega
 
 \spacing{1}
 \glsaddall
-\printglossary[title={},toctitle={}]
+\small{
+  \printglossary[title={},toctitle={}]
+}
 \spacing{1.5}
 
 
