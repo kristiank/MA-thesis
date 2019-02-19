@@ -125,6 +125,117 @@ Tööd ajendab mõtteviis minimeerida tööd: loodud normatiivne morfoloogiline 
 \section{Teoreetilised lähtekohad}
 Kuna töö opereerib arvutilingvistika, deskriptiivse ja dokumentaalse lingvistika ääremail, peame selgitama töö teoreetilised lähtekohad. Siinsele kompendiumiks on ka põhimõisted seletatud pt~\ref{sec:põhimõisted} \nameref{sec:põhimõisted}.
 
+Töö püüdleb olla võimalikult teooriavaba, lastes vadja lekseemide sõnavormide tähtkoostised ise määrata nende paradigmade koostamis\-reeglid. (See on olla deduktiivne esialgse morfoloogia postuleerimises, vastandudes induktiivsele, s.o mingist grammatilisest kirjeldusest lähtudes.)
+
+Tööl on siiski teoreetilised lähtekohad, mis tulenevad ühelt poolt arvutimorfoloogia nõuetest ja teisalt klassikalisest paradigmaatilisest morfoloogiakäsitlusest. Järgmiselt püüan argumenteerida, et arvutimorfoloogia ei pea olema lingvistisest teooriast ajendatud. Seejärel tutvustan tööle kõige lähedamini asetsevat morfoloogilist käsitlust.
+
+
+\subsection{Arvutimorfoloogia eesmärk ja lingvistiline motiveeritus}
+Arvutimorfoloogia eesmärgiks on siin töös valitud moodustada elektroonse vormisõnastiku:
+\begin{quote}
+  ``Üks täielik vormisõnastik peaks esitama kõigi sõnade kõik muutevormid koos vastava grammatilise iseloomustusega. Ainult siis saab kasutaja sõnastikust ilma mingi vaevata ja täiesti kindlalt teada, milline on vajalik vorm antud sõnast või millise sõna millise vormiga on tegemist tundmatu sõnavormi puhul.'' (\cite{viks_vaike_1992} lk 7).
+\end{quote}
+
+% Elektroonne vormisõnastik moodustab seega iga lekseemi jaoks relatsiooni ehk seose $(tsitaatvorm, {muutevormid koos vastava grammatilise iseloomustusega})$.
+Sellist vormisõnastikku võib kujutada erinevatel viisidel. Näiteks leksikaalse andme\-baasina, kus iga lekseemi puhul on nenditud kõik selle muutevormid koos vastava grammatilise iseloomustusega. Matemaatilises mõttes kujutab vormisõnastik vaid \textit{seost} muutevormide ja nende vastavate grammatiliste iseloomustuste vahel. 
+
+% arvutimorfoloogia kui arbitraarne valik realiseerimaks vormisõnastiku sisu (kas info pakkimismehanism või lingvistiliselt motiveeritud)
+Arvutimorfoloogiad võivad seda seost, või vormisõnastiku funktsionaalsust, realiseerida arvutuslikult erinevatel viisidel ja ei pea olema lingvistiliselt motiveeritud. Aga ühe täieliku vormisõnastiku koostamise maht on niivõrd suur (kui mitte lõpmatult suur) ja see on peamine motivatsioon organiseerida vormisõnastiku arvutusliku külje ühel või teisel moel lingvistiliselt.
+
+% pilk ajalukku (mida hiljem ümberlükata kui strukturalistlik-morfeemiline, aga mis on jätnud jälje ka arvutimorfoloogiate mõtemaailmale kui lingvistiliselt realistlikud)
+Eelmise sajandi keskpaiku jagas Charles Francis Hockett kõik seni Ameerikas sajandi algusest saadik ilmunud grammatikad kahe üldise mudeli järgi, IA (\textit{Item-and-Arrangement}, üksus ja distributsioon, üksus ja järjestus) ja IP (\textit{Item-and-Process}, üksus ja protsess ehk protsessi\-morfoloogia). Kõrvalmärkusena tõi ta välja ka kolmanda, ``vanema ja väärikama'' mudeli, WP (\textit{Word-and-Paradigm}, sõna ja paradigma), aga jätab selle oma käsitlusest välja (\cite{hockett_two_1954} lk 210). Hockett võrdleb IA ja IP mudelite eeliseid ja argumenteerib, et IA populaarsus seisneb eeskätt sellel, et ajastu eelistab formaalseid mudeleid. Kuna IA-mudel oli juba formaliseeritud tahtis Hockett nüüd formaliseerida IP-mudeli (\cite{hockett_two_1954}, lk 214) ning sellest sai hiljem Fred Karlssoni sõnade järgi generatiivse lingvistika peamiseks mudeliks (\cite{karlsson_uldkeeleteadus_2002} lk 126).
+
+IP-mudel põhineb (morfoloogilise) protsessi mõistel, millega ühest algvormiks valitud kujust (\textit{base}) luuakse teine vorm (\cite{hockett_two_1954} lk 210). IA tekkis vastureaktsioonina IP protsessimõiste suunalisusele -- enam ei tahetud tõsta esile üht vormi algsemaks teistest vormidest (\cite{hockett_two_1954} lk 211). IA põhineb morfeemi mõistel, mida Hockett kirjeldab kui keele väikseimat grammatiliselt olulist üksust, ja selle distributsiooni määramisel (\cite{hockett_two_1954} lk 212). Hocket nendib, et ka IA mudeli puhul tuleb siiski teha kohati suvalisi valikuid selle üle, mis kuulub morfeemi tasandile ja mis kuulub distributsiooni tasandile (\cite{hockett_two_1954} lk 212).
+
+% Stumpi neljamõõtmeline jaotus
+Gregory Stump on arendanud Hocketti IP ja IA kaheksjagamise klassifikatsiooni edasi tänapäevaste morfoloogiliste teooriate põhjal. Nimetades IAd leksikaalseks (ingl. \textit{lexical}) ja IPd inferentsiaalseks (ingl. \textit{inferential}) on ta lisanud klassifikatsioonile veel sisemise telje: inkrementaalsed (ingl. \textit{incremental}) ja realiseerivad (ingl \textit{realizational}) teooriad. (\cite{stump_inflectional_2001}, lk 1-2)
+
+Inkrementaalsete teooriate järgi lisandub iga (olgu IA järgi leksikaalselt loetletud või IP mõttes inferentsiaalse reegliga tuletatud) morfosüntaktilise tunnuse puhul sõnale ka selle vormiline eksponent (\cite{stump_inflectional_2001}, lk 2). Vormilised eksponendid on üks-üheses seoses grammatiliste tunnustega ja need väljenduvad ükshaaval ehk inkrementaalselt.
+
+Realiseerivate teooriate juures ei pea eksponent iga morfosüntaktilise tunnuse puhul eraldi ja koheselt väljenduma, vaid vormiline väljendus võib realiseeruda tunnuste suuremate komplektide puhul või üldse kui sõna kõik tunnused on teada (\cite{stump_inflectional_2001}, lk 2).
+
+Realiseerivad teooriad võimaldavad niisiis suurema paindlikkuse vormiliste väljendujate \textit{realiseerimisel}, loobudes vormiliste väljendujate üks-ühesest seosest morfosüntaktiliste tunnustega.
+
+Stumpi jagab oma klassifikatsiooni järgi Lieberi morfoloogilise teooria leksikaalseks ja inkementaalseks. Halle ja Marantzi distributsioonilise morfoloogia teooria leksikaalseks ja realiseerivaks. Steele'i artikuleeritud morfoloogia teooria esindab inferentsiaalset ja inkrementaalset suunda.
+
+Stumpi enda ja Matthewsi, Zwicky ning Andersoni teooriaid nimetab ta WP teooriateks, mis on inferentsiaalsed ja realiseerivad (\cite{stump_inflectional_2001}, lk 3).
+
+
+% Finally, Word-and-Paradigm theories of inflection (e.g. those proposed
+% by Matthews (), Zwicky (a), and Anderson ()) are of the
+% inferential–realizational type. In inferential–realizational theories, an
+% inflected word’s association with a particular set of morphosyntactic prop-
+% erties licenses the application of rules determining the word’s inflectional
+% form; likes, for example, arises by means of a rule appending -s to any verb
+% stem associated with the properties ‘sg subject agreement’, ‘present tense’,
+% and ‘indicative mood’.
+
+Robert Beard on nimetanud ülaltoodud autorite arendatud realiseerivaid teooriaid ird-morfoloogiaks (\textit{ingl 'split' morphology}) (\cite{beard_morpheme_1987}, lk 20) ja pakkunud välja morfoloogia veel võimsama eraldamise, mis põhineb tema morfoloogia lahususe hüpoteesil (\textit{Separation Hypothesis}) (\cite{beard_lexeme-morpheme_1995}).
+
+% ird-morfoloogia VS morfoloogia lahususe hüpotees
+Morfoloogia lahususe hüpoteesil põhinevate teooriate ja realiseerivate (ird-)morfoloogia\-teooriate vahe on fundamentaalne ja lähtub nende käsitlusest süntaksi ja semantika vahekorrast. Kõige ilmekalt paistab nende vahe morfeemi definitsioonis, küsimuses kas morfeem on keele väikseim vormiline tähenduslik üksus või mitte.
+
+Beardi teoorias ei ole morfeem grammatiliselt tähenduslik, vaid defineeritud kui mistahes muutusena lekseemi fonoloogilises kujus (\cite[31]{beard_morpheme_1987}). Seega on tema teoorias ainult lekseemid tähenduslikud märgid ning grammatilised afiksid (morfeemid) on seda vaid sattumuslikult (\cite[17]{beard_morpheme_1987}).
+
+Käesolevas magistritöös rakendatud ekstraktmorfoloogia on oma organisatsiooni suhtes WP mudel, aga selle käsitus morfeemist on lähedasem Beardi teooriale.
+
+% Karttust ja Koskenniemit tuua mängu sisse alles siis, kui on vaja näidata kuidas arvuti poolel on hakatud asju tõlgendama enda mõtteviisi järgi
+Arvutilingvistikas on arvutimorfoloogiat üldiselt organiseeritud klassikalise morfeemi\-käsituse järgi. Seda ilmestab hästi 
+% Karttuneni väljakutsed arvutimorfoloogias
+Lauri Karttunen, kes nendib inimkeele mudeldamise puhul arvutimorfoloogias kaks väljakutset: 1)\nobreakspace morfotaktika ehk sõnast väiksemate üksuste kombineerumine ja 2)\nobreakspace morfoloogilised vaheldused ehk sõnast väiksemate üksuste kuju olenemine nende ümbritsevast kontekstist (\cite{karttunen_computing_2003}).
+
+Kusjuures (1)\nobreakspace viitab otseselt klassikalisele morfeemikäsitusele.
+
+Karttuneni artikkel on aga ajendatud Stumpi teooriast ja ta näitlikustab kuidas Stumpi teooria on võimalik rakendada kasutades lõplike automaatide formalismi.
+
+Karttunen toob siiski välja olukorra, et arvutilingvistide morfoloogiad põhinevad arvutuslikel meetoditel, millega nad implementeerivad morfoloogiaid ja mitte ei põhine otse mingil teoorial. Seega võib öelda, et arvutimorfoloogia on laiem kui lingvistiline morfoloogia, kuna esimest piirab mitte teooria, vaid arvutusliku meetodi võimsus. Karttunen näitabki, et Stumpi inferentsiaalne-realiseeriv teooria on taandatav lõplike automaatide formalismi arvutusvõimsusele. (\cite{karttunen_computing_2003})
+
+% TODO lisada ka tema ütlus Stumpi teooria motiveerituses olla teistele morfologistidele elegantne
+
+Sellest võib järeldada, et arvutilingvistikas on lingvistilise teooria roll pigem olla ajendiks kui tõetruuks postulaadiks, kuigi kindlasti on teooria ja selle implementatsioonilise praktika vahekord raskesti eraldatavad ja ajas muutuvad. Tendentsi tõetruuduse vähenemisele võib siiski täheldada ka Kimmo Koskenniemi töös, kus ta on hiljuti oma taandatud kahetasemelises morfoloogiamudelis püüdnud morfofoneemi mõiste juures loobuda selle tähendusliku külje lingvistilisest realismist, omastades seda puhtalt vormile:
+\begin{quote}
+  ``\textit{Morphophonemes} are represented just as the \textit{combinations of the corresponding letters} (or phonemes) which we can observe in the surface forms. On the one hand, such an interpretation of morphophonemes is crude, but on the other hand, it is a fact that anybody can observe.'' (\cite{koskenniemi_informal_2013}, lk 157)
+\end{quote}
+
+% induktsioon ja deduktsioon
+Sügavama epistemoloogilise põhjuse, miks arvutimorfoloogiaid on ajendanud pigem lingvistiline motivatsioon ja mitte arvutusteoreetilised võimalused, arvab siinkirjutaja leiduvat strukturaalse lingvistika formaliseerimisperioodi alguses, mis algas enne arvutusmasinate leiutamist (1940.--1960.-ndateil aastatel) ja ammu enne arvutite arvutus- ja mälumahtuvuse võimsuse plahvatuslikku suurenemist (1980.--2000.-ndail). % TODO lisada Karttuneni ajalooline ülevaade fst morfoloogia arengutest
+
+% lingvistilise teooria formaliseerimine
+Formaalseid teooriaid ja seega teooriate formaliseerimist peetakse teaduse lipulaevaks (\cite[2026]{auroux_history_2006}). Teooriate formaliseerimis\-protsessi jagab Pieter Seuren neljaks etapiks, kus esimene koosneb uuritava ainese tüüpide (ehk kategooriate) leidmisest ning nendele esitus\-kuju määramisest (\cite[2027]{auroux_history_2006}). (Teisisõnu tegeleb see \textit{type-token distinction}'i probleemiga). Teine etapp käib sageli käsi-käes esimese etapiga ja hõlmab tüüpide taksonoomia määramist, ehk selle määramist, mis andmed kuuluvad mis tüübi alla millal ja mis tingimustes (\cite[2027]{auroux_history_2006}). Kolmas etapp koosneb struktuuri määramisest tüüpide esinemisele, elik kuidas kategooriaid on võimalik omavahel kombineerida (\cite[2027 jj]{auroux_history_2006}) näiteks puu- või sõltuvus\-struktuuride abil. Neljas ja viimane etapp koosneb ühe ennustava ja kirjeldava väärtusega formaalse teooria ülesseadmisest algoritmina ehk sammsammulise tegevusjuhisena (\cite[2031]{auroux_history_2006}).
+%final Stage 4, which consists in the setting up of a formal predictive and explanatory theory that has the precision of an algorithmic procedure.
+
+% arvutimorfoloogia on arvutiprogramm mis on formaalne aparaat
+Arvutimorfoloogia on arvutiprogramm (või mitme programmi komplekt), mis tahest-tahtmata hõlmab seelaadset formaalset sammsammulist tegevusjuhist.
+
+% probleem asub 3 ja 4 etapi vahel -- kas teha deduktiivselt või induktiivselt?
+Probleem, miks arvutimorfoloogiad juhinduvad lingvistilistest teooriatest ja mitte puht-arvutuslikest võimalustest asub formaliseerimis\-protsessi 3. ja 4. etapi vahel. Millisel viisil tuleb põhjendada struktuuri määravaid reegleid?
+
+% zellig
+% Generatiivse lingvistika suurkuju Noam Chomsky juhendaja Zellig Harris kirjutab
+Zellig Harris (kes oli Noam Chomsky juhendaja) kirjeldab oma \textit{magnum opus} teoses grammatika formaliseerimise lähenemist, mis põhjendab strukturaalsete reeglite määramise ühe formaalse avastamis\-menetluse abil keeleainese korpus\-esinemustest. See on, formaalse teooria sammsammulised reeglid tuletatakse puhtalt struktuuride esinemistest korpusanalüüsi teel. Selline väga töömahukas grammatika loomise menetlusviis sai tema kaasaegsetelt kõva kriitikat olles nii ilmselgelt ebarealistlik ja ebapraktiline. Harris oli tundlik kriitikale ja mainib oma raamatu lõpus viisi, kuidas korpus\-esinemustest eraldi püstitatud reegleid saab hoopis vastupidises suunas \textit{testida} korpustekstide peal. See pani aluse generatiivsele grammatikale, mida arendas edasi tema kasvandik Noam Chomsky teoses \textit{Syntactic Structures} (\citeyear{chomsky_syntactic_1957}). (\cite[2031]{auroux_history_2006}).
+
+% seletav tekst miks ma jauran
+Eelnevaga olen ma tahtnud öelda seda, et arvutimorfoloogiate koostamis\-põhimõtted põhineda (morfotaktilistel) reeglitel ja mitte puhtalt muutvormide nentimisel korpuse põhjal, on eeskätt ajalooliste traditsioonide järjepidevus. Käesolev töö ei järgi neid traditsioone.
+
+
+% Matthews kirjeldab WP ``mudelit'' kui ... ja Karttuneni järgi kronoloogia Zwicky kaudu Stumpini, aga me ei peagi laskuma WP mudeli arvutusliku külge juurde -- see on väga lihtsal moel lahendatud ekstraktmorfoloogias. Ja Karttuneni konstateering, et Stumpi mudel on arvutuslikult samaväärne FSTga. Ja Roark ja Sproat argumenteerivad, et X ja Y on samuti taandatavad FST-le ja seega samaväärsed. Olen valmis oma argumentatsiooniga siin peatükis, et arvutimorfoloogiad võivad vormisõnastiku funktsionaalsuse realiseerida ilma lingvistilise motivatsioonita. Nagu Stump arvab, et tuleb eelistada ``A theory of inflectional morphology must be preferred to the extent that it minimizes any dependence on theoretical distinctions which are not empirically motivated.'' (\cite{stump_inflectional_2001} lk 9).
+
+
+
+
+\subsection{Paradigmaatiline morfoloogia}
+
+Matthews tõstab esile kaks WP-mudelit: klassikaline ja uus. Klassikaline kuulub X ajastusse ja selle kõrghetk oli õpikutes X sajandil, ajal kui keelt õpetati kooloniates (\cite{matthews_morphology_1991} lk X). Uue rajas Matthews ja seda on Karttuneni sõnul edasi arendanud Zwicky, Anderson ja Stump (\cite{karttunen_computing_2003} lk 2).
+
+Klassikaline on lähedasem siinses magistritöös rakendatud ekstraktmorfoloogiale. Klassikalise ja strukturalistlike lähenemiste suurim vahe seisneb kahes asjaolus. Eeskätt ei näinud klassikalised grammatikud sõnast väiksemat ja tähenduslikku üksust. Arvestati ainult vormikülje üksustega, tähtede-foneemide ja silpidega. Sõna oli väikseim tähenduslik element keeles ja seda nähti tervikuna, hõlmates terve oma paradigma kuuluvaid vorme. (\cite{matthews_morphology_1991} lk X--Y)
+
+Matthews toob välja (klassikalise) paradigmaatilise suuna kolm head omadust. ....
+
+Õpikutes ja grammatikates välja toodud reeglid, mille abil sai ühe lekseemi paradigma moodustada, opereerisid ainult sõnavormide tähtkoostisel. Näiteks võidi ühe sõnavormi lõputähti asendada teiste tähtedega, et saada teine sõnavorm. Et asendatavatele tähtkoostistele ei omandatud mingit tähendust, näitlikustab see, et mõne reegli algvormiks võidi valida selline sõnavorm, mis oma tähtkoostise poolest kõige paremini sobis. (\cite{matthews_morphology_1991} lk X--Y).
+
+
+
+
 
 \subsection{Vadja kirjakeel ja normatiiv}
 \label{sec:kirjakeel}
