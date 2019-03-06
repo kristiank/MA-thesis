@@ -23,7 +23,15 @@ let $MSDs := (
   "grammaticalNumber=plural,grammaticalCase=nominative",
   "grammaticalNumber=plural,grammaticalCase=genitive",
   "grammaticalNumber=plural,grammaticalCase=partitive",
-  "grammaticalNumber=plural,grammaticalCase=illative"
+  "grammaticalNumber=plural,grammaticalCase=illative",
+  "grammaticalNumber=plural,grammaticalCase=inessive",
+  "grammaticalNumber=plural,grammaticalCase=elative",
+  "grammaticalNumber=plural,grammaticalCase=allative",
+  "grammaticalNumber=plural,grammaticalCase=adessive",
+  "grammaticalNumber=plural,grammaticalCase=ablative",
+  "grammaticalNumber=plural,grammaticalCase=translative",
+  "grammaticalNumber=plural,grammaticalCase=terminative",
+  "grammaticalNumber=plural,grammaticalCase=comitative"
 )
 
 (: Convert each CSV record into appropriate format, see the output file for format :)
