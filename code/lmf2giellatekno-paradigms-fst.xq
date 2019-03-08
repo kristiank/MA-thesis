@@ -45,8 +45,8 @@ declare function local:align-transformsets(
 };
 
 (: Read in the LMF :)
-let $lmf := pjson:karp-pjson2lmf("../data/karp-json/votiska.json",
-                                 "../data/karp-json/votiskaparadigms.json")
+let $lmf := doc("../data/lmf.xml")
+
 
 let $lemma-feats := map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"}
 

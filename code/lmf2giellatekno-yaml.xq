@@ -19,8 +19,7 @@ import module namespace giellatekno = "http://giellatekno.uit.no" at "./giellate
 
 
 (:~ Variable $lmf holds the LMF resource :)
-let $lmf := pjson:karp-pjson2lmf("../data/karp-json/votiska.json",
-                                 "../data/karp-json/votiskaparadigms.json")
+let $lmf := doc("../data/lmf.xml")
 
 
 (:~

@@ -18,8 +18,7 @@ import module namespace giellatekno = "http://giellatekno.uit.no" at "./giellate
 
 
 (: Read in the LMF :)
-let $lmf := pjson:karp-pjson2lmf("../data/karp-json/votiska.json",
-                                 "../data/karp-json/votiskaparadigms.json")
+let $lmf := doc("../data/lmf.xml")
 
 (: Group files by part of speech :)
 let $poses := $lmf//MorphologicalPattern/feat[@att="partOfSpeech"]/@val/data()

@@ -17,8 +17,7 @@ import module namespace giellatekno = "http://giellatekno.uit.no" at "./giellate
 
 
 (: Read in the LMF :)
-let $lmf := pjson:karp-pjson2lmf("../data/karp-json/votiska.json",
-                                 "../data/karp-json/votiskaparadigms.json")
+let $lmf := doc("../data/lmf.xml")
 
 (: Specify the the lemma's grammatical feats :)
 let $lemma-feats := map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"}
