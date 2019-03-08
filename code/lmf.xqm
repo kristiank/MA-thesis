@@ -149,7 +149,7 @@ declare function lmf:check-if-listed-patterns-exist($lmf) {
 declare function lmf:get-morphologicalpattern-by-id(
   $pattern-id as xs:string,
   $lmf as element(LexicalResource)
-) as element(MorphologicalPattern)?
+) as element(MorphologicalPattern)*
 {
   $lmf//MorphologicalPattern[feat[@att="id" and @val=$pattern-id]]
 };
