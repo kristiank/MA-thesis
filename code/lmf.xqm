@@ -174,3 +174,42 @@ declare function lmf:get-wordform-by-feats(
     satisfies ./feat[@att=$key and @val=$feats-map($key)]
   ]/feat[@att = "writtenForm"]/@val/data()
 };
+
+
+
+
+(:~
+ : Returns a generalized paradigm pattern of the input paradigm as discussed in:
+ : "A Computational Model for the Linguistic Notion of Morphological Paradigm"
+ : by Silfverberg, Miikka, Ling Liu & Mans Hulden (2018)
+ : @since 1.2
+ : @param $morphologicalpattern as MorphologicalPattern
+ : @return GeneralMorphologicalPattern
+ :)
+declare function lmf:get-general-morphological-pattern(
+  $morphologicalpattern as element(MorphologicalPattern)
+) as element(GeneralMorphologicalPattern)
+{
+  let $orderedtransformsets := 
+    for $sortedgramfeat in $morphologicalpattern/TransformSet
+      order by string-join(sort(
+        (:$sortedgramfeat/GrammaticalFeatures/feat/@val/data():)
+        for $feat in $sortedgramfeat/GrammaticalFeatures/feat
+            return concat($feat/@att/data(), "=", $feat/@val/data())
+      ), " ")
+      return $sortedgramfeat
+  let $enumeratedconstants := 
+    <enumeratedconstants>{
+      for $process at $enum in distinct-values(
+          $orderedtransformsets/Process/feat[@att="stringValue"]/@val/data())
+        return <process><value>{$process}</value><enum>{$enum}</enum></process>
+    }</enumeratedconstants>
+  return copy $generalpattern := $morphologicalpattern
+  modify (
+    rename node $generalpattern as "GeneralMorphologicalPattern",
+    for $constantstringvalue in $generalpattern//Process/feat[@att="stringValue"]/@val
+      return replace value of node $constantstringvalue
+             with $enumeratedconstants/process[value=$constantstringvalue]/enum/data()
+  )
+  return $generalpattern
+};
