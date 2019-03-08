@@ -37,7 +37,12 @@ function($translations as map(xs:string, xs:string)) {
  : @return Giellatekno specific term as xs:string
  :)
 declare variable $giellatekno:get-tests-pos := 
-  $giellatekno:mkTranslator(map{"nn":"Noun"});
+  $giellatekno:mkTranslator(
+    map{
+      "nn": "Noun",
+      "commonNoun": "Noun"
+    }
+  );
   
 (:~ Conversion table for parts of speech as used in Giellatekno's FSTs
  : if a term is not found, it is returned as is.
@@ -46,7 +51,12 @@ declare variable $giellatekno:get-tests-pos :=
  : @return Giellatekno specific term as xs:string
  :)
 declare variable $giellatekno:get-fst-pos := 
-  $giellatekno:mkTranslator(map{"nn":"N"});
+  $giellatekno:mkTranslator(
+    map{
+      "nn": "N",
+      "commonNoun": "N"
+    }
+  );
 
 
 (:~ Conversion table for different terms (mainly grammatical numbers and cases)
