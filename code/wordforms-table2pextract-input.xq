@@ -10,7 +10,7 @@ xquery version "3.0" encoding "UTF-8";
  :)
 
 (: Read in the theme forms table :)
-let $csv-file    := file:read-text("data/themeforms.csv")
+let $csv-file    := file:read-text("data/wordforms.csv")
 let $csv-options := map { 'header': true() }
 let $csv := csv:parse($csv-file, $csv-options)
 
