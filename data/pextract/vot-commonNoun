@@ -1948,6 +1948,31 @@ butkoika	grammaticalNumber=plural,grammaticalCase=comitative
 čässiissaa	grammaticalNumber=plural,grammaticalCase=terminative
 čässijka	grammaticalNumber=plural,grammaticalCase=comitative
 
+čäčüd	grammaticalNumber=singular,grammaticalCase=nominative
+čäččü	grammaticalNumber=singular,grammaticalCase=genitive
+čäčütt	grammaticalNumber=singular,grammaticalCase=partitive
+čäččüse	grammaticalNumber=singular,grammaticalCase=illative
+čäččüz	grammaticalNumber=singular,grammaticalCase=inessive
+čäččüss	grammaticalNumber=singular,grammaticalCase=elative
+čäččülle	grammaticalNumber=singular,grammaticalCase=allative
+čäččüll	grammaticalNumber=singular,grammaticalCase=adessive
+čäččült	grammaticalNumber=singular,grammaticalCase=ablative
+čäččüssi	grammaticalNumber=singular,grammaticalCase=translative
+čäččüssaa	grammaticalNumber=singular,grammaticalCase=terminative
+čäččüka	grammaticalNumber=singular,grammaticalCase=comitative
+čäččüd	grammaticalNumber=plural,grammaticalCase=nominative
+čäččüje	grammaticalNumber=plural,grammaticalCase=genitive
+čäččüit	grammaticalNumber=plural,grammaticalCase=partitive
+čäččüise	grammaticalNumber=plural,grammaticalCase=illative
+čäččüiz	grammaticalNumber=plural,grammaticalCase=inessive
+čäččüiss	grammaticalNumber=plural,grammaticalCase=elative
+čäččüille	grammaticalNumber=plural,grammaticalCase=allative
+čäččüill	grammaticalNumber=plural,grammaticalCase=adessive
+čäččüilt	grammaticalNumber=plural,grammaticalCase=ablative
+čäččüissi	grammaticalNumber=plural,grammaticalCase=translative
+čäččüissaa	grammaticalNumber=plural,grammaticalCase=terminative
+čäččüika	grammaticalNumber=plural,grammaticalCase=comitative
+
 čülme	grammaticalNumber=singular,grammaticalCase=nominative
 čülmä	grammaticalNumber=singular,grammaticalCase=genitive
 čülmä	grammaticalNumber=singular,grammaticalCase=partitive
@@ -3149,7 +3174,7 @@ gimnaziissaa	grammaticalNumber=plural,grammaticalCase=terminative
 gimnazijka	grammaticalNumber=plural,grammaticalCase=comitative
 
 gitari	grammaticalNumber=singular,grammaticalCase=nominative
-gitrai	grammaticalNumber=singular,grammaticalCase=genitive
+gitari	grammaticalNumber=singular,grammaticalCase=genitive
 gitaria	grammaticalNumber=singular,grammaticalCase=partitive
 gitarisõ	grammaticalNumber=singular,grammaticalCase=illative
 gitariz	grammaticalNumber=singular,grammaticalCase=inessive
