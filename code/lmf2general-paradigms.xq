@@ -33,11 +33,11 @@ let $distinct-morphological-patterns :=
 
     
 (: count general paradigms :)
-let $num-of-general-patterns := count($distinct-morphological-patterns)
+let $num-of-distinct-patterns := count($distinct-morphological-patterns)
 
 
 (: group paradigms that share general patterns and show their IDs :)
-let $lemmas-of-general-patterns :=
+let $instantiations-of-general-patterns :=
   for $general-pattern in $distinct-morphological-patterns
     let $lexical-entries := 
       for $lexical-entry in $lmf//LexicalEntry
@@ -49,12 +49,18 @@ let $lemmas-of-general-patterns :=
                 $lmf/LexicalResource
               )[1] => lmf:get-general-morphological-pattern()
               
+        (:let $lexical-entry-general-pattern := 
+            ($general-morphological-patterns//GeneralMorphologicalPattern[feat[@att="id" and @val=$id]])[1]:)
+              
         return if  (deep-equal(
                       $lexical-entry-general-pattern/TransformSet,
                       $general-pattern/TransformSet))
                then($lemma)
                else()
 
-    return string-join($lexical-entries, ", ")
+    return string-join((count($lexical-entries), $lexical-entries), ", ")
 
-return string-join($lemmas-of-general-patterns, out:nl() || out:nl())
+return string-join(($num-of-distinct-patterns,
+                    $instantiations-of-general-patterns),
+                    out:nl() || out:nl()
+                  )
