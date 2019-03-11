@@ -97,6 +97,8 @@
 \tableofcontents
 
 
+% TODO kust pärineb järgmine tsitaat? "computational methodology for linguistic analysis is not the same thing as computational linguistics" ()
+
 
 \newpage
 \spacing{1.5}
@@ -133,6 +135,9 @@ Tööl on siiski teoreetilised lähtekohad, mis tulenevad ühelt poolt arvutimor
 \subsection{Vadja kirjakeel ja korpusplaneerimine}
 % -- tõsta ja sobitada kirjakeele peatükk ka siia alla
 
+Selles peatükis seletan vadja kirjakeeleks valitud aluseid ning korpusplaneerimise mõistet.
+
+% korpusplaneerimine on alamosa keeleplaneerimisest?
 Korpusplaneerimine on mis, miks seda tehakse ja kes seda teevad (kasuta Cooper 1996: 45). Korpusplaneerimine koosneb (Kloss 1968) kolmest osast:
 \spacing{1}
 \begin{enumerate}
@@ -162,6 +167,13 @@ Vormisõnastikust ja arvutimorfoloogiast lähemalt järgnevas peatükis.
 
 
 \subsection{Arvutimorfoloogia eesmärk ja lingvistiline motiveeritus}
+
+% TODO leia allpool õige koht sellele: Kui lingvistika üldine eesmärk on leida ja kirjeldada keelenähtuste reeglipärasusi, siis jääb lahtiseks küsimus mis on arvuti\-lingvistika eesmärk -- kas see on formaliseerida lingvistika poolt leitud reeglipärasused või võib see mahutada ka nende reeglipärasuste leidmist? See töö lähtub arusaamast, et arvuti on abivahend lingvistile, mitte ei ole ainult lingvisti(ka) formalisatsioon.
+% Seda tehakse kahel põhjusel -- esiteks puudub täielik morfoloogiakirjeldus vadja keelele. Teine põhjus on arvutiinsenerlik põhjus. Siinne töö maht ei luba täielikku morfoloogiakirjeldust, pealegi on keeled ajas muutuvad ja tuleb täiendusi teha. Seetõttu ei taha siinne töö esitada sellist formaalset morfoloogiakirjeldust, mida keegi teine ei saaks täiendada. Iga formalismi puhul kaasneb õpikõver, et sellest üldse aru saada, siinne töö esitab arvutimorfoloogia võimalikult formalismivabalt --- vormisõnastiku kujul --- milles sisalduva sõnavara on võimalik igal-ühel täiendada ja muuta ainult sellekaudu, et muuta konkreetse sõna sõnavormi.
+% Tehnoloogiavaba(m) kirjeldus on standartne, ja keeletehnoloog, kes tahab lisada uue ... võib seda teha, kirjelduse formaat on kirjeldatud rahvusvahelise standardi dokumentatsioonis.
+
+% Ehk alustada sellega: Kuna töö kasutab läbivalt sõna 'morfoloogia' natuke teistsuguses tähenduses kui see tavaliselt keeleteaduses kannab, tuleb selle tähendust kõigepealt lahti seletada. . Töö loobub morfeemist kui keele väikseim tähenduslik üksus ja seega ei tähenda siin töös morfoloogia morfeemilist morfoloogiat. Aronoff on pööranud tähelepanu tõigale, et 'morfoloogia' kannab teistsugust tähendust keeleteaduses kui ta seda kannab teistes teadusharudes. Enamik teadusharudes tähendab 'morfoloogia' umbes "võimalike vormide uurimine-kaardistamine". Keeleteaduses hoopis ...
+
 Arvutimorfoloogia eesmärgiks on siin töös valitud moodustada elektroonse vormisõnastiku:
 \begin{quote}
   ``Üks täielik vormisõnastik peaks esitama kõigi sõnade kõik muutevormid koos vastava grammatilise iseloomustusega. Ainult siis saab kasutaja sõnastikust ilma mingi vaevata ja täiesti kindlalt teada, milline on vajalik vorm antud sõnast või millise sõna millise vormiga on tegemist tundmatu sõnavormi puhul.'' (\cite{viks_vaike_1992} lk 7).
@@ -250,6 +262,7 @@ Zellig Harris (kes oli Noam Chomsky juhendaja) kirjeldab oma \textit{magnum opus
 % seletav tekst miks ma jauran
 Eelnevaga olen ma tahtnud öelda seda, et arvutimorfoloogiate koostamis\-põhimõtted põhineda morfeemil ja morfotaktilistel reeglitel ja mitte puhtalt muutvormide nentimisel korpuse põhjal, on eeskätt ajalooliste traditsioonide järjepidevus. Käesolev töö ei järgi neid traditsioone.
 
+See traditsioon on kristalliseerunud ka pealkirjas ``This volume grows out of a special session that we organized at the January 2009 Annual Meeting of the Linguistic Society of America entitled ``Computational Linguistics: Implementation of Analyses against Data''.'' (\cite{bender_computational_2010}).
 
 % Matthews kirjeldab WP ``mudelit'' kui ... ja Karttuneni järgi kronoloogia Zwicky kaudu Stumpini, aga me ei peagi laskuma WP mudeli arvutusliku külge juurde -- see on väga lihtsal moel lahendatud ekstraktmorfoloogias. Ja Karttuneni konstateering, et Stumpi mudel on arvutuslikult samaväärne FSTga. Ja Roark ja Sproat argumenteerivad, et X ja Y on samuti taandatavad FST-le ja seega samaväärsed. Olen valmis oma argumentatsiooniga siin peatükis, et arvutimorfoloogiad võivad vormisõnastiku funktsionaalsuse realiseerida ilma lingvistilise motivatsioonita. Nagu Stump arvab, et tuleb eelistada ``A theory of inflectional morphology must be preferred to the extent that it minimizes any dependence on theoretical distinctions which are not empirically motivated.'' (\cite{stump_inflectional_2001} lk 9).
 
@@ -284,6 +297,21 @@ Kirjeldused ei aita siiski kaasa tänapäeva keeleõppija küsimustele \textit{k
 Käesolev töö ei pürgi looma lõplikku normatiivi, kuivõrd ta loob süsteemi, mis oskab vastata morfoloogilistele küsimustele. Aga loodud süsteemi peamine eesmärk on siiski võimaldada muuta ja jätkata tööd normatiivi arendamiseks ja mille ümber saaks keeleaktivistid ise koonduda, ilma et selleks oleks niivõrd vaja ei lingvistilist ega keeletehnoloogilist spetsialisti.
 
 Püüd luua vadja morfoloogiale normatiivne alus lihtsustab paljudele küsimustele vastusi leida, nt mis käändeid arvestada. Siiski on tööga loodud \textit{keele\-tehnoloogia tuletamise süsteem} avatud ka teistsugustele lähenemistele keeleainesele.
+
+\subsubsection{Noomeni käänded}
+
+Siin käin läbi kust mu tabeli sõnavormid pärinevad, või kuidas need olen rekonstrueerinud. Tüved tulevad Tsvetkovi sõnastikust või Heinsoo või Konkova sõnastikest, kui need on Tsvetkovil puudu. Käändelõppude puhul on järgitud Konkova õpikut.
+
+Vokaale on püütud ühtlustada Heinsoo ja Konkova antud järgi.
+
+\paragraph{Inessiiv}
+
+``A characteristic feature of the Votic inessive is the fact that
+geminate stops -kk-, -pp-, -tt-, the geminate affricates -tts-.
+-ttš-, the geminate -ss-, and the consonant cluster -hs- always
+are in the strong grade before this case marker'' (\cite[23]{ariste_grammar_1968}).
+
+Tegin nii, et kui geminaat esines \textsc{sg nom} vormis, siis muutsin. Konsonant\-klustri -hs- puhul ei vahetanud \textit{ühs} ja \textit{kahs}, sest pole geminaadid.
 
 \subsection{Sõnavara}
 \label{sec:sõnavara}
@@ -680,7 +708,10 @@ Loodud õigekirjakontrollija on eesmärgipäraselt jäetud lihtsakoeliseks. See 
 
 
 
+\newpage
+\section{Arutelu}
 
+Arutelu struktuur peaks järgima üks-ühele sissejuhatuses väljatoodut, ent sellele siis lisama arutelu (sissejuhatus ainult nentingud).
 
 
 \newpage
