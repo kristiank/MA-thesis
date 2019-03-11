@@ -35,25 +35,33 @@ let $distinct-morphological-patterns :=
 (: count general paradigms :)
 let $num-of-distinct-patterns := count($distinct-morphological-patterns)
 
+(: optimization :)
+let $lexical-entries-and-their-general-pattern := 
+  for $lexical-entry in $lmf//LexicalEntry
+    return
+    copy $new-entry := $lexical-entry
+    modify (
+      let $lemma := $lexical-entry/Lemma/feat[@att="writtenForm"]/@val/data()
+      let $id := $lexical-entry/@morphologicalPatterns/data()
+      let $lexical-entry-general-pattern :=
+            lmf:get-morphologicalpattern-by-id(
+              $lexical-entry/@morphologicalPatterns/data(),
+              $lmf/LexicalResource
+            )[1] => lmf:get-general-morphological-pattern()
+      return insert node $lexical-entry-general-pattern into $new-entry
+    )
+    return $new-entry
 
 (: group paradigms that share general patterns and show their IDs :)
 let $instantiations-of-general-patterns :=
   for $general-pattern in $distinct-morphological-patterns
     let $lexical-entries := 
-      for $lexical-entry in $lmf//LexicalEntry
+      for $lexical-entry in $lexical-entries-and-their-general-pattern
         let $lemma := $lexical-entry/Lemma/feat[@att="writtenForm"]/@val/data()
-        let $id := $lexical-entry/@morphologicalPatterns/data()
-        let $lexical-entry-general-pattern :=
-              lmf:get-morphologicalpattern-by-id(
-                $lexical-entry/@morphologicalPatterns/data(),
-                $lmf/LexicalResource
-              )[1] => lmf:get-general-morphological-pattern()
-              
-        (:let $lexical-entry-general-pattern := 
-            ($general-morphological-patterns//GeneralMorphologicalPattern[feat[@att="id" and @val=$id]])[1]:)
-              
+        let $pattern-id := $lexical-entry/@morphologicalPatterns/data()
+        
         return if  (deep-equal(
-                      $lexical-entry-general-pattern/TransformSet,
+                      $lexical-entry//TransformSet,
                       $general-pattern/TransformSet))
                then($lemma)
                else()
