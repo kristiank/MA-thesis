@@ -22,6 +22,10 @@ let $lmf := doc("../data/lmf.xml")
 
 let $latex-tables :=
 for $paradigm in $lmf//MorphologicalPattern
+  let $paradigm-id := $paradigm/feat[@att="id"]/@val/data()
+  let $lexical-entries := $lmf//LexicalEntry[@morphologicalPatterns = $paradigm-id]
+                              /Lemma/feat[@att="writtenForm"]/@val/data()
+  order by count($lexical-entries) descending
   let $table-start := ("\begin{table}",
                        "\centering", 
                        "\begin{tabular}[H]{l l l}",
@@ -55,17 +59,50 @@ for $paradigm in $lmf//MorphologicalPattern
        return concat(string-join($model-word, " "), " &amp; ", string-join($pattern, " + "), " &amp; ", $gramfeats)
   let $table-end := (
     "\end{tabular}",
-    "\caption{Tüüpsõna \textit{" || $paradigm/feat[@att="id"]/@val/data() => substring-after("as") => lower-case() || "} ekstraheeritud muutvormimall.}",
+    "\caption{Tüüpsõna \textit{" || $paradigm/feat[@att="id"]/@val/data() => substring-after("as") => lower-case() || "} ekstraheeritud muutvormimall (hõlmab lekseeme: \vadja{"|| string-join($lexical-entries, ", ") ||"}).}",
     (: "\label{}" :)
     "\end{table}",
+    "\clearpage",
     ""
   )
   let $latex-table := string-join((
     $table-start, $table-content, $table-end
   ), out:nl())
-  return $latex-table
+  return "\paragraph{" || $lexical-entries[1] || "}" || out:nl() || out:nl() || $latex-table
+
+
+let $latex-document := string-join((
+  "\documentclass[12pt,a4paper]{article}
+
+\usepackage[top=4cm, bottom=3cm, left=4cm, right=2.5cm]{geometry}
+
+% polyglossia
+\usepackage{polyglossia}
+\usepackage{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\usepackage{url}
+\usepackage{expex}
+
+% Use a Free/Libre font with Finnish–Hungarian-Cyrillic-UPA coverage
+\setmainfont[Mapping=tex-text]{Linux Libertine O}
+% set languages to use
+\setmainlanguage{estonian}
+\setotherlanguages{english}
+
+\newcommand{\vadja}[1]{\textit{#1}}
+\newcommand{\msd}[1]{\textsc{#1}}
+
+\begin{document}
+",
+$latex-tables,
+"\end{document}"
+), out:nl())
+
+
 
 return file:write-text(
-    "/home/kristian/Projektid/MA-thesis/thesis/lmf-paradigms.tex",
-    string-join($latex-tables, out:nl())
+    (:"/home/kristian/Projektid/MA-thesis/thesis/paradigm-tables.tex",:)
+    "/home/kristian/Projektid/MA-thesis/thesis/appendix-morphological-patterns.tex",
+    string-join($latex-document, out:nl())
   )
