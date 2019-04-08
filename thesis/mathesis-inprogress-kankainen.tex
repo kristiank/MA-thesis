@@ -17,6 +17,9 @@
 \usepackage{url}
 \usepackage{expex}
 
+% \texttildelow to get a nice vertically centered tilde
+\usepackage{textcomp}
+
 % Use a Free/Libre font with Finnish–Hungarian-Cyrillic-UPA coverage
 \setmainfont[Mapping=tex-text]{Linux Libertine O}
 % set languages to use
@@ -43,6 +46,11 @@
 % Sõnastik
 \usepackage[nopostdot,xindy]{glossaries}
 \makeglossaries
+
+% omad mallid
+\newcommand{\vadja}[1]{\textit{#1}}
+\newcommand{\msd}[1]{\textsc{#1}}
+
 
 % sisukord
 % Bakalaureusetöös on soovitatav piirduda kolmeastmelise hierarhiaga, magistritöös neljaastmelisega
@@ -300,11 +308,26 @@ Püüd luua vadja morfoloogiale normatiivne alus lihtsustab paljudele küsimuste
 
 \subsubsection{Noomeni käänded}
 
-Siin käin läbi kust mu tabeli sõnavormid pärinevad, või kuidas need olen rekonstrueerinud. Tüved tulevad Tsvetkovi sõnastikust või Heinsoo või Konkova sõnastikest, kui need on Tsvetkovil puudu. Käändelõppude puhul on järgitud Konkova õpikut.
+Siin käin läbi kust mu tabeli sõnavormid pärinevad, või kuidas need olen rekonstrueerinud. Tüved tulevad Tsvetkovi sõnastikust või Heinsoo või Konkova sõnastikest, kui need on Tsvetkovil puudu. Käänete valiku ja -lõppude puhul on järgitud Konkova õpikut.
 
-Vokaale on püütud ühtlustada Heinsoo ja Konkova antud järgi.
+Käänded on seega nom, gen, part, ill, ine, ela, all, ade, abl, trans, term, com.
+Välja on jäetud essiiv, abessiiv, excessiiv ja instruktiiv, mida Ariste on pidanud käänetena \cite[17]{ariste_grammar_1968}. \cite{__2011} ei käsitle terminatiivi ja komitatiivi käänetena, mida nad on põhjendanud pikemalt \cite{markus_comitative_2014}.
 
-\paragraph{Inessiiv}
+Alljärgnevalt seletan kuidas käänded on moodustatud. Kokkuvõtvalt võib siiski öelda, et tüvemuutused on Tsvetkovilt, tüvelõpuvokaalid on püütud ühtlustada Heinsoo ja Konkova antud järgi.
+
+\paragraph*{Nominatiiv}
+Tsvetkovi antud vormile olen tavaliselt lisanud lühikese tüvelõpuvokaali (Heinsoo ja Konkova eeskuju järgi).
+
+\paragraph*{Genitiiv}
+Tsvetkovi antud vormi lõpuvokaal on normaliseeritud Heinsoo ja Konkova paradigmadele vastavalt.
+
+\paragraph*{Partitiiv}
+Tsvetkovi antud vormi lõpuvokaal on normaliseeritud Heinsoo ja Konkova paradigmadele vastavalt.
+
+\paragraph*{Illatiiv}
+Loodava kirjakeele ühtlustamise huvides on eelistatud läbinähtava käändelõpuga vormi \textit{-se/-sõ} lühikese illatiivi asemel. \cite[247]{markus_comitative_2014} on märkinud, et see käändevorm tänapäeva keeles. Konkoval esineb käändelõpuga illatiivile rööpvormina ka lühike illatiiv. 
+
+\paragraph*{Inessiiv}
 
 ``A characteristic feature of the Votic inessive is the fact that
 geminate stops -kk-, -pp-, -tt-, the geminate affricates -tts-.
@@ -312,6 +335,17 @@ geminate stops -kk-, -pp-, -tt-, the geminate affricates -tts-.
 are in the strong grade before this case marker'' (\cite[23]{ariste_grammar_1968}).
 
 Tegin nii, et kui geminaat esines \textsc{sg nom} vormis, siis muutsin. Konsonant\-klustri -hs- puhul ei vahetanud \textit{ühs} ja \textit{kahs}, sest pole geminaadid.
+
+\paragraph*{Elatiiv}
+
+\paragraph*{Allatiiv}
+\paragraph*{Adessiiv}
+\paragraph*{Ablatiiv}
+
+\paragraph*{Translatiiv}
+\paragraph*{Terminatiiv}
+
+\paragraph*{Komitatiiv}
 
 \subsection{Sõnavara}
 \label{sec:sõnavara}
@@ -464,27 +498,629 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
 \section{Vadja morfoloogiliste tüüpsõnade analüüs}
 \label{sec:analüüs}
 
-See osa kirjeldab ekstraktmorfoloogiaga leitud vadja keele morfoloogilisi tüüpsõnu ja analüüsib neid muuttüüpidesse kasutades üht ekstraktmorfoloogia üldistust. Leitud muuttüüpe analüüsitakse seejärel vadja grammatikate ja läänemeresoome ajaloolise morfoloogia seisukohalt.
+See osa kirjeldab ekstraktmorfoloogiaga leitud vadja keele morfoloogilised tüüpsõnad ja jaotab need käändkondadesse. Käändkondade süsteemiks on kasutatud \cite{ariste_grammar_1968}. Tsvetkovi sõnaraamatus esinevat variatsiooni on analoogia põhjal ühtlustatud kirjakeele lihtsama õppimise eesmärgil. Peatüki viimases osas analüüsitakse mil moel \cite{silfverberg_computational_2018} esitatud ekstraktmorfoloogia üldiste muuttüüpide algoritm kajastab käändkondi.
+
+Ariste käändkonnad põhinevad muutustel, mis kajastuvad järgmistes käändeis: \msd{sg nom} ja \msd{pl nom}, \msd{sg gen} ja \msd{pl gen}, \msd{sg par} ja \msd{pl par}, \msd{sg ill} ja \msd{pl ill} ning \msd{sg ela} ja \msd{pl ela} \cite[42]{ariste_grammar_1968}.
+
+%\subsection{Kirjakeele ühtlustamine}
+Üle käändkonniti on ühtlustatud peamiselt lõpuvokaali õ:a vaheldumine. Detailsemalt on ühtlustatud komponente kirjeldatud iga käändkonna juures.
+
+Noomeni sõnavarast on välja jäetud komparatiivsed vormid (mõlõpi, vanepi). 
+
+\subsection{\RN{1} käändkond}
+
+Esimesse käändkonda kuuluvad ühetüvelised, ühesilbilised sõnad \cite[40]{ariste_grammar_1968}.
+
+\msd{sg ill} vormid on üpris kunstlikult ühtlustatud \textit{pää:pähhe}, \textit{vüü:vühhe}. Diftongiga sõnad on ühtlustatud \textit{või:võisõ}, \textit{täi:täise}. Näide Tsvetkovi sõnaraamatus esinevast variatsioonist: \vadja{ühese} (\vadja{üü}), \vadja{vühe} \texttildelow \vadja{vühese} \texttildelow \vadja{vüüse} (\vadja{vüü}), \vadja{pühe} \texttildelow \vadja{pühese} (\vadja{püü}).
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item \msd{sg} ja \msd{pl} vormid langevad kõik kokku
+\item on lisatud \msd{sg par} vormidele lõpuhäälik (-õ -e vastavalt vokalismile)
+\end{itemize}
+
+\subsubsection*{Tüüpsõnad}
+
+\spacing{0}
+\begin{description}
+\item [\vadja{puu}] mis hõlmab lekseeme \vadja{luu, suu, puu, pihlpuu}
+\item [\vadja{tüü}] mis hõlmab lekseeme \vadja{tüü, vüü, üü, püü}
+\item [\vadja{pää}] mis hõlmab lekseeme \vadja{pää, bulipää}
+\item [\vadja{maa}] mis hõlmab lekseeme \vadja{maa}
+\item [\vadja{pii}] mis hõlmab lekseeme \vadja{pii}
+\item [\vadja{soo}] mis hõlmab lekseeme \vadja{soo}
+\item [\vadja{tee}] mis hõlmab lekseeme \vadja{tee}
+\item [\vadja{täi}] mis hõlmab lekseeme \vadja{täi}
+\item [\vadja{või}] mis hõlmab lekseeme \vadja{või}
+\end{description}
+\spacing{1.5}
+
+
+\subsection{\RN{2} käändkond}
+
+Teise käändkonda kuuluvad kahesilbilised sõnad, mille tüvevokaal on \vadja{-o}, \vadja{-u}, \vadja{-ü}, \vadja{-i} või \vadja{-õ} ning rohkem silpidega sõnad, mille tüvevokaal on \vadja{-o} \cite[42]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item 
+\end{itemize}
+
+\subsubsection*{Tüüpsõnad}
+\spacing{0}
+\begin{description}
+\item [\vadja{auči}] mis hõlmab lekseeme \vadja{auči}
+\item [\vadja{süüčči}] mis hõlmab lekseeme \vadja{süüčči}
+\item [\vadja{koffi}] mis hõlmab lekseeme \vadja{koffi}
+\item [\vadja{vaahto}] mis hõlmab lekseeme \vadja{suuto, vaahto, lehto}
+\item [\vadja{vahti}] mis hõlmab lekseeme \vadja{vahti}
+\item [\vadja{alku}] mis hõlmab lekseeme \vadja{alku, lohko, pehko, plehku, touko, vihko, vinku, alko}
+\item [\vadja{lako}] mis hõlmab lekseeme \vadja{lako, luku, mako, maku, suku, vako, čako}
+\item [\vadja{läikk}] mis hõlmab lekseeme \vadja{läikk}
+\item [\vadja{tükkü}] mis hõlmab lekseeme \vadja{tükkü}
+\item [\vadja{viki}] mis hõlmab lekseeme \vadja{viki}
+\item [\vadja{fraak}] mis hõlmab lekseeme \vadja{fraak}
+\item [\vadja{flakku}] mis hõlmab lekseeme \vadja{flakku, herkku, jõkilikko, kakko, kakku, kiikku, kolkku, kukko, kurkku, kuuzikko, lepikko, liivikko, luikko, lukku, lõõkku, majakko, musikko, mäčizikko, naizikko, oomnikko, pettelikko, rehtelkakku, seukko, võrkko, õzrikko, čerikko}
+\item [\vadja{kokki}] mis hõlmab lekseeme \vadja{kokki, kolkki, luukki, pukki, vokki, galstukki}
+\item [\vadja{jälči}] mis hõlmab lekseeme \vadja{ülči, jälči}
+\item [\vadja{põlto}] mis hõlmab lekseeme \vadja{põlto, mõlto}
+\item [\vadja{greebeni}] mis hõlmab lekseeme \vadja{greebeni, Helsengi, jevi, kiikeri, kiisseli, meebeli, nätel̕i, Reeveli, retsepti, rööveli, špeili, väli, vääri, ängeli, bibli}
+\item [\vadja{löülü}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{airo}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{bagaži}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{parad}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{poštaljon}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{sünti}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{lento}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{vipu}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{hapo}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{vilppi}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{hüppü}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{lippu}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{lamppi}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{sese}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{siso}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{mahsu}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{kursi}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{rusko}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{rissi}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{passi}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{karjušši}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{täti}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{tauti}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{kotko}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{kittsi}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{rätte}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{hattu}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{bankrutti}] mis hõlmab lekseeme \vadja{}
+\item [\vadja{komit̕et}] mis hõlmab lekseeme \vadja{}
+\end{description}
+\spacing{1.5}
+
+
+\subsection{\RN{3} käändkond}
+
+Kolmandasse käändkonda kuuluvad kahesilbilised sõnad, mille tüvevokaal on \vadja{-a} ning rohkem silpidega sõnad, millel esineb esimeses silbis \vadja{-a-}, \vadja{-õ-} või \vadja{-i-} \cite[42]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item siin on sõnu millel on -u- 1. silbis, need peaksid käima hoopis \RN{5} alla
+\item Tsvetkovil palju -õi-mitmusetüvega, need on ühtlustatud -oi-
+\item paljud laensõnad kuuluvad siia alla, nende lõpuvokaalidega on häda
+\end{itemize}
+
+\subsubsection*{Tüüpsõnad}
+\begin{description}
+\item [\textit{kandidaattõ}] (parem \textit{pliittõ})
+\end{description}
+
+
+\subsection{\RN{4} käändkond}
+
+Neljandasse käändkonda kuuluvad mitmed sõnad, mis on ainsuses eespoolse vokalismiga, ent mitmuses on tagapoolsed \cite[43]{ariste_grammar_1968}. Selliseid sõnu Heinsoo loodavas kirjakeeles ei esine (isiklik kommunikatsioon). % TODO: küsi ja kuidas viidata?
+
+
+\subsection{\RN{5} käändkond}
+
+Viiendasse käändkonda kuuluvad kahesilbilised sõnad, mille tüvevokaal on \vadja{-a} ja millel esineb esimeses silbis \vadja{-o-}, \vadja{-u-} või \vadja{-õ-}. Kattumise kohta \RN{3} käändkonna sõnadega, mille esimene silp sisaldab \vadja{-õ-}, mainib Ariste, et enamik neist kuulub siia. \cite[44]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item 5 käändkonna liikmed Aristel -õi- on suuresti muudetud -ii-
+\item 'mussõ' leiti mitu pl 'mussii' VKSi näitelausete hulgast
+\end{itemize}
+
+
+\subsection{\RN{6} käändkond}
+
+Kuuendasse käändkonda kuuluvad Ariste sõnul need sõnad, mis lõppevad \vadja{-õa/-eä/-iä}. Ta toob eraldi välja Jõgõperä murde erinevused üheainsa näitesõnaga. \cite[44]{ariste_grammar_1968}. Vadja kirjakeeles püütakse järgida ... TODO kirjutada.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item käändkonna liikmete pluurali tüved on ühtlustatud -- kas jätta nii või taastada Tsvetkovi variatiivsus?
+\end{itemize}
+
+
+\subsection{\RN{7} käändkond}
+
+Seitsmendasse käändkonda kuuluvad kahesilbilised sõnad, mille \msd{sg nom} lõpp on \vadja{-i}, ent mille tüvevokaal on \vadja{-e/-õ} \cite[45]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item 7 käändkonna kohta TODO kirjuta et isuri mõju tõttu on -i:-e:-iä levinud, aga normeerime nagu Aristel ja Tsvetkovil ka paralleelina tihti
+\item eespoolsed on i:e:eä ja tagapoolsed on i:õ:õa
+\item väci:väe aga mida teha lahti:lahe? -- VKSis esineb Lu lahõ
+\end{itemize}
+
+
+\subsection{\RN{8} käändkond}
+
+Kaheksandasse käändkonda kuuluvad \vadja{-ä}-tüvelised sõnad \cite[46]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item 8 käändkond on väga variatiivne tüvevokaali suhtes (eined, leived, čenned aga sepäd,
+\item eine (Heinsoo, Konkova ning Rozhanskiy ja Markus) aga einä (VKS)
+\item läikkiv on ühtlustatud läikkive
+\item Tsvetkovil paljud geminatsioonid puudu (õjja)
+\item tegija-liides on eespoolsete sõnade puhul ühtlustatud -jä:-jä:-jä, mitte -je:-jä:-jä, VKSis esineb rohkem -jä Lu/Li/J märgenditega (Konkoval eespoolseid sõnu ei esine)
+\item kuigi Tsvetkovil on häälduspäraselt ülesmärgitud 'õmpõlia' ja 'müüjä', on need läbivalt ühtlustatud (lisatud -j- nii \msd{sg nom} kui ka \msd{pl} vormidele)
+\item tegija-liides on tagapoolsete sõnade puhul ühtlustatud -ja:-ja:-ja (kuigi Konkoval esineb -jõ:-ja:-ja)
+\end{itemize}
+
+
+\subsection{\RN{9} käändkond}
+See käändkond on spetsiifiline Kattila murdele ja seda ei käsitleta siin töös.
+
+
+\subsection{\RN{10} käändkond}
+
+Kümnendasse käändkonda koondub suur osa kahetüvelisi sõnu, mille \msd{sg nom} lõpp on \vadja{-i}, ent mille tüvevokaal on \vadja{-e/-õ}. Ariste märgib, et \msd{sp par} on mitu erinevat realisatsiooni, kuigi nende moodustamis\-viis põhimõtteliselt järgib sama malli. \cite[47]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item 10 käändkond Ariste sõnul on sg par väga variatiivne
+\item ühtlustatud on -i:-õ:-tõ lõpuvokaalid
+\item kuigi voosi:voovvõ hääldub vuuvvõ on see märgitud voovvõ
+\end{itemize}
+
+
+\subsection{\RN{11} käändkond}
+
+Üheteistkümnendasse käändkonda kuuluvad need sõnad, mille \msd{sg nom} lõpp on \vadja{-Z}, ent mille vokaaltüvi on \vadja{-s-} \cite[48]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item \vadja{-Z}-lõpu sandhi nähtus on kõigi liikmete puhul ühtlustatud \vadja{-z} lõpulisteks
+\item kas seda peab mainima, et Jõgõperä murdes on -s-, Kattila murdes on -hs- ja teistes murretes on -ss-
+\end{itemize}
+
+
+\subsection{\RN{12} käändkond}
+
+Kaheteistkümnes käändkond koondab need sõnad, mille \msd{sg nom} lõpp on \vadja{-n/-ne/-nõ}, ent mille vokaaltüves on \vadja{-se-:-ze-/-sö-:-zö-} sõltuvalt astmevaheldusele \cite[49]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item pl tüvi ühtlustatud -s- igal pool TODO üle vaadata s:z vaheldus pluuralis, kas see on s kui 1. silp on pikk v kinnine? (Tsvetkovil pole reeglipäraselt vaid variatsiooniline)
+\item kas pl gen peaks vahelduma -z- (iloin)? või -s- (keskolin)?
+\item talviisijõ,talviiziit
+\item õpõin on väga erandlik sõna
+\end{itemize}
+
+
+\subsection{\RN{13} käändkond}
+
+Kolmeteistkümnendasse käändkonda kuuluvad need sõnad, mis lõpevad pika vokaaliga \msd{sg nom}. Lisaks kuuluvad siia mõned sõnad, mis lõppevad diftongiga \msd{sg nom}. \cite[49]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item Aristel pole \vadja{seemen} vaid on seemee:seemenee:seemeetä
+\item Tsvetkovil pole süä:süäme vaid on süä:süä:süttä/süät
+\item Konkoval on võttim:võttimõ:võttima (Tsvetkovil on näitelauses võti)
+\end{itemize}
+
+Veel kuuluvad siia käändkonda ordinaalid kolmest edasi \cite[50]{ariste_grammar_1968}.
+Numeraalide puhul on järgitud Rozhanskiy ja Markuse välja toodud:
+\begin{itemize}
+\item \msd{sg nom} lõpp on \vadja{-iz}
+\end{itemize}
+
+
+\subsection{\RN{14} käändkond}
+
+Neljateistkümnenda käändkonna sõnad lõpevad \vadja{-aZ/-äZ, -iZ} või \vadja{-e/-õ} \cite[50]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item \vadja{-Z}-lõpu sandhi nähtus on kõigi liikmete puhul ühtlustatud \vadja{-z} lõpulisteks
+\item plurale tantum 'ivusõd' kustutatud sest 'ivuz' olemas
+\item Tsvetkovi antud paralleelvariantidest on valitud vaid üks (korpuse, analoogsete sõnade ülekaalu ning Heinsoo ja Konkova põhjal)
+\item valitud 'lähe' tugevaastmeline sg tüvi, sest VKSis esineb ühes Li näitelauses
+\item -kõz-liides muudetud eespoolseks vastavate sõnade juures
+\end{itemize}
+
+
+
+\subsection{\RN{15} käändkond}
+
+Viieteistkümnes käändkond koondab sõnu nagu \vadja{lühüd}, \vadja{õhud}, \vadja{koollu}, \vadja{ilozuZ}, \vadja{rikkauZ} \cite[51]{ariste_grammar_1968}.
+
+Avatuid küsimusi-tähelepanekuid:
+\begin{itemize}
+\item 
+\end{itemize}
+
+
+% \subsection{Ekstraktmorfoloogiaga leitud tüüpsõnad}
+% 
+% See alaosa loendab leitud tüüpsõnad sõnaliigiti. Analüüsitakse tüüpsõnade alla kuuluvaid sõnu struktuurselt (kui mitu silpi, silpide struktuur).
+% 
+% (Analüüsidest on võimalik luua arvutikirjeldus hüpoteetilise vadjakeelse sõna üle õigekirjakontrollija jaoks.)
+% 
+% \paragraph*{bad̕d̕õ} kuulub käändkonda \RN{3} sest \msd{pl} -oi-
+% \paragraph*{airo} kuulub käändkonda \RN{2} sest \msd{sg par} lõpp on -oa või -ua
+% \paragraph*{bagaži} kuulub käändkonda \RN{2} ja \msd{pl} on -ii-
+% \paragraph*{bank} kuulub käändkonda \RN{3} kuigi esimeses silbis esineb ka \vadja{u} peale \vadja{a, õ ja i} NB! \vadja{bank} ehk ei kuulugi siia või on paha nimetaja
+% \paragraph*{čimolain} kuulub käändkonda \RN{12}
+% \paragraph*{fartukkõ} kuulub käändkonda \RN{3} sest \msd{pl} -oi-
+% \paragraph*{duumõ} kuulub käändkonda \RN{5} aga mida teha \msd{pl} -ii- (Aristel on -õi-)
+% \paragraph*{flakku} kuulub käändkonda \RN{2} sest \msd{sg par} lõpp on -oa või -ua
+% \paragraph*{baldõhina} kuulub käändkonda \RN{3} aga \vadja{suma} ei peaks siin olema?
+% \paragraph*{bankrutti} kuulub käändkonda \RN{2}
+% \paragraph*{eine} kuulub käändkonda \RN{8} -ä-tüvevokaaliga NB! aga Aristel \vadja{eine} hoopis \RN{4}, kus \msd{pl} on tagapoolne -oi-
+% \paragraph*{greebeni} kuulub käändkonda \RN{2}
+% \paragraph*{ivuz} kuulub käändkonda \RN{11} ja Jõgõperä moodi on vokaalitüvel -s-, mitte -hs- ega -ss-
+% \paragraph*{aikõ} kuulub käändkonda \RN{3} 
+% \paragraph*{hattu} kuulub käändkonda \RN{2}
+% \paragraph*{sarvi} kuulub käändkonda \RN{7} aga -i:-õ:-ia, Aristel -i:-õ:-õa
+% \paragraph*{alku} kuulub käändkonda \RN{2}
+% \paragraph*{koivuin} kuulub käändkonda \RN{12}
+% \paragraph*{lako} kuulub käändkonda \RN{2}
+% \paragraph*{hoolitoi} kuulub käändkonda \RN{13}
+% \paragraph*{irvi} kuulub käändkonda \RN{7}
+% \paragraph*{kokki} kuulub käändkonda \RN{2} aga \msd{pl} on -ii-?
+% \paragraph*{juuri} kuulub käändkonda \RN{10}
+% \paragraph*{kraaskõ} kuulub käändkonda \RN{3}
+% \paragraph*{jaanikukkõ} kuulub käändkonda \RN{5} aga mida teha -ii- Aristel on -õi-
+% \paragraph*{iiri} kuulub käändkonda \RN{10}
+% \paragraph*{eglin} kuulub käändkonda \RN{12}
+% \paragraph*{liivõkõz} kuulub käändkonda \RN{14}(?)
+% \paragraph*{lamppi} kuulub käändkonda \RN{2}
+% \paragraph*{mato} kuulub käändkonda \RN{2} (või \RN{9}?)
+% \paragraph*{kittsi} kuulub käändkonda \RN{2}
+% \paragraph*{inostranttsõ} kuulub käändkonda \RN{3} NB! \msd{sg ill} valesti -sasõ?
+% \paragraph*{karjušši} kuulub käändkonda \RN{2}
+% \paragraph*{ikolookkõ} kuulub käändkonda \RN{5}
+% \paragraph*{kanka} kuulub käändkonda \RN{6} ehk -\vadja{õa}-lõpulised
+% \paragraph*{jäin} kuulub käändkonda \RN{12}
+% \paragraph*{kompjutera} kuulub käändkonda \RN{5} kas ühtlustada -õ:-a:-a
+% \paragraph*{murhõ} kuulub käändkonda \RN{10}
+% \paragraph*{lento} kuulub käändkonda \RN{2}
+% \paragraph*{lippu} kuulub käändkonda \RN{2}
+% \paragraph*{riittõ} kuulub käändkonda \RN{3}
+% \paragraph*{rusko} kuulub käändkonda \RN{2}
+% \paragraph*{tüü} kuulub käändkonda \RN{1}
+% \paragraph*{pal̕l̕õz} kuulub käändkonda \RN{14}
+% \paragraph*{hammõz} kuulub käändkonda \RN{14}
+% \paragraph*{pää} kuulub käändkonda \RN{1}
+% \paragraph*{magnetti} kuulub käändkonda \RN{2}
+% \paragraph*{mõiznikkõ} kuulub käändkonda \RN{3}
+% \paragraph*{pere} kuulub käändkonda \RN{14} või \RN{6}(?) (\vadja{erne} ja \vadja{pere} kindlasti eri etümoloogiatega)
+% \paragraph*{valka} kuulub käändkonda \RN{6}
+% \paragraph*{kotko} kuulub käändkonda \RN{2}
+% \paragraph*{propkõ} kuulub käändkonda \RN{5}
+% \paragraph*{pehmiä} kuulub käändkonda \RN{6}
+% \paragraph*{pihlpuu} kuulub käändkonda \RN{1}
+% \paragraph*{meri} kuulub käändkonda \RN{10} NB! ühtlustada \msd{sg par} vokaaliga
+% \paragraph*{süsi} kuulub käändkonda \RN{7}
+% \paragraph*{sata} kuulub käändkonda \RN{3}
+% \paragraph*{rapa} kuulub käändkonda \RN{3}
+% \paragraph*{rätte} kuulub käändkonda \RN{2}
+% \paragraph*{rantõ} kuulub käändkonda \RN{3}
+% \paragraph*{trubõ} kuulub käändkonda \RN{3}
+% \paragraph*{l̕iitkõ} kuulub käändkonda \RN{3}
+% \paragraph*{rissisä, česä} kuulub käändkonda \RN{11} NB! \vadja{rissisä} teha \vadja{isä} järgi
+% \paragraph*{musikõz} kuulub käändkonda \RN{14} või peaks ümber tegema \RN{15} järgi?
+% \paragraph*{nenä, čülä} kuulub käändkonda \RN{8}
+% \paragraph*{läkine} kuulub käändkonda \RN{8}
+% \paragraph*{rissimä, emä} kuulub käändkonda \RN{8}
+% \paragraph*{pliittõ} kuulub käändkonda \RN{3}
+% \paragraph*{kaamenšikka} kuulub käändkonda \RN{3}
+% \paragraph*{pähčen, ičäv} kuulub käändkonda \RN{8} ???
+% \paragraph*{ülči, jälči} kuulub käändkonda \RN{2}
+% \paragraph*{vetelüz, jänez} kuulub käändkonda \RN{14}
+% \paragraph*{löülü, jürü} kuulub käändkonda \RN{2}
+% \paragraph*{pen̕sioner} kuulub käändkonda \RN{3} (mil moel erineb \vadja{bank}ast?)
+% \paragraph*{mussõ} kuulub käändkonda \RN{5} kuigi on -õi- mitte -ii-
+% \paragraph*{liippõ} kuulub käändkonda \RN{3}
+% \paragraph*{koomikk} kuulub käändkonda \RN{3} mis \msd{sg nom} lõpuga teha?
+% \paragraph*{või} kuulub käändkonda \RN{1}
+% \paragraph*{passi} kuulub käändkonda \RN{5}
+% \paragraph*{moškõ} kuulub käändkonda \RN{5}
+% \paragraph*{õnki} kuulub käändkonda \RN{5}
+% \paragraph*{kõva} kuulub käändkonda \RN{6} (\vadja{kõrka} kuulub, aga \vadja{kõva} \msd{sg par} võiks muuta?
+% \paragraph*{partõ} kuulub käändkonda \RN{3}
+% \paragraph*{tečejä} kuulub käändkonda \RN{8}
+% \paragraph*{uhsi} kuulub käändkonda \RN{10}
+% \paragraph*{poutõ} kuulub käändkonda \RN{3}
+% \paragraph*{seppe} kuulub käändkonda \RN{8}
+% \paragraph*{suukkurliivõ} kuulub käändkonda \RN{3}
+% \paragraph*{noori, lõhi} kuulub käändkonda \RN{10}
+% \paragraph*{poikõ} kuulub käändkonda \RN{5}
+% \paragraph*{lähe} kuulub käändkonda \RN{14}
+% \paragraph*{lähe} kuulub käändkonda \RN{14} valida emb-kumb
+% \paragraph*{läsijõ} kuulub käändkonda \RN{8} kas ühtlustada eespoolseks niku \vadja{tečejä}
+% \paragraph*{läsijõ} kuulub käändkonda \RN{8} või ühtlustada tagapoolseks \vadja{-ja} liiteks?
+% \paragraph*{muna} kuulub käändkonda \RN{5} kuigi -õi- mitte -ii-
+% \paragraph*{musikko} kuulub käändkonda \RN{2}
+% \paragraph*{peremmeez} kuulub käändkonda \RN{15}
+% \paragraph*{trubačist, mokom} kuulub käändkonda \RN{5}
+% \paragraph*{põlto} kuulub käändkonda \RN{2}
+% \paragraph*{märännü} kuulub käändkonda \RN{15} või
+% \paragraph*{märännü} kuulub käändkonda \RN{2} emb-kumb valida
+% \paragraph*{siso} kuulub käändkonda \RN{2}
+% \paragraph*{sooli} kuulub käändkonda \RN{10} ühtlustada \msd{sg par} lõpud
+% \paragraph*{vaahto} kuulub käändkonda \RN{2}
+% \paragraph*{vilppi} kuulub käändkonda \RN{2}
+% \paragraph*{võõrõz} kuulub käändkonda \RN{14}
+% \paragraph*{tauti} kuulub käändkonda \RN{2} vali emb-kumb tüvemuutus
+% \paragraph*{tauti} kuulub käändkonda \RN{2} vali emb-kumb
+% \paragraph*{vattsõ} kuulub käändkonda \RN{3}
+% \paragraph*{voosi} kuulub käändkonda \RN{10}
+% \paragraph*{aapõ} kuulub käändkonda \RN{3}
+% \paragraph*{ahas} kuulub käändkonda \RN{14}
+% \paragraph*{aitõ} kuulub käändkonda \RN{3}
+% \paragraph*{aloi} kuulub käändkonda \RN{8} ??? \RN{5} jään hätta \msd{sg nom} \vadja{alojõ}? vrd \vadja{kitai}
+% \paragraph*{alõin} kuulub käändkonda \RN{12} ???
+% \paragraph*{angõriaz} kuulub käändkonda \RN{14} ühtlüstada tüvevokaali
+% \paragraph*{auči} kuulub käändkonda \RN{2}
+% \paragraph*{baabukõz} kuulub käändkonda \RN{14} ühtlüstada tüvevokaali
+% \paragraph*{bašmuk} kuulub käändkonda \RN{3}
+% \paragraph*{bašn̕i} kuulub käändkonda \RN{2} sest on palataliseeritud???
+% \paragraph*{biblioteek} kuulub käändkonda \RN{5}
+% \paragraph*{biskvittõ} kuulub käändkonda \RN{5}
+% \paragraph*{borovikkõ} kuulub käändkonda \RN{3}
+% \paragraph*{bruuss} kuulub käändkonda \RN{14} või \vadja{bruussõ} \RN{3}?
+% \paragraph*{bukvõ} kuulub käändkonda \RN{5}
+% \paragraph*{bul̕bukõz} kuulub käändkonda \RN{14}
+% \paragraph*{čenče} kuulub käändkonda \RN{8}
+% \paragraph*{čeväd} kuulub käändkonda \RN{15}
+% \paragraph*{čämmel} kuulub käändkonda \RN{15}
+% \paragraph*{čäsi} kuulub käändkonda \RN{10}
+% \paragraph*{čäčüd} kuulub käändkonda \RN{15} Ariste mainib, et Jõgõperäl \msd{sg nom} vorm \vadja{čäčü}
+% \paragraph*{čümme} kuulub käändkonda \RN{13} või \RN{10} NB! aga \msd{sg par} muuta \vadja{-ntä}? ja \msd{sg gen} peaks lõppema -ne?
+% \paragraph*{čümmenäz} kuulub käändkonda \RN{13} NB! ordinaalid >3 ühtlustada selle käändkonna järgi
+% \paragraph*{dovariššõ} kuulub käändkonda \RN{3} kas \msd{sg ine} ka gemineerub?
+% \paragraph*{enči} kuulub käändkonda \RN{7}
+% \paragraph*{esimein} kuulub käändkonda \RN{12}
+% \paragraph*{famil̕} kuulub käändkonda \RN{2} sest on palataliseeritud???
+% \paragraph*{fartõl} kuulub käändkonda \RN{3} NB! \msd{sg ill} peab valesti olema?
+% \paragraph*{fookusnik} kuulub käändkonda \RN{3}
+% \paragraph*{fotokartočka} kuulub käändkonda \RN{3} või peaks \msd{pl} muutma \RN{5} järgi?
+% \paragraph*{fraak} kuulub käändkonda \RN{5}
+% \paragraph*{frikad̕el̕k} kuulub käändkonda \RN{3} NB! kas muuta astmevahelduslikuks?
+% \paragraph*{haisu} kuulub käändkonda \RN{2}
+% \paragraph*{hapo} kuulub käändkonda \RN{2} aga \msd{sg nom} nõrgas astmes sest *<~hapan?
+% \paragraph*{häülütüs} kuulub käändkonda \RN{14}
+% \paragraph*{hüppü} kuulub käändkonda \RN{2}
+% \paragraph*{ičä} kuulub käändkonda \RN{8} kuigi võiks olla \RN{9}
+% \paragraph*{iloin} kuulub käändkonda \RN{12}
+% \paragraph*{itikkõ} kuulub käändkonda \RN{3}
+% \paragraph*{ivusõd} kuulub käändkonda \RN{15} ??? aga mul on plurale tantum?
+% \paragraph*{joožikkõ} kuulub käändkonda \RN{3} NB! mul on \msd{pl} valesti nõrgas astmes?
+% \paragraph*{jõki} kuulub käändkonda \RN{7} aga miks mitte \RN{2}?
+% \paragraph*{jõutu} kuulub käändkonda \RN{3}
+% \paragraph*{järčü} kuulub käändkonda \RN{3}
+% \paragraph*{kaani} kuulub käändkonda \RN{10} aga kas \msd{sg gen} tüvevokaal muutub?
+% \paragraph*{kaatsõd} kuulub käändkonda \RN{15} ??? aga mul on plurale tantum?
+% \paragraph*{kahs} kuulub käändkonda \RN{10} kas parem oleks siiski \vadja{kahsi}?
+% \paragraph*{kahõsa} kuulub käändkonda \RN{13} ?? vt ka Rozhanskiyst üle
+% \paragraph*{kal̕indora} kuulub käändkonda \RN{5} või \RN{9} aga -õi- mitte -ii-? kas kõik -õi- hoopis \RN{9} alla??
+% \paragraph*{kalliz} kuulub käändkonda \RN{14}
+% \paragraph*{kamal̕ikka} kuulub käändkonda \RN{3}
+% \paragraph*{kand̕idaat} kuulub käändkonda \RN{3}
+% \paragraph*{kangõz} kuulub käändkonda \RN{14}
+% \paragraph*{kanki} kuulub käändkonda \RN{2}
+% \paragraph*{kannõl} kuulub käändkonda \RN{14}
+% \paragraph*{kant} kuulub käändkonda \RN{3}
+% \paragraph*{kasõ} kuulub käändkonda \RN{14}
+% \paragraph*{katol̕ikk} kuulub käändkonda \RN{3}
+% \paragraph*{katõ} kuulub käändkonda \RN{14}
+% \paragraph*{kauniz} kuulub käändkonda \RN{14} NB! muuta Tsvetkovi -e-lõpp -i vastu nagu (Konkovalgi) AGA mida teha \msd{pl} tüvevokaaliga?
+% \paragraph*{kaõ} kuulub käändkonda \RN{10} NB! kuigi \msd{sg nom} pole -i-lõpuline!
+% \paragraph*{kerkä} kuulub käändkonda \RN{6}
+% \paragraph*{keskolin} kuulub käändkonda \RN{12}
+% \paragraph*{kitai} kuulub käändkonda \RN{8}
+% \paragraph*{klaass} kuulub käändkonda \RN{3}
+% \paragraph*{koffi} kuulub käändkonda \RN{2}
+% \paragraph*{kolaus} kuulub käändkonda \RN{5}
+% \paragraph*{komit̕et} kuulub käändkonda \RN{2}
+% \paragraph*{koollud} kuulub käändkonda \RN{15} aga kas tüvevokaali peaks kuidagi ühtlustama?
+% \paragraph*{koori} kuulub käändkonda \RN{2}
+% \paragraph*{koorrõ} kuulub käändkonda \RN{15} ??? mida \msd{sg par} lõpuga teha?
+% \paragraph*{kuha} kuulub käändkonda \RN{5} ???
+% \paragraph*{kultõ} kuulub käändkonda \RN{5} või \RN{9} ??
+% \paragraph*{kumpõ} kuulub käändkonda \RN{5} aga \msd{pl}-tüvi ühtlustada pikaks?
+% \paragraph*{kurkku} kuulub käändkonda \RN{2}
+% \paragraph*{kurp} kuulub käändkonda \RN{5}
+% \paragraph*{kursi} kuulub käändkonda \RN{2}
+% \paragraph*{kusi} kuulub käändkonda \RN{10} NB! ühtlusta \msd{sg ill}
+% \paragraph*{kutõ} kuulub käändkonda \RN{14} ??
+% \paragraph*{kuus} kuulub käändkonda \RN{7}
+% \paragraph*{kuusi} kuulub käändkonda \RN{7}
+% \paragraph*{kuuvvaiz} kuulub käändkonda \RN{13} NB! ühtlustada
+% \paragraph*{kuõ} kuulub käändkonda \RN{14}
+% \paragraph*{kõik} kuulub käändkonda \RN{5}
+% \paragraph*{kõlmaz} kuulub käändkonda \RN{13} NB! ühtlustada
+% \paragraph*{kõlmõd} kuulub käändkonda \RN{15} NB! \msd{sg par} muuta \vadja{kõlmõttõ}
+% \paragraph*{lafkõ} kuulub käändkonda \RN{3}
+% \paragraph*{lahti} kuulub käändkonda \RN{2} NB! lühike illatiiv muuta \vadja{lahtisõ}?
+% \paragraph*{laki} kuulub käändkonda \RN{5}
+% \paragraph*{lehto} kuulub käändkonda \RN{2}
+% \paragraph*{leipe} kuulub käändkonda \RN{8}
+% \paragraph*{lisä} kuulub käändkonda \RN{8} vrd \vadja{isä}?
+% \paragraph*{lootõ} kuulub käändkonda \RN{5}
+% \paragraph*{luiskõ} kuulub käändkonda \RN{5}
+% \paragraph*{lumi} kuulub käändkonda \RN{10}
+% \paragraph*{luukkõ} kuulub käändkonda \RN{9}?? -õi-mitmus
+% \paragraph*{lõunõ} kuulub käändkonda \RN{14}??
+% \paragraph*{läikk} kuulub käändkonda \RN{2}
+% \paragraph*{läikkiv} kuulub käändkonda \RN{8}
+% \paragraph*{läsive} kuulub käändkonda \RN{8}
+% \paragraph*{läsü} kuulub käändkonda \RN{2}
+% \paragraph*{lühüd} kuulub käändkonda \RN{15}
+% \paragraph*{maa} kuulub käändkonda \RN{1}
+% \paragraph*{magnettiin} kuulub käändkonda \RN{12}?
+% \paragraph*{mahsu} kuulub käändkonda \RN{2}
+% \paragraph*{mahsõ} kuulub käändkonda \RN{3}
+% \paragraph*{main} kuulub käändkonda \RN{12}
+% \paragraph*{makka} kuulub käändkonda \RN{6}
+% \paragraph*{makuz} kuulub käändkonda \RN{11}
+% \paragraph*{mansikõz} kuulub käändkonda \RN{14}
+% \paragraph*{mettse} kuulub käändkonda \RN{8}
+% \paragraph*{moodõ} kuulub käändkonda \RN{9}?? -õi-mitmus?
+% \paragraph*{mõlõpi} kuulub käändkonda \RN{} 
+% \paragraph*{mäči} kuulub käändkonda \RN{7}
+% \paragraph*{märče} kuulub käändkonda \RN{8}
+% \paragraph*{mätä} kuulub käändkonda \RN{8}
+% \paragraph*{müüjõ} kuulub käändkonda \RN{8} kas ühtlustada -jõ eespoolseks?
+% \paragraph*{nagriz} kuulub käändkonda \RN{11}
+% \paragraph*{nagru} kuulub käändkonda \RN{2}
+% \paragraph*{nel̕l̕äz} kuulub käändkonda \RN{13}
+% \paragraph*{nenäkõz} kuulub käändkonda \RN{14} kas ühtlustada eespoolseks?
+% \paragraph*{nõki} kuulub käändkonda \RN{12}
+% \paragraph*{olud} kuulub käändkonda \RN{15}
+% \paragraph*{ooli} kuulub käändkonda \RN{10} lisada \msd{sg par} lõpuvokaal
+% \paragraph*{oonõ} kuulub käändkonda \RN{9}??
+% \paragraph*{paganus} kuulub käändkonda \RN{11}
+% \paragraph*{paha} kuulub käändkonda \RN{3},???
+% \paragraph*{parad} kuulub käändkonda \RN{2}
+% \paragraph*{partõin} kuulub käändkonda \RN{12}
+% \paragraph*{parõpi} kuulub käändkonda \RN{}???
+% \paragraph*{peenepi} kuulub käändkonda \RN{}???
+% \paragraph*{pesä} kuulub käändkonda \RN{8}
+% \paragraph*{pii} kuulub käändkonda \RN{1}
+% \paragraph*{poduškõ} kuulub käändkonda \RN{3}
+% \paragraph*{pojo} kuulub käändkonda \RN{9} aga mitmuse tüvi -ai-?
+% \paragraph*{poolõz} kuulub käändkonda \RN{14}
+% \paragraph*{Portugaalija} kuulub käändkonda \RN{6}???
+% \paragraph*{poštaljon} kuulub käändkonda \RN{2} aga kas \msd{sg nom} -i-lõpuga?
+% \paragraph*{programmõ} kuulub käändkonda \RN{5} NB! muuda mitmusetüvi pikaks -ii-
+% \paragraph*{puhaz} kuulub käändkonda \RN{14}
+% \paragraph*{põrzõz} kuulub käändkonda \RN{14}
+% \paragraph*{põski} kuulub käändkonda \RN{7}
+% \paragraph*{pühä} kuulub käändkonda \RN{8}
+% \paragraph*{püütö} kuulub käändkonda \RN{2}
+% \paragraph*{raadio} kuulub käändkonda \RN{6}??
+% \paragraph*{rakõ} kuulub käändkonda \RN{14}
+% \paragraph*{raskõz} kuulub käändkonda \RN{14}
+% \paragraph*{ratis} kuulub käändkonda \RN{14} aga Aristel on \vadja{ratiz}?
+% \paragraph*{rihenneüz} kuulub käändkonda \RN{11} aga see pole ilus liitsõna
+% \paragraph*{rikaz} kuulub käändkonda \RN{14}
+% \paragraph*{rissi} kuulub käändkonda \RN{2}
+% \paragraph*{roho} kuulub käändkonda \RN{15}? NB! \msd{sg par} lõpuvokaal lisada
+% \paragraph*{rookõ} kuulub käändkonda \RN{5} või \RN{9}
+% \paragraph*{rooppõ} kuulub käändkonda \RN{5} või \RN{9}
+% \paragraph*{ruska} kuulub käändkonda \RN{6}
+% \paragraph*{räpäl} kuulub käändkonda \RN{8}
+% \paragraph*{rüiz} kuulub käändkonda \RN{14}??
+% \paragraph*{seemen} kuulub käändkonda \RN{13}
+% \paragraph*{selče} kuulub käändkonda \RN{8}
+% \paragraph*{sese} kuulub käändkonda \RN{2}????
+% \paragraph*{siipi} kuulub käändkonda \RN{2}??
+% \paragraph*{siitiä} kuulub käändkonda \RN{6}
+% \paragraph*{sika} kuulub käändkonda \RN{3}? aga miks geminatsioon \msd{sg par}?
+% \paragraph*{siltõ} kuulub käändkonda \RN{3}
+% \paragraph*{sinin} kuulub käändkonda \RN{12}
+% \paragraph*{slona} kuulub käändkonda \RN{8}??
+% \paragraph*{soo} kuulub käändkonda \RN{1}
+% \paragraph*{sopuin} kuulub käändkonda \RN{12}
+% \paragraph*{sorsõ} kuulub käändkonda \RN{5}
+% \paragraph*{susi} kuulub käändkonda \RN{7}
+% \paragraph*{süčüzü} kuulub käändkonda \RN{2}
+% \paragraph*{sünti} kuulub käändkonda \RN{2}
+% \paragraph*{süsiin} kuulub käändkonda \RN{12}??
+% \paragraph*{süä} kuulub käändkonda \RN{13}?? kuigi Tsetkovil pole \msd{sg gen} -me-lõpuline? või on see \RN{6} järgi?
+% \paragraph*{süüčči} kuulub käändkonda \RN{2}
+% \paragraph*{štanad} kuulub käändkonda \RN{3} aga on plurale tantum
+% \paragraph*{taimi} kuulub käändkonda \RN{7}
+% \paragraph*{talviin} kuulub käändkonda \RN{12}
+% \paragraph*{tarkuz} kuulub käändkonda \RN{11}
+% \paragraph*{tee} kuulub käändkonda \RN{1}
+% \paragraph*{terve} kuulub käändkonda \RN{6}
+% \paragraph*{toho} kuulub käändkonda \RN{15}? NB! \msd{sg par} lõpuvokaal lisada
+% \paragraph*{tuhattõ} kuulub käändkonda \RN{3}?
+% \paragraph*{turvõz} kuulub käändkonda \RN{14}
+% \paragraph*{täti} kuulub käändkonda \RN{2}
+% \paragraph*{tühjõ} kuulub käändkonda \RN{4} aga see käändkond on nii ebaproduktiivne, et tõsta ümber \RN{8}  NB! muuda \vadja{tühje}??
+% \paragraph*{tükkü} kuulub käändkonda \RN{2}
+% \paragraph*{tünke} kuulub käändkonda \RN{8}
+% \paragraph*{tütär} kuulub käändkonda \RN{13}???
+% \paragraph*{usa} kuulub käändkonda \RN{5}
+% \paragraph*{vahti} kuulub käändkonda \RN{2}
+% \paragraph*{vaka} kuulub käändkonda \RN{6}
+% \paragraph*{varsi} kuulub käändkonda \RN{10}
+% \paragraph*{varvõz} kuulub käändkonda \RN{14}
+% \paragraph*{velosipedõ} kuulub käändkonda \RN{5}
+% \paragraph*{vihtõ} kuulub käändkonda \RN{3}
+% \paragraph*{vikahtõ} kuulub käändkonda \RN{3}
+% \paragraph*{viki} kuulub käändkonda \RN{2}
+% \paragraph*{viks} kuulub käändkonda \RN{3}
+% \paragraph*{villõ} kuulub käändkonda \RN{3}
+% \paragraph*{vimpõ} kuulub käändkonda \RN{5}
+% \paragraph*{vipu} kuulub käändkonda \RN{2}
+% \paragraph*{väči} kuulub käändkonda \RN{7}
+% \paragraph*{õgaz} kuulub käändkonda \RN{14}
+% \paragraph*{ohsõ} kuulub käändkonda \RN{5}
+% \paragraph*{õhtõgoin} kuulub käändkonda \RN{12}
+% \paragraph*{õja} kuulub käändkonda \RN{8}
+% \paragraph*{õma} kuulub käändkonda \RN{8}
+% \paragraph*{õmpõjõ} kuulub käändkonda \RN{8}
+% \paragraph*{õmpõlia} kuulub käändkonda \RN{8} -lia aga -lija?
+% \paragraph*{õnnõkõz} kuulub käändkonda \RN{14}
+% \paragraph*{õnnõliin} kuulub käändkonda \RN{12}
+% \paragraph*{õnnõtoi} kuulub käändkonda \RN{13}
+% \paragraph*{õpõin} kuulub käändkonda \RN{12}
+% \paragraph*{õpõttõja} kuulub käändkonda \RN{8}
+% \paragraph*{õttsõ} kuulub käändkonda \RN{3}
+% \paragraph*{änte} kuulub käändkonda \RN{8}
+% \paragraph*{ärčä} kuulub käändkonda \RN{8} aga võiks ka \RN{7}
+% \paragraph*{ääri} kuulub käändkonda \RN{7} aga \msd{sg par} \vadja{ääreä}?
+% \paragraph*{ühs} kuulub käändkonda \RN{10}
+% \paragraph*{üvä} kuulub käändkonda \RN{8}
 
 
 
 
-\subsection{Ekstraktmorfoloogiaga leitud tüüpsõnad}
-
-See alaosa loendab leitud tüüpsõnad sõnaliigiti. Analüüsitakse tüüpsõnade alla kuuluvaid sõnu struktuurselt (kui mitu silpi, silpide struktuur).
-
-(Analüüsidest on võimalik luua arvutikirjeldus hüpoteetilise vadjakeelse sõna üle õigekirjakontrollija jaoks.)
-
-
-
-
-\subsection{Üks võimalik muuttüüpide süsteem}
+\subsection{Ekstraktmorfoloogia üldistatud muuttüüpide algoritm}
 \label{sec:muuttüüpide-süsteem}
 
-Silfverberg ja Hulden (\citeyear{silfverberg_computational_2018}) on kirjeldanud üht formaalset meetodit, kuidas ekstrakt\-morfoloogia tüüpsõnade arvu vähendada. Siin alaosas rakendatakse meetodit leitud tüüpsõnadele ja esitatakse selle põhjal loodud vadja muuttüübistik ja võrreldatakse leitud muuttüübistikku .
+% tundub, et algoritm on kallutatud regulaarsustele, mis esinevad kirjakeeltes-ühiskeeltes, aga ei tööta nii hästi variatiivse keeleainese peal
 
-Eesti muuttüüpide traditsioonist on kirjutanud mh \cite{viks_muuttuubid_nodate}.
+Silfverberg ja Hulden (\citeyear{silfverberg_computational_2018}) on kirjeldanud üht formaalset viisi, kuidas ekstrakt\-morfoloogia tüüpsõnu kokku grupeerida ja seega nende arvu vähendada. Siin alaosas rakendatakse meetodit leitud tüüpsõnadele ja esitatakse selle põhjal loodud vadja muuttüübistik ja võrreldatakse leitud muuttüübistikku Ariste käändkondadega.
 
+
+
+% Eesti muuttüüpide traditsioonist on kirjutanud mh \cite{viks_muuttuubid_nodate}.
+
+
+
+\subsubsection{Muuttüüp \RN{1}}
+% Muuttüüp \RN{1} koondab enda alla kõige suurema hulga sõnu (303) ja tüüpsõnu (??). Hõlmatud tüüpsõnad jagunevad järgnevatesse \cite[85]{__2011} välja toodud muutkondadesse (klassi).
+% 
+% \paragraph*{Klass 1} \vadja{aapõ}, \vadja{aikõ}, \vadja{aitõ}, \vadja{butkõ}, \vadja{čenče}, \vadja{dovariššõ(?)}, \vadja{enči}, \vadja{propkõ}, \vadja{ülči}, \vadja{laiskõ}, \vadja{kultõ}, \vadja{kumpõ}, \vadja{õnki}, \vadja{kurp}, \vadja{partõ}, \vadja{lafkõ}, \vadja{lahti}, \vadja{lautõ}, \vadja{leipe}, \vadja{lootõ}, \vadja{luiskõ}, \vadja{poikõ}, \vadja{märče}, \vadja{selče}, \vadja{mätä}, \vadja{rantõ}, \vadja{põlvi}(?), \vadja{kanki}, \vadja{kant}, \vadja{põski}, \vadja{rookõ}, \vadja{siipi}, \vadja{siltõ}, \vadja{sorsõ}, \vadja{taimi}(?), \vadja{tünko}, \vadja{vihtõ}, \vadja{vimpõ}, \vadja{õhsõ}, \vadja{änte}, \vadja{ääri}(?)
+% 
+% \paragraph*{Klass 1a} \vadja{kukkõ}, \vadja{biskvittõ}, \vadja{borovikkõ}, \vadja{bruuss}, \vadja{mõiznikkõ}, \vadja{fartukkõ}, \vadja{pliittõ}, \vadja{ikolookkõ}, \vadja{itikkõ}, \vadja{joožikkõ}, \vadja{katol̕ikk}, \vadja{liippõ}, \vadja{koomikk}, \vadja{klaass}, \vadja{riittõ}, \vadja{seppe}, \vadja{luukkõ}, \vadja{mahsõ}, \vadja{musikko}, \vadja{rooppõ}, \vadja{tükku}, 
+% 
+% \paragraph*{Klass 2}
+% 
+% \paragraph*{Klass 2$^\ast$} \vadja{česä}, \vadja{ičä}, \vadja{jõki}, \vadja{sõta(?)}, \vadja{mäči}, \vadja{nõki}, \vadja{rapa}, \vadja{sika}, \vadja{usa}, \vadja{väči} 
+% 
+% \paragraph*{Klass 3} \vadja{iiri}, \vadja{irvi(?)}, \vadja{suuri}, \vadja{kahs}, \vadja{kahõsa(?)}, \vadja{koollud(?)}, \vadja{koori}, \vadja{kuus(?)}, \vadja{uusi}(?), \vadja{kuusi}, \vadja{lumi}, \vadja{noori}, \vadja{lõunõ}, \vadja{läsijõ}, \vadja{lühüd}, \vadja{meri}, \vadja{peeni}, \vadja{meeli}, \vadja{meez}, \vadja{ooli}, \vadja{poduškõ}(?), \vadja{pooli}, \vadja{uhsi}, \vadja{varsi}, \vadja{õmpõlia}, \vadja{ühs}
+% 
+% \paragraph*{Klass 3$^\ast$} \vadja{čäsi}, \vadja{laki}, \vadja{süsi}, \vadja{vesi}, \vadja{susi}
+% 
+% \paragraph*{Klass 4} \vadja{pal̕l̕õz}, \vadja{alõin}, \vadja{ammõz}, \vadja{čimolain}, \vadja{baabukõz}, \vadja{bul̕bukõz}, \vadja{musikõz}, \vadja{eglin}, \vadja{čümmenäz}, \vadja{esimein}, \vadja{iirikkõin}, \vadja{iloin}, \vadja{jäin}, \vadja{liivõkõz}, \vadja{kangõz}, \vadja{kauniz}, \vadja{keskolin}, \vadja{kultõin}, \vadja{kuuvvaiz}, \vadja{kõlmaz}, \vadja{makuz}, \vadja{mansikõz}, \vadja{nagriz}, \vadja{nel̕l̕äz}, \vadja{nenäkõz}, \vadja{nain}, \vadja{poolõz}, \vadja{põrzõz}, \vadja{raskõz}, \vadja{rihenneüz}, \vadja{rüiz}, \vadja{sinin}, \vadja{sopuin}, \vadja{süsiin}, \vadja{võõrõz}, \vadja{talviin}, \vadja{tarkuz}, \vadja{turvõz}, \vadja{varvõz}, \vadja{õhtõgoin}, \vadja{õnnõkõz}, \vadja{õnnõliin}
 
 
 
@@ -503,13 +1139,13 @@ Tegelikult on ekstraktmorfoloogia leitud LCS ainus põhivorm ja kõik muutvormid
 
 
 
-\subsection{Muuttüüpide produktiivsus}
-
-Kristiina Kross (Ross) nimetab produktiivsuseks ``mingi morfoloogilise nähtuse võimet allutada endale uusi sõnu'' (\cite{kross_eesti_1984}). Siin allosas seatakse eelmises osas leitud muuttüübid pingeritta selle järgi, kui mitu tüüpsõna nendele allub.
-
-Kas selleks on vaja defineerida, mis on \textit{uus sõna}? Näiteks kõik uuemad vene keele laenud.
-
-Kas produktiivsuse pingerida on võimalik jagada mingi kriteeriumi järgi avatuteks ja suletuteks muuttüüpideks?
+%\subsection{Muuttüüpide produktiivsus}
+%
+%Kristiina Kross (Ross) nimetab produktiivsuseks ``mingi morfoloogilise nähtuse võimet allutada endale uusi sõnu'' (\cite{kross_eesti_1984}). Siin allosas seatakse eelmises osas leitud muuttüübid pingeritta selle järgi, kui mitu tüüpsõna nendele allub.
+%
+%Kas selleks on vaja defineerida, mis on \textit{uus sõna}? Näiteks kõik uuemad vene keele laenud.
+%
+%Kas produktiivsuse pingerida on võimalik jagada mingi kriteeriumi järgi avatuteks ja suletuteks muuttüüpideks?
 
 
 
@@ -659,8 +1295,8 @@ Morfoloogiakomponendi programmkood on jaotatav kaheks tükiks, leksikoniks ja mu
 \subsubsection{Leksikon}
 \label{sec:gf-leksikon}
 
-\subsubsection{Muuttüübid}
-\label{sec:gf-muuttüübid}
+\subsubsection{Tüüpsõnad}
+\label{sec:gf-tüüpsõnad}
 
 \subsubsection{Arutelu}
 \label{sec:gf-arutelu}
@@ -687,8 +1323,8 @@ Kuigi lexc fraasi\-struktuuri\-grammatikatega on võimalik paradigmasid (tüüps
 
 Leksikon koosneb selles töös ainult kahest andest: \textit{lemma} ja \textit{tüüpsõna}. 
 
-\subsubsection{Muuttüübid}
-\label{sec:giella-muuttüübid}
+\subsubsection{Tüüpsõnad}
+\label{sec:giella-tüüpsõnad}
 
 Paradigmade ehk tüüpsõnamallide esitus FST formalismis põhineb suuresti Forsbergi ja Huldeni (\citeyear{forsberg_learning_2016}) tööle.
 
