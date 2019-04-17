@@ -67,8 +67,8 @@
   name=Muuttüüp,
   description={on morfoloogilise klassifikatsiooni elementaar\-üksus. See on sõnaklass, mis erineb teistest sõnaklassidest mingite erijoonte poolest sõnade muutmisel.}
 }
-\newglossaryentry{tüüpsõnamall}{
-  name=Tüüpsõnamall,
+\newglossaryentry{sõnatüübimall}{
+  name=Sõnatüübimall,
   description={on ekstraktmorfoloogiaga leitud tüüpsõna paradigma kirjeldus, mis koosneb iga muutvormi koostamismallidest ehk muutvormimallidest. Tüüpsõnamall on relatsioon tehnilise tüve ja kõigi selle paradigmasse kuuluvate muutvormide vahel.}
 }
 \newglossaryentry{muutvormimall}{
@@ -98,10 +98,10 @@
 \begin{document}
 
 
-% @todo: lisada magistritöö, ülikool ja juhendaja jne
+% @TODO: lisada magistritöö, ülikool ja juhendaja jne
 % vaata siit https://tex.stackexchange.com/questions/184848/how-to-add-the-name-of-the-supervisor-in-a-thesis-field#184878
-% @todo: vormistada esileht eraldi
-\title{Ekstraktmorfoloogia meetodiga tuletatud keeletehnoloogia vadja noomeni morfoloogilise sõnastiku näitel}
+% @TODO: vormistada esileht eraldi
+\title{Ekstraktmorfoloogia meetodiga tuletatud keeletehnoloogia vadja noomeni vormisõnastiku näitel}
 \author{Kristian Kankainen}
 % \supervisor{Heinike Heinsoo, Külli Prillop}
 % \university{Tartu Ülikool}
@@ -196,21 +196,36 @@ Magistritöö on struktureeritud järgmiselt:
 
 
 \newpage
-\section{Morfoloogilise sõnaraamatu koostamine ja selle teoreetilised lähtekohad}
+\section{Vormisõnastiku koostamise teoreetilised lähtekohad}
 
 % TODO mitte kasutada meie vorme verbides, mitte kasutada 'püüdleb'
+Siin peatükis kirjeldatatakse vormisõnastiku koostamise ja muutvormide rekonstrueerimise põhimõtteid. Muutvormide sisestamist Morfoloogialabori rakenduse abil kirjeldatakse pt~\ref{sec:vormisõnastiku-sisestamine}.
 
-Kuna töö opereerib arvutilingvistika, deskriptiivse ja dokumentaalse lingvistika ääremail, peame selgitama töö teoreetilised lähtekohad. Siinsele kompendiumiks on ka põhimõisted seletatud pt~\ref{sec:põhimõisted} \nameref{sec:põhimõisted}.
+Vormisõnastiku definitsiooniks on võetud Ülle Viksi järgi:
 
-Töö püüdleb olla võimalikult teooriavaba, lastes vadja lekseemide sõnavormide tähtkoostised ise määrata nende paradigmade koostamis\-reeglid. (See on olla deduktiivne esialgse morfoloogia postuleerimises, vastandudes induktiivsele, s.o mingist grammatilisest kirjeldusest lähtudes.)
+\spacing{1}
+\begin{quote}
+  ``Üks täielik vormisõnastik peaks esitama kõigi sõnade kõik muutevormid koos vastava grammatilise iseloomustusega. Ainult siis saab kasutaja sõnastikust ilma mingi vaevata ja täiesti kindlalt teada, milline on vajalik vorm antud sõnast või millise sõna millise vormiga on tegemist tundmatu sõnavormi puhul.'' (\cite[7]{viks_vaike_1992}).
+\end{quote}
+\spacing{1.5}
 
-Tööl on siiski teoreetilised lähtekohad, mis tulenevad ühelt poolt arvutimorfoloogia nõuetest ja teisalt klassikalisest paradigmaatilisest morfoloogiakäsitlusest. Järgmiselt püüan argumenteerida, et arvutimorfoloogia ei pea olema mingist lingvistisest teooriast ajendatud. Seejärel tutvustan tööle kõige lähedamini asetsevat morfoloogilist käsitlust.
+
+
+% TODO siia lisada Viksi definitsioon vormisõnastikust
+
+%Kuna töö opereerib arvutilingvistika, deskriptiivse ja dokumentaalse lingvistika ääremail, peame selgitama töö teoreetilised lähtekohad. Siinsele kompendiumiks on ka põhimõisted seletatud pt~\ref{sec:põhimõisted} \nameref{sec:põhimõisted}.
+
+%Töö püüdleb olla võimalikult teooriavaba, lastes vadja lekseemide sõnavormide tähtkoostised ise määrata nende paradigmade koostamis\-reeglid. (See on olla deduktiivne esialgse morfoloogia postuleerimises, vastandudes induktiivsele, s.o mingist grammatilisest kirjeldusest lähtudes.)
+
+%Tööl on siiski teoreetilised lähtekohad, mis tulenevad ühelt poolt arvutimorfoloogia nõuetest ja teisalt klassikalisest paradigmaatilisest morfoloogiakäsitlusest. Järgmiselt püüan argumenteerida, et arvutimorfoloogia ei pea olema mingist lingvistisest teooriast ajendatud. Seejärel tutvustan tööle kõige lähedamini asetsevat morfoloogilist käsitlust.
 
 % TODO EELMINE JUTT TÄIELIKULT ÜLE VAADATA!
 
 \subsection{Vadja ühiskeel ja korpuse planeerimine}
 
-Selles peatükis seletatakse vadja ühiskeeleks valitud aluseid ning korpuse planeerimise mõistet. Vadja keelele ei loodud 1930-ndateil ühiskeelt, nagu seda tehti Nõukogude Liidus näiteks karjala, vepsa ja isuri keele jaoks. Vadja kirjakeele loomise pürgimistest pärast Nõukogude Liidu lagunemist on kirjutanud lähemalt \cite{ernits_vadja_2006} ja vadjalaste ilma kirjakeeleta keele normi tunnetamisest on rääkinud \cite{markus_concept_2013}.
+% TODO lisada ühiskeele murdeline alus on Vaipooli (Li-Lu), sest see on mida "kõneldakse veel". Rohkem on uuritud ja kirjeldatud Kattila(?), mida Ernits on ka soovitanud ühiskeele aluseks valida.
+
+Selles peatükis seletatakse vadja ühiskeeleks valitud aluseid ning korpuse planeerimise mõistet. Vadja keelele ei loodud 1930-ndateil ühiskeelt Nõukogude Liidus, nagu seda tehti näiteks karjala, vepsa ja isuri keele jaoks. Vadja kirjakeele loomise pürgimistest pärast Nõukogude Liidu lagunemist on kirjutanud lähemalt \cite{ernits_vadja_2006} ja vadjalaste ilma kirjakeeleta keele normi tunnetusest on rääkinud \cite{markus_concept_2013}.
 
 % korpusplaneerimine on alamosa keeleplaneerimisest?
 %Korpusplaneerimine on mis, miks seda tehakse ja kes seda teevad (kasuta Cooper 1996: 45).
@@ -352,7 +367,9 @@ Tegin nii, et kui geminaat esines \textsc{sg nom} vormis, siis muutsin. Konsonan
 
 
 
+
 \subsection{Morfeemi staatus ja definitsioon}
+\label{sec:morfeemi-staatus}
 Morfeemi ei käsitleta siin töös levinud lingvistilisest seisukohast kui \textit{väikseimat tähenduslikku üksust}, vaid klassikalistele paradigmaatilistele lähenemistele omaselt kui \textit{mistahes tähtkoostise muutust, millega kaasneb tähenduslik muutus} (\cites{beard_morpheme_1987}{beard_lexeme-morpheme_1995}). %Morfeemipõhist suunda ajab nt \cite{stump_inflectional_2001}.
 
 % TODO ÜLALPOOL LISADA VIITEID? ALLPOOL ON NII:
@@ -421,7 +438,7 @@ Sõna kui selle vormide tervik; pedagoogiline praktika ja paradigma üldistuse �
 
 Arvutimorfoloogia eesmärgiks on siin töös valitud moodustada elektroonse vormisõnastiku:
 \begin{quote}
-  ``Üks täielik vormisõnastik peaks esitama kõigi sõnade kõik muutevormid koos vastava grammatilise iseloomustusega. Ainult siis saab kasutaja sõnastikust ilma mingi vaevata ja täiesti kindlalt teada, milline on vajalik vorm antud sõnast või millise sõna millise vormiga on tegemist tundmatu sõnavormi puhul.'' (\cite{viks_vaike_1992} lk 7).
+  ``Üks täielik vormisõnastik peaks esitama kõigi sõnade kõik muutevormid koos vastava grammatilise iseloomustusega. Ainult siis saab kasutaja sõnastikust ilma mingi vaevata ja täiesti kindlalt teada, milline on vajalik vorm antud sõnast või millise sõna millise vormiga on tegemist tundmatu sõnavormi puhul.'' (\cite[7]{viks_vaike_1992}).
 \end{quote}
 
 % TODO Aronoff on pööranud tähelepanu tõigale, et 'morfoloogia' kannab teistsugust tähendust keeleteaduses kui ta seda kannab teistes teadusharudes. Enamik teadusharudes tähendab 'morfoloogia' umbes "võimalike vormide uurimine-kaardistamine". Keeleteaduses hoopis ...
@@ -539,35 +556,54 @@ Huldenil on omakorda üks väga formaalne viis, kuidas vähendada ekstrakt\-morf
 
 
 \newpage
+
+\section{Vormisõnastiku sisestamine Morfoloogialabori rakenduse abil}
+\label{sec:vormisõnastiku-sisestamine}
+
+Sisestamise töövoog on olnud:
+\begin{enumerate}
+\item sisestada lekseemi põhivorm
+\item valida olemasolev tüüpsõna ennustatud sõnatüüpide põhjal
+\item sõnatüübi (ja tüüpsõna) puudumise juhul sisestada lekseemi kõik muutvormid
+\end{enumerate}
+
+Punkti (3) juhul loob rakendus ekstraktmorfoloogia abil uue sõnatüübi, mis on koheselt järgmise sisestatava lekseemi puhul ennustatav ja valitav.
+
+Töö algusfaasis ja tühja andmestikuga alustamise tõttu ei ole loomulikult olnud võimalik valida paljudele sisestatud lekseemidele õiget sõnatüüpi ning on pidanud sisestama kõik muutvormid. Töö jooksul on sõnatüüpide arv kasvanud ja rakenduse abil on saanud valida õige sõnatüüp, mis on töö\-protsessi kiirendanud. Tihti on ka olnud abiks valida nt vokalismi suhtes vale sõnatüüp ja genereeritud muutvormides ainult korrigeerida vokalismi kajastav tähtkoostis.
+
+
+
+\newpage
 \section{Ekstraktmorfoloogia meetod}
 \label{sec:ekstraktmorfoloogia-meetod}
-See osa kirjeldab töös rakendatud ekstraktmorfoloogia meetodit. Töö kasutab ekstraktmorfoloogiat kaheks otstarbeks, esiteks vadja keele morfoloogiliste tüüpsõnade väljaselgitamiseks ja kirjeldamiseks ja teisalt programmkoodi automaatseks tuletamiseks saadud kirjelduse põhjal. Neid kahte rakendust kirjeldatatakse lähemalt vastavates peatükkides \textit{\nameref{sec:analüüs}} ja \textit{\nameref{sec:programmkoodi-tuletamine}}.
+
+% mis on ekstmorf
+Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis koosneb kahest komponendist: \emph{sõnatüübi eraldamise meetodist} ja tundmatule sõnale õige \emph{sõnatüübi ennustamise meetodist}. Meetod on \textit{juhendatud}, sest sisestatud andmed, ehk muutvormi\-tabelid, peavad olema korrektsed.
+
+% mis on sõnatüüp? (tegelt juba pt 2.6)
+
+% mis on eraldamine
+Sõnatüübi eraldamise korral üldistab meetod lekseemi muutvormitabelit ja eraldab sellest \glslink{sõnatüübimall}{sõnatüübimalli}. Seda protsessi kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-eraldamine}. % TODO eraldatud sõnatüübimallide põhjal genereeritakse programmkoodi, mida kirjeldatakse lähemalt pt-s X.
+
+% mis on ennustamine
+Eraldatud sõnatüübimallide põhjal on võimalik moodustada (genereerida) ka tundmatute sõnade muutvormi\-tabelid. Juba sisestatud (õpitud) lekseemide põhjal, mis jagavad üht ja sama sõnatüübimalli, on võimalik üldistada nende iseärasusi ja luua statistiline ennustus\-mudel. Ennustus\-mudeliga on võimalik määrata tundmatu sõnavormi kuuluvust ühe või teise sõnatüübi alla. Meetodi seda osa kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-ennustamine}.
+
+Magistritöös on ekstraktmorfoloogia meetodit kasutatud eesmärgiga, et luua vadja keelele keele\-tehnoloogiat. Selleks otstarbeks genereeritakse eraldatud sõnatüübi\-mallide põhjal programm\-koodi, mis teostab mallidest tuleneva sõnavormide analüüsimise ja sünteesimise võime. Programm\-koodi automaatset genereerimist kirjeldatakse pt-s~\ref{sec:programmkoodi-tuletamine}.
+
+Ekstraktmorfoloogia meetodi ennustamisvõimet on kasutatud vaid vormisõnastiku sisestamise juures, mida kirjeldati pt-s~\ref{sec:vormisõnastiku-sisestamine}. % TODO kas seda lauset üldse jätta?
+
+% See osa kirjeldab töös rakendatud ekstraktmorfoloogia meetodit. Töö kasutab ekstraktmorfoloogiat kaheks otstarbeks, esiteks vadja keele morfoloogiliste tüüpsõnade väljaselgitamiseks ja kirjeldamiseks ja teisalt programmkoodi automaatseks tuletamiseks saadud kirjelduse põhjal. Neid kahte rakendust kirjeldatatakse lähemalt vastavates peatükkides \textit{\nameref{sec:analüüs}} ja \textit{\nameref{sec:programmkoodi-tuletamine}}.
 
 
-\subsection{Võrdlus teiste meetoditega}
-% kuhu alla see paremini paigutada?
-
-Tavapärane on arvutimorfoloogia koostada reeglite kirjutamise kaudu, seejuures teha kõigepealt klassifikatsioon, mille järgi on leida kõik eri klassid elik üksused milledele rakenduvad samad reeglid.
-Seda on teinud nt Viks eesti arvutimorfoloogia koostamiseks (mh \cite{viks_verbide_1976}) ja sarnase viisi metodoloogiat on püüdnud formaliseerida Koskenniemi (\cite{koskenniemi_informal_2013}).
-
-\subsection{Sissejuhatus}
-\label{sec:ekstraktmorfoloogia-sissejuhatus}
-
-% juhendatud masinõppe meetod -- aga masinõppe ei kõla minu jaoks hästi
-Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis üldistab lekseemide muutvormitabeleid ja eraldab neist \glslink{tüüpsõnamall}{tüüpsõnamallid}. See on \textit{juhendatud}, sest sisendiks olevad muutvormitabelid peavad olema korrektselt koostatud. %Ja see on \textit{masinõppe}, sest sisendist analüüsitud mudel on laiendatav ka uuele ja tundmatule sisendile.
-
-% masinõppe asemel kasutan ma seda kirjeldusena ja pealdisena paradigmadele ning liidesena arvutimorfoloogia deklareerimiseks
-Selles töös käsitletakse meetodi abil saadud mudelit siiski pigem lihtsa kirjeldusena. See on tüüpsõnakirjeldus, mis on osa sõnastikust -- lekseemi paradigma kirjeldusena. Ja sellest kirjeldusest 
-% kirjeldus on inimloetav (viidatav fakt)
-
-% tüüpsõnamalli kohta
-Tüüpsõna\-mall koosneb muutvormide mallidest ja vastab seega morfoloogilise paradigma mõistele. 
-Tüüpsõna\-malli abil on võimalik moodustada ka tundmatu sõna kõik muutvormid.
-% produktiivsusmalli kohta
-Kuna kaks või enam lekseemi võivad jagada üht ja sama tüüpsõna\-malli (s.o kuuluda sama paradigmasse), on võimalik ekstrakt\-morfoloogia meetodiga üldistada lekseemide iseärasusi ja luua nendest tüüpsõnade produktiivsuse mudeli. Produktiivsus\-mudeliga on võimalik ennustada uue ja tundmatu sõnavormi kuuluvust ühe või teise tüüpsõna alla. 
 
 
-Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi sisendit ja väljundit. Sisendiks on ühe lekseemi muutvormitabel tervikuna (vt tabel\nobreakspace \ref{tab:sisendtabel_katto}). Väljundiks on meetodi poolt leitud tüüpsõnamall (vt tabel\nobreakspace \ref{tab:väljundtabel_katto}). Tabelitele viidatakse alljärgnevas tekstis mitmel korral.
+\subsection{Sõnatüübi eraldamine}
+\label{sec:ekstraktmorfoloogia-eraldamine}
+
+% võiks lihtsalt mainida, et opereerib tähtkoostisel
+Ekstraktmorfoloogia meetod eraldab lekseemi sõnatüübi selle muutvormide tähtkoostise põhjal. Sõna need tähtede jadad, mis esinevad üle kõigi selle muutvormide, loetakse lekseemi tehniliseks tüveks. Muutvormide ülejäänud tähtkoostised, mis järelikult ei esine üle kõigi muutvormide, loetakse muutvorme teine-teisest erinevaks tegema (vrd morfeemi definitsioon pt~\ref{sec:morfeemi-staatus}).
+
+Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi sisendit ja väljundit. Sisendiks on ühe lekseemi muutvormitabel tervikuna (tabel~\ref{tab:sisendtabel-katto}). Väljundiks on meetodi poolt leitud tüüpsõnamall (tabel~\ref{tab:väljundtabel-katto}). Tabelitele viidatakse alljärgnevas tekstis mitmel korral.
 
 \spacing{1.0}
 \begin{table}[H] %[!htbp] % kuvab tabelit definiitselt enne neile järgnevat teksti
@@ -604,7 +640,7 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
       \textit{kattoika}   & \textsc{pl com} \\
     \end{tabular}
     \caption{Sisendi muutvormide tabel koos morfo\-loogiliste tunnustega.}
-    \label{tab:sisendtabel_katto}
+    \label{tab:sisendtabel-katto}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{.55\textwidth}
@@ -640,15 +676,27 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
       \underline{kat} t \underline{o} ika   & $x_1$ + t + $x_2$ + ika   & \textsc{pl com} \\
     \end{tabular}
     \caption{Väljundi tüüpsõnamall (kus\-juures $x_1 = $ \textit{kat} ja $x_2 = $ \textit{o} vastab mallist leitud ühisosajadale).}
-    \label{tab:väljundtabel_katto}
+    \label{tab:väljundtabel-katto}
   \end{minipage}
 \end{table}
 \spacing{1.5}
 
+Meetod eraldab maksimaalseid asju.
 
 
 
+\subsection{Sõnatüübi ennustamine}
+\label{sec:ekstraktmorfoloogia-ennustamine}
 
+Ennustamine on eraldiseisev protsess ja seisneb sisestatud andmete mälupõhise statistika koostamisele.
+
+
+
+\subsection{Võrdlus teiste meetoditega ja Eesti leksikograafilise traditsiooniga}
+% kuhu alla see paremini paigutada? ARVUTIMORFOLOOGIA EESMÄRGI ALLA?
+
+Tavapärane on arvutimorfoloogia koostada reeglite kirjutamise kaudu, seejuures teha kõigepealt klassifikatsioon, mille järgi on leida kõik eri klassid elik üksused milledele rakenduvad samad reeglid.
+Seda on teinud nt Viks eesti arvutimorfoloogia koostamiseks (mh \cite{viks_verbide_1976}) ja sarnase viisi metodoloogiat on püüdnud formaliseerida Koskenniemi (\cite{koskenniemi_informal_2013}).
 
 
 
