@@ -17,7 +17,7 @@ import module namespace giellatekno = "http://giellatekno.uit.no" at "./giellate
 
 
 (: Read in the LMF :)
-let $lmf := doc("../data/lmf.xml")
+let $lmf := doc("../data/lmf.xml")/LexicalResource
 
 (: Specify the the lemma's grammatical feats :)
 let $lemma-feats := map {"grammaticalNumber":"singular", "grammaticalCase":"nominative"}
@@ -40,11 +40,12 @@ for $pos in $poses
   let $lexc-items :=
       for $entry in $lmf//LexicalEntry[feat[@att="partOfSpeech"]/@val/data() = $pos]
         let $lemma        := lmf:get-wordform-by-feats($lemma-feats, $entry)
+        order by $lemma
         let $paradigm-ids  := $entry/@morphologicalPatterns/data() => tokenize()
         for $paradigm-id in $paradigm-ids
           let $contlex-name := lmf:get-morphologicalpattern-by-id($paradigm-id, $lmf)
                                => giellatekno:paradigm-to-lexc-name()
-          let $lexc-item := concat(" ", $lemma, ":", $lemma, " ", $contlex-name, " # ;")
+          let $lexc-item := concat(" ", $lemma, " ", $contlex-name, " ;")
           return $lexc-item
   
   
