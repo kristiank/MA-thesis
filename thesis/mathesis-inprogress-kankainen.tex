@@ -4,6 +4,9 @@
 \usepackage{setspace}
 
 \usepackage{float}
+\usepackage{placeins} % defines \FloatBarrier
+
+\usepackage{amsmath} % align ja gather
 
 \usepackage{enumerate}
 
@@ -19,6 +22,9 @@
 
 % \texttildelow to get a nice vertically centered tilde
 \usepackage{textcomp}
+
+% \mathfraktur jaoks
+\usepackage{amsfonts}
 
 % Use a Free/Libre font with Finnish–Hungarian-Cyrillic-UPA coverage
 \setmainfont[Mapping=tex-text]{Linux Libertine O}
@@ -120,6 +126,22 @@
 \newpage
 \spacing{1.5}
 \section{Sissejuhatus}
+
+Magistritöö eesmärk on koostada vadja keele noomeni jaoks morfoloogilise
+andmestiku ehk vormisõnastiku. Vormisõnastik täidab kaht suuremat funktsiooni: 1)~on produktiivsele, tänapäeva keelekasutust peegeldav sõnaraamat ja 2)~selle sisu on teisendatav programmkoodi, mis integreerib vadja keele morfoloogiamooduli kahte keeletehnoloogilisse raamistikku.
+
+Tööl on neli suuremat eesmärki ehk teesi:
+\begin{enumerate}
+\item näidata, et ekstraktmorfoloogia on intuitiivne viis luua arvutimorfoloogia
+(võimaldab mitte-(arvutus-)lingvistil luua ja muuta andmestikku)
+\item ekstraktmorfoloogia meetodiga loodud arvutimorfoloogia on võimalik integreerida automaatse teisendusega erinevatesse keeletehnoloogiatesse
+\item ekstraktmorfoloogia meetodiga luuakse arhiveeritava ja püsivama väärtusega andmestik % kui seda on keeletehnoloogia
+\item kõrvutada ja ühitada vadja noomeni ekstraktmorfoloogia leiud traditsioonilise
+morfoloogiakäsitlusega
+\item on laiendatav teise sõnaliigiga sõnade sisestamiseks
+\item on laiendatav tõlkevastustega % TODO neid kahte ma väga ei "tõesta"
+\end{enumerate}
+
 
 Magistritöö eesmärk on luua vadja keelele morfoloogiline sõnastik sellisel moel, et keeletehnoloogilised komponendid, mh õigekirjakontrollija, on sellest automaatselt tuletatavad. Sõnastik oleks loodava vadja kirjakeele õigekeelsuse baasiks ja aitaks keeleõppes ja revitaliseerimises kaasa.
 
@@ -274,7 +296,10 @@ Kuna see töö loob ühtse töökeskkonna, mille abil määratakse morfoloogia a
 
 Sõnavara valik hõlmab Heinsoo õppematerjali sõnastikus esitatud noomeneid ja adjektiive (u~420 sõna). Sõnavara on veel laiendatud autori enda silma järgi Tsvetkovi sõnastikust ettesattunuga (u~460 sõna, nt~\vadja{asfal̕tti}, \vadja{bibli} ja \vadja{biblioteekkõ}). Kokku on morfoloogilisse sõnaraamatusse koondatud 882 sõna\-artiklit.
 
-Sõnaartiklitele on lisatud Tsvetkovi sõnaraamatus esitatud käände\-paradigmade põhi\-käände\-vormid (\msd{sg nom}, \msd{sg gen}, \msd{sg par}, \msd{sg ill} ja  \msd{pl nom}, \msd{pl gen}, \msd{pl par}, harva ka \msd{pl ill}). Mitme paralleelse põhikäändevormi esitamise puhul on eelistatud pikemaid vorme, nt \msd{sg ill} \vadja{asfal̕ttisõ} lühikese illatiivi asemel \vadja{asfal̕tti}. Niiviisi on morfoloogiliste sõnatüüpide koostamise ja kaardistamise protsessis välditud paralleelvorme, kuigi loodud lõpplahendus ehk arvutimorfoloogiline süsteem võimaldab sõna\-artiklitel esitada ka paralleelseid muuttüüpe.
+Sõnaartiklitele on lisatud Tsvetkovi sõnaraamatus esitatud käände\-paradigmade põhi\-käände\-vormid (\msd{sg nom}, \msd{sg gen}, \msd{sg par}, \msd{sg ill} ja  \msd{pl nom}, \msd{pl gen}, \msd{pl par}, harva ka \msd{pl ill}). Mitme paralleelse põhikäändevormi esitamise puhul on eelistatud pikemaid vorme, nt \msd{sg ill} \vadja{asfal̕ttisõ} lühikese illatiivi asemel \vadja{asfal̕tti}. Niiviisi on morfoloogiliste sõnatüüpide kaardistamise protsessis välditud paralleelvorme, kuigi loodud lõpplahendus ehk arvutimorfoloogiline süsteem võimaldab sõna\-artiklitel esitada ka paralleelseid muuttüüpe. % TODO nagu Eesti arvutimorfoloogia traditsioonis on tehtud \cite[278]{viks_verbide_1976} ja SAMEST projektis aditiiv ja illatiiv lahku löödud
+% TODO eelmisesse lisada ka pl part
+% TODO kuigi see on avatud küsimus ja ilmselt muutub
+% TODO ekstraktmorfoloogia meetod võimaldab paralleelvormide esitamise
 
 Jõgõperä ja Luuditsa murrete erinevustest on kirjutanud mh \cite{rozhanskiy_dialectal_2015}. % TODO tõsta kuskile!
 
@@ -292,6 +317,7 @@ Käänete valiku ja lõppude puhul on järgitud Konkova õpikut, mis ühtib Hein
   \centering
   \begin{tabular}[t]{r l l l l l}
     % TODO vali paremad sõnad!
+    % TODO vadja sõnad kursiivi!
      kääne & eespoolne & eespoolne & tagapoolne & tagapoolne & tagapoolne \\
     \hline
     \msd{sg nom} & pää & ärče & lafkõ & lammõz & ivuz \\
@@ -577,20 +603,30 @@ Töö algusfaasis ja tühja andmestikuga alustamise tõttu ei ole loomulikult ol
 \section{Ekstraktmorfoloogia meetod}
 \label{sec:ekstraktmorfoloogia-meetod}
 
+%Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis (\cite[14]{forsberg_what_2016}) on välja pakkunud kui lihtsama ja loomulikuma viisina lingvistil määratleda arvutimorfoloogia, kui seda on juhinduda morfoloogilistest-grammatilistest kirjeldustest.
+% Meetodit on lähemalt tutvustanud \cite{ahlberg_semi-supervised_2014} ja \cite{ahlberg_paradigm_2015}. % need viited tulevad ju allpool välja
+
+%Meetod koosneb kahest komponendist: \emph{sõnatüübi eraldamise meetodist} ja tundmatule sõnale õige \emph{sõnatüübi ennustamise meetodist}.
+% TODO kuhu? Magistritöös rakendatakse sõnatüübi eraldamise osa ja ennustamist ainult kaudselt
+
+% ------
+
 % mis on ekstmorf
 Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis koosneb kahest komponendist: \emph{sõnatüübi eraldamise meetodist} ja tundmatule sõnale õige \emph{sõnatüübi ennustamise meetodist}. Meetod on \textit{juhendatud}, sest sisestatud andmed, ehk muutvormi\-tabelid, peavad olema korrektsed.
 
-% mis on sõnatüüp? (tegelt juba pt 2.6)
+% TODO mis on sõnatüüp? (tegelt juba pt 2.6)
+
+Meetod on välja pakutud kui lihtsama ja loomulikuma viisina lingvistil määratleda arvutimorfoloogia, kuna see põhineb lekseemide sõnavormide esitamisel ja ei juhindu morfoloogiliste-grammatiliste reeglite kirjutamisest (\cite[14]{forsberg_what_2016}).
 
 % mis on eraldamine
-Sõnatüübi eraldamise korral üldistab meetod lekseemi muutvormitabelit ja eraldab sellest \glslink{sõnatüübimall}{sõnatüübimalli}. Seda protsessi kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-eraldamine}. % TODO eraldatud sõnatüübimallide põhjal genereeritakse programmkoodi, mida kirjeldatakse lähemalt pt-s X.
+Sõnatüübi eraldamise korral üldistab meetod sisestatud muutvormitabelit ja eraldab sellest lekseemi \glslink{tehniline-tüvi}{tehnilise tüve} ja \glslink{sõnatüübimall}{sõnatüübimalli}. Meetodi seda osa kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-eraldamine}.
+%Eraldatud sõna\-tüübi\-mallide põhjal tuletatakse magistritöös programmkoodi, mida kirjeldatakse lähemalt pt-s~\ref{sec:programmkoodi-tuletamine}.
 
 % mis on ennustamine
-Eraldatud sõnatüübimallide põhjal on võimalik moodustada (genereerida) ka tundmatute sõnade muutvormi\-tabelid. Juba sisestatud (õpitud) lekseemide põhjal, mis jagavad üht ja sama sõnatüübimalli, on võimalik üldistada nende iseärasusi ja luua statistiline ennustus\-mudel. Ennustus\-mudeliga on võimalik määrata tundmatu sõnavormi kuuluvust ühe või teise sõnatüübi alla. Meetodi seda osa kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-ennustamine}.
+Eraldatud sõnatüübimallide ja tehniliste tüvede põhjal on võimalik üldistada nende iseärasusi ja luua statistiline ennustus\-mudel. Ennustus\-mudeliga on võimalik määrata tundmatu sõnavormi kuuluvust ühe või teise sõnatüübi alla. Meetodi seda osa kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-ennustamine}.
 
-Magistritöös on ekstraktmorfoloogia meetodit kasutatud eesmärgiga, et luua vadja keelele keele\-tehnoloogiat. Selleks otstarbeks genereeritakse eraldatud sõnatüübi\-mallide põhjal programm\-koodi, mis teostab mallidest tuleneva sõnavormide analüüsimise ja sünteesimise võime. Programm\-koodi automaatset genereerimist kirjeldatakse pt-s~\ref{sec:programmkoodi-tuletamine}.
+Magistritöös kasutatakse ekstraktmorfoloogia meetodit eesmärgiga, et luua vadja keelele keele\-tehnoloogiat. Selleks otstarbeks tuletatakse eraldatud sõnatüübi\-mallide põhjal programm\-koodi, mis teostab mallidest tuleneva sõnavormide analüüsimise ja sünteesimise võime. Programm\-koodi automaatset tuletamist kirjeldatakse pt-s~\ref{sec:programmkoodi-tuletamine}.
 
-Ekstraktmorfoloogia meetodi ennustamisvõimet on kasutatud vaid vormisõnastiku sisestamise juures, mida kirjeldati pt-s~\ref{sec:vormisõnastiku-sisestamine}. % TODO kas seda lauset üldse jätta?
 
 % See osa kirjeldab töös rakendatud ekstraktmorfoloogia meetodit. Töö kasutab ekstraktmorfoloogiat kaheks otstarbeks, esiteks vadja keele morfoloogiliste tüüpsõnade väljaselgitamiseks ja kirjeldamiseks ja teisalt programmkoodi automaatseks tuletamiseks saadud kirjelduse põhjal. Neid kahte rakendust kirjeldatatakse lähemalt vastavates peatükkides \textit{\nameref{sec:analüüs}} ja \textit{\nameref{sec:programmkoodi-tuletamine}}.
 
@@ -599,11 +635,10 @@ Ekstraktmorfoloogia meetodi ennustamisvõimet on kasutatud vaid vormisõnastiku 
 
 \subsection{Sõnatüübi eraldamine}
 \label{sec:ekstraktmorfoloogia-eraldamine}
-
 % võiks lihtsalt mainida, et opereerib tähtkoostisel
-Ekstraktmorfoloogia meetod eraldab lekseemi sõnatüübi selle muutvormide tähtkoostise põhjal. Sõna need tähtede jadad, mis esinevad üle kõigi selle muutvormide, loetakse lekseemi tehniliseks tüveks. Muutvormide ülejäänud tähtkoostised, mis järelikult ei esine üle kõigi muutvormide, loetakse muutvorme teine-teisest erinevaks tegema (vrd morfeemi definitsioon pt~\ref{sec:morfeemi-staatus}).
+Sõnatüübi eraldamise mehhanism põhineb tehnilise tüve tuvastamisel. Tehniline tüvi moodustub nendest tähtedest, mis ilmnevad lekseemi igas muutvormis.
 
-Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi sisendit ja väljundit. Sisendiks on ühe lekseemi muutvormitabel tervikuna (tabel~\ref{tab:sisendtabel-katto}). Väljundiks on meetodi poolt leitud tüüpsõnamall (tabel~\ref{tab:väljundtabel-katto}). Tabelitele viidatakse alljärgnevas tekstis mitmel korral.
+Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi sisendit ja väljundit. Sisendiks on ühe lekseemi muutvormitabel tervikuna (tabel~\ref{tab:sisendtabel-katto}). Väljundiks on meetodi poolt leitud tehniline tüvi ja sõna\-tüübi\-mall, mille põhjal on võimalik rekonstrueerida sisendi muutvormi\-tabel (tabel~\ref{tab:väljundtabel-katto}). Tabelitele viidatakse alljärgnevas tekstis mitmel korral.
 
 \spacing{1.0}
 \begin{table}[H] %[!htbp] % kuvab tabelit definiitselt enne neile järgnevat teksti
@@ -611,27 +646,26 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
   \begin{minipage}[t]{.40\textwidth}
 %    \centering
     \begin{tabular}[t]{l l}
+      % TODO vaata sõnavormid üle vormisõnastikust
       muutvorm            & tunnused \\ \hline
       \textit{katto}      & \textsc{sg nom} \\
       \textit{katod}      & \textsc{pl nom} \\
       \textit{kato}       & \textsc{sg gen} \\
-      \textit{kattoi}     & \textsc{pl gen} \\
-      \textit{kattoje}    & \textsc{pl gen} \\
+      \textit{kattojõ}    & \textsc{pl gen} \\
       \textit{kattoa}     & \textsc{sg part} \\
-      \textit{kattoi}     & \textsc{pl part} \\
-      \textit{kattoite}   & \textsc{pl part} \\
+      \textit{kattoit}    & \textsc{pl part} \\
       \textit{kattose}    & \textsc{sg ill} \\
-      \textit{kattoise}   & \textsc{pl ill} \\
+      \textit{kattoisõ}   & \textsc{pl ill} \\
       \textit{kattoz}     & \textsc{sg ine} \\
       \textit{kattoiz}    & \textsc{pl ine} \\
-      \textit{katosse}    & \textsc{sg ela} \\
-      \textit{kattoisse}  & \textsc{pl ela} \\
-      \textit{katolle}    & \textsc{sg all} \\
-      \textit{kattoille}  & \textsc{pl all} \\
+      \textit{katossõ}    & \textsc{sg ela} \\
+      \textit{kattoissõ}  & \textsc{pl ela} \\
+      \textit{katollõ}    & \textsc{sg all} \\
+      \textit{kattoillõ}  & \textsc{pl all} \\
       \textit{katol}      & \textsc{sg ade} \\
       \textit{kattoil}    & \textsc{pl ade} \\
-      \textit{katolte}    & \textsc{sg abl} \\
-      \textit{kattoilte}  & \textsc{pl abl} \\
+      \textit{katoltõ}    & \textsc{sg abl} \\
+      \textit{kattoiltõ}  & \textsc{pl abl} \\
       \textit{katossi}    & \textsc{sg tran} \\
       \textit{kattoissi}  & \textsc{pl tran} \\
       \textit{kattossaa}  & \textsc{sg term} \\
@@ -646,28 +680,27 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
   \begin{minipage}[t]{.55\textwidth}
     \centering
     \begin{tabular}[t]{l l l}
-      ühisosajada                     & muutvormi\-mall           & tunnused \\
+      % TODO vaata sõnavormid üle vormisõnastikust
+      tehniline tüvi                     & muutvormi\-mall           & tunnused \\
       \hline
       \underline{kat} t \underline{o}       & $x_1$ + t + $x_2$         & \textsc{sg nom} \\
       \underline{kat}   \underline{o} d     & $x_1$ + $x_2$ + d         & \textsc{pl nom} \\
       \underline{kat}   \underline{o}       & $x_1$ + $x_2$             & \textsc{sg gen} \\
-      \underline{kat} t \underline{o} i     & $x_1$ + t + $x_2$ + i     & \textsc{pl gen} \\
-      \underline{kat} t \underline{o} je    & $x_1$ + t + $x_2$ + je    & \textsc{pl gen} \\
+      \underline{kat} t \underline{o} jõ    & $x_1$ + t + $x_2$ + jõ    & \textsc{pl gen} \\
       \underline{kat} t \underline{o} a     & $x_1$ + t + $x_2$ + a     & \textsc{sg part} \\
-      \underline{kat} t \underline{o} i     & $x_1$ + t + $x_2$ + i     & \textsc{pl part} \\
-      \underline{kat} t \underline{o} ite   & $x_1$ + t + $x_2$ + ite   & \textsc{pl part} \\
-      \underline{kat} t \underline{o} se    & $x_1$ + t + $x_2$ + se    & \textsc{sg ill} \\
-      \underline{kat} t \underline{o} ise   & $x_1$ + t + $x_2$ + ise   & \textsc{pl ill} \\
+      \underline{kat} t \underline{o} ite   & $x_1$ + t + $x_2$ + it    & \textsc{pl part} \\
+      \underline{kat} t \underline{o} sõ    & $x_1$ + t + $x_2$ + sõ    & \textsc{sg ill} \\
+      \underline{kat} t \underline{o} isõ   & $x_1$ + t + $x_2$ + isõ   & \textsc{pl ill} \\
       \underline{kat} t \underline{o} z     & $x_1$ + t + $x_2$ + z     & \textsc{sg ine} \\
       \underline{kat} t \underline{o} iz    & $x_1$ + t + $x_2$ + iz    & \textsc{pl ine} \\
-      \underline{kat}   \underline{o} sse   & $x_1$ + $x_2$ + sse       & \textsc{sg ela} \\
-      \underline{kat} t \underline{o} isse  & $x_1$ + t + $x_2$ + isse  & \textsc{pl ela} \\
-      \underline{kat}   \underline{o} lle   & $x_1$ + $x_2$ + lle       & \textsc{sg all} \\
-      \underline{kat} t \underline{o} ille  & $x_1$ + t + $x_2$ + ille  & \textsc{pl all} \\
+      \underline{kat}   \underline{o} sse   & $x_1$ + $x_2$ + ssõ       & \textsc{sg ela} \\
+      \underline{kat} t \underline{o} issõ  & $x_1$ + t + $x_2$ + issõ  & \textsc{pl ela} \\
+      \underline{kat}   \underline{o} llõ   & $x_1$ + $x_2$ + llõ       & \textsc{sg all} \\
+      \underline{kat} t \underline{o} illõ  & $x_1$ + t + $x_2$ + illõ  & \textsc{pl all} \\
       \underline{kat}   \underline{o} l     & $x_1$ + $x_2$ + l         & \textsc{sg ade} \\
       \underline{kat} t \underline{o} il    & $x_1$ + t + $x_2$ + il    & \textsc{pl ade} \\
-      \underline{kat}   \underline{o} lte   & $x_1$ + $x_2$ + lte       & \textsc{sg abl} \\
-      \underline{kat} t \underline{o} ilte  & $x_1$ + t + $x_2$ + ilte  & \textsc{pl abl} \\
+      \underline{kat}   \underline{o} ltõ   & $x_1$ + $x_2$ + ltõ       & \textsc{sg abl} \\
+      \underline{kat} t \underline{o} iltõ  & $x_1$ + t + $x_2$ + iltõ  & \textsc{pl abl} \\
       \underline{kat}   \underline{o} ssi   & $x_1$ + $x_2$ + ssi       & \textsc{sg tran} \\
       \underline{kat} t \underline{o} issi  & $x_1$ + t + $x_2$ + issi  & \textsc{pl tran} \\
       \underline{kat} t \underline{o} ssaa  & $x_1$ + t + $x_2$ + ssaa  & \textsc{sg term} \\
@@ -675,21 +708,132 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
       \underline{kat}   \underline{o} ka    & $x_1$ + $x_2$ + ka        & \textsc{sg com} \\
       \underline{kat} t \underline{o} ika   & $x_1$ + t + $x_2$ + ika   & \textsc{pl com} \\
     \end{tabular}
-    \caption{Väljundi tüüpsõnamall (kus\-juures $x_1 = $ \textit{kat} ja $x_2 = $ \textit{o} vastab mallist leitud ühisosajadale).}
+    \caption{Väljundi tüüpsõnamall (kus\-juures $x_1 = $ \textit{kat} ja $x_2 = $ \textit{o} vastab sisendist leitud ühisosajadale).} % ühisosajada = tehniline tüvi
     \label{tab:väljundtabel-katto}
   \end{minipage}
 \end{table}
 \spacing{1.5}
 
-Meetod eraldab maksimaalseid asju.
+% tähtkoostise põhjal
+Ekstraktmorfoloogia meetod eraldab sisendtabelist sõna\-tüübi\-malli ja tehnilise tüve lekseemi muutvormide tähtkoostise põhjal, s.o sõnavormide tähtede põhjal. Meetod arvestab palatalisatsiooniga kuivõird vadja ortograafias seda märgitakse, rõhuga meetod ei arvesta, kuna on sisendis märkimata. Silpide arvuga meetod ei arvesta. % TODO kas saaks paremini see s.o seletus?
+
+% tehniline tüvi
+Tehniliseks tüveks loetakse sõna need tähtede jadad, mis esinevad (korduvad) üle kõigi selle muutvormide (allajoonitud tähed tabelis~\ref{tab:väljundtabel-katto}, veerg~1). Tehniline tüvi koosneb ühest või enamast osast (tähtede jadast), antud näite puhul kahest. Samasse sõnatüüpi kuuluvad lekseemid erinevad vaid oma tehnilise tüve poolest. % TODO kas morfeemi definitsiooniga võrdlemine ka kopeerida siia?
+Sõnatüübi muutvorme eristab teine-teisest see tähtkoostis, mis ei kordu üle kõigi muutvormide (vrd morfeemi definitsioon pt~\ref{sec:morfeemi-staatus}).
+
+Tehnilise tüve leidmine koosneb kahest etapist: 1)~pikima ühisosajada eraldamine ning 2)~ühisosajada ühene jaotamine muutvormide vahel tehniliseks tüveks. Sõnatüüp koosneb muutvormimallidest ja koostatakse tehnilise tüve jaotuse põhjal, kusjuures üldistatakse tehnilise tüve osad muutujateks ja sõnatüüp funktsiooniks.
 
 
+\paragraph{Tehnilise tüve eraldamine}
+
+% tehniline tüvi == LCS
+Tehniline tüvi on ekstraktmorfoloogias defineeritud kordse pikima ühisosajadana (\textit{Multiple Longest Common Subsequence}). %, mille tuvastamiseks rakendatakse lõplike automaatide formalismi (\cite{hulden_generalizing_2014}).
+Näites (tabel~\ref{tab:sisendtabel-katto}) esinevad üle kõigi muutvormide järgmised tähed: \vadja{k, a, t} ja \vadja{o}. Aga kuna \textit{t}-sid esineb eri muutvormides rohkem kui üks, ei ole selge millele neist vastab pikima ühisosajada täht \textit{t}.  Näite puhul on võimalik kaks pikima ühisosajada jaotust: \textit{kat}~ja~\textit{o} või \textit{ka}~ja~\textit{to}.
+
+Võimalike mitmesuste lahendamiseks kasutatakse ekstraktmorfoloogias ühestamise heuristikat. %, mida on lähemalt kirjeldanud \cite{hulden_generalizing_2014}.
+Ühestamine eelistab mh pikemat esiosa (\cite[33]{hulden_generalizing_2014}), mistõttu valitakse näite puhul tehniliseks tüveks osad \textit{kat}~ja~\textit{o}.
+% Üheseks tehniliseks tüveks mitme võimaliku variandi puhul valitakse 
+% LCS ambigious
+% Muutvormidest võib leiduda mitu erinevat ühisosajada ja nende vahel üheselt  tuleb  ja nendest ühe valimise
+
+
+\paragraph{Üldistamine sõnatüübi funktsiooniks}
+
+Tehnilise tüve fikseerimise järel moodustatakse muutvormi\-mallid. Muutvormides asendatakse tehnilise tüve osad muutujatega (tabelis~\ref{tab:väljundtabel-katto}, veerg 2). Näiteks
+\begin{align*}
+  \textit{katto} &\rightarrow \underline{\textit{kat}} + \textit{t} + \underline{\textit{o}} \rightarrow x_1 + t + x_2 \nonumber \\
+  \textit{katod} &\rightarrow \underline{\textit{kat}} + \underline{\textit{o}} + \textit{d} \rightarrow x_1 + x_2 + d \nonumber
+\end{align*}
+vastavalt \msd{sg nom} ja \msd{sg gen} vormidele.
+
+On ilmne et, kui asendatakse muutvormimallides muutujad vastavate tehnilise tüve osadega, siis taas-moodustatakse muutvormid \textit{katto} ja \textit{katod}. Muutujaid aga asendades teiste tähtedega, % moodustatakse muude (potentsiaalsete) lekseemide muutvormid,
+nt \textit{čiut}~ja~\textit{o}, moodustatakse teise lekseemi, \textit{čiutto} käändetabel. Näiteks
+\begin{align*}
+  x_1 + t + x_2 &\rightarrow \underline{\textit{čiut}} + \textit{t} + \underline{\textit{o}} \rightarrow \textit{čiutto} \nonumber \\
+  x_1 + x_2 + d &\rightarrow \underline{\textit{čiut}} + \underline{\textit{o}} + \textit{d} \rightarrow \textit{čiutod} \nonumber
+\end{align*}
+vastavalt \msd{sg nom} ja \msd{sg gen} muutvormi\-mallidele.
+
+Järelikult kuuluvad mõlemad lekseemid sama sõnatüübi alla ja erinevad ainult oma tehnilise tüve poolest.
+
+Lekseemi iseloomustab ekstraktmorfoloogias sõnatüüp ja tehniline tüvi. Sõnatüüp on funktsioon, mille muutuja(te)ks on tehniline tüvi. Sõnatüübi muutvorme eristab teine-teisest see tähtkoostis, mis ei kordu üle kõigi muutvormide (vrd morfeemi definitsioon pt~\ref{sec:morfeemi-staatus}).
+
+Kuna see vajab spetsiifilist teadmist tehnilise tüve moodustamise kohta, ei ole tehnilisel tüvel opereeriv funktsioon sobilik praktiliseks inim-kasutamiseks. On võimalik moodustada kasutamist hõlbustav funktsioon, mille sisendiks on terve sõnavorm.
+
+Tehniline tüvi ei sõltu definitsiooni järgi ühest konkreetsest muutvormist, vaid lekseemi tervest muutvormi\-tabelist (paradigmast). Seetõttu on ekstrakt\-morfoloogia lemma suhtes neutraalne. Lemma valik on teise\-järguline ja seda on võimalik hiljem vahetada. % TODO rohkem sellest kuskil?
+
+Kui lemmaks on valitud kindel muutvorm (nt \msd{sg nom}), on võimalik koostada funktsioon, mille sisendiks on muutvorm tervikuna ja väljundiks on tehniline tüvi. Funktsiooni koostamise aluseks on lemmaks valitud vormi muutvormi\-mall, mille järgi sisend-sõnavormi tähtkoostis jaotatakse ühestamisheuristika põhjal (\cite[572]{ahlberg_semi-supervised_2014}). Niiviisi saab aheldada lemmavormi sisendiks võtva funktsioon kokku tehnilise tüve sisendiks võtva funktsiooniga ja moodustada kasutust hõlbustava funktsiooni, mille sisendiks on sõna lemmavorm ja väljundiks muutvormide tabel. Seda lähenemisviisi kasutatakse magistritöös Grammatical Framework programmkoodi tuletamise juures (pt~\ref{sec:gf}). % TODO aga Giella puhul? kas FST ei tee mitte täpselt seda sama? ... aga pole funktsioon?
+
+
+%% ----- 
+%% ülejäänud tähtkoostis iseloomustab muutvorme ja võrdlus morfeemi definitsiooniga
+%%Lekseemi sõnatüüpi iseloomustab sellest eraldatud sõna\-tüübi\-mall, mis koostatakse tehnilise tüve ja muutvormide ülejäänud tähtkoostise põhjal.
+%% LIIGUTA Tähtkoostis, mis ei esine üle kõigi muutvormide, loetakse muutvorme teine-teisest eristavaks muutvormi\-malliks (vrd morfeemi definitsioon pt~\ref{sec:morfeemi-staatus}).
+%
+%% Kuidas sõnatüübimallid koostatakse?
+%Sõnatüübi\-mall koosneb muutvormimallidest. Iga muutvormi mall koostatakse eraldatud tehnilise tüve jaotamise
+%
+%Iga muutvormimall on omakorda moodustatud tehnilise tüve ja ülejäänud tähtkoostise jadadest sel moel, et tehnilise tüve osad on abstraheeritud muutujateks (tabeli~\ref{tab:väljundtabel-katto}, veerg 2).
+%
+%% TODO sõnatüübimalli võib vaadata funktsioonina
+%Sõnatüüpi ja muutvormimalle võib vaadata funktsioonina, mille muutuja(te)ks on tehniline tüvi. Kui muut\-voormi\-mallides asendada muutujad eraldatud tehnilise tüvega, rekonstrueeritakse sõna muut\-vormid. %Kui muut\-vormi\-malli muutujad asendatakse tehnilise tüvega, siis taastatakse lekseemi muutvorm (nt       \underline{kat} t \underline{o} je    & $x_1$ + t + $x_2$ + je    & \textsc{pl gen}
+%
+%
+%% sama sõnatüübi lekseemid erinevad vaid tüve poolest
+%Sama sõnatüübi alla kuuluvad lekseemid erinevad vaid oma tehnilise tüve poolest. %Teised lekseemid, mis käituvad sama sõnatüübi järgi, erinevad ainult tehnilise tüve poolest.
+%Näiteks \vadja{katto} (ee~katus) ja \vadja{čiutto} (ee~särk) tehnilised tüved on vastavavalt $x_1 = $ \textit{kat}, $x_2 = $ \textit{o} ja $x_1 = $ \textit{čiut}, $x_2 = $ \textit{o} ning moodustavad nt \msd{pl gen} muutvormimalli järgi sõnavormid.
+%
+%% TODO 'joonis' ei ole õige termin selleks
+%\begin{figure}[H]
+%  \centering
+%  % tee graaf nii, et mall on jagatud mõlemaga: mall < üleval ja all sõnavormid
+%
+%  $ \mathfrak{katto}(x_1, x_2) = x_1 + \mathtt{t} + x_2 + \mathtt{j\~{o}} = \textup{kat} + \mathtt{t} + \textup{o} + \mathtt{j\~{o}} = \mathit{kattoj\~{o}} $
+%  
+%  $ \mathfrak{katto}(x_1, x_2) = x_1 + \mathtt{t} + x_2 + \mathtt{j\~{o}} = \textup{čiut} + \mathtt{t} + \textup{o} + \mathtt{j\~{o}} = \mathit{čiuttoj\~{o}} $
+%  \caption{Lekseemide \vadja{katto} ja \vadja{čiutto} \msd{sg gen} vormide rekonstrueerimine muutvormimalli ja tehnilise tüvega.}
+%  \label{fig:muutvormimalli-rakendamine}
+%\end{figure}
+%
+%
+%% meetod eraldab maksimaalseid tüüpe, nt vokalism 'tüttö'
+%Kuivõrd sõna \vadja{tüttö} käitub morfoloogiliselt väga sarnaselt siin näitlikustatud sõnatüübiga, eraldatakse selleks siiski omaette sõnatüüp ekstrakt\-morfoloogias. Põhjus on vokalismis, mistõttu erinevad ees- ja tagapoolsed muutvormimallid oma täht\-koostise poolest ja seega ei saa kaks sõnatüüpi kokku langeda (\msd{pl gen} muut\-vormi\-malli puhul \vadja{je} ja \vadja{jõ}).
+%
+%% maksimaalne ja konkretiseeritud üksikhäälikuteni
+%kuna sisendiks on võetud ortograafiline vormisõnastik, kajastab tähtkoostise põhjal eraldatud tähed ka ortograafiat -- nt palatalisatsiooni on, rõhku pole. % TODO
+%Ekstraktmorfoloogia opereerib tähtkoostisel ja seetõttu on ka saadud (eraldatud) sõnatüübistik konkretiseeritud üksikhäälikuteni, mida \cite[282]{viks_verbide_1976} peab sõnade muuttüüpide seisukohalt täiesti tarbetuks. Sõnatüübistik sarnaneb E.~Muugi 1933. a VÕSis esitatud tüübistikuga, mis hõlmab 895 eesti keele noomeni\-tüüpi (\cite[282]{viks_verbide_1976}, \cite[282]{viks_muuttüübid_}). Viks ei näe põhjust neid pidada muuttüüpideks, vaid nimetab neid pigem struktuuritüüpideks \cite[282]{viks_verbide_1976}.
+%% TODO välja arvatud see, et Muuk arvestab silpide arvu
+%
+%% info ei kadu -- tehniline tüvi + mall rekonstrueerib sisendi (infot ei kaotata, sobitub mälupõhisele)
+%Kõik ekstraktmorfoloogiaga eraldatud informatsioon, s.o sõnatüübi mall ja tehniline tüvi, salvestatakse andmebaasi, mille kuju kirjeldatakse lähemalt pt-s~\ref{sec:lmf}. Kuna salvestatud informatsiooni põhjal on võimalik kõik sisend\-materjal taastada, on ekstrakt\-morfoloogia meetod n.n mitte-destruktiivne. % TODO või iseloomustada mälupõhisena?
+%
+%% TODO kuhu panna viiteid nt Huldeni fst algoritmile ja üldse lähteartiklitele?
+%% kuhu panna jutt mallide loetavuse kohta?
+%
+%% into järgmisse peatükki
+%Järgmine peatükk kirjeldab kuidas tehnilise tüve põhjal on võimalik luua statistiline mudel, mille abil saab määrata tundmatu sõnavormi kuuluvust ühe või teise sõnatüübi alla. % TODO pole stat mudel vaid statistikaga rehkendatud regulaaravaldis!
+%
+%
+%% TODO tehniline tüvi on käändevormist sõltumata ja seega on ka lemmavorm vabalt valitav
 
 \subsection{Sõnatüübi ennustamine}
 \label{sec:ekstraktmorfoloogia-ennustamine}
 
-Ennustamine on eraldiseisev protsess ja seisneb sisestatud andmete mälupõhise statistika koostamisele.
+% eraldamisest eraldiseisev
+Sõnatüübi ennustamine on eraldiseisev protsess ja põhineb ainult eraldatud tehniliste tüvede muutujate tähtkoostise analüüsimisel. Ennustamine koosneb piirangute seadmisest tehnilise tüve muutujate kujule.
 
+% kasutatakse ainult morfoloogialabori veebirakenduses, kuigi oleks võimalik keeletehnoloogiasse sisse kodeerida. seda ei tehta, sest esialgu on piirdutud õigekirjakontrollija GF sõnastiku loomisega. kitsendused sarnanevad GF raamistikus levinud Smart Paradigm funktsiooni mõistega ja oleks üks võimalik edasiarenduse suund.
+Sõnatüübi ennustamismeetodit on magistritöös kasutatud vaid kaudselt, Morfoloogialabori veebiliidese kaudu vormisõnastik koostamisel. Seda on tehtud kuna magistritöö eesmärgiks on olnud esmane integreerimine keeletehnoloogilistesse raamistikesse ja õigekirjakontrollija loomine, kus ennustamisvõimet ei ole otseselt tarvis. Ennustamismeetod sarnaneb \textit{Grammatical Framework}'i \textit{Smart Paradigm}-funktsiooni mõistega (\cite{detrez_smart_2012}) ja on magistritöö üks võimalik edasiarenduse suund. Forsberg ja Hulden (\cite{forsberg_deriving_2016}) on rakendanud meetodit tundmatu sõnavormi sõnatüübi ennustajaks (ingl. \textit{morphological guesser}), mida Morfoloogialabori veebiliides kasutab sõnatüüpide järjestamiseks kasutajale.
+
+% tehnilise tüve akumuleerimine
+Vormisõnastikku salvestatud lekseemid kannavad informatsiooni tehnilise tüve ja sõnatüübimalli kohta. Mida rohkem lekseeme jagab üht ja sama sõnatüübi malli, seda rohkem on informatsiooni selle sõnatüübi tehniliste tüvede kujude kohta.
+
+% constrained by reflect morphophonological phenomena and orthographic conventions
+Tehnilised tüved ei jaotu sõnatüüpide vahel arbitraarselt, vaid nende kuju peegeldab tihti morfofonoloogilisi nähtuseid ja ortograafilisi tavasid. Seda informatsiooni on võimalik kasutada selleks, et seada sõnatüübimallide muutujatele kitsendusi ja piirata sellega ühtivate tehniliste tüvede hulka, ning tundmatu sõnavormi puhul ennustada selle kuulumist ühe või teise sõnatüüpi alla. (\cite[2579]{forsberg_deriving_2016}).
+
+Forsberg ja Hulden kirjeldavad statistilist viisi, millega nad loovad tehnilise tüve kuju tähtkoostist kitsendava regulaarse grammatika. Statistik arvutab salvestatud andmete põhjal piirmäära, mida mitte ületades loetakse tehnilise tüve tähtkoostise algus- või lõpposa (või terviklikult) suletud klassiks. Suletud klassi puhul peab leitud tähtkoostis antud positsioonis esinema, et lubada tundmatu sõnavorm ühtida sõnatüübiga. (\cite[2580]{forsberg_deriving_2016}).
+
+Meetodi näitlikustamiseks võib magistritöö vältel koostatud vormisõnastiku põhjal märkida seda, et kõik \textit{katto}-sõnatüübi alla kuuluvad lekseemid moodustaksid suletud klassi: tehnilise tüve esimene muutuja peab lõppema \textit{t}-tähega: \vadja{\textbf{jut}t\textbf{u}, \textbf{hat}t\textbf{u}, \textbf{kat}t\textbf{o}, \textbf{kut}t\textbf{su}, \textbf{laat}t\textbf{o}, \textbf{lant}t\textbf{u}, \textbf{pal̕t}t\textbf{o}, \textbf{port}t\textbf{u}, \textbf{Tart}t\textbf{u}, \textbf{čiut}t\textbf{o}}.
 
 
 \subsection{Võrdlus teiste meetoditega ja Eesti leksikograafilise traditsiooniga}
@@ -704,13 +848,15 @@ Seda on teinud nt Viks eesti arvutimorfoloogia koostamiseks (mh \cite{viks_verbi
 \section{Vadja morfoloogiliste tüüpsõnade analüüs}
 \label{sec:analüüs}
 
-See osa kirjeldab ekstraktmorfoloogiaga leitud vadja keele morfoloogilised tüüpsõnad ja jaotab need käändkondadesse. Käändkondade süsteemiks on kasutatud \cite{ariste_grammar_1968}. Tsvetkovi sõnaraamatus esinevat variatsiooni on analoogia põhjal ühtlustatud kirjakeele lihtsama õppimise eesmärgil. Peatüki viimases osas analüüsitakse mil moel \cite{silfverberg_computational_2018} esitatud ekstraktmorfoloogia üldiste muuttüüpide algoritm kajastab käändkondi.
+See osa kirjeldab ekstraktmorfoloogiaga leitud vadja keele morfoloogilised sõnatüübid ja jaotab need käändkondadesse. Käändkondade süsteemiks on kasutatud \cite{ariste_grammar_1968}. Tsvetkovi sõnaraamatus esinevat variatsiooni on analoogia põhjal ühtlustatud kirjakeele lihtsama õppimise eesmärgil. Peatüki viimases osas analüüsitakse mil moel \cite{silfverberg_computational_2018} esitatud ekstraktmorfoloogia üldiste muuttüüpide algoritm kajastab käändkondi.
 
 Ariste käändkonnad põhinevad muutustel, mis kajastuvad järgmistes käändeis: \msd{sg nom} ja \msd{pl nom}, \msd{sg gen} ja \msd{pl gen}, \msd{sg par} ja \msd{pl par}, \msd{sg ill} ja \msd{pl ill} ning \msd{sg ela} ja \msd{pl ela} \cite[42]{ariste_grammar_1968}.
 
 %\subsection{Kirjakeele ühtlustamine}
-Üle käändkonniti on ühtlustatud peamiselt lõpuvokaali õ:a vaheldumine. Detailsemalt on ühtlustatud komponente kirjeldatud iga käändkonna juures.
+Üle käändkonniti on rekonstrueeritud lõpukaolised vokaalid ja ühtlustatud peamiselt lõpuvokaali õ:a vaheldumine. Detailsemalt on ühtlustatud komponente kirjeldatud iga käändkonna juures.
 
+% TODO tee endale selgeks mis asi on noomen ja kas komparatiivid kuuluvad selle alla
+% TODO sõnavara sisaldab ka pronoomeneid, millel pole defektsed paradigmad
 Noomeni sõnavarast on välja jäetud komparatiivsed vormid (mõlõpi, vanepi). 
 
 \subsection{\RN{1} käändkond}
@@ -725,20 +871,18 @@ Avatuid küsimusi-tähelepanekuid:
 \item on lisatud \msd{sg par} vormidele lõpuhäälik (-õ -e vastavalt vokalismile)
 \end{itemize}
 
-\subsubsection*{Tüüpsõnad}
+\subsubsection*{Sõnatüübid}
 
-\spacing{0}
-\begin{description}
-\item [\vadja{puu}] mis hõlmab lekseeme \vadja{luu, suu, puu, pihlpuu}
-\item [\vadja{tüü}] mis hõlmab lekseeme \vadja{tüü, vüü, üü, püü}
-\item [\vadja{pää}] mis hõlmab lekseeme \vadja{pää, bulipää}
-\item [\vadja{maa}] mis hõlmab lekseeme \vadja{maa}
-\item [\vadja{pii}] mis hõlmab lekseeme \vadja{pii}
-\item [\vadja{soo}] mis hõlmab lekseeme \vadja{soo}
-\item [\vadja{tee}] mis hõlmab lekseeme \vadja{tee}
-\item [\vadja{täi}] mis hõlmab lekseeme \vadja{täi}
-\item [\vadja{või}] mis hõlmab lekseeme \vadja{või}
-\end{description}
+\spacing{1}
+\input{paradigms/pihlpuu}
+\input{paradigms/tüü}
+\input{paradigms/pää}
+\input{paradigms/täi}
+\input{paradigms/või}
+\input{paradigms/maa}
+\input{paradigms/pii}
+\input{paradigms/soo}
+\input{paradigms/tee}
 \spacing{1.5}
 
 
@@ -751,53 +895,54 @@ Avatuid küsimusi-tähelepanekuid:
 \item paljud vene laensõnad kuuluvad sellesse käändkonda, puudub aga arusam nende käitumisest (\cite{rozanskij_zaimstvovannyje_2009-1})
 \end{itemize}
 
-\subsubsection*{Tüüpsõnad}
+\subsubsection*{Sõnatüübid}
 \spacing{0}
-\begin{description}
-\item [\vadja{auči}] mis hõlmab lekseeme \vadja{auči}
-\item [\vadja{süüčči}] mis hõlmab lekseeme \vadja{süüčči}
-\item [\vadja{koffi}] mis hõlmab lekseeme \vadja{koffi}
-\item [\vadja{vaahto}] mis hõlmab lekseeme \vadja{suuto, vaahto, lehto}
-\item [\vadja{vahti}] mis hõlmab lekseeme \vadja{vahti}
-\item [\vadja{alku}] mis hõlmab lekseeme \vadja{alku, lohko, pehko, plehku, touko, vihko, vinku, alko}
-\item [\vadja{lako}] mis hõlmab lekseeme \vadja{lako, luku, mako, maku, suku, vako, čako}
-\item [\vadja{läikk}] mis hõlmab lekseeme \vadja{läikk}
-\item [\vadja{tükkü}] mis hõlmab lekseeme \vadja{tükkü}
-\item [\vadja{viki}] mis hõlmab lekseeme \vadja{viki}
-\item [\vadja{fraak}] mis hõlmab lekseeme \vadja{fraak}
-\item [\vadja{flakku}] mis hõlmab lekseeme \vadja{flakku, herkku, jõkilikko, kakko, kakku, kiikku, kolkku, kukko, kurkku, kuuzikko, lepikko, liivikko, luikko, lukku, lõõkku, majakko, musikko, mäčizikko, naizikko, oomnikko, pettelikko, rehtelkakku, seukko, võrkko, õzrikko, čerikko}
-\item [\vadja{kokki}] mis hõlmab lekseeme \vadja{kokki, kolkki, luukki, pukki, vokki, galstukki}
-\item [\vadja{jälči}] mis hõlmab lekseeme \vadja{ülči, jälči}
-\item [\vadja{põlto}] mis hõlmab lekseeme \vadja{põlto, mõlto}
-\item [\vadja{greebeni}] mis hõlmab lekseeme \vadja{greebeni, Helsengi, jevi, kiikeri, kiisseli, meebeli, nätel̕i, Reeveli, retsepti, rööveli, špeili, väli, vääri, ängeli, bibli}
-\item [\vadja{löülü}] mis hõlmab lekseeme \vadja{löülü}
-\item [\vadja{airo}] mis hõlmab lekseeme \vadja{az̕z̕õ, bad̕d̕õ, bahvõlõ, bl̕aahõ, bobrõ, borkkanõ, bruudõ, čirjavõ, čirjõ, d̕eelõ, dobrõ, filmõ, glaizõ, grammõ, gribavihmõ, iivõ, jumalõ, jurmõ, kabjõ, kaglõ, kagrõ, kajagõ, kambõlõ, kanavõ, karjõ, kassõ, katagõ, kavalõ, kvartirõ, lad̕d̕õ, ladvõ, lahjõ, lahnõ, lainõ, laivõ, liivõ, linnõ, l̕istõ, maailmõ, maamõ, mahlõ, mannõ, marjõ, matalõ, metlõ, muragõ, mussõmarjõ, naglõ, n̕egrõ, niglõ, ostanofkõ, paglõ, progonõ, pudrõ, pupuškõ, rauhõ, saappõgõ, sarjõ, saunõ, siglõ, sisavõ, sl̕ifkõ, summõ, surmõ, suukkurliivõ, sõbrõ, šuubõ, ženihõ, taičinõ, trubõ, vihmõ, vikahtõ, villõ, õravõ, õzrõ, akkunõ}
-\item [\vadja{bagaži}] mis hõlmab lekseeme \vadja{bagaži, balhoni, baroni, bil̕jardi, bobuli, bul̕joni, d̕ivani, dohtõri, farfori, flaneli, gimnazi, gitari, glazi, haili, inspektori, itkuri, jaani, kammõri, kongressi, kuhni, lusti, makarooni, mal̕ari, mandõri, naapuri, nojaabri, nuumõri, paperi, plaastõri, pošti, stooli, suukkuri, taari, tormi, tunni, vagzõli, vari, vinkuri, almõzi}
-\item [\vadja{poštaljon}] mis hõlmab lekseeme \vadja{poštaljon, parad}
-\item [\vadja{sünti}] mis hõlmab lekseeme \vadja{sünti}
-\item [\vadja{lento}] mis hõlmab lekseeme \vadja{lento, lintu, rokkalintu, kanto}
-\item [\vadja{vipu}] mis hõlmab lekseeme \vadja{vipu}
-\item [\vadja{hapo}] mis hõlmab lekseeme \vadja{hapo}
-\item [\vadja{vilppi}] mis hõlmab lekseeme \vadja{vilppi, šlääppi}
-\item [\vadja{hüppü}] mis hõlmab lekseeme \vadja{hüppü}
-\item [\vadja{lippu}] mis hõlmab lekseeme \vadja{lippu, lõppu, puippu, kippu}
-\item [\vadja{lamppi}] mis hõlmab lekseeme \vadja{lamppi, pappi, suppi, ukroppi, kaappi}
-\item [\vadja{sese}] mis hõlmab lekseeme \vadja{sese, läsü}
-\item [\vadja{siso}] mis hõlmab lekseeme \vadja{siso, nisu}
-\item [\vadja{mahsu}] mis hõlmab lekseeme \vadja{mahsu, haisu}
-\item [\vadja{kursi}] mis hõlmab lekseeme \vadja{kursi}
-\item [\vadja{rusko}] mis hõlmab lekseeme \vadja{rusko, tuisku, usko, pääsko}
-\item [\vadja{rissi}] mis hõlmab lekseeme \vadja{rissi}
-\item [\vadja{passi}] mis hõlmab lekseeme \vadja{passi, komissi}
-\item [\vadja{karjušši}] mis hõlmab lekseeme \vadja{karjušši, latõšši, potašši, fal̕šši}
-\item [\vadja{täti}] mis hõlmab lekseeme \vadja{täti}
-\item [\vadja{kotko}] mis hõlmab lekseeme \vadja{kotko, laatko, itku}
-\item [\vadja{kittsi}] mis hõlmab lekseeme \vadja{kittsi, komferenttsi, pletti, biletti}
-\item [\vadja{tüttö}] mis hõlmab lekseeme \vadja{rätte, tüttö, nenärätte}
-\item [\vadja{hattu}] mis hõlmab lekseeme \vadja{hattu, juttu, katto, kuttsu, laatto, lanttu, pal̕tto, porttu, Tarttu, čiutto}
-\item [\vadja{bankrutti}] mis hõlmab lekseeme \vadja{bankrutti, dokumentti, fabrikantti, Franttsi, fundamentti, kajutti, kametti, kanfetti, katti, kometti, komfetti, komnõtti, lautti, magnetti, minutti, muzõkantti, protestantti, protsentti, Roottsi, asfal̕tti}
-\item [\vadja{komit̕et}] mis hõlmab lekseeme \vadja{komit̕et}
-\end{description}
+\input{paradigms/auči}
+\input{paradigms/süüčči}
+\input{paradigms/koffi}
+\input{paradigms/suuto}
+\input{paradigms/vahti}
+\input{paradigms/alku}
+\input{paradigms/lako}
+\input{paradigms/läikk}
+\input{paradigms/tükkü}
+\input{paradigms/viki}
+\input{paradigms/fraak}
+\input{paradigms/flakku}
+\input{paradigms/kokki}
+\input{paradigms/ülči}
+\input{paradigms/põlto}
+\input{paradigms/greebeni}
+\input{paradigms/löülü}
+\input{paradigms/airo}
+\input{paradigms/bagaži}
+\input{paradigms/poštaljon}
+\input{paradigms/sünti}
+\input{paradigms/lento}
+\input{paradigms/vipu}
+\input{paradigms/hapo}
+\input{paradigms/vilppi}
+\input{paradigms/hüppü}
+\input{paradigms/lippu}
+\input{paradigms/lamppi}
+\input{paradigms/sese}
+\input{paradigms/siso}
+\input{paradigms/mahsu}
+\input{paradigms/kursi}
+\input{paradigms/rusko}
+\input{paradigms/rissi}
+\input{paradigms/passi}
+\input{paradigms/karjušši}
+\input{paradigms/täti}
+\input{paradigms/kotko}
+\input{paradigms/kittsi}
+\input{paradigms/rätte}
+\input{paradigms/hattu}
+\input{paradigms/dokumentti}
+\input{paradigms/komit̕et}
+\input{paradigms/mato}
+\input{paradigms/bašn̕i}
+\input{paradigms/famil̕}
 \spacing{1.5}
 
 
@@ -812,10 +957,40 @@ Avatuid küsimusi-tähelepanekuid:
 \item paljud laensõnad kuuluvad siia alla, nende lõpuvokaalidega on häda
 \end{itemize}
 
-\subsubsection*{Tüüpsõnad}
-\begin{description}
-\item [\textit{kandidaattõ}] (parem \textit{pliittõ})
-\end{description}
+\subsubsection*{Sõnatüübid}
+
+\spacing{1}
+\input{paradigms/tuhattõ}
+\input{paradigms/lafkõ}
+\input{paradigms/mahsõ}
+\input{paradigms/vihtõ}
+\input{paradigms/aitõ}
+\input{paradigms/aikõ}
+\input{paradigms/sika}
+\input{paradigms/borovikkõ}
+\input{paradigms/siltõ}
+\input{paradigms/paha}
+\input{paradigms/az̕z̕õ}
+\input{paradigms/bank}
+\input{paradigms/baldõhina}
+\input{paradigms/pintõ}
+\input{paradigms/rapa}
+\input{paradigms/aapõ}
+\input{paradigms/liippõ}
+\input{paradigms/järčü}
+\input{paradigms/partõ}
+\input{paradigms/kraaskõ}
+\input{paradigms/klaassõ}
+\input{paradigms/poduškõ}
+\input{paradigms/dovariššõ}
+\input{paradigms/sata}
+\input{paradigms/l̕iitkõ}
+\input{paradigms/kand̕idaattõ}
+\input{paradigms/inostranttsõ}
+\input{paradigms/jõutu}
+\input{paradigms/poutõ}
+\input{paradigms/štanad}
+\spacing{1.5}
 
 
 \subsection{\RN{4} käändkond}
@@ -833,7 +1008,31 @@ Avatuid küsimusi-tähelepanekuid:
 \item 'mussõ' leiti mitu pl 'mussii' VKSi näitelausete hulgast
 \end{itemize}
 
+\subsubsection{Sõnatüübid}
 
+\spacing{1}
+\input{paradigms/kuha}
+\input{paradigms/poikõ}
+\input{paradigms/biblioteekkõ}
+\input{paradigms/kõik}
+\input{paradigms/kultõ}
+\input{paradigms/vimpõ}
+\input{paradigms/kompjutera}
+\input{paradigms/maamuna}
+\input{paradigms/mokom}
+\input{paradigms/bukvõ}
+\input{paradigms/propkõ}
+\input{paradigms/rooppõ}
+\input{paradigms/kurp}
+\input{paradigms/usa}
+\input{paradigms/õhsõ}
+\input{paradigms/luiskõ}
+\input{paradigms/mussõ}
+\input{paradigms/moškõ}
+\input{paradigms/lootõ}
+\input{paradigms/biskvittõ}
+\spacing{1.5}
+  
 \subsection{\RN{6} käändkond}
 
 Kuuendasse käändkonda kuuluvad Ariste sõnul need sõnad, mis lõppevad \vadja{-õa/-eä/-iä}. Ta toob eraldi välja Jõgõperä murde erinevused üheainsa näitesõnaga. \cite[44]{ariste_grammar_1968}. Vadja kirjakeeles püütakse järgida ... TODO kirjutada.
@@ -843,6 +1042,12 @@ Avatuid küsimusi-tähelepanekuid:
 \item käändkonna liikmete pluurali tüved on ühtlustatud -- kas jätta nii või taastada Tsvetkovi variatiivsus?
 \end{itemize}
 
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/kerkiä}
+\input{paradigms/terve}
+\input{paradigms/kanka}
+\spacing{1.5}
 
 \subsection{\RN{7} käändkond}
 
@@ -854,6 +1059,22 @@ Avatuid küsimusi-tähelepanekuid:
 \item eespoolsed on i:e:eä ja tagapoolsed on i:õ:õa
 \item väci:väe aga mida teha lahti:lahe? -- VKSis esineb Lu lahõ
 \end{itemize}
+
+
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/väči}
+\input{paradigms/lahti}
+\input{paradigms/laki}
+\input{paradigms/kurki}
+\input{paradigms/põski}
+\input{paradigms/irvi}
+\input{paradigms/sarvi}
+\input{paradigms/enči}
+\input{paradigms/siipi}
+\input{paradigms/kuusi}
+\input{paradigms/tauti}
+\spacing{1.5}
 
 
 \subsection{\RN{8} käändkond}
@@ -872,6 +1093,41 @@ Avatuid küsimusi-tähelepanekuid:
 \end{itemize}
 
 
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/ičä}
+\input{paradigms/selče}
+\input{paradigms/eine}
+\input{paradigms/läkine}
+\input{paradigms/rissimä}
+\input{paradigms/pähčen}
+\input{paradigms/räpäle}
+\input{paradigms/läsijä}
+\input{paradigms/kitai}
+\input{paradigms/slona}
+\input{paradigms/õmpõlija}
+\input{paradigms/kompjutera}
+\input{paradigms/čenče}
+\input{paradigms/tünke}
+\input{paradigms/änte}
+\input{paradigms/leipe}
+\input{paradigms/seppe}
+\input{paradigms/ärče}
+\input{paradigms/pesä}
+\input{paradigms/lisä}
+\input{paradigms/mätä}
+\input{paradigms/mettse}
+\input{paradigms/nenä}
+\input{paradigms/čülä}
+\input{paradigms/pühä}
+\input{paradigms/üvä}
+\input{paradigms/õja}
+\input{paradigms/õma}
+\input{paradigms/kõva}
+\spacing{1.5}
+
+
+
 \subsection{\RN{9} käändkond}
 See käändkond on spetsiifiline Kattila murdele ja seda ei käsitleta siin töös.
 
@@ -887,6 +1143,21 @@ Avatuid küsimusi-tähelepanekuid:
 \item kuigi voosi:voovvõ hääldub vuuvvõ on see märgitud voovvõ
 \end{itemize}
 
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/lumi}
+\input{paradigms/iiri}
+\input{paradigms/juuri}
+\input{paradigms/uhsi}
+\input{paradigms/kusi}
+\input{paradigms/uusi}
+\input{paradigms/ühs}
+\input{paradigms/kahs}
+\input{paradigms/varsi}
+\input{paradigms/mesi}
+\input{paradigms/susi}
+\spacing{1.5}
+
 
 \subsection{\RN{11} käändkond}
 
@@ -897,6 +1168,12 @@ Avatuid küsimusi-tähelepanekuid:
 \item \vadja{-Z}-lõpu sandhi nähtus on kõigi liikmete puhul ühtlustatud \vadja{-z} lõpulisteks
 \item kas seda peab mainima, et Jõgõperä murdes on -s-, Kattila murdes on -hs- ja teistes murretes on -ss-
 \end{itemize}
+
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/rihenneüz}
+\input{paradigms/makuz}
+\spacing{1.5}
 
 
 \subsection{\RN{12} käändkond}
@@ -910,6 +1187,16 @@ Avatuid küsimusi-tähelepanekuid:
 \item talviisijõ,talviiziit
 \item õpõin on väga erandlik sõna
 \end{itemize}
+
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/õpõin}
+\input{paradigms/entin}
+\input{paradigms/süsiin}
+\input{paradigms/õnnõliin}
+\input{paradigms/čimolain}
+\input{paradigms/koivuin}
+\spacing{1.5}
 
 
 \subsection{\RN{13} käändkond}
@@ -930,6 +1217,21 @@ Numeraalide puhul on järgitud Rozhanskiy ja Markuse välja toodud:
 \end{itemize}
 
 
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/čümme}
+\input{paradigms/čümmenäz}
+\input{paradigms/nel̕l̕äz}
+\input{paradigms/seemen}
+\input{paradigms/süä}
+\input{paradigms/tütär}
+\input{paradigms/õnnõto}
+\input{paradigms/kahõsa}
+\input{paradigms/kuuvvaiz}
+\input{paradigms/kõlmaz}
+\spacing{1.5}
+
+
 \subsection{\RN{14} käändkond}
 
 Neljateistkümnenda käändkonna sõnad lõpevad \vadja{-aZ/-äZ, -iZ} või \vadja{-e/-õ} \cite[50]{ariste_grammar_1968}.
@@ -943,6 +1245,34 @@ Avatuid küsimusi-tähelepanekuid:
 \item -kõz-liides muudetud eespoolseks vastavate sõnade juures
 \end{itemize}
 
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/õgaz}
+\input{paradigms/puhaz}
+\input{paradigms/lähe}
+\input{paradigms/rüiz}
+\input{paradigms/rakõ}
+\input{paradigms/rikaz}
+\input{paradigms/bul̕bukõz}
+\input{paradigms/kalliz}
+\input{paradigms/pal̕l̕õz}
+\input{paradigms/poolõz}
+\input{paradigms/hammõz}
+\input{paradigms/lõunõ}
+\input{paradigms/kangõz}
+\input{paradigms/kauniz}
+\input{paradigms/angõriaz}
+\input{paradigms/raskõz}
+\input{paradigms/kasõ}
+\input{paradigms/vetelüz}
+\input{paradigms/põrzõz}
+\input{paradigms/ratiz}
+\input{paradigms/katõ}
+\input{paradigms/kuõ}
+\input{paradigms/varvõz}
+\input{paradigms/pere}
+\spacing{1.5}
+
 
 
 \subsection{\RN{15} käändkond}
@@ -953,6 +1283,25 @@ Avatuid küsimusi-tähelepanekuid:
 \begin{itemize}
 \item 
 \end{itemize}
+
+
+\subsubsection{Sõnatüübid}
+\spacing{1}
+\input{paradigms/čämmel}
+\input{paradigms/oonõ}
+\input{paradigms/kannõl}
+\input{paradigms/peremmeez}
+\input{paradigms/märännü}
+\input{paradigms/čeväd}
+\input{paradigms/čäčüd}
+\input{paradigms/ivusõd}
+\input{paradigms/kaatsõd}
+\input{paradigms/koollud}
+\input{paradigms/koorrõ}
+\input{paradigms/kõlmõd}
+\input{paradigms/olud}
+\input{paradigms/toho}
+\spacing{1.5}
 
 
 % \subsection{Ekstraktmorfoloogiaga leitud tüüpsõnad}
@@ -1359,55 +1708,93 @@ Tegelikult on ekstraktmorfoloogia leitud LCS ainus põhivorm ja kõik muutvormid
 \section{Programmkoodi tuletamine}
 \label{sec:programmkoodi-tuletamine}
 
-Programmkoodi tuletamise all peetakse siin töös silmas mistahes protsessi, mille käigus tuletatakse mingi üldisema kirjelduse põhjal programmkoodi ühe või mitme konkreetse programmeerimiskeskkona jaoks.
 
-Üldine kirjeldus (või teisisõnu ontoloogia) kirjeldab faktuaalselt \textit{mida} ning tuletatud programmkood kirjeldab konkreetselt \textit{kuidas} seda teadmist rakendada.
+Programmkoodi tuletamise (ingl. \textit{source code generation}) all peetakse siin töös silmas mistahes protsessi, mille käigus tuletatakse mingi üldisema kirjelduse põhjal programmkoodi ühe või mitme konkreetse programmeerimiskeskkona jaoks.
 
-Töös kasutatakse keskseks kirjelduseks leksikaalset ressurssi, mille peamine osa koosneb ekstraktmorfoloogiaga leitud tüüpsõnade mallidest.
+Üldine kirjeldus (või teisisõnu ontoloogia) kirjeldab faktuaalset \textit{mis}-laadi teadmist ning tuletatud programmkood kirjeldab konkreetselt \textit{kuidas} neid teadmisi rakendada.
 
-Keskse kirjelduse leksikaalset ressurssi hoitakse rahvusvahelise standardi vormingus \textit{Lexical Markup Framework} (\cite{iso/tc_37/sc_4_language_2007}).
+Töös kasutatakse keskseks kirjelduseks vormisõnastikku ja sellest ekstrakt\-morfoloogiaga eraldatud sõnatüübi\-malle. Kirjeldus on vormistatud rahvusvahelise standardi \textit{Lexical Markup Framework} (\cite{iso/tc_37/sc_4_language_2007}) järgi leksikaalseks ressurssiks, mis on XML vormingus.
 
-Programmkoodi tuletavad nn generaatorid. Töös esitatakse kaht generaatorit, üks programmeerimiskeele Grammatical Framework jaoks ning teine Giella keeletehnoloogilise taristu integreerimise jaoks. Generaatorid on kirjutatud programmeerimiskeeles XQuery.
+Programmkoodi tuletavad nn generaatorid. Töös esitatakse kaht generaatorit, üks programmeerimiskeele Grammatical Framework jaoks ning teine Giella keeletehnoloogilise taristu integreerimise jaoks. Generaatorid on kirjutatud XQuery programmeerimiskeeles.
 
+Mõlema programmkoodi\-generaatori ühine arhitektuurne omadus on terminite tõlke\-tabelite kasutamine. Tõlke\-tabelite põhjal asendatakse leksikaalses ressursis kasutatud terminid sihtkeeles kasutatud terminitega. See võimaldab järgida ja austada eri taristute terminoloogilisi traditsioone. Näiteks nimetatakse sõnatüüpe LMFis ingliskeelse prefiksiga \textit{as} (kui \textit{asKatto}), aga Grammatical Framework'is eesliitega \textit{mk} (inglis\-keelsest tegusõnast \textit{make}) kui \textit{mkKatto} ja Giella taristus hoopis sõnaliigiga (\textit{N\_KATTO}).
+
+Samuti erinevad eri taristutes kasutatud grammatiliste tunnuste märgendid (nt ainsuse nominatiiv on LMFis ja GFis \textit{singular nominative}, aga Giellas \textit{+SG+NOM}).
+% A shared architectural feature of both code generators is the use of translation
+% tables for translating terms used in the LMF ontology to their corresponding terms
+% used in the host environment. For example the names of paradigms are prefixed with
+% as in the LMF (e.g. asTšiutto), but named like actions in the GF (mkTšiutto), and
+% prefixed by their part of speech in Giellatekno (N_TŠIUTTO). Also the terminology for
+% grammatical features differ between the environments.
+% In this way different terminological traditions are supported and respected.
 
 
 
 \subsection{Keskne kirjeldus Lexical Markup Framework vormingus}
+\label{sec:lmf}
+
+% 3.1
+% Lexical Markup Framework
+% The Lexical Markup Framework (LMF, ISO 24613:2008) is an ISO standard for natural
+% language processing lexicons and machine readable dictionaries. It provides a com-
+% mon model for managing exchange of data and enables merging of different resources.
+% (Francopoulo, 2013).
+% The LMF standard consists of a core model and several extensions. In our work we
+% use two extensions: the NLP Morphological Pattern extension to model the extracted
+% paradigm information, and the Morphology extension to represent each lexeme’s in-
+% flected wordforms.
+% Representing the lexeme’s morphology with both paradigms (describing in inten-
+% sion) and inflected wordform tables (describing in extension) might seem superfluous.
+% But both representations serve their own purpose.
+% Listing extensionally all inflectional wordforms for each lexeme is in this work
+% considered part of documentation and what adds value to the work’s 50-year per-
+% spective (discussed in section 4).
+% Recording lexeme’s all inflected wordforms extensionally also creates the possi-
+% bility to further annotate the individual wordforms, such as real attested corpus at-
+% testations, or other meta-linguistic information such as judgements.
+% Listing wordform information explicitly is also beneficial for the dictionary sys-
+% tem, enabling quick searches and statistics.
+% Next, we will introduce our data and how it is represented in the LMF.
 
 % sissejuhatav tekst
-Sissejuhatav tekst, mis on e-sõnastike ja leksikaalsete andmebaaside rahvusvaheline standard Lexical Markup Framework (\cite{iso/tc_37/sc_4_language_2007}) ja milleks seda kasutatakse. (märksõnu: semantika eeldefineeritud märgenduskeel; koostöövõime)
+Lexical Markup Framework (LMF) on loomuliku keeletöötluse leksikonidele ja masin\-loetavatele sõna\-raamatutele mõeldud rahvusvaheline ISO-standard. Standard koosneb märgenduskeelega defineeritud ühisest mudelist andmevahetuse juhtimiseks ja võimaldab erinevate ressursside ühendamist. (\cite[1]{francopoulo_lmf_2013}).
+% TODO kas Francopoulo peatükist ei leidu natuke pikemalt lahtivõetud kirjeldus?
 
 % laiendimoodulid
-Standardi märgenduskeel koosneb mitmest eriotstarbelisest laiendimoodulist (vt nt \cite{francopoulo_lmf_2013}). Siinne töö kasutab kahte: morfoloogia moodul (\textit{LMF Morphology Extension}) ja morfoloogiliste paradigmade moodul (\textit{LMF Morphological Pattern Extension}).
+Standard koosneb põhimoodulist ja mitmest eri\-otstarbelisest laiendi\-moodulist (\cite[22]{francopoulo_lmf_2013}). Magistritöös kasutatakse peale põhimoodulit veel kahte moodulit: morfoloogia moodul (\textit{LMF Morphology Extension}) ja morfoloogiliste paradigmade moodul (\textit{LMF Morphological Pattern Extension}). Valitud moodulitega on olnud võimalik kirjeldada ja salvestada nii vormisõnastiku andmed (lekseemide muutvormid) kui ka ekstrakt\-morfoloogiaga eraldatud andmed (sõnatüüpide protsessuaalsed koostamis\-mallid ja tehniliste tüvede muutujad).
 
 % morfoloogiamoodul eesmärk
-Morfoloogiamooduli eesmärgiks on kirjeldada morfoloogiat mahu kaudu, s.o kirjeldada lekseemi loendades kõiki selle muutvorme.
+Morfoloogiamooduli eesmärgiks on kirjeldada morfoloogiat mahu kaudu, s.o kirjeldada lekseemi loendades kõik selle muutvormid.
 
 % paradigmamooduli eesmärk
-Morfoloogiliste paradigmade mooduli eesmärgiks on seevastu kirjeldada sisu kaudu, s.o kirjeldada neid kriteeriume ja reegleid, millega saab moodustada kõik ühe lekseemi muutvormid. Selles töös kirjeldatakse ekstraktmorfoloogia tüüpsõnamalle antud mooduliga.
+Morfoloogiliste paradigmade mooduli eesmärgiks on seevastu kirjeldada morfoloogiat sisu kaudu, s.o kirjeldada neid kriteeriume ja reegleid, millega saab moodustada kõik ühe lekseemi muutvormid. Selles töös kirjeldatakse ekstrakt\-morfoloogia sõnatüübi\-mallid antud mooduliga.
 
 % topeltkirjeldus ju liigne?
-Sama nähtuse kirjeldamine nii mahus kui ka sisus võib tunduda liigsena, ent niiviisi võimaldatakse rohkem informatsiooni hoidmist.
+Sama nähtuse kirjeldamine nii mahus kui ka sisus võib tunduda liigsena, ent mõlemal kirjeldusviisil on omad head küljed. Lekseemide iga muutvormi loendamist peetakse magistritöös eeskätt dokumenteeriva ja arhiveeritava väärtusena, mis ei kahane pikaajalises perspektiivis -- muutvormide loendamine on ka 50 või 150 aasta pärast informatiivne, keele\-tehnoloogia programm\-kood ei pruugi olla arusaadav ega jooksutatav. Veel võimaldab muutvormide loendamine edaspidises sõnastikutöös ka igale muutvormile lisada informatsiooni, nt selle reaalsete korpusesinemuste kohta. %Samas on just loendatud muutvormid ekstraktmorfoloogia meetodi sisend, ja võimaldab .
 
-% aga ei ole -- kuigi kõlab rohkem nagu diskussiooni alla kuuluvat?
-Näiteks võib iga lekseemi muutvormi kohta hoida informatsiooni nende reaalsetest korpusesinemustest. Niiviisi on võimalik klassifitseerida tüüpsõnade teoretiseeringutaset, kui ühe ja sama tüüpsõna alla kuuluvate lekseemide korpusleiud kinnitavad igat selle muutvormi, ei ole see teoretiseeritud.
-
-% @TODO: mis veel häid külgi topeltkirjeldamisega on?
+% TODO sõnatüübimalli hoidmise häid külgi pole kirjeldatud
+Ekstraktmorfoloogiaga eraldatud sõnatüübimallide kirjeldamine samas vormingus võimaldab neid protsessuaalseid koostamis\-eeskirju teisendada programm\-koodi generaatoritega. Generaatoreid võib hiljem lisada juurde uue keeletehnoloogia tuletamise jaoks ilma selleta, et lähte\-andmestikku peab muutma. See teebki LMFi kirjelduse nö tehnoloogia\-neutraalseks standardiks.
 
 % mis seal veel hoitakse?
-Peale sõnaartiklite ja morfoloogilise informatsiooni hoitakse leksikaalses ressursis ka globaalset informatsiooni, nagu keele nimetus ja kood.
+Peale sõnaartiklite ja morfoloogilise informatsiooni hoitakse leksikaalses ressursis ka globaalset informatsiooni, nagu keele nimetust ja keele\-koodi, mida kasutatakse tuletatud programmkoodis peamiselt failide nimetamisel.
+
+% TODO kirjutada outro ja intro järgmise kahe alatüki jaoks
 
 
+\subsubsection{Sõnaartikli esitamine LMFis}
+Lekseemide sõnaartiklid LMFi esituses koosnevad muutvormide loendist, lemmaks valitud muutvormist, sõnaliigist ja sõnatüübist. Paralleelvormide puhul on sõnatüüpe rohkem kui üks.
 
+% TODO
+Andmete struktuuri näitlikustav sõnaartikkel on LMFi XML märgendus\-formaadis esitatud joonises~\ref{code:lmf-lexicalentry}.
+% TODO 'joonis' on siin pigem 'näidis'
 
-\subsubsection{Sõnaartiklite esitamine LMFis}
-Iga sõnaartikkel ehk leksikaalne kirje kannab informatsiooni lekseemi sõnaliigi kohta, selle valitud lemma vorm ning morfoloogiamooduliga esitatud muutvormitabeli.
-
-\begin{figure}[p]
+% TODO allpool peak olema commonNoun, kopeeri uus kood!
+\spacing{1}
+\begin{figure}[h]
   \center
 \begin{minted}[frame=single,fontsize=\small,framesep=10pt]{XML}
 <LexicalEntry morphologicalPatterns="asKatto">
-  <feat att="partOfSpeech" val="nn"/>
+  <feat att="partOfSpeech" val="noun"/>
   <Lemma>
     <feat att="writtenForm" val="katto"/>
   </Lemma>
@@ -1423,18 +1810,42 @@ Iga sõnaartikkel ehk leksikaalne kirje kannab informatsiooni lekseemi sõnaliig
   </WordForm>
 </LexicalEntry>
 \end{minted}
-\caption{Sõnaartikli \textit{katto} esitamine LMFis (muutvormid kajastatud vaid osaliselt).
+\caption{Sõnaartikli \textit{katto} esitamine LMFis (muutvormid on kajastatud vaid osaliselt).
   \label{code:lmf-lexicalentry}}
 \end{figure}
+\spacing{1.5}
+
+Sõnatüübimall \textit{asKatto} on märgitud \textit{morphological\-Patterns} atribuudis. Mitme sõnatüübi puhul loendatakse need tühikutega eraldatuna. Sõnaliik on märgitud \textit{part\-Of\-Speech} elemendis (\textit{noun}). Element \textit{Lemma} sisaldab lemmaks valitud sõnavormi. \textit{Word\-Form}-elemendid loendavad muutvorme koos nende grammatiliste tunnustega: arv (\textit{grammatical\-Number} ja kääne (\textit{grammatical\-Case}).
+
+Sõnavormide modaalsust on täpsustatud kirjakeelseks kujuks (\textit{writtenForm}).
 
 
 
 
+\subsubsection{Sõnatüübi malli esitamine LMFis}
 
-\subsubsection{Tüüpsõnamallide esitamine LMFis}
+%The extracted paradigms are represented as LMF Morphological Patterns. These hold
+%information about their part of speech and are name-tagged with an ID. The names
+%follow the LMF tradition and are prefixed with as, such as asTšiutto.
+Ekstraktmorfoloogiaga eraldatud sõnatüübid kirjeldatakse LMFi morfoloogiliste paradigmade mooduli elementidega (\textit{LMF Morphological Pattern Extension}, varem nimetatud ka \textit{LMF Paradigm Pattern}). Iga sõnatüüp on märgitud identifitseeriva nimetusega, mille puhul on järgitud LMFi tava lisada tüüpsõna ette ingliskeelne eeslide \textit{as} (nt \textit{asKatto}).
 
-\begin{figure}[p]
+%The LMF Morphological Patterns model all the information extracted by Extract
+%Morphology. The attested variable values, i.e. the technical stems, of all lexemes
+%added in the Morphology Lab is saved. This information could be utilized to inte-
+%grate prediction models into the generated source code, as have been demonstrated
+%by Forsberg and Hulden (2016). This has not been done, as the work has focused on
+%integrating the lexical resources as a first stage.
+Peale nimetuse ja sõnaliigi kirjeldatakse LMF morfoloogiliste paradigmadega veel kõik ekstraktmorfoloogiaga eraldatud informatsioon: salvestatakse lekseemide tehniliste tüvede muutujad ja muutvormimallid.
+
+Muutvormallid on LMFis kirjeldatud nn transformatsiooni\-elementidega (\textit{TransformSet}), mis koosnevad muutvormi morfoloogistest tunnustest (\textit{GrammaticalFeatures}) ja muutvormi koostamiseks vajalikest protsessidest (\textit{Process}). Koostamis\-protsessid osundavad lihtsaid, järjestatud konkatenatsioni\-tehteid (\textit{addAfter}), mis liidavad lükkimise teel tehnilise tüve muutujad ja muutvormi ülejäänud tähtkoostised kokku.
+
+Andmete struktuuri näitlikustav sõnatüüp on LMFi XML märgendus\-formaadis esitatud joonises~\ref{code:lmf-paradigmpattern} (lk~\pageref{code:lmf-paradigmpattern}).
+
+\spacing{1}
+\begin{figure}[h]
   \center
+  % TODO muuda kood asKatto järgi!
+  % TODO muuda tšiutto õigekirja järgi
 \begin{minted}[frame=single,fontsize=\footnotesize,framesep=10pt]{XML}
 <MorphologicalPattern>
   <feat att="id" val="asTšiutto"/>
@@ -1483,29 +1894,158 @@ Iga sõnaartikkel ehk leksikaalne kirje kannab informatsiooni lekseemi sõnaliig
   </TransformSet>
 <MorphologicalPattern>
 \end{minted}
-\caption{Tüüpsõnamalli \texttt{tšiutto} (mille alla kuuluvad mh \textit{tšiutto} ja \textit{katto}) esitus LMFis. Esitus mudeldab muutvormimalle $x_1 \oplus \textbf{t} \oplus x_2$ ning $x_1 \oplus x_2 \oplus \textbf{d}$.
+\caption{Tüüpsõnamalli \texttt{tšiutto} (mille alla kuuluvad mh \textit{tšiutto} ja \textit{katto}) esitus LMF\-is. Esitus mudeldab muutvormimalle $x_1 \oplus \textbf{t} \oplus x_2$ ning $x_1 \oplus x_2 \oplus \textbf{d}$.
   \label{code:lmf-paradigmpattern}}
+\end{figure}
+\spacing{1.5}
+
+Morfoloogiliste paradigmade \textit{Process}-elemendid on üks-üheses vastavuses ekstrakt\-morfoloogia meetodiga eraldatud sõnatüübi\-mallidega.
+
+% TODO process elementide processType kirjeldus!
+
+% TODO kas ma lihtsalt 'unustan' tehniliste tüvede kirjeldamise?
+
+
+\FloatBarrier
+\subsection{Integreerimine Grammatical Framework'iga}
+\label{sec:gf}
+
+Grammatical Framework (GF) on eriotstarbeline programmeerimis\-keel, mis on loodud loomulike (ja tehislike) keelte grammatikate kirjeldamiseks. GFi iseloomustab muuhulgas see, et see kuulub funktsionaalsete programmeerimis\-keelte paradigmasse ja on rajatud tüübiteooriale. (\cite[\RN{7}]{ranta_grammatical_2011})
+
+Teoreetiliselt on GF formaal\-grammatikana väljendus\-rikkuse poolest ekvivalentne PMCFG tüüpi grammatikaga (\textit{Parallell Multiple Context-Free Grammar}), mis jääb mõõdukalt konteksti\-tundlike \textit{mildly context-sensitive} ja täielkult konteksti\-tundlike \textit{fully context-sensitive} grammatikate vahele (\cite[10]{ranta_grammatical_2011}).
+
+Grammatical Framework toetab on keele\-spetsiifilise koodi eraldamist teekidesse, mida nimetatakse ressursi\-teekideks (\cite{ranta_grammars_2008}, \cite[97]{ranta_grammatical_2011}). Üle 32~keele on oma ressursi\-teegiga toetatud. Eesti keele ressursi\-teegi on loonud \cite{listenmaa_computational_2014}. %Teegid võivad ka jagada ühiseid grammatilisi jooni eriti süntaksis. On olemas soome süntaksi 
+
+Siin esitatud programm\-koodi generaator loob vadja keele ressursi\-teegi morfoloogia ja leksikoni moodulid. Loodud vadja ressursi\-teek on internetis saadaval\footnote{https://github.com/keeleleek/GF-Votic}. % Usually the best way to start resource grammar writing is with the morphology. \cite[209]{ranta_grammatical_2011}
+
+% TODO järgmine kopeerida ka programmkoodi genereerimise intro alla
+Loodud generaator näitlikustab üht integreerimis\-viisi, mida iseloomustab tarkvara arendusmeetod pidev paigaldamine (\textit{Continuous Integration}). Vormisõnastiku täiendamist (ja ka muutmist) saab kasutada eesmärgipäraselt selleks, et viia täiendused sisse Grammatical Framework'i vadja morfoloogia\-teeki ja sealt\-kaudu sellele põhinevatele rakendustele.
+
+Generaator on jaotatav kaheks osaks, millest üks genereerib vadja morfoloogia\-mooduli ja teine vadja leksikoni\-mooduli.
+
+Generaator koostatud võimalikult universaalseks ja ei sisalda midagi vadja keelele spetsiifilist. Lemmavormi valikut ei ole generaatorisse jäigalt sissekodeeritud, vaid on vahetatav generaatori parameetritega. Veel koostatakse moodulite failinimed vastavalt leksikaalses ressursist antud keele\-koodi järgi.
+
+
+
+\subsubsection{Morfoloogia moodul}
+\label{sec:gf-tüüpsõnad}
+Grammatical Framework'i morfoloogiamoodul koosneb nn paradigma\-funktsioonidest, mille ülesandeks on luua sõnade paradigmad ehk muutvormitabelid (\cite[248]{ranta_grammatical_2011}, \cite[645]{detrez_smart_2012}).
+
+Ekstrakt\-morfoloogiaga eraldatud sõnatüübi\-mallide funktsioonid on olnud lihtne teostada paradigma\-funktsioonidena. Igale sõnatüübile on teostatud kaks eraldi funktsiooni: üks üldine, mis võtab sisendiks sõna muutvormi tervikuna ja väljastab sõna tehnilise tüve osad, teine on konkreetne ja selle sisendiks tehnilise tüve osad ja väljundiks on muutvormide tabel. Kuigi on võimalik kahest funktsioonist üks moodustada, on kaks funktsiooni eraldi hoitud võimalike tarkvara\-vigade otsimise tarbeks, et arendajal on võimalik testida enda moodustatud tehniliste tüvedega.
+
+% To generate the function for an extracted paradigm description, we need to specify its name, interface and body.
+Sõnatüübist paradigmafunktsiooni genereerimiseks on vaja määrata funktsiooni nimi, liides (\textit{interface}) ja keha (\textit{body}). Genereeritud programm\-koodi illustreeritakse joonises~\ref{code:gf-morfoloogia}. % TODO joonis?
+
+Morfoloogiamooduli nimi on koostatud leksikaalses ressursis oleva vadja keelekoodiga vastavalt GF mooduli\-nimetustele \textit{MorphoVot}.
+
+% TODO muuda koodis olevad sõnad katto vastu
+\spacing{1}
+\begin{figure}[H]
+  \center
+\begin{minted}[frame=single,fontsize=\small,framesep=10pt]{haskell}
+resource MorphoVot = {
+
+param
+  Number = singular | plural ;
+  Case = nominative ;
+  NForm = NF Number Case ;
+
+oper
+  Noun : Type = {s : NForm => Str} ;
+
+------------------------------------------------
+-- Start of Noun section
+------------------------------------------------
+
+  mkTšiutto : Str -> Noun = \tšiutto -> 
+    case tšiutto of {
+      tšiut + "t" + o@(-(_+"t"+_)) => mkTšiuttoConcrete tšiut o ;
+      _ => Predef.error "Unsuitable lemma for mkTšiutto"
+    } ;
+  
+  mkTšiuttoConcrete : Str -> Str -> Noun = \tšiut,o -> 
+    { s =
+      table {
+        NF singular nominative => tšiut + "t" + o ;
+        NF plural nominative => tšiut + o + "d"
+      }
+    } ;
+}
+\end{minted}
+\caption{Vadja keele GF morfoloogia\-mooduli genereeritud programmkood (näites piiratud käänetega).
+  \label{code:gf-morfoloogia}}
+\end{figure}
+\spacing{1.5}
+
+Funktsiooni nimetuseks on sõnatüübi identifikaator LMFi leksikaalsest ressursist, mille eesliide \textit{as} vahetatakse GFi traditsiooni järgi \textit{mk}.
+
+% The function’s interface is declared in the oper section and parameter types in
+% the param section. The names and values of the parameters reflect the attributes and values of the grammatical features in the lMF, with minor modifications. The oper
+% definition is largely templatic, reflecting only the parts of speech from the LMF.
+Funktsiooni liides on deklareeritud \textit{oper} osas ja parameetrite tüübid \textit{param} osas. Parameetrite nimetused ja kategooriad peegeldavad grammatilisi tunnuseid LMFis.
+
+% To help readers navigate the code, the paradigms are ordered by their part of
+% speech and headers are generated in the form of comments for each part of speech
+% section. These are the only comments generated at the moment.
+Kuigi vadja vormisõnastik sisaldab magistritöö valmimise hetkel ainult nimisõnu, arvestab koodi\-generaator teiste sõna\-liikidega ja grupeerib sõnatüüpide paradigma\-funktsioonid vastavateks sektsioonideks, mille ette lisatakse kommentaar sõnaliigi kohta. Koodi lugemise hõlbustamiseks järjestatakse veel sõnatüüpide funktsioonid nende nimede järgi tähestikuliselt. 
+
+% Every paradigm is split into two separate functions a high-level dispatch function
+% (mkTšiutto, and low-level to mkTšiuttoConcrete). This is to allow a developer to
+% use the low-level function for debugging or testing purposes.
+
+% The high-level function takes a string with the chosen lemma form as its input and
+% splits it into the technical stem parts, which are then simply delegated to the low-level
+% function. An error message is thrown in case the input string is not able to match.
+Üldisem, lemmavormil opereeriv funktsioon eraldab sisestatud muutvormi selle tehnilise tüve osadeks, mis seejärel edastatakse konkreetsele paradigma\-funktsioonile.
+% Note that GF’s implementation of regular expressions is non-greedy as opposed to
+% many other programming languages. Because of this the expression @(-(_+"t"+_))
+% is appended to the last part of the pattern. This expression is automatically created
+% and makes the `t` match the last letter t in the wordform.
+Võib märkida, et GFi regulaaravaldised töötavad mitte-aplalt (ingl. \textit{non-greedy}), vastupidiselt paljude teiste programmeerimis\-keeltele. Seetõttu lisatakse nt \textit{@(-(\_+"t"+\_))} avaldisesse, mis muudab \textit{t}-tähega ühtimise aplaks.
+
+% The names of the variables holding the technical stem parts are taken from the
+% paradigm’s name.
+Tehnilise tüve muutujate nimetused saadakse sõnatüübi nimetusest.
+
+% The low-level, or concrete, function is the one that generates the inflection table.
+% On the left-hand side of the table is the grammatical features and on the right-hand
+% side are the concatenation patterns that instantiates the wordforms.
+Konkreetse funktsiooni nimetuse järele lisatakse \textit{Concrete} ja see funktsioon tagastab muutvormide tabeli. Tabeli vasakul poolel on grammatilised tunnused ja paremal poolel on muutvormide mallid.
+
+
+
+
+\subsubsection{Leksikoni moodul}
+\label{sec:gf-leksikon}
+
+Grammatical Framework on oma olemuselt mitmekeelne ning iga rakendus peaks täitma nende oma semantika abstraktse grammatikaga. Kuna vormisõnastik ei sisalda hetkel tõlkeid, genereeritakse lihtne sõnaloend.
+%GF is a multilingual framework and each application is expected to define their own semantics in an abstract grammar. No attempt is made to include semantic pivots to the Votic resource, instead a simple monolingual word list is generated as a lexicon.
+
+Iga sõnaartikli puhul koostatakse sõnaloendisse kirje, mille nimeks on lemma ja sõnaliigi\-tähis ning väljakutse vastava sõnatüübi paradigma\-funktsioonile. Juhul, kui sõna\-artiklil on mitu sõnatüüpi, määratakse need kirje variantideks.
+%This lexicon specifies for each entry in the resource its lemma, which is appended with its part of speech and a call to the paradigm function. In the case a lemma has multiple paradigms, each one is declared as variants.
+
+%Rakenduste loomisel võib GF arendaja tugineda genereeritud sõnaloendile.
+%The GF developer could use this word list when translating the application-specific vocabulary names of the abstract grammar.
+
+Genereeritud sõnaloendi programm\-koodi illustreeritakse joonises~\ref{code:gf-leksikon}. % TODO joonis?
+%The source code of the generated word list is illustrated in figure~\ref{code:gf-lexikon}.
+
+\begin{figure}[ht]
+  \center
+  \begin{minted}[frame=single,fontsize=\small,framesep=10pt]{haskell}
+fun
+  lin katto_N = mkKatto "katto"
+  lin čiutto_N = mkKatto "čiutto" ;
+\end{minted}
+\caption{Generated source code for the Votic GF lexicon.
+  \label{code:gf-lexikon}}
 \end{figure}
 
 
+%\subsubsection{Arutelu}
+%\label{sec:gf-arutelu}
 
-
-\subsection{Grammatical Framework morfoloogiakomponent}
-
-Mis on see, mida mina teen. Seejärel, mis on programmeerimiskeel Grammatical Framework ja milleks seda kasutatakse.
-
-Morfoloogiakomponendi programmkood on jaotatav kaheks tükiks, leksikoniks ja muuttüüpide funktsioonid. Järgnevalt neist detailsemalt. Viimases alaosas on arutelu GFide võimalustest ja edasiarendusvõimalustest.
-
-\subsubsection{Leksikon}
-\label{sec:gf-leksikon}
-
-\subsubsection{Tüüpsõnad}
-\label{sec:gf-tüüpsõnad}
-
-\subsubsection{Arutelu}
-\label{sec:gf-arutelu}
-
-Loodud morfoloogiakomponenti on kasutatud interaktiivses vadja-vene-vadja vestmikus.
+%Loodud morfoloogiakomponenti on kasutatud interaktiivses vadja-vene-vadja vestmikus.
 
 
 
@@ -1513,9 +2053,45 @@ Loodud morfoloogiakomponenti on kasutatud interaktiivses vadja-vene-vadja vestmi
 
 \subsection{Integreerimine Giella-taristuga}
 
+% pmst on see 
+% cat root.lexc affixes/nouns.lexc stems/nouns.lexc > vot.lexc
+% hfst-xfst
+% read lexc /tmp/vot.lexc
+% define Lexicon
+% source paradigms.xfscript
+% define Paradigms
+% define Speller Lexicon ?+ .o. Paradigms
+% 
+% ! kusjuures ?+ katab/ühtib käänded
+% NB! veel juurde on testide genereerimine!
+
+
+% mis on Giellatekno infra
+The Giellatekno infrastructure has been characterized in \cite{moshagen_building_2013} to be a \textit{development environment infrastructure} (as opposed to a resource infrastructure), offering a framework for building language-specific analysers and directly turn them into a wide range of useful programs.
+
+From the point of view of our work on Votic morphology, the programs of interest are proofing tools and morphological analyzers.
+
+% minu töö rasked kohad
+For the integration with Giellatekno's infrastructure, several components are needed: a lexicon, paradigm descriptions in FST, automatic test declarations, and a Makefile that binds all the components together.
+
+At the work's current stage all but the Makefile is being generated. Because of this, each component has only been tested on its own but not integrated in the infrastructure.
+
+We don't include any examples of generated code for the Giellatekno infrastructure because of space considerations. We will only present and discuss the main design choices made.
+
+
+
 Keeletehnoloogilise taristuga Giella integreeritakse selles töös peamiselt selleks, et saada kätte õigekirja\-kontrollija. Giella-taristu koosneb veel võimalustest. Taristut kasutavad peamiselt Giellatekno ja Divvun.
 
 Integreerimine on jagatav kaheks peamiseks osaks: leksikoni integreerimeerimine ja tüüpsõnamallide integreerimine. Seejärel kirjeldatakse taristu poolt loodud õigekirjakontrollija tööpõhimõtet ja lõpetuseks on arutelu.
+
+\subsubsection{Tüüpsõnad}
+\label{sec:giella-tüüpsõnad}
+
+Paradigmade ehk tüüpsõnamallide esitus FST formalismis põhineb suuresti Forsbergi ja Huldeni (\citeyear{forsberg_learning_2016}) tööle.
+
+Paradigmad esitatakse relatsioonidena sõnavormi ja lemma koos analüüsiga vahel. Sellised relatsioonid sisaldavad lõpmatut hulka sõnalemmasid, millest mõistagi pole suurem osa vadjakeelsed. Mis on siiski tähtis, on see, et relatsioonid mudeldavad paradigmasid.
+
+Sõnade lõpmatu hulk piiratakse leksikonis antuga ja niiviisi saadakse leksikonis sisalduvate sõnade kõik sõnavormid. Nendest ja ainult nendest sõnavormidest koosnebki esialgne vadja õigekirja\-kontrollija.
 
 \subsubsection{Leksikon}
 \label{sec:giella-leksikon}
@@ -1527,14 +2103,16 @@ Kuigi lexc fraasi\-struktuuri\-grammatikatega on võimalik paradigmasid (tüüps
 
 Leksikon koosneb selles töös ainult kahest andest: \textit{lemma} ja \textit{tüüpsõna}. 
 
-\subsubsection{Tüüpsõnad}
-\label{sec:giella-tüüpsõnad}
 
-Paradigmade ehk tüüpsõnamallide esitus FST formalismis põhineb suuresti Forsbergi ja Huldeni (\citeyear{forsberg_learning_2016}) tööle.
-
-Paradigmad esitatakse relatsioonidena sõnavormi ja lemma koos analüüsiga vahel. Sellised relatsioonid sisaldavad lõpmatut hulka sõnalemmasid, millest mõistagi pole suurem osa vadjakeelsed. Mis on siiski tähtis, on see, et relatsioonid mudeldavad paradigmasid.
-
-Sõnade lõpmatu hulk piiratakse leksikonis antuga ja niiviisi saadakse leksikonis sisalduvate sõnade kõik sõnavormid. Nendest ja ainult nendest sõnavormidest koosnebki esialgne vadja õigekirja\-kontrollija.
+% Instead of generating the lexicon straight into FST representation, we use Giellatekno's Sanat XML format. This is achieved by simple XML transformations from the LMF format.
+% 
+% The Giellatekno infrastructure uses the Sanat XML to generate its own source codes.
+% 
+% In its essence, the Sanat XML contains the lexical entry's lemma, the name of the paradigm (e.g a FST continuation class) and the technical stem needed by the continuation class.
+% 
+% What is crucially missing from our implementation is the Finnish translation equivalents used as interlingual pivots in the Giellatekno infrastructure.
+% These equivalents will be generated when our work on the Votic morphological dictionary resource has reached the stage of adding them. 
+% 
 
 \subsubsection{Õigekirjakontrollija}
 \label{sec:giella-õigekirjakontrollija}
