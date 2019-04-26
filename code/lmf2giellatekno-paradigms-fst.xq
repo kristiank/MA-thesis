@@ -134,6 +134,6 @@ let $fst := $fst-header ||
             out:nl() ||
             $fst-footer
 
-let $filename := "/home/kristian/Projektid/MA-thesis/data/giellatekno/morphology/paradigms.fst"
+let $filename := "/home/kristian/Projektid/MA-thesis/data/giellatekno/morphology/paradigms.xfscript"
 
 return file:write-text($filename, $fst)
