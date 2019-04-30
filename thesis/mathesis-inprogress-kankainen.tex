@@ -127,8 +127,10 @@
 \spacing{1.5}
 \section{Sissejuhatus}
 
+% %Käesolev töö ei pürgi looma lõplikku normatiivi, kuivõrd ta loob süsteemi, mis oskab vastata morfoloogilistele küsimustele. Aga loodud süsteemi peamine eesmärk on siiski võimaldada muuta ja jätkata tööd normatiivi arendamiseks ja mille ümber saaks keeleaktivistid ise koonduda, ilma et selleks oleks niivõrd vaja ei lingvistilist ega keeletehnoloogilist spetsialisti.
+
 Magistritöö eesmärk on koostada vadja keele noomeni jaoks morfoloogilise
-andmestiku ehk vormisõnastiku. Vormisõnastik täidab kaht suuremat funktsiooni: 1)~on produktiivsele, tänapäeva keelekasutust peegeldav sõnaraamat ja 2)~selle sisu on teisendatav programmkoodi, mis integreerib vadja keele morfoloogiamooduli kahte keeletehnoloogilisse raamistikku.
+andmestiku ehk vormisõnastiku. Vormisõnastik täidab magistritöös kaht suuremat funktsiooni: 1)~on produktiivsele, tänapäeva keelekasutust peegeldav sõnaraamat ja 2)~selle sisu on teisendatav programmkoodi, mis integreerib vadja keele morfoloogiamooduli kahte keeletehnoloogilisse raamistikku.
 
 Tööl on neli suuremat eesmärki ehk teesi:
 \begin{enumerate}
@@ -151,7 +153,7 @@ Sõnade paradigmad, ehk käändvormide tüvemuutused, on saadud Tsvetkovi sõnar
 
 Loodud sõnaraamatu kirjed on kõrvuti morfoloogiliste muutvormidega varustatud ka sõnatüübi\-tähisega. Sõnatüübid leitakse ekstraktmorfoloogia meetodi abil automaatselt ja sõnatüübistik uuendatakse iga kord sõnaraamatu kirjeid muudetakse.
 
-Ekstrakt-morfoloogiline klassifikatsioon põhineb ainult sõnade mutuvormide tähtkoostisel ja sõnatüübistik on maksimaalne selles suhtes, et igal tüvevokaalil ja astmevahelduslikul tähel on omaette sõnatüüp.
+Ekstrakt-morfoloogiline klassifikatsioon põhineb ainult sõnade muutvormide tähtkoostisel ja sõnatüübistik on maksimaalne selles suhtes, et igal tüvevokaalil ja astmevahelduslikul tähel on omaette sõnatüüp.
 
 Kõrvuti eksisteeriv sõnatüübistik võimaldab arvutimorfoloogia automaatse loomise ja niiviisi on sõnaraamatusse uute kirjete lisamise juures süsteemil võimalik genereerida ja kasutajale kuvada sõna potentsiaalseid muutvorme. Samuti on võimalik sõnatüübistiku kirjelduse põhjal automaatselt luua programm\-koodi, mis täidab morfoloogia komponendi ülesannet ühes või mitmes programmeerimis\-keeles.
 
@@ -221,7 +223,7 @@ Magistritöö on struktureeritud järgmiselt:
 \section{Vormisõnastiku koostamise teoreetilised lähtekohad}
 
 % TODO mitte kasutada meie vorme verbides, mitte kasutada 'püüdleb'
-Siin peatükis kirjeldatatakse vormisõnastiku koostamise ja esialgseid vadja kirjakeelsete muutvormide rekonstrueerimise põhimõtteid. Andmestiku sisestamist ja vormistamist vormisõnastikuks Morfoloogialabori rakenduse abil kirjeldatakse peatükis~\ref{sec:vormisõnastiku-sisestamine}.
+Siin peatükis kirjeldatatakse vormisõnastiku koostamise ja vadja kirjakeelsete muutvormide rekonstrueerimise põhimõtteid. Andmete sisestamist nn Morfoloogia\-labori rakendusega kirjeldatakse peatükis~\ref{sec:vormisõnastiku-sisestamine} ja andmete kuju kirjeldatakse peatükis~\ref{sec:lmf}.
 
 Vormisõnastiku definitsiooniks magistritöös on võetud Ülle Viksi järgi:
 
@@ -360,26 +362,26 @@ Alljärgnevalt seletatakse kuidas Tsvetkovi sõnastikust saadud põhi\-vormid on
 
 
 \paragraph*{Nominatiiv}
-Tsvetkovi sõnaraamatus antud vormile on tüve\-lõpu\-vokaali puudumise korral tavaliselt lisatud lühike vokaal vastavalt vokalismile (Heinsoo ja Konkova eeskuju järgi).
+Tsvetkovi sõnaraamatus antud vormile on tüve\-lõpu\-vokaali puudumise korral tavaliselt lisatud lühike vokaal vastavalt vokalismile Heinsoo ja Konkova eeskuju järgi (\cite[88]{heinsoo_vadsonakopittoja_2015}, \cite[10]{konkova_vaddceeli_2014}).
 
 
 \paragraph*{Genitiiv}
-Tsvetkovi sõnaraamatus antud vormi lõpuvokaal on ühtlustatud vastavalt Heinsoo ja Konkova sõnastikes esitatuga või rekonstrueeritud vastavalt sõna vokalismile.
+Tsvetkovi sõnaraamatus antud vormi lõpuvokaal on ühtlustatud vastavalt Heinsoo ja Konkova sõnastikes esitatule või rekonstrueeritud vastavalt sõna vokalismile.
 
 
 \paragraph*{Partitiiv}
-Tsvetkovi antud vormi lõpuvokaal on ühtlustatud Heinsoo ja Konkova sõnastikele vastavalt või rekonstrueeritud vastavalt sõna vokalismile. Mitmuse partitiivi puhul on eelistatud pikemat -\textit{it}-muute\-lõppu ainult -\textit{i}-mitmusliku tüve asemel, mis mõlemad esinevad paralleelsete variantidena Konkova õppematerjalis.
+Tsvetkovi antud vormi lõpuvokaal on ühtlustatud Heinsoo ja Konkova sõnastikele vastavalt või rekonstrueeritud vastavalt sõna vokalismile. Mitmuse partitiivi puhul on eelistatud pikemat, muute\-lõpuga varianti puhta -\textit{i}-mitmusliku tüve asemel. Mõlemad vormid esinevad paralleelsete variantidena Heinsoo ja Konkova õppematerjalis (\cite[88]{heinsoo_vadsonakopittoja_2015}, \cite[10]{konkova_vaddceeli_2014}).
 
 
 \paragraph*{Illatiiv}
-Loodava kirjakeele ühtlustamise huvides on eelistatud läbinähtava käändelõpuga vormi \textit{-se/-sõ} lühikese illatiivi asemel. Selline eelistus on vastu\-olus \cite[247]{markus_comitative_2014} on välja\-toodule, et tänapäeva Luuditsa murdes esineb tavalist lühike vorm ja pikem vorm väga harva. Konkova esitab mõlemad vormid rööpselt.
+Loodava kirjakeele ühtlustamise huvides on vormisõnastiku koostamisel eelistatud läbinähtava käändelõpuga vormi \textit{-se/-sõ} lühikese illatiivi asemel. Selline eelistus on siiski vastu\-olus olukorraga tänapäeva Luuditsa murdes, kus tavaliselt esineb lühike vorm ja pikk vorm esineb väga harva \cite[247]{markus_comitative_2014}. Heinsoo ja Konkova õppe\-materjalides on mõlemad vormid esitatud rööpselt (\cite[88]{heinsoo_vadsonakopittoja_2015}, \cite[10]{konkova_vaddceeli_2014}).
 
 
 \paragraph*{Inessiiv}
 On analoogiavorm ja selle muutevormid ainsuses on rekonstrueeritud \msd{pl nom} vormi alusel, kusjuures muutelõpp -\textit{d} on asendatud lõpuga -\textit{z}. Mitmuse vormid on rekonstrueeritud \msd{pl ill} põhjal.
 
 % ``A characteristic feature of the Votic inessive is the fact that geminate stops -kk-, -pp-, -tt-, the geminate affricates -tts-, -ttš-, the geminate -ss-, and the consonant cluster -hs- always are in the strong grade before this case marker''
-Ariste järgi on vadja keele inessiivile omaseks tunnuseks see, et geminaat\-klusiilid -\textit{kk}-, -\textit{pp}- ja -\textit{tt}-, geminaat\-afrikaadid -\textit{tts}-, -\textit{ttš}-, geminaat -\textit{ss}- ning konsonant\-kluster -\textit{hs}- esinevad alati tugevas astmes (\cite[23]{ariste_grammar_1968}). Seda printsiipi järgides on \msd{sg ine} käände\-vormi vastavad tüved rekonstrueeritud tugeva\-astmelisteks.
+Ariste järgi on vadja keele inessiivile omaseks tunnuseks see, et geminaat\-klusiilid -\textit{kk}-, -\textit{pp}- ja -\textit{tt}-, geminaat\-afrikaadid -\textit{tts}- ja -\textit{ttš}-, geminaat -\textit{ss}- ning konsonant\-kluster -\textit{hs}- esinevad alati tugevas astmes (\cite[23]{ariste_grammar_1968}). Seda printsiipi järgides on \msd{sg ine} käände\-vormi vastavad tüved rekonstrueeritud tugeva\-astmelisteks.
 
 
 \paragraph*{Elatiiv}
@@ -411,7 +413,7 @@ Ariste järgi võib terminatiiv põhineda illatiivi või allatiivi tüvele (\cit
 
 
 \paragraph*{Komitatiiv}
-On analoogiavorm ja selle muutevormid ainsuses on rekonstrueeritud \msd{pl nom} vormi alusel, kusjuures muutelõpp -\textit{d} on asendatud lõpuga -\textit{ka}. Mitmuse vormid on rekonstrueeritud \msd{pl ill} põhjal, kusjuures -\textit{i}-tüveliste sõnade puhul on moodustunud pikk i muudetud -ij- vastavalt Konkova esitatud vormile (-\textit{-ijka}).
+On analoogiavorm ja selle muutevormid ainsuses on rekonstrueeritud \msd{pl nom} vormi alusel, kusjuures muutelõpp -\textit{d} on asendatud lõpuga -\textit{ka}. Mitmuse vormid on rekonstrueeritud \msd{pl ill} põhjal, kusjuures -\textit{i}-tüveliste sõnade puhul on moodustunud pikk i muudetud -ij- vastavalt Konkova esitatud vormile (-\textit{-ijka}) (\cite[10]{konkova_vaddceeli_2014}).
 
 
 
@@ -420,186 +422,161 @@ On analoogiavorm ja selle muutevormid ainsuses on rekonstrueeritud \msd{pl nom} 
 
 \subsection{Morfeemi staatus ja definitsioon}
 \label{sec:morfeemi-staatus}
-Morfeemi ei käsitleta siin töös levinud lingvistilisest seisukohast kui \textit{väikseimat tähenduslikku üksust}, vaid klassikalistele paradigmaatilistele lähenemistele omaselt kui \textit{mistahes tähtkoostise muutust, millega kaasneb tähenduslik muutus} (\cites{beard_morpheme_1987}{beard_lexeme-morpheme_1995}). %Morfeemipõhist suunda ajab nt \cite{stump_inflectional_2001}.
+
+
+Magistritöö meetodis ei käsitleta morfeemi levinud lingvistilise seisukoha järgi kui \textit{väikseimat tähenduslikku üksust}, vaid järgib definitsiooni, et morfeem on lekseemi \textit{mistahes fonoloogilise kuju muutust, millega kaasneb tähenduslik muutus} (\cites[31]{beard_morpheme_1987}[49]{beard_lexeme-morpheme_1995}), %Morfeemipõhist suunda ajab nt \cite{stump_inflectional_2001}.
+mis on sarnane klassikalisele paradigmaatilisele morfoloogia lähenemisele.
 
 % TODO ÜLALPOOL LISADA VIITEID? ALLPOOL ON NII:
-% Beardi teoorias ei ole morfeem grammatiliselt tähenduslik, vaid defineeritud kui mistahes muutusena lekseemi fonoloogilises kujus (\cite[31]{beard_morpheme_1987}). Seega on tema teoorias ainult lekseemid tähenduslikud märgid ning grammatilised afiksid (morfeemid) on seda vaid sattumuslikult (\cite[17]{beard_morpheme_1987}).
+%Beardi teoorias ei ole morfeem grammatiliselt tähenduslik, vaid defineeritud kui mistahes muutusena lekseemi fonoloogilises kujus (\cite[31]{beard_morpheme_1987}). Seega on tema teoorias ainult lekseemid tähenduslikud märgid ning grammatilised afiksid (morfeemid) on seda vaid sattumuslikult (\cite[17]{beard_morpheme_1987}).
 
-% TODO Aronoff on pööranud tähelepanu tõigale, et 'morfoloogia' kannab teistsugust tähendust keeleteaduses kui ta seda kannab teistes teadusharudes. Enamik teadusharudes tähendab 'morfoloogia' umbes "võimalike vormide uurimine-kaardistamine". Keeleteaduses hoopis ...
+
 
 \subsection{Klassikaline paradigmaatiline morfoloogia}
 
-Matthews tõstab esile kaks WP-mudelit: klassikaline ja uus ehk strukturalistlik. Klassikaline kuulub X ajastusse ja selle kõrghetk oli õpikutes X sajandil, ajal kui keelt õpetati kooloniates (\cite{matthews_morphology_1991} lk X). Uue rajas Matthews ja seda on Karttuneni sõnul edasi arendanud Zwicky, Anderson ja Stump (\cite[2]{karttunen_computing_2003}).
+%Nii Beard'i teoorias kui ka klassikalises paradigmaatilises lähenemises on ainult lekseemid tähenduslikud märgid ning grammatilised afiksid (morfeemid) on seda vaid sattumuslikult (\cite[17]{beard_morpheme_1987}, \cite[189]{matthews_morphology_1991}).
 
-Klassikaline on lähedasem siinses magistritöös rakendatud ekstraktmorfoloogiale. Klassikalise ja strukturalistliku lähenemise suurim vahe seisneb kahes asjaolus. Eeskätt ei näinud klassikalised grammatikud sõnast väiksemat ja tähenduslikku üksust, elik ei arvestatud morfeemiga. Arvestati ainult vormikülje üksustega, tähtede-foneemide ja silpidega. Sõna oli väikseim tähenduslik element keeles ja seda nähti tervikuna, hõlmates terve oma paradigma kuuluvaid vorme. (\cite{matthews_morphology_1991} lk X--Y)
+Matthews tõstab esile kaks paradidmaatilise morfoloogia käsitlust, klassikaline ja uus ehk strukturalistlik. Kahe käsitluse erinevuseks on see, et uus opereerib morfeemidel aga vana opereerib tervikutel sõna\-vormidel (\cite[196]{matthews_morphology_1991}).
 
-Matthews toob välja (klassikalise) paradigmaatilise suuna kolm head omadust. ....
+% relate words as wholes 186
+Klassikaline paradigmaatiline morfoloogia käsitleb sõna selle sõnavormide komplektina (\cite[186]{matthews_morphology_1991}).
 
-Õpikutes ja grammatikates välja toodud reeglid, mille abil sai ühe lekseemi paradigma moodustada, opereerisid ainult sõnavormide tähtkoostisel. Näiteks võidi ühe sõnavormi lõputähti asendada teiste tähtedega, et saada teine sõnavorm. Et asendatavatele tähtkoostistele ei omandatud mingit tähendust, näitlikustab see, et mõne reegli algvormiks võidi valida selline sõnavorm, mis oma tähtkoostise poolest kõige paremini sobis. (\cite{matthews_morphology_1991} lk X--Y).
+Keele väikseimaks tähenduslikuks üksuseks on sõnavorm tervikuna. Sõnavormide grammatilised tähendused on klassikalise teooria järgi vaid sattumused (ingl. \textit{accidents}) (\cite[189]{matthews_morphology_1991}). % \cite[17]{beard_morpheme_1987}
 
+Vanades ladina keele õpikutes ja grammatikates võidi esitada reegleid, mille abil ühe lekseemi kõik muutvormid moodustada. Reeglid opereerisid ainult sõnavormide tähtkoostisel. Näiteks võis reegel ühe sõnavormi lõputähti asendada muude tähtedega, et saada teine sõnavorm. Et asendatavatele tähtkoostistele ei omandatud mingit tähendust, näitlikustab ka see, et mõne reegli algvormiks võidi valida suvaline sõnavorm, mis oma tähtkoostise poolest kõige paremini sobis. (\cite[195-196]{matthews_morphology_1991}).
 
-%\subsection{Klassikaline paradigmaatiline morfoloogia}
-Sõna kui selle vormide tervik; pedagoogiline praktika ja paradigma üldistuse ülekantavus uutele sõnadele \cite{matthews_morphology_1991}. Matthewski jätab mudeli vormipõhiseks ja mitte morfeemipõhiseks, selle kohta edasi järgmises allosas.
-
-
-
-
-
-%\subsection{Vadja kirjakeel ja normatiiv}
-%\label{sec:kirjakeel}
-
-% vadjal on palju ressursse, grammatikaid jne, aga pole palju mis vastab
-% keeleõppija küsimustele kuidas?
-%Vadja keelele ei loodud kirjandust 1930-ndateil, nagu seda tehti Nõukogude Liidus näiteks karjala, vepsa ja isuri keele jaoks. 
+Magistritöös rakendatud ekstrakt\-morfoloogia meetod koosneb sarnastest sõna\-vormi koostamis\-reeglitest, nn muutvormi\-mallidest. Meetodit tutvustatakse pt~\ref{sec:ekstraktmorfoloogia-meetod}.
 
 %Siiski on vadja keelel hulganisti lingvistilisi kirjeldusi, nagu grammatikaid (mh \cites{ahlqvist_wotisk_1856}{airila_vatjan_1934}{tsvetkov_vadja_2008}{ariste_grammar_1968}{__2011}), sõnaraamatuid (mh \cites{tsvetkov_vatjan_1995}{ariste_vadja_1943}{laakso_vatjan_1989}{raag_dictionary_1982}{pomberg_vadja_1991}{grunberg_vadja_2013}{heinsoo_vadsonakopittoja_2015}) ja ka etnograafilisi töid (mh \cites{kass_kasitoo-_1961}{malk_vadja_1977}).
 
-%Kirjeldused ei aita siiski kaasa tänapäeva keeleõppija küsimustele \textit{kuidas kirjutatakse sõna \textsc{tüttö} mitmuse omastavas?}. Selleks on vaja tänapäevase vadja keele morfoloogia standardiseerimist ehk normatiivset kirjeldust.
 
 %Käesolev töö ei pürgi looma lõplikku normatiivi, kuivõrd ta loob süsteemi, mis oskab vastata morfoloogilistele küsimustele. Aga loodud süsteemi peamine eesmärk on siiski võimaldada muuta ja jätkata tööd normatiivi arendamiseks ja mille ümber saaks keeleaktivistid ise koonduda, ilma et selleks oleks niivõrd vaja ei lingvistilist ega keeletehnoloogilist spetsialisti.
 
 %Püüd luua vadja morfoloogiale normatiivne alus lihtsustab paljudele küsimustele vastusi leida, nt mis käändeid arvestada. Siiski on tööga loodud \textit{keele\-tehnoloogia tuletamise süsteem} avatud ka teistsugustele lähenemistele keeleainesele.
 
 
-% \subsection{Sõnavara}
-% \label{sec:sõnavara}
-% Töös on piirdutud Heinsoo Sõnakopittõjas esitatud noomenite ja adjektiividega. Sõnade paradigmasidd on täiendatud Laakso toimetatud Tsvetkovi sõnaraamatus esitatuga, kusjuures on eelistatud pikemaid muutvorme (TODO kirjelda miks on seda eelistatud). Mõningaid Sõnakopittõjas mitte-esinevaid sõnu on siiski Laakso sõnastikust tööle lisatud, selle eesmärgiga, et laiendada vadja õigekirjakontrollija sõnavara.
-% 
 
 
-
-% \subsection{Morfofonoloogia}
-% Tavaliselt jagatakse arvutilingvistikas morfoloogia ja fonoloogia eraldi nii, et morfoloogia tasandil on abstraktne esitus, nn morfofoneemid, mille pindesitused tulenevad eraldi fonoloogilistest reeglitest.
-% 
-% Niiviisi saaks esitada mõlemad fonoloogilised vormid \textit{tšiuttoa} ja \textit{tüttöä} ühe ja sama morfoloogilise kujuga \textsc{tšiutto+a} ja \textsc{tüttö+a}. Kusjuures käändelõpu \textsc{+a} pindesitus \textit{a}-na või \textit{ä}-na sõltuks vastavalt sellest, kas lemmas esineb tagapoolsed või eespoolsed vokaalid.
-% 
-% See töö ei arvesta morfofonoloogilise tasandiga. Peatükis \ref{sec:muuttüüpide-süsteem} näidatakse üht võimalikku viisi koondada tüüpsõnu kokku abstraktsemal tasandil, mis mingil määral arvestab ka morfofonoloogilisi reeglipärasusi.
-% 
-
-
-
-\subsection{Arvutimorfoloogia eesmärk ja lingvistiline motiveeritus}
-
-% TODO leia allpool õige koht sellele: Kui lingvistika üldine eesmärk on leida ja kirjeldada keelenähtuste reeglipärasusi, siis jääb lahtiseks küsimus mis on arvuti\-lingvistika eesmärk -- kas see on formaliseerida lingvistika poolt leitud reeglipärasused või võib see mahutada ka nende reeglipärasuste leidmist? See töö lähtub arusaamast, et arvuti on abivahend lingvistile, mitte ei ole ainult lingvisti(ka) formalisatsioon.
-% Seda tehakse kahel põhjusel -- esiteks puudub täielik morfoloogiakirjeldus vadja keelele. Teine põhjus on arvutiinsenerlik põhjus. Siinne töö maht ei luba täielikku morfoloogiakirjeldust, pealegi on keeled ajas muutuvad ja tuleb täiendusi teha. Seetõttu ei taha siinne töö esitada sellist formaalset morfoloogiakirjeldust, mida keegi teine ei saaks täiendada. Iga formalismi puhul kaasneb õpikõver, et sellest üldse aru saada, siinne töö esitab arvutimorfoloogia võimalikult formalismivabalt --- vormisõnastiku kujul --- milles sisalduva sõnavara on võimalik igal-ühel täiendada ja muuta ainult sellekaudu, et muuta konkreetse sõna sõnavormi.
-% Tehnoloogiavaba(m) kirjeldus on standartne, ja keeletehnoloog, kes tahab lisada uue ... võib seda teha, kirjelduse formaat on kirjeldatud rahvusvahelise standardi dokumentatsioonis.
-
-% Ehk alustada sellega: Kuna töö kasutab läbivalt sõna 'morfoloogia' natuke teistsuguses tähenduses kui see tavaliselt keeleteaduses kannab, tuleb selle tähendust kõigepealt lahti seletada. . Töö loobub morfeemist kui keele väikseim tähenduslik üksus ja seega ei tähenda siin töös morfoloogia morfeemilist morfoloogiat. Aronoff on pööranud tähelepanu tõigale, et 'morfoloogia' kannab teistsugust tähendust keeleteaduses kui ta seda kannab teistes teadusharudes. Enamik teadusharudes tähendab 'morfoloogia' umbes "võimalike vormide uurimine-kaardistamine". Keeleteaduses hoopis ...
-
-Arvutimorfoloogia eesmärgiks on siin töös valitud moodustada elektroonse vormisõnastiku:
-\begin{quote}
-  ``Üks täielik vormisõnastik peaks esitama kõigi sõnade kõik muutevormid koos vastava grammatilise iseloomustusega. Ainult siis saab kasutaja sõnastikust ilma mingi vaevata ja täiesti kindlalt teada, milline on vajalik vorm antud sõnast või millise sõna millise vormiga on tegemist tundmatu sõnavormi puhul.'' (\cite[7]{viks_vaike_1992}).
-\end{quote}
-
-% TODO Aronoff on pööranud tähelepanu tõigale, et 'morfoloogia' kannab teistsugust tähendust keeleteaduses kui ta seda kannab teistes teadusharudes. Enamik teadusharudes tähendab 'morfoloogia' umbes "võimalike vormide uurimine-kaardistamine". Keeleteaduses hoopis ...
-
-% Elektroonne vormisõnastik moodustab seega iga lekseemi jaoks relatsiooni ehk seose $(tsitaatvorm, {muutevormid koos vastava grammatilise iseloomustusega})$.
-Sellist vormisõnastikku võib moodustada erinevatel viisidel. Näiteks leksikaalse andme\-baasina, kus iga lekseemi puhul on nenditud kõik selle muutevormid koos vastava grammatilise iseloomustusega, või näiteks reeglite komplektina, mida rakendades saab koostada lekseemi muutvorme vastavalt nende grammatilistele iseloomustustele.
-
-Matemaatilises mõttes kujutab vormisõnastik vaid \textit{seost} muutevormide ja nende vastavate grammatiliste iseloomustuste vahel. 
-
-% arvutimorfoloogia kui arbitraarne valik realiseerimaks vormisõnastiku sisu (kas info pakkimismehanism või lingvistiliselt motiveeritud)
-Arvutimorfoloogiad võivad seda seost (või vormisõnastiku funktsionaalsust) realiseerida arvutuslikult erinevatel viisidel ja ei pea olema lingvistilis-grammatiliselt motiveeritud. Kuna üks täielik vormisõnastik on mahult niivõrd suur (kui mitte lõpmatult suur), on selle mahu kompaktsem ja ülevaatlikum esitus peamiseks motivatsiooniks organiseerida selle koostamise reeglite abil, mis on ühel või teisel moel põhjendatud lingvistiliste-grammatiliste reeglipärasustega.
-
-
-\subsubsection{Morfoloogia formaalsete teooriate lingvistiline motiveeritus}
-% pilk ajalukku (mida hiljem ümberlükata kui strukturalistlik-morfeemiline, aga mis on jätnud jälje ka arvutimorfoloogiate mõtemaailmale kui lingvistiliselt realistlikud)
-Eelmise sajandi keskpaiku jagas Charles Francis Hockett kõik seni Ameerikas sajandi algusest saadik ilmunud grammatikad kahe üldise mudeli järgi, IA (ingl. \textit{Item-and-Arrangement}, üksus ja distributsioon v järjestus v korraldus) ja IP (ingl. \textit{Item-and-Process}, üksus ja protsess ehk protsessi\-morfoloogia). Kõrvalmärkusena tõi ta välja ka kolmanda, ``vanema ja väärikama'' mudeli, WP (ingl. \textit{Word-and-Paradigm}, sõna ja paradigma), aga jättis selle oma käsitlusest välja (\cite[210]{hockett_two_1954}). Hockett võrdleb IA ja IP mudelite eeliseid ja argumenteerib, et IA toonane populaarsus seisneb eeskätt selles, et ajastu eelistab formaalseid mudeleid. Kuna IA-mudel oli juba formaliseeritud tahtis Hockett nüüd formaliseerida sellest vanema IP-mudeli (\cite[214]{hockett_two_1954}) ning sellest sai hiljem, Fred Karlssoni sõnade järgi, generatiivse lingvistika peamiseks mudeliks (\cite[126]{karlsson_uldkeeleteadus_2002}).
-
-IP-mudel põhineb (morfoloogilise) protsessi mõistel, millega ühest algvormiks valitud kujust (ingl. \textit{base}) luuakse teine vorm (\cite[210]{hockett_two_1954}). IA tekkis vastureaktsioonina IP protsessi\-mõiste suunalisusele -- enam ei tahetud tõsta esile üht vormi algsemaks teistest vormidest (\cite[211]{hockett_two_1954}). IA põhineb morfeemi mõistel, mida Hockett iseloomustab kui keele väikseimat grammatiliselt olulist üksust, ja selle distributsiooni määramisel (\cite[212]{hockett_two_1954}). Hocket nendib, et ka IA mudeli puhul tuleb siiski teha kohati suvalisi valikuid selle üle, mis kuulub morfeemi tasandile ja mis kuulub distributsiooni tasandile (\cite[212]{hockett_two_1954}).
-
-% Stumpi neljamõõtmeline jaotus
-Gregory Stump on arendanud Hocketti IP ja IA kaheks\-jagamise klassifikatsiooni edasi tänapäevaste morfoloogiliste teooriate põhjal. Nimetades IAd ümber leksikaalseks (ingl. \textit{lexical}) ja IPd inferentsiaalseks (ingl. \textit{inferential}) lisab ta klassifikatsioonile veel sisemise telje: inkrementaalsed (ingl. \textit{incremental}) ja realiseerivad (ingl \textit{realizational}) teooriad. (\cite{stump_inflectional_2001}, lk 1-2)
-
-Inkrementaalsete teooriate järgi lisandub iga (olgu IA puhul leksikaalselt loetletud või IP puhul inferentsiaalse reegliga tuletatud) morfosüntaktilise tunnuse puhul sõnale ka selle vormiline eksponent (\cite[2]{stump_inflectional_2001}). Vormilised eksponendid on üks-üheses seoses grammatiliste tunnustega ja need väljenduvad ükshaaval elik inkrementaalselt.
-
-Realiseerivate teooriate juures ei pea vormiline eksponent iga morfosüntaktilise tunnuse puhul eraldi ja koheselt väljenduma, vaid vormiline väljendus võib realiseeruda tunnuste suuremate komplektide puhul või üldse kui sõna kõik tunnused on teada (\cite[2]{stump_inflectional_2001}).
-
-Realiseerivad teooriad võimaldavad niiviisi suurema paindlikkuse vormiliste väljendujate \textit{realiseerimisel}, loobudes vormiliste väljendujate üks-ühesest seosest morfosüntaktiliste tunnustega.
-
-Stumpi jagab oma klassifikatsiooni järgi Lieberi morfoloogilise teooria leksikaalseks ja inkementaalseks. Halle ja Marantzi distributsioonilise morfoloogia teooria leksikaalseks ja realiseerivaks. Steele'i artikuleeritud morfoloogia teooria esindab inferentsiaalset ja inkrementaalset suunda. (\cite[2--3]{stump_inflectional_2001}).
-
-Stumpi enda ja Matthewsi, Zwicky ning Andersoni teooriaid nimetab ta WP teooriateks, mis on inferentsiaalsed ja realiseerivad (\cite[3]{stump_inflectional_2001}).
-% TODO siin oleks hea pöörata KLASSIKALISELE PARADIGMAATILISELE MORFOLE
-
-% Finally, Word-and-Paradigm theories of inflection (e.g. those proposed
-% by Matthews (), Zwicky (a), and Anderson ()) are of the
-% inferential–realizational type. In inferential–realizational theories, an
-% inflected word’s association with a particular set of morphosyntactic prop-
-% erties licenses the application of rules determining the word’s inflectional
-% form; likes, for example, arises by means of a rule appending -s to any verb
-% stem associated with the properties ‘sg subject agreement’, ‘present tense’,
-% and ‘indicative mood’.
-
-Robert Beard on nimetanud ülaltoodud viimaste autorite arendatud realiseerivaid teooriaid eru-morfoloogiaks (ingl. \textit{'split' morphology}) (\cite[20]{beard_morpheme_1987}) ja pakkunud välja morfoloogia veel võimsama eraldamise, mis põhineb tema morfoloogia lahususe hüpoteesil (ingl. \textit{Separation Hypothesis}) (\cite{beard_lexeme-morpheme_1995}).
-
-% ird-morfoloogia VS morfoloogia lahususe hüpotees
-Morfoloogia lahususe hüpoteesil põhinevate teooriate ja realiseerivate (eru-)morfoloogia\-teooriate vahe on fundamentaalne ja lähtub nende käsitlusest süntaksi ja semantika vahekorrast. Kõige ilmekalt paistab nende vahe morfeemi definitsioonis, küsimuses kas morfeem on keele väikseim vormiline tähenduslik üksus või mitte.
-
-Beardi teoorias ei ole morfeem grammatiliselt tähenduslik, vaid defineeritud kui mistahes muutusena lekseemi fonoloogilises kujus (\cite[31]{beard_morpheme_1987}). Seega on tema teoorias ainult lekseemid tähenduslikud märgid ning grammatilised afiksid (morfeemid) on seda vaid sattumuslikult (\cite[17]{beard_morpheme_1987}).
-
-Käesolevas magistritöös rakendatud ekstraktmorfoloogia on oma organisatsiooni suhtes sõna ja paradigma mudel, aga selle käsitus morfeemist on lähedasem Beardi teooriale.
-
-\subsubsection{Arvutimorfoloogiate lingvistiline motiveeritus}
-
-% Karttust ja Koskenniemit tuua mängu sisse alles siis, kui on vaja näidata kuidas arvuti poolel on hakatud asju tõlgendama enda mõtteviisi järgi
-Arvutilingvistikas on arvutimorfoloogiat üldiselt organiseeritud klassikalise morfeemi\-käsituse järgi. Seda ilmestab hästi 
-% Karttuneni väljakutsed arvutimorfoloogias
-Lauri Karttunen, kes nendib inimkeele mudeldamise puhul arvutimorfoloogias kaks väljakutset: 1)\nobreakspace morfotaktika ehk sõnast väiksemate üksuste kombineerumine ja 2)\nobreakspace morfoloogilised vaheldused ehk sõnast väiksemate üksuste kuju olenemine nende ümbritsevast kontekstist (\cite{karttunen_computing_2003}).
-
-Mille mõlemad väljakutsed viitavad otseselt klassikalisele morfeemi\-käsitusele.
-
-Karttuneni artikkel on vastus Stumpi teooriale ja ta näitlikustab selles kuidas Stumpi teooria on võimalik rakendada kasutades lõplike automaatide formalismi.
-
-Karttunen toob välja olukorra, et arvuti\-morfoloogiad põhinevad arvutuslikel formalismidel, millega nad implementeerivad morfoloogiaid ja mitte ei põhine otse mingil lingvistilisel teoorial. Ta ütleb et morfoloogia\-uurija üllitiste peamine eesmärk on olla veenev, et tema teooria annab läbinägelikuma (ingl. \textit{insightful}) ja elegantsema kirjelduse kui teised teooriad ja formalismid (\cite[2]{karttunen_computing_2003}). Praktilised küsimused nagu sõnavaraline katvus, arvutus\-kiirus ja mälu\-maht ei ole relevantsed akadeemilisele morfoloogia\-uurijale (\cite[2]{karttunen_computing_2003}).
-
-Seega võib öelda, et arvutimorfoloogia on laiem kui lingvistiline morfoloogia, kuna esimest ei piira mitte teooria, vaid arvutusliku meetodi võimsus. Karttunen tõestab artiklis, et Stumpi inferentsiaalne-realiseeriv teooria on taandatav lõplike automaatide formalismi arvutusvõimsusele.% (\cite{karttunen_computing_2003}). % TODO vaata kas viide tõesti hõlmab tervet paragrahvi
-
-Sellest võib järeldada, et arvutilingvistikas on lingvistilise teooria roll pigem olla ajendiks kui tõetruuks postulaadiks, kuigi kindlasti on teooria ja selle implementatsioonilise praktika vahekord raskesti eraldatavad ja ajas muutuvad. Kuigi tendentsi tõetruuduse vähenemisele võib siiski täheldada tänapäeval ka Kimmo Koskenniemi töös, kus ta on hiljuti oma taandatud kahetasemelises morfoloogiamudelis püüdnud morfofoneemi mõiste juures loobuda selle tähendusliku külje lingvistilisest realismist, omastades seda puhtalt vormile:
-\begin{quote}
-  ``\textit{Morphophonemes} are represented just as the \textit{combinations of the corresponding letters} (or phonemes) which we can observe in the surface forms. On the one hand, such an interpretation of morphophonemes is crude, but on the other hand, it is a fact that anybody can observe.'' (\cite[157]{koskenniemi_informal_2013})
-\end{quote}
-
-\subsubsection{Sügavam epistomoloogiline põhjus: formaalse lingvistika lingvistiline motiveeritus}
-% induktsioon ja deduktsioon
-Sügavama epistemoloogilise põhjuse, miks arvutimorfoloogiaid on ajendanud pigem lingvistiline motivatsioon ja mitte arvutusteoreetilised võimalused, arvab siinkirjutaja leiduvat strukturaalse lingvistika formaliseerimisperioodi alguses, mis algas enne arvutusmasinate leiutamist (1940.--1960.-ndateil aastatel) ja ammu enne arvutite arvutus- ja mälumahtuvuse võimsuse plahvatuslikku suurenemist (1980.--2000.-ndail). % TODO lisada Karttuneni ajalooline ülevaade fst morfoloogia arengutest
-
-% lingvistilise teooria formaliseerimine
-Formaalseid teooriaid ja seega teooriate formaliseerimist peetakse teaduse lipulaevaks (\cite[2026]{auroux_history_2006}). Teooriate formaliseerimis\-protsessi jagab Pieter Seuren neljaks etapiks, kus esimene koosneb uuritava ainese tüüpide (ehk kategooriate) leidmisest ning nendele esitus\-kuju määramisest (\cite[2027]{auroux_history_2006}). (Teisisõnu tegeleb see \textit{type-token distinction}'i probleemiga). Teine etapp käib sageli käsi-käes esimese etapiga ja hõlmab tüüpide taksonoomia määramist, ehk selle määramist, mis andmed kuuluvad mis tüübi alla millal ja mis tingimustes (\cite[2027]{auroux_history_2006}). Kolmas etapp koosneb struktuuri määramisest tüüpide esinemisele, elik kuidas kategooriaid on võimalik omavahel kombineerida (\cite[2027 jj]{auroux_history_2006}) näiteks puu- või sõltuvus\-struktuuride abil. Neljas ja viimane etapp koosneb ühe ennustava ja kirjeldava väärtusega formaalse teooria ülesseadmisest algoritmina ehk sammsammulise tegevusjuhisena (\cite[2031]{auroux_history_2006}).
-%final Stage 4, which consists in the setting up of a formal predictive and explanatory theory that has the precision of an algorithmic procedure.
-
-% arvutimorfoloogia on arvutiprogramm mis on formaalne aparaat
-Arvutimorfoloogia on arvutiprogramm (või mitme programmi komplekt), mis tahest-tahtmata hõlmab seelaadset formaalset sammsammulist tegevusjuhist.
-
-% probleem asub 3 ja 4 etapi vahel -- kas teha deduktiivselt või induktiivselt?
-Probleem, miks arvutimorfoloogiad juhinduvad lingvistilistest teooriatest ja mitte puht-arvutuslikest võimalustest asub formaliseerimis\-protsessi 3. ja 4. etapi vahel. Millisel viisil tuleb põhjendada struktuuri määravaid reegleid?
-
-% zellig
-% Generatiivse lingvistika suurkuju Noam Chomsky juhendaja Zellig Harris kirjutab
-Zellig Harris (kes oli Noam Chomsky juhendaja) kirjeldab oma \textit{magnum opus} teoses grammatika formaliseerimise lähenemist, mis põhjendab strukturaalsete reeglite määramise ühe formaalse avastamis\-menetluse abil keeleainese korpus\-esinemustest. See on, formaalse teooria sammsammulised reeglid tuletatakse puhtalt struktuuride esinemistest korpusanalüüsi teel. Selline väga töömahukas grammatika loomise menetlusviis sai tema kaasaegsetelt kõva kriitikat olles nii ilmselgelt ebarealistlik ja ebapraktiline. Harris oli tundlik kriitikale ja mainib oma raamatu lõpus viisi, kuidas korpus\-esinemustest eraldi püstitatud reegleid saab hoopis vastupidises suunas \textit{testida} korpustekstide peal. See pani aluse generatiivsele grammatikale, mida arendas edasi tema kasvandik Noam Chomsky teoses \textit{Syntactic Structures} (\citeyear{chomsky_syntactic_1957}). (\cite[2031]{auroux_history_2006}).
-
-% seletav tekst miks ma jauran
-Eelnevaga olen ma tahtnud öelda seda, et arvutimorfoloogiate koostamis\-põhimõtted põhineda morfeemil ja morfotaktilistel reeglitel ja mitte puhtalt muutvormide nentimisel korpuse põhjal, on eeskätt ajalooliste traditsioonide järjepidevus. Käesolev töö ei järgi neid traditsioone.
-
-See traditsioon on kristalliseerunud ka pealkirjas ``This volume grows out of a special session that we organized at the January 2009 Annual Meeting of the Linguistic Society of America entitled ``Computational Linguistics: Implementation of Analyses against Data''.'' (\cite{bender_computational_2010}).
-
-% Matthews kirjeldab WP ``mudelit'' kui ... ja Karttuneni järgi kronoloogia Zwicky kaudu Stumpini, aga me ei peagi laskuma WP mudeli arvutusliku külge juurde -- see on väga lihtsal moel lahendatud ekstraktmorfoloogias. Ja Karttuneni konstateering, et Stumpi mudel on arvutuslikult samaväärne FSTga. Ja Roark ja Sproat argumenteerivad, et X ja Y on samuti taandatavad FST-le ja seega samaväärsed. Olen valmis oma argumentatsiooniga siin peatükis, et arvutimorfoloogiad võivad vormisõnastiku funktsionaalsuse realiseerida ilma lingvistilise motivatsioonita. Nagu Stump arvab, et tuleb eelistada ``A theory of inflectional morphology must be preferred to the extent that it minimizes any dependence on theoretical distinctions which are not empirically motivated.'' (\cite{stump_inflectional_2001} lk 9).
-
+%% \subsection{Arvutimorfoloogia eesmärk ja lingvistiline motiveeritus}
+%% 
+%% % TODO leia allpool õige koht sellele: Kui lingvistika üldine eesmärk on leida ja kirjeldada keelenähtuste reeglipärasusi, siis jääb lahtiseks küsimus mis on arvuti\-lingvistika eesmärk -- kas see on formaliseerida lingvistika poolt leitud reeglipärasused või võib see mahutada ka nende reeglipärasuste leidmist? See töö lähtub arusaamast, et arvuti on abivahend lingvistile, mitte ei ole ainult lingvisti(ka) formalisatsioon.
+%% % Seda tehakse kahel põhjusel -- esiteks puudub täielik morfoloogiakirjeldus vadja keelele. Teine põhjus on arvutiinsenerlik põhjus. Siinne töö maht ei luba täielikku morfoloogiakirjeldust, pealegi on keeled ajas muutuvad ja tuleb täiendusi teha. Seetõttu ei taha siinne töö esitada sellist formaalset morfoloogiakirjeldust, mida keegi teine ei saaks täiendada. Iga formalismi puhul kaasneb õpikõver, et sellest üldse aru saada, siinne töö esitab arvutimorfoloogia võimalikult formalismivabalt --- vormisõnastiku kujul --- milles sisalduva sõnavara on võimalik igal-ühel täiendada ja muuta ainult sellekaudu, et muuta konkreetse sõna sõnavormi.
+%% % Tehnoloogiavaba(m) kirjeldus on standartne, ja keeletehnoloog, kes tahab lisada uue ... võib seda teha, kirjelduse formaat on kirjeldatud rahvusvahelise standardi dokumentatsioonis.
+%% 
+%% % Ehk alustada sellega: Kuna töö kasutab läbivalt sõna 'morfoloogia' natuke teistsuguses tähenduses kui see tavaliselt keeleteaduses kannab, tuleb selle tähendust kõigepealt lahti seletada. . Töö loobub morfeemist kui keele väikseim tähenduslik üksus ja seega ei tähenda siin töös morfoloogia morfeemilist morfoloogiat. Aronoff on pööranud tähelepanu tõigale, et 'morfoloogia' kannab teistsugust tähendust keeleteaduses kui ta seda kannab teistes teadusharudes. Enamik teadusharudes tähendab 'morfoloogia' umbes "võimalike vormide uurimine-kaardistamine". Keeleteaduses hoopis ...
+%% 
+%% %Aronoff on pööranud tähelepanu tõigale, et termin \emph{morfoloogia} on keeleteaduses alati erinenud selle tavatähendusest 'õpetus vormidest', mida termin kannab nt bioloogias ja geoloogias. Terminil on kitsam tähendus keele\-teaduses: 'grammatika see osa, mis tegeleb sõnavormide muutmisega ja sõna\-moodustamisega' ja ka filoloogias: 'keele grammatilise struktuuri üldised reeglid'. (\cite[1]{aronoff_morphology_1996})
+%% % Aronoffi puänt on see, et miks kitsamalt ainult \emph{sõnade} morfoloogia, miks mitte ülejäänud keeleline vorm?
+%% 
+%% % Elektroonne vormisõnastik moodustab seega iga lekseemi jaoks relatsiooni ehk seose $(tsitaatvorm, {muutevormid koos vastava grammatilise iseloomustusega})$.
+%% %Sellist vormisõnastikku võib moodustada erinevatel viisidel. Näiteks leksikaalse andme\-baasina, kus iga lekseemi puhul on nenditud kõik selle muutevormid koos vastava grammatilise iseloomustusega, või näiteks reeglite komplektina, mida rakendades saab koostada lekseemi muutvorme vastavalt nende grammatilistele iseloomustustele.
+%% 
+%% %Matemaatilises mõttes kujutab vormisõnastik vaid \textit{seost} muutevormide ja nende vastavate grammatiliste iseloomustuste vahel. 
+%% 
+%% % arvutimorfoloogia kui arbitraarne valik realiseerimaks vormisõnastiku sisu (kas info pakkimismehanism või lingvistiliselt motiveeritud)
+%% %Arvutimorfoloogiad võivad seda seost (või vormisõnastiku funktsionaalsust) realiseerida arvutuslikult erinevatel viisidel ja ei pea olema lingvistilis-grammatiliselt motiveeritud. Kuna üks täielik vormisõnastik on mahult niivõrd suur (kui mitte lõpmatult suur), on selle mahu kompaktsem ja ülevaatlikum esitus peamiseks motivatsiooniks organiseerida selle koostamise reeglite abil, mis on ühel või teisel moel põhjendatud lingvistiliste-grammatiliste reeglipärasustega.
+%% 
+%% 
+%% %\subsubsection{Morfoloogia formaalsete teooriate lingvistiline motiveeritus}
+%% % pilk ajalukku (mida hiljem ümberlükata kui strukturalistlik-morfeemiline, aga mis on jätnud jälje ka arvutimorfoloogiate mõtemaailmale kui lingvistiliselt realistlikud)
+%% %Eelmise sajandi keskpaiku jagas Charles Francis Hockett kõik seni Ameerikas sajandi algusest saadik ilmunud grammatikad kahe üldise mudeli järgi, IA (ingl. \textit{Item-and-Arrangement}, üksus ja distributsioon v järjestus v korraldus) ja IP (ingl. \textit{Item-and-Process}, üksus ja protsess ehk protsessi\-morfoloogia). Kõrvalmärkusena tõi ta välja ka kolmanda, ``vanema ja väärikama'' mudeli, WP (ingl. \textit{Word-and-Paradigm}, sõna ja paradigma), aga jättis selle oma käsitlusest välja (\cite[210]{hockett_two_1954}). Hockett võrdleb IA ja IP mudelite eeliseid ja argumenteerib, et IA toonane populaarsus seisneb eeskätt selles, et ajastu eelistab formaalseid mudeleid. Kuna IA-mudel oli juba formaliseeritud tahtis Hockett nüüd formaliseerida sellest vanema IP-mudeli (\cite[214]{hockett_two_1954}) ning sellest sai hiljem, Fred Karlssoni sõnade järgi, generatiivse lingvistika peamiseks mudeliks (\cite[126]{karlsson_uldkeeleteadus_2002}).
+%% 
+%% %IP-mudel põhineb (morfoloogilise) protsessi mõistel, millega ühest algvormiks valitud kujust (ingl. \textit{base}) luuakse teine vorm (\cite[210]{hockett_two_1954}). IA tekkis vastureaktsioonina IP protsessi\-mõiste suunalisusele -- enam ei tahetud tõsta esile üht vormi algsemaks teistest vormidest (\cite[211]{hockett_two_1954}). IA põhineb morfeemi mõistel, mida Hockett iseloomustab kui keele väikseimat grammatiliselt olulist üksust, ja selle distributsiooni määramisel (\cite[212]{hockett_two_1954}). Hocket nendib, et ka IA mudeli puhul tuleb siiski teha kohati suvalisi valikuid selle üle, mis kuulub morfeemi tasandile ja mis kuulub distributsiooni tasandile (\cite[212]{hockett_two_1954}).
+%% 
+%% % Stumpi neljamõõtmeline jaotus
+%% Gregory Stump on arendanud Hocketti IP ja IA kaheks\-jagamise klassifikatsiooni edasi tänapäevaste morfoloogiliste teooriate põhjal. Nimetades IAd ümber leksikaalseks (ingl. \textit{lexical}) ja IPd inferentsiaalseks (ingl. \textit{inferential}) lisab ta klassifikatsioonile veel sisemise telje: inkrementaalsed (ingl. \textit{incremental}) ja realiseerivad (ingl \textit{realizational}) teooriad. (\cite{stump_inflectional_2001}, lk 1-2)
+%% 
+%% Inkrementaalsete teooriate järgi lisandub iga (olgu IA puhul leksikaalselt loetletud või IP puhul inferentsiaalse reegliga tuletatud) morfosüntaktilise tunnuse puhul sõnale ka selle vormiline eksponent (\cite[2]{stump_inflectional_2001}). Vormilised eksponendid on üks-üheses seoses grammatiliste tunnustega ja need väljenduvad ükshaaval elik inkrementaalselt.
+%% 
+%% Realiseerivate teooriate juures ei pea vormiline eksponent iga morfosüntaktilise tunnuse puhul eraldi ja koheselt väljenduma, vaid vormiline väljendus võib realiseeruda tunnuste suuremate komplektide puhul või üldse kui sõna kõik tunnused on teada (\cite[2]{stump_inflectional_2001}).
+%% 
+%% Realiseerivad teooriad võimaldavad niiviisi suurema paindlikkuse vormiliste väljendujate \textit{realiseerimisel}, loobudes vormiliste väljendujate üks-ühesest seosest morfosüntaktiliste tunnustega.
+%% 
+%% Stumpi jagab oma klassifikatsiooni järgi Lieberi morfoloogilise teooria leksikaalseks ja inkementaalseks. Halle ja Marantzi distributsioonilise morfoloogia teooria leksikaalseks ja realiseerivaks. Steele'i artikuleeritud morfoloogia teooria esindab inferentsiaalset ja inkrementaalset suunda. (\cite[2--3]{stump_inflectional_2001}).
+%% 
+%% Stumpi enda ja Matthewsi, Zwicky ning Andersoni teooriaid nimetab ta WP teooriateks, mis on inferentsiaalsed ja realiseerivad (\cite[3]{stump_inflectional_2001}).
+%% % TODO siin oleks hea pöörata KLASSIKALISELE PARADIGMAATILISELE MORFOLE
+%% 
+%% % Finally, Word-and-Paradigm theories of inflection (e.g. those proposed
+%% % by Matthews (), Zwicky (a), and Anderson ()) are of the
+%% % inferential–realizational type. In inferential–realizational theories, an
+%% % inflected word’s association with a particular set of morphosyntactic prop-
+%% % erties licenses the application of rules determining the word’s inflectional
+%% % form; likes, for example, arises by means of a rule appending -s to any verb
+%% % stem associated with the properties ‘sg subject agreement’, ‘present tense’,
+%% % and ‘indicative mood’.
+%% 
+%% Robert Beard on nimetanud ülaltoodud viimaste autorite arendatud realiseerivaid teooriaid eru-morfoloogiaks (ingl. \textit{'split' morphology}) (\cite[20]{beard_morpheme_1987}) ja pakkunud välja morfoloogia veel võimsama eraldamise, mis põhineb tema morfoloogia lahususe hüpoteesil (ingl. \textit{Separation Hypothesis}) (\cite{beard_lexeme-morpheme_1995}).
+%% 
+%% % ird-morfoloogia VS morfoloogia lahususe hüpotees
+%% Morfoloogia lahususe hüpoteesil põhinevate teooriate ja realiseerivate (eru-)morfoloogia\-teooriate vahe on fundamentaalne ja lähtub nende käsitlusest süntaksi ja semantika vahekorrast. Kõige ilmekalt paistab nende vahe morfeemi definitsioonis, küsimuses kas morfeem on keele väikseim vormiline tähenduslik üksus või mitte.
+%% 
+%% Beardi teoorias ei ole morfeem grammatiliselt tähenduslik, vaid defineeritud kui mistahes muutusena lekseemi fonoloogilises kujus (\cite[31]{beard_morpheme_1987}). Seega on tema teoorias ainult lekseemid tähenduslikud märgid ning grammatilised afiksid (morfeemid) on seda vaid sattumuslikult (\cite[17]{beard_morpheme_1987}).
+%% 
+%% Käesolevas magistritöös rakendatud ekstraktmorfoloogia on oma organisatsiooni suhtes sõna ja paradigma mudel, aga selle käsitus morfeemist on lähedasem Beardi teooriale.
+%% 
+%% \subsubsection{Arvutimorfoloogiate lingvistiline motiveeritus}
+%% 
+%% % Karttust ja Koskenniemit tuua mängu sisse alles siis, kui on vaja näidata kuidas arvuti poolel on hakatud asju tõlgendama enda mõtteviisi järgi
+%% Arvutilingvistikas on arvutimorfoloogiat üldiselt organiseeritud klassikalise morfeemi\-käsituse järgi. Seda ilmestab hästi 
+%% % Karttuneni väljakutsed arvutimorfoloogias
+%% Lauri Karttunen, kes nendib inimkeele mudeldamise puhul arvutimorfoloogias kaks väljakutset: 1)\nobreakspace morfotaktika ehk sõnast väiksemate üksuste kombineerumine ja 2)\nobreakspace morfoloogilised vaheldused ehk sõnast väiksemate üksuste kuju olenemine nende ümbritsevast kontekstist (\cite{karttunen_computing_2003}).
+%% 
+%% Mille mõlemad väljakutsed viitavad otseselt klassikalisele morfeemi\-käsitusele.
+%% 
+%% Karttuneni artikkel on vastus Stumpi teooriale ja ta näitlikustab selles kuidas Stumpi teooria on võimalik rakendada kasutades lõplike automaatide formalismi.
+%% 
+%% Karttunen toob välja olukorra, et arvuti\-morfoloogiad põhinevad arvutuslikel formalismidel, millega nad implementeerivad morfoloogiaid ja mitte ei põhine otse mingil lingvistilisel teoorial. Ta ütleb et morfoloogia\-uurija üllitiste peamine eesmärk on olla veenev, et tema teooria annab läbinägelikuma (ingl. \textit{insightful}) ja elegantsema kirjelduse kui teised teooriad ja formalismid (\cite[2]{karttunen_computing_2003}). Praktilised küsimused nagu sõnavaraline katvus, arvutus\-kiirus ja mälu\-maht ei ole relevantsed akadeemilisele morfoloogia\-uurijale (\cite[2]{karttunen_computing_2003}).
+%% 
+%% Seega võib öelda, et arvutimorfoloogia on laiem kui lingvistiline morfoloogia, kuna esimest ei piira mitte teooria, vaid arvutusliku meetodi võimsus. Karttunen tõestab artiklis, et Stumpi inferentsiaalne-realiseeriv teooria on taandatav lõplike automaatide formalismi arvutusvõimsusele.% (\cite{karttunen_computing_2003}). % TODO vaata kas viide tõesti hõlmab tervet paragrahvi
+%% 
+%% Sellest võib järeldada, et arvutilingvistikas on lingvistilise teooria roll pigem olla ajendiks kui tõetruuks postulaadiks, kuigi kindlasti on teooria ja selle implementatsioonilise praktika vahekord raskesti eraldatavad ja ajas muutuvad. Kuigi tendentsi tõetruuduse vähenemisele võib siiski täheldada tänapäeval ka Kimmo Koskenniemi töös, kus ta on hiljuti oma taandatud kahetasemelises morfoloogiamudelis püüdnud morfofoneemi mõiste juures loobuda selle tähendusliku külje lingvistilisest realismist, omastades seda puhtalt vormile:
+%% \begin{quote}
+%%   ``\textit{Morphophonemes} are represented just as the \textit{combinations of the corresponding letters} (or phonemes) which we can observe in the surface forms. On the one hand, such an interpretation of morphophonemes is crude, but on the other hand, it is a fact that anybody can observe.'' (\cite[157]{koskenniemi_informal_2013})
+%% \end{quote}
+%% 
+%% \subsubsection{Sügavam epistomoloogiline põhjus: formaalse lingvistika lingvistiline motiveeritus}
+%% % induktsioon ja deduktsioon
+%% Sügavama epistemoloogilise põhjuse, miks arvutimorfoloogiaid on ajendanud pigem lingvistiline motivatsioon ja mitte arvutusteoreetilised võimalused, arvab siinkirjutaja leiduvat strukturaalse lingvistika formaliseerimisperioodi alguses, mis algas enne arvutusmasinate leiutamist (1940.--1960.-ndateil aastatel) ja ammu enne arvutite arvutus- ja mälumahtuvuse võimsuse plahvatuslikku suurenemist (1980.--2000.-ndail). % TODO lisada Karttuneni ajalooline ülevaade fst morfoloogia arengutest
+%% 
+%% % lingvistilise teooria formaliseerimine
+%% Formaalseid teooriaid ja seega teooriate formaliseerimist peetakse teaduse lipulaevaks (\cite[2026]{auroux_history_2006}). Teooriate formaliseerimis\-protsessi jagab Pieter Seuren neljaks etapiks, kus esimene koosneb uuritava ainese tüüpide (ehk kategooriate) leidmisest ning nendele esitus\-kuju määramisest (\cite[2027]{auroux_history_2006}). (Teisisõnu tegeleb see \textit{type-token distinction}'i probleemiga). Teine etapp käib sageli käsi-käes esimese etapiga ja hõlmab tüüpide taksonoomia määramist, ehk selle määramist, mis andmed kuuluvad mis tüübi alla millal ja mis tingimustes (\cite[2027]{auroux_history_2006}). Kolmas etapp koosneb struktuuri määramisest tüüpide esinemisele, elik kuidas kategooriaid on võimalik omavahel kombineerida (\cite[2027 jj]{auroux_history_2006}) näiteks puu- või sõltuvus\-struktuuride abil. Neljas ja viimane etapp koosneb ühe ennustava ja kirjeldava väärtusega formaalse teooria ülesseadmisest algoritmina ehk sammsammulise tegevusjuhisena (\cite[2031]{auroux_history_2006}).
+%% %final Stage 4, which consists in the setting up of a formal predictive and explanatory theory that has the precision of an algorithmic procedure.
+%% 
+%% % arvutimorfoloogia on arvutiprogramm mis on formaalne aparaat
+%% Arvutimorfoloogia on arvutiprogramm (või mitme programmi komplekt), mis tahest-tahtmata hõlmab seelaadset formaalset sammsammulist tegevusjuhist.
+%% 
+%% % probleem asub 3 ja 4 etapi vahel -- kas teha deduktiivselt või induktiivselt?
+%% Probleem, miks arvutimorfoloogiad juhinduvad lingvistilistest teooriatest ja mitte puht-arvutuslikest võimalustest asub formaliseerimis\-protsessi 3. ja 4. etapi vahel. Millisel viisil tuleb põhjendada struktuuri määravaid reegleid?
+%% 
+%% % zellig
+%% % Generatiivse lingvistika suurkuju Noam Chomsky juhendaja Zellig Harris kirjutab
+%% Zellig Harris (kes oli Noam Chomsky juhendaja) kirjeldab oma \textit{magnum opus} teoses grammatika formaliseerimise lähenemist, mis põhjendab strukturaalsete reeglite määramise ühe formaalse avastamis\-menetluse abil keeleainese korpus\-esinemustest. See on, formaalse teooria sammsammulised reeglid tuletatakse puhtalt struktuuride esinemistest korpusanalüüsi teel. Selline väga töömahukas grammatika loomise menetlusviis sai tema kaasaegsetelt kõva kriitikat olles nii ilmselgelt ebarealistlik ja ebapraktiline. Harris oli tundlik kriitikale ja mainib oma raamatu lõpus viisi, kuidas korpus\-esinemustest eraldi püstitatud reegleid saab hoopis vastupidises suunas \textit{testida} korpustekstide peal. See pani aluse generatiivsele grammatikale, mida arendas edasi tema kasvandik Noam Chomsky teoses \textit{Syntactic Structures} (\citeyear{chomsky_syntactic_1957}). (\cite[2031]{auroux_history_2006}).
+%% 
+%% % seletav tekst miks ma jauran
+%% Eelnevaga olen ma tahtnud öelda seda, et arvutimorfoloogiate koostamis\-põhimõtted põhineda morfeemil ja morfotaktilistel reeglitel ja mitte puhtalt muutvormide nentimisel korpuse põhjal, on eeskätt ajalooliste traditsioonide järjepidevus. Käesolev töö ei järgi neid traditsioone.
+%% 
+%% See traditsioon on kristalliseerunud ka pealkirjas ``This volume grows out of a special session that we organized at the January 2009 Annual Meeting of the Linguistic Society of America entitled ``Computational Linguistics: Implementation of Analyses against Data''.'' (\cite{bender_computational_2010}).
+%% 
+%% % Matthews kirjeldab WP ``mudelit'' kui ... ja Karttuneni järgi kronoloogia Zwicky kaudu Stumpini, aga me ei peagi laskuma WP mudeli arvutusliku külge juurde -- see on väga lihtsal moel lahendatud ekstraktmorfoloogias. Ja Karttuneni konstateering, et Stumpi mudel on arvutuslikult samaväärne FSTga. Ja Roark ja Sproat argumenteerivad, et X ja Y on samuti taandatavad FST-le ja seega samaväärsed. Olen valmis oma argumentatsiooniga siin peatükis, et arvutimorfoloogiad võivad vormisõnastiku funktsionaalsuse realiseerida ilma lingvistilise motivatsioonita. Nagu Stump arvab, et tuleb eelistada ``A theory of inflectional morphology must be preferred to the extent that it minimizes any dependence on theoretical distinctions which are not empirically motivated.'' (\cite{stump_inflectional_2001} lk 9).
+%% 
 
 
 
 \subsection{Muuttüüp, tüüpsõna ja sõnatüüp}
 
-% seda selle tõttu, sest töö põhined muuttüübil
-% heal lapsel mitu nime, paar sõna 
-
-Eesti traditsiooni järgi on muuttüüp tüüpsõnast üldisem. Kuidas siin töös terminoloogiliselt ümber käia, kas \textit{muuttüüp} või \textit{tüüpsõna\-mall}?
-
-Muuttüübistik sõltub selle aluseks võetud klassifikatsioonist, ekstrakt\-morfoloogiat võiks vaadata kui lihtsalt üht väga formaalselt defineeritud muuttüübistikku.
-
-Huldenil on omakorda üks väga formaalne viis, kuidas vähendada ekstrakt\-morfoloogiaga leitud muuttüüpide arvu. Kas see on hoopis muuttüübistik?
-
-
+Selles töös kasutatakse termineid \emph{muuttüüp}, \emph{tüüpsõna} ja \emph{sõnatüüp} sama tähendusega ja osutab lekseemi kõiki muutvorme. \emph{Tüüpsõna} on valitud lekseem, millega nimetatakse üht \emph{sõnatüüpi}. \emph{Sõnatüüp} on seega tüüpsõnast üldisem mõiste ja tähistab muutvormide koostamismalle, millega saab moodustada sellesse sõnatüüpi kuuluvate sõnade kõiki muutvorme.
+%% 
+%% % seda selle tõttu, sest töö põhined muuttüübil
+%% % heal lapsel mitu nime, paar sõna 
+%% 
+%% Eesti traditsiooni järgi on muuttüüp tüüpsõnast üldisem. Kuidas siin töös terminoloogiliselt ümber käia, kas \textit{muuttüüp} või \textit{tüüpsõna\-mall}?
+%% 
+%% Muuttüübistik sõltub selle aluseks võetud klassifikatsioonist, ekstrakt\-morfoloogiat võiks vaadata kui lihtsalt üht väga formaalselt defineeritud muuttüübistikku.
+%% 
+%% Huldenil on omakorda üks väga formaalne viis, kuidas vähendada ekstrakt\-morfoloogiaga leitud muuttüüpide arvu. Kas see on hoopis muuttüübistik?
+%% 
+%% 
 
 
 
@@ -610,17 +587,27 @@ Huldenil on omakorda üks väga formaalne viis, kuidas vähendada ekstrakt\-morf
 \section{Vormisõnastiku sisestamine Morfoloogialabori rakenduse abil}
 \label{sec:vormisõnastiku-sisestamine}
 
-Sisestamise töövoog on olnud:
+Morfoloogialabor\footnote{https://spraakbanken.gu.se/morfologilabbet/} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. See on loodud Språkbanken'is\footnote{Rootsi keelepank ehk keele\-ressursside keskus} prototüübina, et integreerida ekstraktmorfoloogia nende leksikaalsesse taristusse Karp.
+
+Labor põhineb ekstraktmorfoloogial ja lihtsustab uute sõnade morfoloogilise informatsiooni lisamist sõnaraamatu koostamisel. Rakendus ennustab sisestatud sõnale sobivaid muuttüüpe ja moodustab muuttüübile vastavalt kõik muutvormid. Kasutaja peab kontrollima kas muutvormid on õiged või valima teine muuttüüp. Rakendus on ühendatud korpuspäringute süsteemiga KORP ja näitab muutvormi juures kasutajale selle esinemis\-arvu korpustes.
+
+Magistritöö jooksul on koostatud ja kasutatud kaks vadja korpust: kirjakeelne korpus, mis koosneb Heinsoo õpematerjalide tekstidest ja murdeid kajastav korpus, mis koosneb vadja sõnaraamatu \cite{grunberg_vadja_2013} näitelausetest. Korpused on päritavad Eesti Keeleressursside Keskuse korpuspäringute süsteemist KORP\footnote{https://korp.keeleressursid.ee/?mode=vadja} ja avaldatud \cite{kankainen_keeleleek/votic-corpora:_2018}.
+
+Morfoloogialaboriga salvestatud andmed ja nende kuju vastab suuresti pt~\ref{sec:lmf} kirjeldatule. Siinkirjutajal oli au viibida Språkbanken'is prototüübi ehitamise ajal (2018.~a kevadel) ja sai panustada andmete kuju standardiseerimisega.
+
+
+Magistritöö vadja vormisõnastiku sisestamise töövoog on olnud:
 \begin{enumerate}
 \item sisestada lekseemi põhivorm
-\item valida olemasolev tüüpsõna ennustatud sõnatüüpide põhjal
+\item valida olemasolev tüüpsõna olemas\-olevate sõnatüüpide põhjal
 \item sõnatüübi (ja tüüpsõna) puudumise juhul sisestada lekseemi kõik muutvormid
 \end{enumerate}
 
-Punkti (3) juhul loob rakendus ekstraktmorfoloogia abil uue sõnatüübi, mis on koheselt järgmise sisestatava lekseemi puhul ennustatav ja valitav.
+Punkti (3) juhul loob rakendus ekstrakt\-morfoloogia abil uue sõnatüübi, mis on juba järgmise sisestatava lekseemi puhul süsteemi poolt ennustatav ja valitav.
 
-Töö algusfaasis ja tühja andmestikuga alustamise tõttu ei ole loomulikult olnud võimalik valida paljudele sisestatud lekseemidele õiget sõnatüüpi ning on pidanud sisestama kõik muutvormid. Töö jooksul on sõnatüüpide arv kasvanud ja rakenduse abil on saanud valida õige sõnatüüp, mis on töö\-protsessi kiirendanud. Tihti on ka olnud abiks valida nt vokalismi suhtes vale sõnatüüp ja genereeritud muutvormides ainult korrigeerida vokalismi kajastav tähtkoostis.
+Töö algusfaasis ja tühja andmestikuga alustamise tõttu ei ole loomulikult olnud võimalik valida paljudele sisestatud lekseemidele õiget sõnatüüpi ning on pidanud sisestama kõik muutvormid. Töö jooksul on sõnatüüpide arv kasvanud ja rakenduse abil on saanud valida õige sõnatüüp, mis on töö\-protsessi kiirendanud. Tihti on ka olnud abiks valida nt vokalismi suhtes vale sõnatüüp ja genereeritud muutvormides ainult korrigeerida vokalismi kajastavad osad.
 
+Kuivõrd magistritöö jooksul on vadja sõnatüüpe ühtlustatud, on seda tehtud tagant-järgi valides juba salvestatud sõnadele uus sõnatüüp. Kuna seda on pidanud tegema kõikide sõnade puhul, mis kuuluvad uue, ühtlustatud sõnatüübi alla, on see olnud aega\-nõudev protsess. Ühtlustamise ajal tekkinud mõtteid, kuidas seda protsessi lihtsustada ja kiirendada, on edastatud Språkbanken'i arendajatele.
 
 
 \newpage
@@ -643,7 +630,7 @@ Ekstraktmorfoloogia on juhendatud masinõppe meetod, mis koosneb kahest komponen
 Meetod on välja pakutud kui lihtsama ja loomulikuma viisina lingvistil määratleda arvutimorfoloogia, kuna see põhineb lekseemide sõnavormide esitamisel ja ei juhindu morfoloogiliste-grammatiliste reeglite kirjutamisest (\cite[14]{forsberg_what_2016}).
 
 % mis on eraldamine
-Sõnatüübi eraldamise korral üldistab meetod sisestatud muutvormitabelit ja eraldab sellest lekseemi \glslink{tehniline-tüvi}{tehnilise tüve} ja \glslink{sõnatüübimall}{sõnatüübimalli}. Meetodi seda osa kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-eraldamine}.
+Sõnatüübi eraldamise (ekstraheerimise) korral eraldab meetod lekseemi muutvormide tabelist selle \glslink{tehniline-tüvi}{tehnilise tüve} ja \glslink{sõnatüübimall}{sõnatüübimalli}. Meetodi seda osa kirjeldatakse lähemalt pt-s~\ref{sec:ekstraktmorfoloogia-eraldamine}.
 %Eraldatud sõna\-tüübi\-mallide põhjal tuletatakse magistritöös programmkoodi, mida kirjeldatakse lähemalt pt-s~\ref{sec:programmkoodi-tuletamine}.
 
 % mis on ennustamine
@@ -671,7 +658,7 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
 %    \centering
     \begin{tabular}[t]{l l}
       % TODO vaata sõnavormid üle vormisõnastikust
-      muutvorm            & tunnused \\ \hline
+      muutvorm            & vormiinfo \\ \hline
       \textit{katto}      & \textsc{sg nom} \\
       \textit{katod}      & \textsc{pl nom} \\
       \textit{kato}       & \textsc{sg gen} \\
@@ -697,7 +684,7 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
       \textit{katoka}     & \textsc{sg com} \\
       \textit{kattoika}   & \textsc{pl com} \\
     \end{tabular}
-    \caption{Sisendi muutvormide tabel koos morfo\-loogiliste tunnustega.}
+    \caption{Sisendi muutvormide tabel koos morfo\-loogilise informatsiooniga.}
     \label{tab:sisendtabel-katto}
   \end{minipage}
   \hfill
@@ -705,7 +692,7 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
     \centering
     \begin{tabular}[t]{l l l}
       % TODO vaata sõnavormid üle vormisõnastikust
-      tehniline tüvi                     & muutvormi\-mall           & tunnused \\
+      tehniline tüvi                     & muutvormi\-mall           & vormiinfo \\
       \hline
       \underline{kat} t \underline{o}       & $x_1$ + t + $x_2$         & \textsc{sg nom} \\
       \underline{kat}   \underline{o} d     & $x_1$ + $x_2$ + d         & \textsc{pl nom} \\
@@ -732,7 +719,7 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
       \underline{kat}   \underline{o} ka    & $x_1$ + $x_2$ + ka        & \textsc{sg com} \\
       \underline{kat} t \underline{o} ika   & $x_1$ + t + $x_2$ + ika   & \textsc{pl com} \\
     \end{tabular}
-    \caption{Väljundi tüüpsõnamall (kus\-juures $x_1 = $ \textit{kat} ja $x_2 = $ \textit{o} vastab sisendist leitud ühisosajadale).} % ühisosajada = tehniline tüvi
+    \caption{Väljundi tüüpsõnamall (kus\-juures muutujad $x_1 = $ \textit{kat} ja $x_2 = $ \textit{o} vastab sisendist leitud, allajoonitud tehnilisele tüvele).}
     \label{tab:väljundtabel-katto}
   \end{minipage}
 \end{table}
@@ -748,7 +735,7 @@ Sõnatüübi muutvorme eristab teine-teisest see tähtkoostis, mis ei kordu üle
 Tehnilise tüve leidmine koosneb kahest etapist: 1)~pikima ühisosajada eraldamine ning 2)~ühisosajada ühene jaotamine muutvormide vahel tehniliseks tüveks. Sõnatüüp koosneb muutvormimallidest ja koostatakse tehnilise tüve jaotuse põhjal, kusjuures üldistatakse tehnilise tüve osad muutujateks ja sõnatüüp funktsiooniks.
 
 
-\paragraph{Tehnilise tüve eraldamine}
+\subsubsection{Tehnilise tüve eraldamine}
 
 % tehniline tüvi == LCS
 Tehniline tüvi on ekstraktmorfoloogias defineeritud kordse pikima ühisosajadana (\textit{Multiple Longest Common Subsequence}). %, mille tuvastamiseks rakendatakse lõplike automaatide formalismi (\cite{hulden_generalizing_2014}).
@@ -761,7 +748,7 @@ Võimalike mitmesuste lahendamiseks kasutatakse ekstraktmorfoloogias ühestamise
 % Muutvormidest võib leiduda mitu erinevat ühisosajada ja nende vahel üheselt  tuleb  ja nendest ühe valimise
 
 
-\paragraph{Üldistamine sõnatüübi funktsiooniks}
+\subsubsection{Üldistamine sõnatüübi funktsiooniks}
 
 Tehnilise tüve fikseerimise järel moodustatakse muutvormi\-mallid. Muutvormides asendatakse tehnilise tüve osad muutujatega (tabelis~\ref{tab:väljundtabel-katto}, veerg 2). Näiteks
 \begin{align*}
@@ -770,7 +757,7 @@ Tehnilise tüve fikseerimise järel moodustatakse muutvormi\-mallid. Muutvormide
 \end{align*}
 vastavalt \msd{sg nom} ja \msd{sg gen} vormidele.
 
-On ilmne et, kui asendatakse muutvormimallides muutujad vastavate tehnilise tüve osadega, siis taas-moodustatakse muutvormid \textit{katto} ja \textit{katod}. Muutujaid aga asendades teiste tähtedega, % moodustatakse muude (potentsiaalsete) lekseemide muutvormid,
+On ilmne et, kui asendatakse muutvormimallides muutujad vastavate tehnilise tüve osadega, siis taas-moodustatakse muutvormid (\vadja{katto} ja \vadja{katod}). Muutujaid aga asendades teiste tähtedega, % moodustatakse muude (potentsiaalsete) lekseemide muutvormid,
 nt \textit{čiut}~ja~\textit{o}, moodustatakse teise lekseemi, \textit{čiutto} käändetabel. Näiteks
 \begin{align*}
   x_1 + t + x_2 &\rightarrow \underline{\textit{čiut}} + \textit{t} + \underline{\textit{o}} \rightarrow \textit{čiutto} \nonumber \\
@@ -847,29 +834,29 @@ Kui lemmaks on valitud kindel muutvorm (nt \msd{sg nom}), on võimalik koostada 
 Sõnatüübi ennustamine on eraldiseisev protsess ja põhineb ainult eraldatud tehniliste tüvede muutujate tähtkoostise analüüsimisel. Ennustamine koosneb piirangute seadmisest tehnilise tüve muutujate kujule.
 
 % kasutatakse ainult morfoloogialabori veebirakenduses, kuigi oleks võimalik keeletehnoloogiasse sisse kodeerida. seda ei tehta, sest esialgu on piirdutud õigekirjakontrollija GF sõnastiku loomisega. kitsendused sarnanevad GF raamistikus levinud Smart Paradigm funktsiooni mõistega ja oleks üks võimalik edasiarenduse suund.
-Sõnatüübi ennustamismeetodit on magistritöös kasutatud vaid kaudselt, Morfoloogialabori veebiliidese kaudu vormisõnastik koostamisel. Seda on tehtud kuna magistritöö eesmärgiks on olnud esmane integreerimine keeletehnoloogilistesse raamistikesse ja õigekirjakontrollija loomine, kus ennustamisvõimet ei ole otseselt tarvis. Ennustamismeetod sarnaneb \textit{Grammatical Framework}'i \textit{Smart Paradigm}-funktsiooni mõistega (\cite{detrez_smart_2012}) ja on magistritöö üks võimalik edasiarenduse suund. Forsberg ja Hulden (\cite{forsberg_deriving_2016}) on rakendanud meetodit tundmatu sõnavormi sõnatüübi ennustaja (ingl. \textit{morphological guesser}) ehitamiseks, mida Morfoloogialabori veebiliides kasutab sõnatüüpide järjestamiseks kasutajale.
+Sõnatüübi ennustamismeetodit on magistritöös kasutatud vaid kaudselt, Morfoloogialabori veebiliidese kaudu vormisõnastiku koostamisel. Seda on tehtud kuna magistritöö eesmärgiks on olnud esmane integreerimine keeletehnoloogilistesse raamistikesse ja õigekirjakontrollija loomine, kus ennustamisvõimet ei ole otseselt tarvis. Ennustamismeetod sarnaneb \textit{Grammatical Framework}'i \textit{Smart Paradigm}-funktsiooni mõistega (\cite{detrez_smart_2012}) ja on magistritöö üks võimalik edasiarenduse suund. Forsberg ja Hulden (\cite{forsberg_deriving_2016}) on rakendanud meetodit tundmatu sõnavormi sõnatüübi ennustaja (ingl. \textit{morphological guesser}) ehitamiseks, mida Morfoloogialabori veebiliides kasutab uute sõnade sisestamisel neile pakutud sõnatüüpide järjestamiseks kasutajale.
 
 % tehnilise tüve akumuleerimine
-Vormisõnastikku salvestatud lekseemid kannavad informatsiooni tehnilise tüve ja sõnatüübimalli kohta. Mida rohkem lekseeme jagab üht ja sama sõnatüübi malli, seda rohkem on informatsiooni selle sõnatüübi tehniliste tüvede kujude kohta.
+Vormisõnastikku salvestatud lekseemid kannavad informatsiooni tehnilise tüve ja sõnatüübimalli kohta. Mida rohkem lekseeme jagavad üht ja sama sõnatüübi malli, seda rohkem on informatsiooni selle sõnatüübi tehniliste tüvede kujude kohta.
 
 % constrained by reflect morphophonological phenomena and orthographic conventions
-Tehnilised tüved ei jaotu sõnatüüpide vahel arbitraarselt, vaid nende kuju peegeldab tihti morfofonoloogilisi nähtuseid ja ortograafilisi tavasid. Seda informatsiooni on võimalik kasutada selleks, et seada sõnatüübimallide muutujatele kitsendusi ja piirata sellega ühtivate tehniliste tüvede hulka, ning tundmatu sõnavormi puhul ennustada selle kuulumist ühe või teise sõnatüüpi alla. (\cite[2579]{forsberg_deriving_2016}).
+Tehnilised tüved ei jaotu sõnatüüpide vahel arbitraarselt, vaid nende kuju peegeldab tihti morfo\-fonoloogilisi nähtuseid ja orto\-graafilisi tavasid. Seda informatsiooni on võimalik kasutada selleks, et seada sõna\-tüübi\-mallide muutujatele kitsendusi ja piirata selle ühtivate tehniliste tüvede hulka, ning tundmatu sõnavormi puhul ennustada selle kuulumist ühe või teise sõnatüüpi alla. (\cite[2579]{forsberg_deriving_2016}).
 
 Forsberg ja Hulden kirjeldavad statistilist viisi, millega nad loovad tehnilise tüve kuju tähtkoostist kitsendava regulaarse grammatika. Statistik arvutab salvestatud andmete põhjal piirmäära, mida mitte ületades loetakse tehnilise tüve tähtkoostise algus- või lõpposa (või terviklikult) suletud klassiks. Suletud klassi puhul peab leitud tähtkoostis antud positsioonis esinema, et lubada tundmatu sõnavorm ühtida sõnatüübiga. (\cite[2580]{forsberg_deriving_2016}).
 
 Meetodi näitlikustamiseks võib magistritöö vältel koostatud vormisõnastiku põhjal märkida seda, et kõik \textit{katto}-sõnatüübi alla kuuluvad lekseemid moodustaksid suletud klassi: tehnilise tüve esimene muutuja peab lõppema \textit{t}-tähega: \vadja{\textbf{jut}t\textbf{u}, \textbf{hat}t\textbf{u}, \textbf{kat}t\textbf{o}, \textbf{kut}t\textbf{su}, \textbf{laat}t\textbf{o}, \textbf{lant}t\textbf{u}, \textbf{pal̕t}t\textbf{o}, \textbf{port}t\textbf{u}, \textbf{Tart}t\textbf{u}, \textbf{čiut}t\textbf{o}}.
 
 
-\subsection{Võrdlus teiste meetoditega ja Eesti leksikograafilise traditsiooniga}
+%%\subsection{Võrdlus Eesti leksikograafilise traditsiooniga}
 % kuhu alla see paremini paigutada? ARVUTIMORFOLOOGIA EESMÄRGI ALLA?
 
-Tavapärane on arvutimorfoloogia koostada reeglite kirjutamise kaudu, seejuures teha kõigepealt klassifikatsioon, mille järgi on leida kõik eri klassid elik üksused milledele rakenduvad samad reeglid.
-Seda on teinud nt Viks eesti arvutimorfoloogia koostamiseks (mh \cite{viks_verbide_1976}) ja sarnase viisi metodoloogiat on püüdnud formaliseerida Koskenniemi (\cite{koskenniemi_informal_2013}).
+%% Tavapärane on arvutimorfoloogia koostada reeglite kirjutamise kaudu, seejuures teha kõigepealt klassifikatsioon, mille järgi on leida kõik eri klassid elik üksused milledele rakenduvad samad reeglid.
+%% Seda on teinud nt Viks eesti arvutimorfoloogia koostamiseks (mh \cite{viks_verbide_1976}) ja sarnase viisi metodoloogiat on püüdnud formaliseerida Koskenniemi (\cite{koskenniemi_informal_2013}).
 
 
 
 \newpage
-\section{Vadja morfoloogiliste tüüpsõnade analüüs}
+\section{Vadja morfoloogiliste sõnatüüpide analüüs}
 \label{sec:analüüs}
 
 See osa kirjeldab ekstraktmorfoloogiaga leitud vadja keele morfoloogilised sõnatüübid ja jaotab need käändkondadesse. Käändkondade süsteemiks on kasutatud \cite{ariste_grammar_1968}. Tsvetkovi sõnaraamatus esinevat variatsiooni on analoogia põhjal ühtlustatud kirjakeele lihtsama õppimise eesmärgil. Peatüki viimases osas analüüsitakse mil moel \cite{silfverberg_computational_2018} esitatud ekstraktmorfoloogia üldiste muuttüüpide algoritm kajastab käändkondi.
@@ -1721,12 +1708,12 @@ Avatuid küsimusi-tähelepanekuid:
 
 
 
-\subsection{Ekstraktmorfoloogia üldistatud muuttüüpide algoritm}
-\label{sec:muuttüüpide-süsteem}
+%\subsection{Ekstraktmorfoloogia üldistatud muuttüüpide algoritm}
+%\label{sec:muuttüüpide-süsteem}
 
 % tundub, et algoritm on kallutatud regulaarsustele, mis esinevad kirjakeeltes-ühiskeeltes, aga ei tööta nii hästi variatiivse keeleainese peal
 
-Silfverberg ja Hulden (\citeyear{silfverberg_computational_2018}) on kirjeldanud üht formaalset viisi, kuidas ekstrakt\-morfoloogia tüüpsõnu kokku grupeerida ja seega nende arvu vähendada. Siin alaosas rakendatakse meetodit leitud tüüpsõnadele ja esitatakse selle põhjal loodud vadja muuttüübistik ja võrreldatakse leitud muuttüübistikku Ariste käändkondadega.
+%Silfverberg ja Hulden (\citeyear{silfverberg_computational_2018}) on kirjeldanud üht formaalset viisi, kuidas ekstrakt\-morfoloogia tüüpsõnu kokku grupeerida ja seega nende arvu vähendada. Siin alaosas rakendatakse meetodit leitud tüüpsõnadele ja esitatakse selle põhjal loodud vadja muuttüübistik ja võrreldatakse leitud muuttüübistikku Ariste käändkondadega.
 
 
 
@@ -1734,7 +1721,7 @@ Silfverberg ja Hulden (\citeyear{silfverberg_computational_2018}) on kirjeldanud
 
 
 
-\subsubsection{Muuttüüp \RN{1}}
+%\subsubsection{Muuttüüp \RN{1}}
 % Muuttüüp \RN{1} koondab enda alla kõige suurema hulga sõnu (303) ja tüüpsõnu (??). Hõlmatud tüüpsõnad jagunevad järgnevatesse \cite[85]{__2011} välja toodud muutkondadesse (klassi).
 % 
 % \paragraph*{Klass 1} \vadja{aapõ}, \vadja{aikõ}, \vadja{aitõ}, \vadja{butkõ}, \vadja{čenče}, \vadja{dovariššõ(?)}, \vadja{enči}, \vadja{propkõ}, \vadja{ülči}, \vadja{laiskõ}, \vadja{kultõ}, \vadja{kumpõ}, \vadja{õnki}, \vadja{kurp}, \vadja{partõ}, \vadja{lafkõ}, \vadja{lahti}, \vadja{lautõ}, \vadja{leipe}, \vadja{lootõ}, \vadja{luiskõ}, \vadja{poikõ}, \vadja{märče}, \vadja{selče}, \vadja{mätä}, \vadja{rantõ}, \vadja{põlvi}(?), \vadja{kanki}, \vadja{kant}, \vadja{põski}, \vadja{rookõ}, \vadja{siipi}, \vadja{siltõ}, \vadja{sorsõ}, \vadja{taimi}(?), \vadja{tünko}, \vadja{vihtõ}, \vadja{vimpõ}, \vadja{õhsõ}, \vadja{änte}, \vadja{ääri}(?)
@@ -1753,18 +1740,18 @@ Silfverberg ja Hulden (\citeyear{silfverberg_computational_2018}) on kirjeldanud
 
 
 
-\subsection{Põhivormid ja analoogiavormid}
+%\subsection{Põhivormid ja analoogiavormid}
 
-Selles osas selgitatakse välja vadja keele tüüpsõnade põhi- ja analoogiavormid sõnaliigiti. Seda püütakse teha formaalselt põhinedes vaid ekstrakt\-morfoloogiaga leitud tüüpsõnamallidele.
+%Selles osas selgitatakse välja vadja keele tüüpsõnade põhi- ja analoogiavormid sõnaliigiti. Seda püütakse teha formaalselt põhinedes vaid ekstrakt\-morfoloogiaga leitud tüüpsõnamallidele.
 
-\cite{erelt_eesti_2007} järgi ``[p]õhivormid on need vormid, mida pole võimalik teiste vormide alusel tuletada ning mille moodustamiseks tuleb iga sõnatüübi korral anda vastavad reeglid.'' ja ``[a]naloogiavormid on vormid, mida saab moodustada mingi põhivormi analoogial.''
+%\cite{erelt_eesti_2007} järgi ``[p]õhivormid on need vormid, mida pole võimalik teiste vormide alusel tuletada ning mille moodustamiseks tuleb iga sõnatüübi korral anda vastavad reeglid.'' ja ``[a]naloogiavormid on vormid, mida saab moodustada mingi põhivormi analoogial.''
 
-Tegelikult on ekstraktmorfoloogia leitud LCS ainus põhivorm ja kõik muutvormid on sellest tuletatud analoogiavormid. Kuna aga läänemeresoome keelte keeleteaduses ei ole katkendlike põhivormide kasutamine traditsioonis (nagu seda on nt araabia keelte puhul), püütakse siin leida traditsioonilise käsitluse järgi põhi- ja analoogiavormid.
+%Tegelikult on ekstraktmorfoloogia leitud LCS ainus põhivorm ja kõik muutvormid on sellest tuletatud analoogiavormid. Kuna aga läänemeresoome keelte keeleteaduses ei ole katkendlike põhivormide kasutamine traditsioonis (nagu seda on nt araabia keelte puhul), püütakse siin leida traditsioonilise käsitluse järgi põhi- ja analoogiavormid.
 
-\subsubsection{Käändsõnad}
+%\subsubsection{Käändsõnad}
 % Eesti keele käändsõna põhivormid on ainsuse nimetav, ainsuse omastav, ainsuse osastav, mitmuse omastav ja mitmuse osastav. Põhivormiks tuleb tingimisi lugeda ka ainsuse lühikest sisseütlevat.
 
-\subsubsection{Tegusõnad}
+%\subsubsection{Tegusõnad}
 
 
 
@@ -2195,8 +2182,8 @@ Leksikon koosneb selles töös ainult kahest andest: \textit{lemma} ja \textit{t
 
 Eelnevalt kirjeldatud integreerimine Giella-taristusse võimaldab taristul luua õigekirjakontrollija. Mis on õigekirjakontrollija, kus seda kasutatakse ja mida see kontrollib?
 
-\subsubsection{Arutelu}
-\label{sec:giella-arutelu}
+%\subsubsection{Arutelu}
+%\label{sec:giella-arutelu}
 
 Loodud õigekirjakontrollija on eesmärgipäraselt jäetud lihtsakoeliseks. See märgib kõik sõnad valeks, mis ei sisaldu sõnastikus. See on lühiajaliseks kasutamiseks ja mõeldud ärgitama kasutajaid ise pakkuma täiendusi ja sõnaloomet vadja sõnastikusse.
 
