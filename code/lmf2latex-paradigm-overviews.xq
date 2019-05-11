@@ -64,7 +64,7 @@ for $paradigm in $lmf//MorphologicalPattern
     ""
   )
   let $hõlmab-lekseeme := if  (count($lexical-entries) > 1)
-                          then("Tüüpsõna hõlmab vormisõnastiku lekseeme \vadja{" || string-join($lexical-entries, ", ") || "}.")
+                          then("Tüüpsõna hõlmab vormisõnastiku lekseeme \vadja{" || string-join($lexical-entries[position() < last()], ", ") || "} ja \vadja{" || $lexical-entries[last()] || "}.")
                           else("Tüüpsõna ei hõlma teisi lekseeme vormi\-sõnastikus.")
   let $overview := string-join((
     (:$sõnatüübinimi || " " || $hõlmab-lekseeme, "\\", string-join($muutvormimallid, ", "), "":)
