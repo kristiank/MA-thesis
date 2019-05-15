@@ -20,7 +20,7 @@ import module namespace giellatekno = "http://giellatekno.uit.no" at "./giellate
 let $lmf := doc("../data/lmf.xml")
 
 
-for $paradigm in $lmf//MorphologicalPattern
+for $paradigm at $paradigm-number in $lmf//MorphologicalPattern
   let $paradigm-id := $paradigm/feat[@att="id"]/@val/data()
   let $paradigm-name := substring-after($paradigm-id, "as") => lower-case()
   (:let $lexical-entries := $lmf//LexicalEntry[@morphologicalPatterns = $paradigm-id]
@@ -39,10 +39,16 @@ for $paradigm in $lmf//MorphologicalPattern
       return string-join($underlined-lemma)
                  
   order by $paradigm-name
-  let $table-start := ("\paragraph*{Tüüpsõnamall \vadja{" || $paradigm-name || "}} ",
+  let $table-start := (if  ($paradigm-number = 1)
+                       then("\\")
+                       else(""),
+                       (:"\begin{addmargin}[0pt]{3em}",:)
+                       "\vspace{1.8em}",
+                       "\begin{minipage}{\textwidth}",
+                       "\stepcounter{mallinumber}",
+                       "\textbf{Tüüpsõnamall \arabic{mallinumber}\,\vadja{" || $paradigm-name || "}}\\",
+                       (:"\begin{table}[H]",:)
                        "",
-                       "\begin{table}[H]",
-                       (:"\centering",:)
                        "\begin{sideways}",
                        "\begin{tabular}{l l}",
                        (:"ühisosajada &amp; muutvormimall &amp; tunnused \\",:)
@@ -107,22 +113,24 @@ for $paradigm in $lmf//MorphologicalPattern
     "\end{tabular}",
     "\end{sideways}",
     (:"\caption{Tüüpsõnamall \textit{" || $paradigm/feat[@att="id"]/@val/data() => substring-after("as") => lower-case() || "}}",:)
-    "\caption{Tüüpsõna \textit{" || $paradigm/feat[@att="id"]/@val/data() => substring-after("as") => lower-case() || "} ekstraheeritud muutvormimallid.}",
+    "\captionof{table}{Tüüpsõna \arabic{mallinumber}\,\textit{" || $paradigm/feat[@att="id"]/@val/data() => substring-after("as") => lower-case() || "} ekstraheeritud muutvormimallid.}",
     "\label{tab:tüüpsõnamall-" || $paradigm-name || "}",
+    "",
+    "\end{minipage}",
+    (:"\end{addmargin}",:)
     (:"\end{table}",:)
-    "\end{table}",
     (:"\clearpage",:)
     ""
   )
   let $hõlmab-lekseeme := if  (count($lexical-entries) > 1)
-                          then("Tüüpsõna hõlmab vormisõnastiku " || count($lexical-entries) || " lekseemi: \vadja{" || string-join($lexical-entries[position() < last()], ", ") || "} ja \vadja{" || $lexical-entries[last()] || "}.")
-                          else("Tüüpsõna ei hõlma teisi lekseeme vormi\-sõnastikus.")
+                          then("\noindent Tüüpsõna hõlmab vormisõnastiku " || count($lexical-entries) || " lekseemi: \vadja{" || string-join($lexical-entries[position() < last()], ", ") || "} ja \vadja{" || $lexical-entries[last()] || "}.")
+                          else("\noindent Tüüpsõna ei hõlma teisi lekseeme vormi\-sõnastikus.")
   
   
   let $table := string-join(($table-start, $table-content, $table-end, " "), out:nl())
   
   let $overview := string-join((
-    $table, $hõlmab-lekseeme, ""
+    $table, "\vspace{1em}", $hõlmab-lekseeme, ""
   ), out:nl())
   
   return file:write-text(
