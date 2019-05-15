@@ -43,10 +43,11 @@ for $paradigm at $paradigm-number in $lmf//MorphologicalPattern
                        then("\\")
                        else(""),
                        (:"\begin{addmargin}[0pt]{3em}",:)
-                       "\vspace{1.8em}",
-                       "\begin{minipage}{\textwidth}",
+                       "",
+                       "\vspace{3.5em}",
+                       "\noindent \begin{minipage}{\textwidth}",
                        "\stepcounter{mallinumber}",
-                       "\textbf{Tüüpsõnamall \arabic{mallinumber}\,\vadja{" || $paradigm-name || "}}\\",
+                       "\noindent \textbf{Tüüpsõnamall \arabic{mallinumber}\,\vadja{" || $paradigm-name || "}}\\",
                        (:"\begin{table}[H]",:)
                        "",
                        "\begin{sideways}",
@@ -80,7 +81,7 @@ for $paradigm at $paradigm-number in $lmf//MorphologicalPattern
                 /@val/data() || "}"
             default return
               $process/feat[@att="stringValue"]/@val/data()
-       return concat(string-join($model-word, "\,+\,"), (:" &amp; ", string-join($pattern, " + "),:) " &amp; ", $gramfeats)
+       return concat(string-join($model-word, "\,$\oplus$\,"), (:" &amp; ", string-join($pattern, " + "),:) " &amp; ", $gramfeats)
   let $muutvormimallid := 
     for $transformset at $pos in $paradigm/TransformSet(:[position() = (1,2,3,4,6,13,14,15,16,18)]:)
       let $gramfeats := string-join((
@@ -123,8 +124,8 @@ for $paradigm at $paradigm-number in $lmf//MorphologicalPattern
     ""
   )
   let $hõlmab-lekseeme := if  (count($lexical-entries) > 1)
-                          then("\noindent Tüüpsõna hõlmab vormisõnastiku " || count($lexical-entries) || " lekseemi: \vadja{" || string-join($lexical-entries[position() < last()], ", ") || "} ja \vadja{" || $lexical-entries[last()] || "}.")
-                          else("\noindent Tüüpsõna ei hõlma teisi lekseeme vormi\-sõnastikus.")
+                          then("\noindent Tüüpsõna hõlmab vormisõnastikus " || count($lexical-entries) || " lekseemi: \vadja{" || string-join($lexical-entries[position() < last()], ", ") || "} ja \vadja{" || $lexical-entries[last()] || "}.")
+                          else("\noindent See tüüpsõna ei hõlma teisi lekseeme vormi\-sõnastikus.")
   
   
   let $table := string-join(($table-start, $table-content, $table-end, " "), out:nl())
