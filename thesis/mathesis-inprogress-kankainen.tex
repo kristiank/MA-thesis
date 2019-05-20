@@ -2340,7 +2340,7 @@ Giella taristu sihtrühmaks on keeleteadlased ja arvuti\-lingvistid, kellel on o
 See võimaldab morfoloogia komponenti arendamist kõigi poolt, kes oskavad vormisõnastikku muuta ja täiendada. Keele\-teadlane ja arvuti\-lingvist võib arendada kõrgema keele\-tasandi ehk süntaksi mudelleerimist eraldi\-seisvalt morfoloogia arendamisest, mis peaks võimaldama suuremat koos\-töö\-võimet väikse keele kasutajas\-konnaga.
 %Taristu toetab keelte normatiivset ja deskriptiivset kirjeldamist rööpselt. 
 
-Kuigi Giella taristu toetab õige\-keelsuslikku informatsiooni, määrates selle abil morfoloogilisi vorme olema kas deskriptiivsed või normatiivsed, ei ole vastavat informatsiooni lisatud magistritöö vadja vormi\-sõnastikku. Seda on võimalik teha hiljem, kui vormi\-sõnastik sisaldab piisavalt suurt sõna\-vara. Õige\-keelsuslikku informatsiooni kasutatakse näiteks Giella taristu loodud õige\-kirja\-kontrollijas, mis pakub ainult normatiivile vastavaid vorme, ent ei määra valeks sellist sõna, mis on deskriptiivses kirjelduses olemas (\citeyear{moshagen_building_2013}). % vadja keele jaoks ei 
+Kuigi Giella taristu toetab õige\-keelsuslikku informatsiooni, määrates selle abil morfoloogilisi vorme olema kas deskriptiivsed või normatiivsed, ei ole vastavat informatsiooni lisatud magistritöö vadja vormi\-sõnastikku. Seda on võimalik teha hiljem, kui vormi\-sõnastik sisaldab piisavalt suurt sõna\-vara. Õige\-keelsuslikku informatsiooni kasutatakse näiteks Giella taristu loodud õige\-kirja\-kontrollijas, mis pakub ainult normatiivile vastavaid vorme, ent ei määra valeks sellist sõna, mis on deskriptiivses kirjelduses olemas (\cite{moshagen_building_2013}). % vadja keele jaoks ei 
 
 Vormisõnastiku integreerimiseks on vaja luua mitu komponenti Giella taristus: leksikon, tüüpsõnade paradigmade kirjeldused, automaatsete testide kirjeldused ning kooste\-programmi kirjeldus. 
 % For the integration with Giellatekno's infrastructure, several components are needed: a lexicon, paradigm descriptions in FST, automatic test declarations, and a Makefile that binds all the components together.
@@ -2361,11 +2361,14 @@ Giella taristus kirjeldatakse tavaliselt nii leksikoni kui ka morfoloogiliste pa
 
 Lexc (ingl \textit{Lexicon Compiler}, ee leksikoni\-koostaja või kompileerija) on eeskätt mõeldud lihtsustamaks leksikograafilisi ülesandeid, nagu leksikoni koostamist, kuigi sellega on võimalik kirjeldada ka morfotaktikat. 
 % Ajalooliselt on see seotud Kimmo Koskenniemi kahe-tasandilise.
+Alguse on lexc saanud Kimmo Koskenniemi kahetasandilisest morfoloogia\-kirjeldus\-viisist TwoL. 
 Lexc on parem-rekursiivne fraasi-fraasi\-struktuuri\-grammatika (\textit{right-recursive phrase-structure grammar}, mis kompileerub kirjelduseks lõplike muundurite formalismis (\cites[]{karttunen_finite-state_1993}[203]{beesley_finite_2003}). 
 
-Töös järgitakse Giella taristu faili-hierarhiat ja jagatakse morfoloogiline kirjeldus samal viisil järgmisteks osadeks: \texttt{morphology/stems/nouns.lexc} kannab sõna\-loendit noomeni tüvedega; \texttt{morphology/affixes/nouns.lexc} hoiab noomenite jätkamis\-reegleid; \texttt{morphology/root.lexc} sisaldab kõiki vajalikke eel\-häälestusi ning \texttt{morphology/paradigms.xfscript} sisaldab tüüpsõna\-mallide koostamis\-reegleid.
+Töös järgitakse üldiselt Giella taristu faili-hierarhiat ja jagatakse morfoloogiline kirjeldus samal viisil järgmisteks osadeks: \texttt{morphology/stems/nouns.lexc} kannab sõna\-loendit noomeni tüvedega; \texttt{morphology/affixes/nouns.lexc} hoiab noomenite jätkamis\-reegleid; \texttt{morphology/root.lexc} sisaldab kõiki vajalikke eel\-häälestusi ning \texttt{morphology/nouns-paradigms.xfscript} sisaldab noomenite tüüpsõna\-mallide koostamis\-reegleid. Kõik failid koostatakse automaatselt vormi\-sõnastiku andmete põhjal ja on laiendatav ka teistele sõna\-liikidele. Kuivõrd 
 
-Magistritöö vormisõnastiku integreerimiseks on siiski lihtsuse huvides valitud eraldada tüüpsõna\-mallide kirjeldused leksikonist. See valik teeb leksikoni ülevaatlikumaks, kuna leksikonisse jääb ainult kaks välja, lekseemi lemma\-vorm ja tüüpsõna. Ülevaatlikkuse eesmärgiks ei ole abistada leksikoni arendamist Giella taristu kaudu, vaid lihtsustada XXXX. Joonisel~\ref{code:giella-lexicon} on näitlikustatud leksikoni struktuuri.
+Magistritöö vormisõnastiku integreerimiseks on siiski ülevaatlikkuse huvides valitud eraldada tüüpsõna\-mallide kirjeldused leksikonit kirjeldavast formalismist lexc ja kasutada üldiseid lõplikke muundurite asendus\-reegleid (ingl \textit{fst replace rules}). See valik teeb leksikoni ülevaatlikumaks, kuna tüvede\-loendisse jääb ainult kaks välja, lekseemi lemma\-vorm ja tüüpsõna.
+
+Koostatavat leksikoni tüvede loendit näitlikustatakse joonisel~\ref{code:giella-lexicon}. 
 % ``Formally, the lexc language is a kind of right-recursive phrase-structure grammar.'' ja ``A lexc description compiles into a standard Xerox finite-state network, either a simple automaton or a transducer.'' (\cite[203]{beesley_finite_2003}).
 
 \spacing{1}
@@ -2382,7 +2385,7 @@ LEXICON nouns
 \end{figure}
 \spacing{1.5}
 
-Leksikoni tüüpsõnanimed (siin näites \textit{N\_hattu}) viitavad reeglitele, mis lisavad lemma\-vormile tüüpsõna\-lipiku ja on kirjeldatud eraldi failis. Tüüpsõna\-lipiku põhjal toimivad tüüpsõna\-reeglid.
+Leksikonis kasutatavad tüüpsõnanimed (siin näites \textit{N\_hattu}) viitavad reeglitele, mis lisavad lemma\-vormile tüüpsõna\-lipiku on koostatud eraldi faili \texttt{morphology/affixes.lexc}, mille struktuuri näitlikustatakse joonisel~\ref{code:giella-affixes}. Tüüpsõna\-lipiku põhjal toimivad tüüpsõna\-mallide reeglid kirjeldatatakse järgmises alaosas.
 
 \spacing{1}
 \begin{figure}[H]
@@ -2392,7 +2395,7 @@ LEXICON N_hattu
   +Paradigm/hattu_N # ;
 \end{minted}
 \caption{
-  \label{code:giella-lexicon}}
+  \label{code:giella-affixes}}
 \end{figure}
 \spacing{1.5}
 
@@ -2412,7 +2415,11 @@ LEXICON N_hattu
 \subsubsection{Tüüpsõnad}
 \label{sec:giella-tüüpsõnad}
 
-Vormisõnastiku tüüpsõnamalle ehk morfoloogilisi paradigmasid ei esitata lexc's, vaid otse lõplike muundurite formalismis. Magistritöös on põhinetud suuresti Forsbergi ja Huldeni (\citeyear{forsberg_learning_2016}) esitatud koodile.
+Vormisõnastiku tüüpsõnamallide põhjal koostatakse sõnade muutvormide koostamis\-reeglid. Magistritöös on järgitud Forsbergi ja Huldeni (\citeyear{forsberg_learning_2016}) esitatud viisi. Tüüp\-sõna\-malli \textit{asHattuN}, mis järgib leksikonis kasutatud lipikut \textit{N\_hattu}, näitlikustatakse (osaliselt) joonisel~\ref{code:giella-paradigms}. Joonise alguses defineeritud \texttt{Alph} sisaldab vadja kirjakeele tähemärgid. Järgnevad definitsioonid \texttt{asHattuN=var1} ja \texttt{asHattuN=var2} märgivad tüüp\-sõna\-malli muutujaid ja koosnevad mitte-tühjadest tähe\-märkide jadadest (\textit{Alph+}).
+
+Tüüp\-sõna\-malli definitsioni \texttt{asHattuN} esimesed kaks rida tähistavad noomeni muutvormi ainsuse nimetavas käändes, mida märgivad analüüsi lisatavad tähised \texttt{+N}, \texttt{+Sg} ja \texttt{+Nom}. Ainsuse nimetava käände tugeva\-astmelisust on näha asendus\-reeglist \texttt{[{t}:{t}]}, mis asendab tähemärgi \textit{t} sama tähemärgiga \textit{t} (koostatav muutvorm on nt \textit{hattu}).
+
+Järgmised kaks rida tähistavad noomeni muutvormi ainsuse omastavas käändes, mida  märgivad analüüsi lisatavad tähised \texttt{+N}, \texttt{+Sg} ja \texttt{+Gen}. Ainsuse nimetava käände nõrga\-astmelisust on näha asendus\-reeglist \texttt{[0:{t}]}, mis kustutab tähemärgi \textit{t} muutvormist (nt muuvorm \textit{hatu}). Viimased kaks rida tähistavad järelikult noomeni muutvormi ainsuse osastavas käändes, mis on tugevas astmes ning mille lõppu on lisatud tähemärk \textit{a} (nt muutvorm \textit{hattua}).
 
 \spacing{1}
 \begin{figure}[H]
@@ -2431,74 +2438,31 @@ define asHattuN [asHattuN=var1] [{t}:{t}] [asHattuN=var2]
        [asHattuN=var1] [0:{t}] [asHattuN=var2]
            0:["+Paradigm/hattu_N" "+N" "+Sg" "+Gen"] |
        [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{a}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Par"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{sõ}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Ill"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{z}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Ine"] |
-       [asHattuN=var1] [0:{t}] [asHattuN=var2] [{ss}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Ela"] |
-       [asHattuN=var1] [0:{t}] [asHattuN=var2] [{llõ}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+All"] |
-       [asHattuN=var1] [0:{t}] [asHattuN=var2] [{ll}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Ade"] |
-       [asHattuN=var1] [0:{t}] [asHattuN=var2] [{lt}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Abl"] |
-       [asHattuN=var1] [0:{t}] [asHattuN=var2] [{ssi}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Tra"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{ssaa}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Ter"] |
-       [asHattuN=var1] [0:{t}] [asHattuN=var2] [{ka}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Com"] |
-       [asHattuN=var1] [0:{t}] [asHattuN=var2] [{d}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Nom"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{jõ}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Gen"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{it}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Par"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{isõ}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Ill"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{iz}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Ine"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{iss}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Ela"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{illõ}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+All"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{ill}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Ade"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{ilt}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Abl"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{issi}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Tra"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{issaa}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Ter"] |
-       [asHattuN=var1] [{t}:{t}] [asHattuN=var2] [{ika}:0]
-           0:["+Paradigm/hattu_N" "+N" "+Pl" "+Com"];
+           0:["+Paradigm/hattu_N" "+N" "+Sg" "+Par"] ;
 \end{minted}
 \caption{Tuletatud Giella taristu tüüpsõnamalli reeglite struktuur (näitlikustatud piiratud käänete valikuga).
-  \label{code:giella-lexicon}}
+  \label{code:giella-paradigms}}
 \end{figure}
 \spacing{1.5}
 
 
 
-Sõnade lõpmatu hulk piiratakse leksikonis antuga ja niiviisi saadakse leksikonis sisalduvate sõnade kõik sõnavormid. Nendest ja ainult nendest sõnavormidest koosnebki esialgne vadja õigekirja\-kontrollija.
-
-
 \subsubsection{Testid}
 \label{sec:giella-testid}
-This becomes essentially a unit-test-like setup (Huizinga and Kolawa 2007): when you write a new inflectional lexicon for a new inflectional class, you can start by spelling out the wanted behaviour in the form of test cases. (347)
 
+Giella taristu on mõeldud reeglipõhise morfoloogia kirjeldamiseks ja reeglite testimiseks on taristus võimalik luua testid õigete muutvormidega. Kui arendamisel üks test ei lähe läbi annab arendus\-keskkond sellest märku. (\cite[347]{moshagen_building_2013}). %  This becomes essentially a unit-test-like setup (Huizinga and Kolawa 2007): when you write a new inflectional lexicon for a new inflectional class, you can start by spelling out the wanted behaviour in the form of test cases. (347)
+
+Magistritöö vormisõnastiku põhjal tuletatakse programm\-koodi ka testide jaoks. Kuna magistritöö koodi\-genereerimise eesmärk ei ole kasutada Giella taristut arendus\-keskkonnana vaid tuletab põhimõtteliselt õigeid reegleid annab testide mitte-läbimine märku tuletatud koodi adekvaatsuse kohta. Juhul kui testid nurjuvad, annab see märku et koodi\-tuletamisega on midagi valesti.
 
 \subsubsection{Õigekirjakontrollija}
 \label{sec:giella-õigekirjakontrollija}
 
-Eelnevalt kirjeldatud integreerimine Giella-taristusse võimaldab taristul luua õigekirjakontrollija. Mis on õigekirjakontrollija, kus seda kasutatakse ja mida see kontrollib?
+Eelnevalt kirjeldatud vadja vormisõnastiku integreerimine Giella-taristusse võimaldab taristul luua õige\-kirja\-kontrollija. Õige\-kirja\-kontrollija töötab kontori\-tarkvaraga OpenOffice ja LibreOffice ning märgib punase joonega valeks kõik need sõnad, mis vormi\-sõnastikus ei sisaldu.
 
 %\subsubsection{Arutelu}
 %\label{sec:giella-arutelu}
 
-Loodud õigekirjakontrollija on eesmärgipäraselt jäetud lihtsakoeliseks. See märgib kõik sõnad valeks, mis ei sisaldu sõnastikus. See on lühiajaliseks kasutamiseks ja mõeldud ärgitama kasutajaid ise pakkuma täiendusi ja sõnaloomet vadja sõnastikku.
+Automaatselt loodud õigekirjakontrollija on eesmärgipäraselt jäetud lihtsakoeliseks. See märgib kõik sõnad valeks, mis ei sisaldu vormi\-sõnastikus. See on lühiajaliseks kasutamiseks ja mõeldud ärgitama kasutajaid ise pakkuma täiendusi ja sõnaloomet vadja sõnastikku. Ka lihtsate igapäevaste sõnade lisamine vadja sõnastikku märgib suurt edu\-sammu vadja keele taas\-elustamises.
 
 
 
@@ -2513,7 +2477,7 @@ Loodud õigekirjakontrollija on eesmärgipäraselt jäetud lihtsakoeliseks. See 
 \section{Kokkuvõte}
 \label{sec:kokkuvõte}
 
-Magistritöö on kirjeldanud süsteemi, millega on ühelt poolt defineeritud vadja keele normatiivne morfoloogia ja mille põhjal teisalt tuletatakse automaatselt morfoloogiline keeletehnoloogia.
+Magistritöö on kirjeldanud süsteemi, millega on ühelt poolt defineeritud vadja keele normatiivne morfoloogia ja mille põhjal teisalt tuletatakse automaatselt keeletehnoloogia morfoloogia jaoks.
 
 Morfoloogilise normatiivi vajadust ajendab Heinike Heinsoo läbiviidud kursused keelekümbluskoolis Ämmesse Vunukassaa ja normatiiv on hõlpsasti muudetav-parendatav ilma programmeerimisoskusteta.
 
