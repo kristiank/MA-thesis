@@ -43,6 +43,13 @@
 \usepackage[backend=biber,style=authoryear-ibid]{biblatex}
 \addbibresource{bibliography-mathesis.bib}
 
+% muuda tsiteerimisi, et oleks aasta ja leheküljenumbri vahel ainult koolon
+% õigem oleks vist siiski teha wrapper-funktsioon nimega \citeUT
+\DeclareDelimFormat{postnotedelim}{}
+\DefineBibliographyStrings{estonian}{%
+  page = {:~}
+}
+
 \usepackage{hyperref}
 \urlstyle{}
 
