@@ -40,7 +40,7 @@
 % \setdefaultlanguage{german}
 
 % @todo: vormistada kirjanduse loetelu õigesti
-% @todo: vormistada tekstis viited õigesti (nt lk kooloni järel jne)
+% @done: vormistada tekstis viited õigesti (nt lk kooloni järel jne)
 \usepackage[backend=biber,style=authoryear-ibid]{biblatex}
 \addbibresource{bibliography-mathesis.bib}
 
@@ -126,6 +126,7 @@
 
 
 % @TODO: lisada magistritöö, ülikool ja juhendaja jne
+% TODO lisada litsentsi leht!
 % vaata siit https://tex.stackexchange.com/questions/184848/how-to-add-the-name-of-the-supervisor-in-a-thesis-field#184878
 % @TODO: vormistada esileht eraldi
 \title{Ekstraktmorfoloogia meetodiga tuletatud keeletehnoloogia vadja noomeni vormisõnastiku näitel}
@@ -141,7 +142,7 @@
 \tableofcontents
 
 
-% TODO kust pärineb järgmine tsitaat? "computational methodology for linguistic analysis is not the same thing as computational linguistics" ()
+% kust pärineb järgmine tsitaat? "computational methodology for linguistic analysis is not the same thing as computational linguistics" ()
 
 
 \newpage
@@ -293,7 +294,7 @@ Vormisõnastiku definitsiooniks magistritöös on võetud Ülle Viksi järgi:
 
 
 
-% TODO siia lisada Viksi definitsioon vormisõnastikust
+%  siia lisada Viksi definitsioon vormisõnastikust
 
 %Kuna töö opereerib arvutilingvistika, deskriptiivse ja dokumentaalse lingvistika ääremail, peame selgitama töö teoreetilised lähtekohad. Siinsele kompendiumiks on ka põhimõisted seletatud pt~\ref{sec:põhimõisted} \nameref{sec:põhimõisted}.
 
@@ -301,7 +302,7 @@ Vormisõnastiku definitsiooniks magistritöös on võetud Ülle Viksi järgi:
 
 %Tööl on siiski teoreetilised lähtekohad, mis tulenevad ühelt poolt arvutimorfoloogia nõuetest ja teisalt klassikalisest paradigmaatilisest morfoloogiakäsitlusest. Järgmiselt püüan argumenteerida, et arvutimorfoloogia ei pea olema mingist lingvistisest teooriast ajendatud. Seejärel tutvustan tööle kõige lähedamini asetsevat morfoloogilist käsitlust.
 
-% TODO EELMINE JUTT TÄIELIKULT ÜLE VAADATA!
+%  EELMINE JUTT TÄIELIKULT ÜLE VAADATA!
 
 \subsection{Vadja ühiskeel ja korpuse planeerimine}
 \label{korpuse-planeerimine}
@@ -313,7 +314,6 @@ Vadja keelele ei loodud Nõukogude Liidus 1930.\,aastail ühiskeelt, nagu seda t
 
 % korpusplaneerimine on alamosa keeleplaneerimisest?
 %Korpusplaneerimine on mis, miks seda tehakse ja kes seda teevad (kasuta Cooper 1996: 45).
-% TODO lisada viited
 Korpusplaneerimine on keele\-planeerimise üks osa ja koosneb Klossi (\citeyear{kloss_research_1970}) järgi kolmest osast:
 \spacing{0}
 \begin{enumerate}
@@ -370,7 +370,7 @@ Alljärgnevalt seletatakse põhikäändevormide ühtlustamise ja analoogiavormid
 
 
 \subsubsection{Noomeni käänded ja ühtlustamine}
-
+% TODO käi läbi kõikide jooniste ja tabelite pealdiste tekstid!!!
 
 
 Käänete valiku ja muutelõppude puhul on järgitud Konkova õpikus (\citeyear[10]{konkova_vaddceeli_2014}) esitatut, mis langeb kokku Heinsoo (\citeyear[88]{heinsoo_vadsonakopittoja_2015}) õppe\-materjalide põhimõtetega. Käänded on näitlikustatud tabelis~\ref{tab:noomeni-käänded}.
@@ -379,33 +379,33 @@ Käänete valiku ja muutelõppude puhul on järgitud Konkova õpikus (\citeyear[
   \centering
   \begin{tabular}[t]{r l l l l l}
     % TODO vali paremad sõnad!
-    % TODO vadja sõnad kursiivi!
+    % DONE vadja sõnad kursiivi!
      kääne & eespoolne & eespoolne & tagapoolne & tagapoolne & tagapoolne \\
     \hline
-    \msd{sg nom} & pää & ärče & lafkõ & lammõz & ivuz \\
-    \msd{sg gen} & pää & ärjä & lavga & lampa & ivusõ \\
-    \msd{sg par} & pääte & ärčä & lafka & lammassõ & ivussõ \\
-    \msd{sg ill} & pähhe & ärčäse & lafkasõ & lampasõ & ivussõsõ \\
-    \msd{sg ine} & pääz & ärjez & lavgõz & lampaz & ivusõz \\
-    \msd{sg ela} & pääss & ärjess & lavgõss & lampass & ivusõss \\
-    \msd{sg all} & päälle & ärjelle & lavgõllõ & lampallõ & ivusõllõ \\
-    \msd{sg ade} & pääll & ärjell & lavgõll & lampall & ivusõll \\
-    \msd{sg abl} & päält & ärjelt & lavgõlt & lampalt & ivusõlt \\
-    \msd{sg tra} & päässi & ärjessi & lavgõssi & lampassi & ivusõssi \\
-    \msd{sg ter} & päässaa & ärjessaa & lavgõssaa & lampassaa & ivusõssaa \\
-    \msd{sg com} & pääka & ärjeka & lavgõka & lampaka & ivusõka \\
-    \msd{pl nom} & pääd & ärjed & lavgõd & lampad & ivusõd \\
-    \msd{pl gen} & päije & ärčije & lafkojõ & lampajõ & ivussijõ \\
-    \msd{pl par} & päit & ärčiit & lafkoit & lampait & ivussiit \\
-    \msd{pl ill} & päise & ärčiise & lafkoisõ & lampaisõ & ivussiisõ \\
-    \msd{pl ine} & päiz & ärčiiz & lafkoiz & lampaiz & ivussiiz \\
-    \msd{pl ela} & päiss & ärčiiss & lafkoiss & lampaiss & ivussiiss \\
-    \msd{pl all} & päille & ärčiille & lafkoillõ & lampaillõ & ivussiillõ \\
-    \msd{pl ade} & päill & ärčiill & lafkoill & lampaill & ivussiill \\
-    \msd{pl abl} & päilt & ärčiilt & lafkoilt & lampailt & ivussiilt \\
-    \msd{pl tra} & päissi & ärčiissi & lafkoissi & lampaissi & ivussiissi \\
-    \msd{pl ter} & päissaa & ärčiissaa & lafkoissaa & lampaissaa &  ivussiissaa \\
-    \msd{pl com} & päika & ärčijka & lafkoika & lampaika & ivussijka \\
+    \msd{sg nom} & \vadja{pää    } & \vadja{ärče     } & \vadja{lafkõ     } & \vadja{lammõz    } & \vadja{ivuz} \\
+    \msd{sg gen} & \vadja{pää    } & \vadja{ärjä     } & \vadja{lavga     } & \vadja{lampa     } & \vadja{ivusõ} \\
+    \msd{sg par} & \vadja{pääte  } & \vadja{ärčä     } & \vadja{lafka     } & \vadja{lammassõ  } & \vadja{ivussõ} \\
+    \msd{sg ill} & \vadja{pähhe  } & \vadja{ärčäse   } & \vadja{lafkasõ   } & \vadja{lampasõ   } & \vadja{ivussõsõ} \\
+    \msd{sg ine} & \vadja{pääz   } & \vadja{ärjez    } & \vadja{lavgõz    } & \vadja{lampaz    } & \vadja{ivusõz} \\
+    \msd{sg ela} & \vadja{pääss  } & \vadja{ärjess   } & \vadja{lavgõss   } & \vadja{lampass   } & \vadja{ivusõss} \\
+    \msd{sg all} & \vadja{päälle } & \vadja{ärjelle  } & \vadja{lavgõllõ  } & \vadja{lampallõ  } & \vadja{ivusõllõ} \\
+    \msd{sg ade} & \vadja{pääll  } & \vadja{ärjell   } & \vadja{lavgõll   } & \vadja{lampall   } & \vadja{ivusõll} \\
+    \msd{sg abl} & \vadja{päält  } & \vadja{ärjelt   } & \vadja{lavgõlt   } & \vadja{lampalt   } & \vadja{ivusõlt} \\
+    \msd{sg tra} & \vadja{päässi } & \vadja{ärjessi  } & \vadja{lavgõssi  } & \vadja{lampassi  } & \vadja{ivusõssi} \\
+    \msd{sg ter} & \vadja{päässaa} & \vadja{ärjessaa } & \vadja{lavgõssaa } & \vadja{lampassaa } & \vadja{ivusõssaa} \\
+    \msd{sg com} & \vadja{pääka  } & \vadja{ärjeka   } & \vadja{lavgõka   } & \vadja{lampaka   } & \vadja{ivusõka} \\
+    \msd{pl nom} & \vadja{pääd   } & \vadja{ärjed    } & \vadja{lavgõd    } & \vadja{lampad    } & \vadja{ivusõd} \\
+    \msd{pl gen} & \vadja{päije  } & \vadja{ärčije   } & \vadja{lafkojõ   } & \vadja{lampajõ   } & \vadja{ivussijõ} \\
+    \msd{pl par} & \vadja{päit   } & \vadja{ärčiit   } & \vadja{lafkoit   } & \vadja{lampait   } & \vadja{ivussiit} \\
+    \msd{pl ill} & \vadja{päise  } & \vadja{ärčiise  } & \vadja{lafkoisõ  } & \vadja{lampaisõ  } & \vadja{ivussiisõ} \\
+    \msd{pl ine} & \vadja{päiz   } & \vadja{ärčiiz   } & \vadja{lafkoiz   } & \vadja{lampaiz   } & \vadja{ivussiiz} \\
+    \msd{pl ela} & \vadja{päiss  } & \vadja{ärčiiss  } & \vadja{lafkoiss  } & \vadja{lampaiss  } & \vadja{ivussiiss} \\
+    \msd{pl all} & \vadja{päille } & \vadja{ärčiille } & \vadja{lafkoillõ } & \vadja{lampaillõ } & \vadja{ivussiillõ} \\
+    \msd{pl ade} & \vadja{päill  } & \vadja{ärčiill  } & \vadja{lafkoill  } & \vadja{lampaill  } & \vadja{ivussiill} \\
+    \msd{pl abl} & \vadja{päilt  } & \vadja{ärčiilt  } & \vadja{lafkoilt  } & \vadja{lampailt  } & \vadja{ivussiilt} \\
+    \msd{pl tra} & \vadja{päissi } & \vadja{ärčiissi } & \vadja{lafkoissi } & \vadja{lampaissi } & \vadja{ivussiissi} \\
+    \msd{pl ter} & \vadja{päissaa} & \vadja{ärčiissaa} & \vadja{lafkoissaa} & \vadja{lampaissaa} & \vadja{ivussiissaa} \\
+    \msd{pl com} & \vadja{päika  } & \vadja{ärčijka  } & \vadja{lafkoika  } & \vadja{lampaika  } & \vadja{ivussijka} \\
   \end{tabular}
   \caption{Noomeni käänded koos käändelõppudega ees- ja tagapoolse vokalismi kujul.}
   \label{tab:noomeni-käänded}
@@ -485,7 +485,7 @@ Komitatiiv on analoogiavorm ja selle muutevormid ainsuses on moodustatud \msd{pl
 Magistritöös ei käsitleta morfeemi levinud lingvistilise seisukoha järgi kui \textit{väikseimat tähenduslikku üksust}, vaid töö järgib definitsiooni, et morfeem on lekseemi \textit{mistahes fonoloogilise kuju muutust, millega kaasneb tähenduslik muutus} (\cites[31]{beard_morpheme_1987}[49]{beard_lexeme-morpheme_1995}), %Morfeemipõhist suunda ajab nt \cite{stump_inflectional_2001}.
 mis on sarnane klassikalise paradigmaatilise morfoloogia lähenemisele.
 
-% TODO ÜLALPOOL LISADA VIITEID? ALLPOOL ON NII:
+% DONE ÜLALPOOL LISADA VIITEID? ALLPOOL ON NII:
 %Beardi teoorias ei ole morfeem grammatiliselt tähenduslik, vaid defineeritud kui mistahes muutusena lekseemi fonoloogilises kujus (\cite[31]{beard_morpheme_1987}). Seega on tema teoorias ainult lekseemid tähenduslikud märgid ning grammatilised afiksid (morfeemid) on seda vaid sattumuslikult (\cite[17]{beard_morpheme_1987}).
 
 
@@ -648,7 +648,7 @@ Magistritöös rakendatud ekstrakt\-morfoloogia meetod koosneb sarnastest sõna\
 
 Morfoloogialabor\footnote{https://spraakbanken.gu.se/morfologilabbet/} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. See on loodud Språkbanken'is\footnote{Rootsi keelepank ehk keele\-ressursside keskus} prototüübina, et integreerida ekstraktmorfoloogia nende leksikaalsesse taristusse Karp.
 
-Labor põhineb ekstraktmorfoloogial ja lihtsustab uute sõnade morfoloogilise informatsiooni lisamist sõnaraamatu koostamisel. Rakendus ennustab sisestatud sõnale sobivaid tüüpsõnu ja moodustab tüüpsõnale vastavalt kõik muutvormid. Kasutaja peab kontrollima, kas muutvormid on õiged või valima teise muuttüübi.  Rakendus on ühendatud korpuspäringute süsteemiga KORP ja näitab muutvormi juures kasutajale selle esinemis\-arvu korpustes. % TODO miks on siin muuttüüp??
+Labor põhineb ekstraktmorfoloogial ja lihtsustab uute sõnade morfoloogilise informatsiooni lisamist sõnaraamatu koostamisel. Rakendus ennustab sisestatud sõnale sobivaid tüüpsõnu ja moodustab tüüpsõnale vastavalt kõik muutvormid. Kasutaja peab kontrollima, kas muutvormid on õiged või valima teise muuttüübi.  Rakendus on ühendatud korpuspäringute süsteemiga KORP ja näitab muutvormi juures kasutajale selle esinemis\-arvu korpustes.
 
 Magistritöö jooksul on koostatud ja kasutatud kaht vadja korpust: kirjakeelset korpust, mis koosneb Heinsoo õpematerjalide tekstidest ja murdeid kajastavat korpust, mis koosneb \enquote{Vadja keele sõnaraamatu} (\cite{grunberg_vadja_2013}) näitelausetest. Korpused on päritavad Eesti Keeleressursside Keskuse korpuspäringute süsteemist KORP\footnote{https://korp.keeleressursid.ee/?mode=vadja} ja avaldatud internetis (\cite{kankainen_keeleleek/votic-corpora:_2018}).
 
@@ -845,7 +845,7 @@ Kui lemmaks on valitud kindel muutvorm (nt \msd{sg nom}), on võimalik koostada 
 %
 %Iga muutvormimall on omakorda moodustatud tehnilise tüve ja ülejäänud tähtkoostise jadadest sel moel, et tehnilise tüve osad on abstraheeritud muutujateks (tabeli~\ref{tab:väljundtabel-katto}, veerg 2).
 %
-%% TODO sõnatüübimalli võib vaadata funktsioonina
+%%  sõnatüübimalli võib vaadata funktsioonina
 %Sõnatüüpi ja muutvormimalle võib vaadata funktsioonina, mille muutuja(te)ks on tehniline tüvi. Kui muut\-voormi\-mallides asendada muutujad eraldatud tehnilise tüvega, rekonstrueeritakse sõna muut\-vormid. %Kui muut\-vormi\-malli muutujad asendatakse tehnilise tüvega, siis taastatakse lekseemi muutvorm (nt       \underline{kat} t \underline{o} je    & $x_1$ + t + $x_2$ + je    & \textsc{pl gen}
 %
 %
@@ -875,16 +875,16 @@ Kui lemmaks on valitud kindel muutvorm (nt \msd{sg nom}), on võimalik koostada 
 %% TODO välja arvatud see, et Muuk arvestab silpide arvu
 %
 %% info ei kadu -- tehniline tüvi + mall rekonstrueerib sisendi (infot ei kaotata, sobitub mälupõhisele)
-%Kõik ekstraktmorfoloogiaga eraldatud informatsioon, s.o sõnatüübi mall ja tehniline tüvi, salvestatakse andmebaasi, mille kuju kirjeldatakse lähemalt pt-s~\ref{sec:lmf}. Kuna salvestatud informatsiooni põhjal on võimalik kõik sisend\-materjal taastada, on ekstrakt\-morfoloogia meetod n.n mitte-destruktiivne. % TODO või iseloomustada mälupõhisena?
+%Kõik ekstraktmorfoloogiaga eraldatud informatsioon, s.o sõnatüübi mall ja tehniline tüvi, salvestatakse andmebaasi, mille kuju kirjeldatakse lähemalt pt-s~\ref{sec:lmf}. Kuna salvestatud informatsiooni põhjal on võimalik kõik sisend\-materjal taastada, on ekstrakt\-morfoloogia meetod n.n mitte-destruktiivne. %  või iseloomustada mälupõhisena?
 %
-%% TODO kuhu panna viiteid nt Huldeni fst algoritmile ja üldse lähteartiklitele?
+%%  kuhu panna viiteid nt Huldeni fst algoritmile ja üldse lähteartiklitele?
 %% kuhu panna jutt mallide loetavuse kohta?
 %
 %% into järgmisse peatükki
-%Järgmine peatükk kirjeldab kuidas tehnilise tüve põhjal on võimalik luua statistiline mudel, mille abil saab määrata tundmatu sõnavormi kuuluvust ühe või teise sõnatüübi alla. % TODO pole stat mudel vaid statistikaga rehkendatud regulaaravaldis!
+%Järgmine peatükk kirjeldab kuidas tehnilise tüve põhjal on võimalik luua statistiline mudel, mille abil saab määrata tundmatu sõnavormi kuuluvust ühe või teise sõnatüübi alla. %  pole stat mudel vaid statistikaga rehkendatud regulaaravaldis!
 %
 %
-%% TODO tehniline tüvi on käändevormist sõltumata ja seega on ka lemmavorm vabalt valitav
+%%  tehniline tüvi on käändevormist sõltumata ja seega on ka lemmavorm vabalt valitav
 
 \subsection{Tüüpsõna ennustamine}
 \label{sec:ekstraktmorfoloogia-ennustamine}
@@ -924,18 +924,18 @@ Ariste (\citeyear[42]{ariste_grammar_1968}) käändkonnad põhinevad muutustel, 
 
 Käändkondadesse klassifitseerimine ei ole olnud range, vaid selle eesmärgiks on olnud koondada kokku sarnaselt käituvaid sõnu gruppideks. Seejärel on sõnu gruppide\-siseselt on seejärel püütud analoogia põhjal ühtlustada Tsvetkovi sõnaraamatus esinevat variatsiooni kirjakeele lihtsama õppimise eesmärgil. Need sõnad, mida ei ole suudetud klassifitseerida Ariste käändkondadesse, esitatakse eraldi.
 
-%Peatüki viimases osas analüüsitakse kui hästi \cite{silfverberg_computational_2018} esitatud ekstraktmorfoloogia üldiste muuttüüpide algoritm kajastab käändkondi. % TODO lisa see osa!
+%Peatüki viimases osas analüüsitakse kui hästi \cite{silfverberg_computational_2018} esitatud ekstraktmorfoloogia üldiste muuttüüpide algoritm kajastab käändkondi. %  lisa see osa!
 
 
 %\subsection{Kirjakeele ühtlustamine}
 Kõikides käändkondades on ühtlustatud peamiselt lõpuvokaali õ:a vaheldumist ja lõpukao tõttu puuduvad vokaalid on püütud rekonstrueerida. Allpool on detailsemalt kirjeldatud iga käändkonna juures eraldi ühtlustatud komponente.
 
-% TODO tee endale selgeks mis asi on noomen ja kas komparatiivid kuuluvad selle alla
+%  tee endale selgeks mis asi on noomen ja kas komparatiivid kuuluvad selle alla
 % TODO sõnavara sisaldab ka pronoomeneid, millel pole defektsed paradigmad
 %Noomeni sõnavarast on välja jäetud komparatiivsed vormid (mõlõpi, vanepi). 
 
-% TODO
-Alljärgnevate tüüpsõnade kirjelduste juurde on lisatud nende muutvormimallid käände\-tabeli kujul, milles on alla\-joonitud tehniline tüvi. Selline esitus võimaldab lugejal paremini näha läbi ekstrakt\-morfoloogia muutvormimalli funktsioneerimist ja moodustada teiste sama tüüsõna alla kuuluvate sõnade käändvorme. Tähisega $\oplus$ märgitakse teksti\-koostise kokku\-viimist.
+% 
+Alljärgnevate kirjelduste juurde on lisatud tüüpsõnade muutvormimallid käände\-tabelina, milles on alla\-joonitud tehniline tüvi. Selline esitus võimaldab lugejal paremini näha läbi ekstrakt\-morfoloogia muutvormimalli funktsioneerimist ja moodustada teiste sama tüüsõna alla kuuluvate sõnade käändvorme. Tähisega $\oplus$ märgitakse teksti\-koostise kokku\-viimist.
 
 \subsection{\RN{1} käändkond}
 
@@ -997,35 +997,35 @@ Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega čč:č.
 \input{paradigms/järčü}
 Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega rč:rj.
 \input{paradigms/koffi}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega ff:f, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega ff:f, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/suuto}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega t:∅. % TODO kuidas 0 ?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega t:∅.
 \input{paradigms/vahti}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega t:∅, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega t:∅, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/alku}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega k:g, kusjuures tüvemuutus esineb konsonant\-klustris, mistõttu gemineerumist ei toimu \msd{sg par} ja \msd{sg ill} tüvedes.
 \input{paradigms/lako}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega k:g, kusjuures tüvi gemineerub \msd{sg par} ja \msd{sg ill} vormides.
 \input{paradigms/läikki}
-Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega kk:k, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega kk:k, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/tükkü}
 Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega kk:k.
 \input{paradigms/viki}
-Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega kk:k, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega kk:k, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/flakku}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega kk:k.
 \input{paradigms/galstukki}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega kk:k, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega kk:k, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/põlto}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega lt:ll.
 \input{paradigms/greebeni}
-Tüüpsõna\-mall kirjeldab eespoolseid tüvemuutuseta sõnu, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab eespoolseid tüvemuutuseta sõnu, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/löülü}
 Tüüpsõna\-mall kirjeldab eespoolseid tüvemuutuseta sõnu.
 \input{paradigms/airo}
 Tüüpsõna\-mall kirjeldab tagapoolseid tüvemuutuseta sõnu.
 \input{paradigms/bagaži}
-Tüüpsõna\-mall kirjeldab tagapoolseid tüvemuutuseta sõnu, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid tüvemuutuseta sõnu, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/poštaljon}
 Tüüpsõna\-mall kirjeldab tagapoolseid tüvemuutuseta sõnu.
 \input{paradigms/sünti}
@@ -1037,13 +1037,13 @@ Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega p:v.
 \input{paradigms/hapo}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega p:pp.
 \input{paradigms/vilppi}
-Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega pp:p, mille lõpuvokaal on \textit{i}.% TODO i tüvi?
+Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega pp:p, mille lõpuvokaal on \textit{i}.
 \input{paradigms/hüppü}
 Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega pp:p.
 \input{paradigms/lippu}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega pp:p.
 \input{paradigms/lamppi}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega pp:p, mille lõpuvokaal on \textit{i}.% TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega pp:p, mille lõpuvokaal on \textit{i}.
 \input{paradigms/sese}
 Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega s:z.
 \input{paradigms/siso}
@@ -1051,27 +1051,27 @@ Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega s:z.
 \input{paradigms/mahsu}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega s:z, mille tüvi konsonant\-klustri tõttu ei gemineeru.
 \input{paradigms/kursi}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega s:z, mille tüvi konsonant\-klustri tõttu ei gemineeru, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega s:z, mille tüvi konsonant\-klustri tõttu ei gemineeru, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/rusko}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega sk:zg.
 \input{paradigms/rissi}
-Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega ss:s, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega ss:s, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/passi}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega ss:s, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega ss:s, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/karjušši}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega šš:š, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega šš:š, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/täti}
-Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega t:d, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega t:d, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/kotko}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega tk:dg.
 \input{paradigms/kittsi}
-Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega tt:t, mille lõpuvokaal on \textit{i}. % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega tt:t, mille lõpuvokaal on \textit{i}. 
 \input{paradigms/rätte}
 Tüüpsõna\-mall kirjeldab eespoolseid sõnu tüvemuutusega tt:t.
 \input{paradigms/hattu}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega tt:t.
 \input{paradigms/dokumentti}
-Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega tt:t, mille lõpuvokaal on \textit{i}.  % TODO i tüvi?
+Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega tt:t, mille lõpuvokaal on \textit{i}.  
 \input{paradigms/komit̕et}
 Tüüpsõna\-mall kirjeldab tagapoolseid sõnu tüvemuutusega tt:t.
 %\input{paradigms/mato}
@@ -2111,8 +2111,6 @@ Andmete struktuuri näitlikustav tüüpsõna on LMFi XML märgendus\-formaadis e
 \spacing{1}
 \begin{figure}[h]
   \center
-  % TODO muuda kood asKatto järgi!
-  % TODO muuda tšiutto õigekirja järgi
 \begin{minted}[frame=single,fontsize=\footnotesize,framesep=10pt]{XML}
 <MorphologicalPattern>
   <feat att="id" val="asHattu"/>
@@ -2207,7 +2205,6 @@ Tüüpsõnamallist paradigmafunktsiooni programmkoodi genereerimiseks on vaja m�
 
 Morfoloogiamooduli failinimi, \textit{MorphoVot}, on koostatud vastavalt vadja keele\-koodile, mis on leksikaalses ressursis antud.
 
-% TODO muuda koodis olevad sõnad katto vastu
 \spacing{1}
 \begin{figure}[ht]
   \center
@@ -2241,7 +2238,7 @@ oper
     } ;
 }
 \end{minted}
-\caption{Vadja keele GF morfoloogia\-mooduli genereeritud programmkood (näites piiratud käänetega).
+\caption{Vadja keele GF morfoloogia\-mooduli genereeritud programmkood (näites piiratud käänetega \msd{sg nom} ja \msd{pl nom}).
   \label{code:gf-morfoloogia}}
 \end{figure}
 \spacing{1.5}
@@ -2341,9 +2338,9 @@ fun
 Moshagen ja teised (\citeyear[344]{moshagen_building_2013}) on kirjeldanud Giella taristut arendus\-keskkonnana, mis abistab morfoloogia\-kirjelduste ja arvuti\-leksikonide loomist ning muuta need automaatselt ümber paljudeks kasulikeks programmideks, mh õige\-kirja\-kontrollijaks (\textit{speller}), poolitajaks (\textit{hyphenator}) ja grammatika\-kontrollijaks (\textit{grammar checker}). 
 % The Giellatekno infrastructure has been characterized in \cite{moshagen_building_2013} to be a \textit{development environment infrastructure} (as opposed to a resource infrastructure), offering a framework for building language-specific analysers and directly turn them into a wide range of useful programs.
 
-Giella taristu on ainus nii suur ja laia\-ulatuslik keskkond, mis on mõeldud vähemus\-keelte keele\-tehnoloogia arendamiseks (\cite[346]{moshagen_building_2013}). Taristus kirjeldatud keelte hulka kuulub mh palju lääne\-mere soome keeli (\cite[349]{moshagen_building_2013}). % TODO lisada neid keeli!!!
+Giella taristu on ainus nii suur ja laia\-ulatuslik arendus\-keskkond, mis on mõeldud väikeste keelte keele\-tehnoloogia arendamiseks (\cite[346]{moshagen_building_2013}). Taristus arendatavate keelte hulka kuulub palju lääne\-mere soome ja saami keeli, soome, Lule saami, põhjasaami, lõunasaami, kveeni, Inari saami, isuri, karjala, Kildini saami, liivi, livviko, Pite saami, kolta\-saami, Ume saami, vepsa, võru ja eesti keel  (\cite[349]{moshagen_building_2013}).
 
-Taristu puhul on valitud tugineda reegli\-põhilisele keele\-mudelleerimisele, kuna väikeste keelte puhul on tihti puudu piisavalt suurtest teksti\-kogudest, mida eeldavad statistilised meetodid. Morfoloogia kirjeldamiseks kasutatakse lõplike muundurite formalismi (\textit{Finite State Transducer}), mida on eesti keeles nimetatud ka lõplike automaatide formalismiks (\textit{Finite State Automaton}). Kõrgema keele\-tasandi, süntaksi kirjeldamiseks kasutatakse (\textit{Constraint Grammar}). (\cite[346]{moshagen_building_2013})
+Taristu loojad on valinud tugineda reegli\-põhilisele keele\-mudelleerimisele, kuna väikeste keelte puhul on tihti puudu piisavalt suurtest teksti\-kogudest, mida eeldavad statistilised meetodid. Morfoloogia kirjeldamiseks kasutatakse lõplike muundurite formalismi (\textit{Finite State Transducer}), mida on eesti keeles nimetatud ka lõplike automaatide formalismiks (\textit{Finite State Automaton}). Kõrgema keele\-tasandi, süntaksi kirjeldamiseks kasutatakse kitsenduste grammatika formalismi (\textit{Constraint Grammar}). (\cite[346]{moshagen_building_2013})
 
 Magistritöö eesmärk integreerida Giella taristuga ei ole olnud selleks, et seda kasutada arendus\-keskkonnana morfoloogia jaoks. Töö laiemaks eesmärgiks on olnud integreerida vormi\-sõnastik Giella taristu vadja morfoloogia\-kirjelduseks, et saaks alustada vadja süntaksi kirjeldamisega. Integreerimise kitsemaks eesmärgiks on olnud saada Giella taristust üht kasulikku programmi, vadja keele õige\-kirja\-kontrollijat. 
 % From the point of view of our work on Votic morphology, the programs of interest are proofing tools and morphological analyzers.
