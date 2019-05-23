@@ -646,11 +646,16 @@ Magistritöös rakendatud ekstrakt\-morfoloogia meetod koosneb sarnastest sõna\
 \section{Vormisõnastiku sisestamine Morfoloogialabori rakenduse abil}
 \label{sec:vormisõnastiku-sisestamine}
 
-Morfoloogialabor\footnote{\url{https://spraakbanken.gu.se/morfologilabbet/?lexicon=votiska&lang=eng}} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. See on loodud Språkbanken'is\footnote{Rootsi keelepank ehk keele\-ressursside keskus} prototüübina, et integreerida ekstraktmorfoloogia nende leksikaalsesse taristusse Karp.
+Morfoloogialabor\footnote{\url{https://spraakbanken.gu.se/morfologilabbet/?lexicon=votiska&lang=eng}} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. Rakendus on loodud prototüübina Språkbanken'i ehk Rootsi keele\-ressursside keskuse juures, et integreerida ekstrakt\-morfoloogia meetodi nende leksikaalsesse taristusse Karp.
 
-Morfoloogialabori rakendus kasutab ekstraktmorfoloogia meetodit (mida tutvustatakse peatükis~\ref{sec:ekstraktmorfoloogia}) ja lihtsustab uute sõnade lisamist vormisõnastikku. Rakendus ennustab sisestatud sõnale sobivaid tüüpsõnu ja moodustab tüüpsõnale vastavalt kõik muutvormid. Kasutaja peab kontrollima, kas muutvormid on õiged või valima teise muuttüübi.  Rakendus on ühendatud korpuspäringute süsteemiga KORP ja näitab muutvormi juures kasutajale selle esinemis\-arvu korpustes.
+Morfoloogialabori rakendus kasutab ekstraktmorfoloogia meetodit (mida tutvustatakse peatükis~\ref{sec:ekstraktmorfoloogia-meetod}) ja lihtsustab uute sõnade lisamist vormisõnastikku. Rakendus ennustab sisestatud sõnale sobivaid tüüpsõnu ja moodustab tüüpsõnale vastavalt kõik muutvormid. Kasutaja peab kontrollima, kas kõik moodustatud muutvormid on õiged või valima teise muuttüübi.  Rakendus on ühendatud korpuspäringute süsteemiga KORP ja näitab muutvormi juures kasutajale selle esinemis\-arvu korpustes. Joonisel~\ref{fig:morfologilabbet} näidatakse rakenduse ekraani\-kuva sõna \vadja{čiutto} sisestamise juures.
 
-% TODO siia lisada ekraanitõmmis!
+\begin{figure}[h]
+  \center
+  \includegraphics[width=.8\textwidth]{morfologilabbet}
+  \caption{Morfoloogialabori sisestamise vaade sõna \vadja{čiutto} tüüpsõna \vadja{hattu} järgi moodustatud muutvormide ja nende korpus\-esinemiste arvuga.}
+  \label{fig:morfologilabbet}
+\end{figure}
 
 Magistritöö jooksul on koostatud ja kasutatud kaht vadja korpust: kirjakeelset korpust, mis koosneb Heinsoo õpematerjalide tekstidest ja murdeid kajastavat korpust, mis koosneb \enquote{Vadja keele sõnaraamatu} (\cite{grunberg_vadja_2013}) näitelausetest. Korpused on päritavad Eesti Keeleressursside Keskuse korpuspäringute süsteemist KORP\footnote{\url{https://korp.keeleressursid.ee/?mode=vadja}} ja avaldatud internetis (\cite{kankainen_keeleleek/votic-corpora:_2018}).
 
@@ -659,11 +664,13 @@ Siin\-kirjutajal oli au viibida Språkbanken'is morfoloogia\-labori ehitamise aj
 
 
 Magistritöö vadja vormisõnastiku sisestamise töövoog on olnud järgmine:
+\spacing{0}
 \begin{enumerate}
 \item sisestada lekseemi põhivorm või teine muutvorm
 \item valida olemasolevatest tüüpsõnadest õige
 \item tüüpsõna puudumisel sisestada lekseemi kõik muutvormid
 \end{enumerate}
+\spacing{1.5}
 
 Punkti (3) juhul loob rakendus ekstrakt\-morfoloogia abil uue sõnatüübi, mis on juba järgmise sisestatava lekseemi puhul süsteemi poolt ennustatav ja valitav.
 
@@ -2539,6 +2546,7 @@ Viimase tõttu püüab magistritöö ühendada arvutuslingvistika ja dokumenteer
 
 
 \newpage
+% TODO VAATA SEE ÜLE KAS ÜLDSE VAJALIKKI?
 \section{Põhimõisted ja lühendid}
 \label{sec:põhimõisted}
 Siin loetletakse töös kasutatud mõisted ja lühendid koos nende tähendustega.
