@@ -114,7 +114,7 @@ for $paradigm at $paradigm-number in $lmf//MorphologicalPattern
     "\end{tabular}",
     "\end{sideways}",
     (:"\caption{Tüüpsõnamall \textit{" || $paradigm/feat[@att="id"]/@val/data() => substring-after("as") => lower-case() || "}}",:)
-    "\captionof{table}{Tüüpsõna \arabic{mallinumber}\,\textit{" || $paradigm/feat[@att="id"]/@val/data() => substring-after("as") => lower-case() || "} ekstraheeritud muutvormimallid.}",
+    "\captionof{table}{Tüüpsõnamall \arabic{mallinumber}\,\vadja{" || $paradigm-name || "} ekstraheeritud muutvormimallid.}",
     "\label{tab:tüüpsõnamall-" || $paradigm-name || "}",
     "",
     "\end{minipage}",
@@ -124,8 +124,8 @@ for $paradigm at $paradigm-number in $lmf//MorphologicalPattern
     ""
   )
   let $hõlmab-lekseeme := if  (count($lexical-entries) > 1)
-                          then("\noindent Tüüpsõna hõlmab vormisõnastikus " || count($lexical-entries) || " lekseemi: \vadja{" || string-join($lexical-entries[position() < last()], ", ") || "} ja \vadja{" || $lexical-entries[last()] || "}.")
-                          else("\noindent See tüüpsõna ei hõlma teisi lekseeme vormi\-sõnastikus.")
+                          then("\noindent Tüüpsõnamall \vadja{"||$paradigm-name||"} hõlmab vormisõnastikus " || count($lexical-entries) || " lekseemi: \vadja{" || string-join($lexical-entries[position() < last()], ", ") || "} ja \vadja{" || $lexical-entries[last()] || "}.")
+                          else("\noindent Tüüpsõnamall \vadja{"||$paradigm-name||"} ei hõlma teisi lekseeme vormi\-sõnastikus.")
   
   
   let $table := string-join(($table-start, $table-content, $table-end, " "), out:nl())
