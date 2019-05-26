@@ -658,7 +658,7 @@ Magistritöös rakendatud ekstrakt\-morfoloogia meetod koosneb sarnastest sõna\
 \section{Vormisõnastiku sisestamine Morfoloogialabori rakenduse abil}
 \label{sec:vormisõnastiku-sisestamine}
 
-Morfoloogialabor\footnote{\url{https://spraakbanken.gu.se/morfologilabbet/?lexicon=votiska&lang=eng}} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. Rakendus on loodud prototüübina Språkbanken'i ehk Rootsi keele\-ressursside keskuse juures, et integreerida ekstrakt\-morfoloogia meetodi nende leksikaalsesse taristusse Karp.
+Morfoloogialabor\footnote{Morfologilabbet \url{https://spraakbanken.gu.se/morfologilabbet/?lexicon=votiska&lang=eng}} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. Rakendus on loodud prototüübina Språkbanken'i ehk Rootsi keele\-ressursside keskuse juures, et integreerida ekstrakt\-morfoloogia meetodi nende leksikaalsesse taristusse Karp.
 
 Morfoloogialabori rakendus kasutab ekstraktmorfoloogia meetodit (mida tutvustatakse peatükis~\ref{sec:ekstraktmorfoloogia-meetod}) ja lihtsustab uute sõnade lisamist vormisõnastikku. Rakendus ennustab sisestatud sõnale sobivaid tüüpsõnu ja moodustab tüüpsõnale vastavalt kõik muutvormid. Kasutaja peab kontrollima, kas kõik moodustatud muutvormid on õiged või valima teise muuttüübi.  Rakendus on ühendatud korpuspäringute süsteemiga KORP ja näitab muutvormi juures kasutajale selle esinemis\-arvu korpustes. Joonisel~\ref{fig:morfologilabbet} näidatakse rakenduse ekraani\-kuva sõna \vadja{čiutto} sisestamise juures.
 
@@ -2530,15 +2530,27 @@ Automaatselt loodud õige\-kirja\-kontrollija on eesmärgipäraselt jäetud liht
 
 Magistritöös on loodud arvutisüsteem, mille abil on koostatud vadja noomeni morfoloogiline sõnastik ehk vormisõnastik sellisel kujul, et selles kätketud morfoloogiline informatsioon on integreeritav kahte keeletehnoloogilisse taristusse (Grammatical Framework ja Giella taristu) ning automaatselt teisendatav erinevateks keele\-tehnoloogilisteks rakendusteks (morfoloogiline analüsaator-süntesaator ja õige\-kirja\-kontrollija).
 
-Koostatud vormisõnastik ei ole pürginud lõplikuks vadja kirjakeele morfoloogia\-kirjelduseks, vaid süsteemi loomise juures on peetud tähtsaks kasutajasõbralikust, et vormisõnastik oleks täiendatav ilma programmeerimis\-oskusteta.
+Koostatud vormisõnastik ei ole pürginud lõpliku vadja kirjakeele morfoloogia\-kirjelduse poole, vaid süsteemi loomise juures on peetud tähtsaks kasutaja\-sõbralikust, et vormisõnastik oleks täiendatav ilma programmeerimis\-oskusteta.
 
 Kasutajasõbraliku süsteemiga on autor tahtnud anda vadja keelele kala asemel õnge,
 % TODO keeleplaneerimisele? keelekorraldamisele?
 et edaspidine vadja keele arendamine võiks toimida teiste eest\-vedamisel, mitte jääda arvutus\-lingvisti või keele\-tehnoloogi taha toppama.
 
-%Loodud süsteem koosneb suuresti kolmest osast: kasutajaliidesest, vormisõnastiku andmestikust ja programm\-koodi\-generaatoritest.
+Loodud vadja keele vormisõnastik sisaldab 882~sõna ja automaatselt teisendatud õigekirjakontrollija märgib nende sõnade kõiki 28 käändevormi õigeks kirjutatud arvuti kontoritarkvaras. Vormisõnastikku on lihtne muuta ja ei vaja programmeerimis\-oskusi, muudatused tehakse otse sõna käändevorme muutes või vahetades sõna tüüpsõna. Muudatused viiakse vormisõnastikust automaatselt üle keeletehnoloogilistesse taristutesse ning õigekirjakontrollijasse.
 
-%Vormisõnastiku sisestamiseks ja muutmiseks mõeldud kasutaja\-liideseks on kasutatud Rootsi keelepanga ehk Språkbanken'i
+
+Magistritöö viis peatükki on kirjeldanud süsteemi loomiseks vajalikke osi. Peatükis~2 on kirjeldatud vormisõnastiku sõnavara valikut ja käänete valikut ning käändevormide moodustamist. Ka on antud ülevaade töö asetusest vadja korpuse planeerimise suhtes.
+% Sõnavara valik hõlmab Heinsoo (\citeyear{heinsoo_vaddsonakopittoja_2015}) sõnastikus esitatud nimi\-sõnu ja adjektiive (u~420 sõna). Sõnavara on veel laiendatud autori enda silma järgi Tsvetkovi sõnastikust (\cite{laakso_vatja_1989}) ettesattunuga (u~460 sõna, mh~\vadja{asfal̕tti}, \vadja{bibli} ja \vadja{biblioteekkõ}). Kokku on vormi\-sõnastikku koondatud 882 sõna\-artiklit.
+
+
+Peatükis~3 on tutvustatud töö kasutajaliidest Morfoloogia\-laborit (\textit{Morfologi\-labbet}). Morfoloogia\-labor on Språkbanken'is ehk Rootsi keeleressursside keskuses loodud eraldiseisev veebi\-rakendus ja põhineb ekstrakt\-morfoloogial (tuvtustatud 4.~peatükis). Ekstrakt\-morfoloogia tõttu suudab morfoloogia\-labor moodustada suvalise sõna kõiki käändevorme valitud tüüpsõna malli järgi. Uus ja süsteemist puuduv tüüpsõnamall defineeritakse sõna käändetabeli sisestamisega.
+
+Kasutaja\-liides on oluliselt lihtsustanud ja kiirendanud 882~sõna 28~käändevormi lisamist vormi\-sõnastikku. Sisestamise peamiseks töökäiguks oli valida uuele sisestatavale sõnale õige tüüpsõnamall ja selle puudumisel tuli sisestatava sõna käändetabel moodustada käsitsi. Käsitsi moodustatud ja sisestatud käändetabeli põhjal õppis süsteem uue tüüpsõna malli, mida järgmise sisestatava sõna juures sai tüüpsõna\-malliks valida.
+
+Neljandas peatükis tutvustati ekstrakt\-morfoloogia meetodit lähemalt. Näitlikustati kuidas meetod eraldab (ekstraheerib) tüüpsõna\-malli vadja sõna \vadja{hattu} (ee müts) käände\-tabelist ning kuidas tüüpsõna\-malli järgi saab moodustada teise sõna, \vadja{čiutto} (ee särk) kõik käände\-vormid. % Tüüpsõna\-mall koostatakse kahes etapis, esimese puhul eraldatakse nn  Seejärel kuidas 
+
+Viiendas peatükis esitati vormisõnastiku kõik 
+
 
 andmestiku moodustamine
 sisestamine
