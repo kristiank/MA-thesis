@@ -2512,7 +2512,7 @@ Magistritöö vormisõnastiku põhjal tuletatakse programm\-koodi ka testide jao
 
 Giella arendus\-taristus on automatiseeritud õige\-kirja\-kontrollijate ehitamine morfoloogia\-kirjeldustest. Eelnevalt kirjeldatud vadja vormisõnastiku integreerimine Giella-taristusse võimaldab vadja keele õige\-kirja\-kontrollija automaatse ehitamise. Vormisõnastiku integreerimise ja õigekirjakontrollija automaatse ehitamise detailides on autorit aidanud terve Giella meeskond, eriti Sjur Moshagen ja Jack Rueter.
 
-Vadja õige\-kirja\-kontrollija töötab kontori\-tarkvaraga Microsoft Office, OpenOffice ja LibreOffice ning märgib punase joonega valeks kõik need sõnad, mis vormi\-sõnastikus ei sisaldu. Vadja keele õige\-kirja\-kontrollija on kätte\-saadaval internetis\footnote{\url{https://gtsvn.uit.no/langtech/trunk/langs/vot/tools/spellcheckers/}}. 
+Vadja õige\-kirja\-kontrollija töötab kontori\-tarkvaradega Microsoft Office, OpenOffice ja LibreOffice ning märgib punase joonega valeks kõik need sõnad, mis vormi\-sõnastikus ei sisaldu. Vadja keele õige\-kirja\-kontrollija on kätte\-saadaval internetis\footnote{\url{https://gtsvn.uit.no/langtech/trunk/langs/vot/tools/spellcheckers/}}. 
 
 
 Automaatselt loodud õige\-kirja\-kontrollija on eesmärgipäraselt jäetud lihtsa\-koeliseks. See märgib kõik sõnad valeks, mis ei sisaldu vormi\-sõnastikus. See on lühi\-ajaliseks kasutamiseks ja mõeldud ärgitama kasutajaid ise pakkuma täiendusi ja sõnaloomet vadja sõnastikku. Ka lihtsate igapäevaste sõnade lisamine vadja vormi\-sõnastikku märgiks suurt edu\-sammu vadja keele taas\-elustamises.
@@ -2553,16 +2553,24 @@ Neljandas peatükis tutvustati ekstrakt\-morfoloogia meetodit lähemalt. Näitli
 
 Viiendas peatükis esitati kõik vormisõnastikust eraldatud 281~tüüpsõna\-malli. Ülevaatlikuma esituse huvides jagati tüüpsõnad Ariste (\citeyear{ariste_grammar_1968}) grammatika käändkondade süsteemi järgi. % edaspidine töö käib nende põhjal
 
-Peatükis~6 tutvustati magistritöö tuumosa programm\-koodi tuletamist. Programm\-koodi tuletamine toodi esile protsessina, kus vormisõnastikku kätketud teadmist kasutatakse kirjeldusena, mille põhjal kirjutatakse automaatselt programm\-koodi. Vormisõnastikku hoiti rahvusvahelise standardi \textit{Lexical Markup Framework} (LMF) vormingus ja magistritöös esitati kaks programm\-koodi\-tuletajat ehk koodi\-generaatorit. Mõlemad koodi\-generaatorid olid varustatud tõlke\-tabelitega, mistõttu  oli võimalik toetada kõigi kolme taristu terminoloogiaid ja traditsioone, nii standardi LMFi kui ka siht-taristute omi.
+Peatükis~6 tutvustati magistritöö tuumosa programm\-koodi tuletamist. Programm\-koodi tuletamine toodi esile protsessina, kus vormisõnastikku kätketud teadmist kasutatakse keskse kirjeldusena, mille põhjal genereeritakse automaatselt programm\-koodi. Vormisõnastikku hoitakse rahvusvahelise standardi \textit{Lexical Markup Framework} (LMF) vormingus ja magistritöös esitati kaks programm\-koodi\-tuletajat ehk koodi\-generaatorit. Mõlemad koodi\-generaatorid olid varustatud tõlke\-tabelitega, mistõttu  oli võimalik toetada kõigi kolme taristu, s.o nii standardi LMFi kui ka siht-taristute terminoloogiaid ja traditsioone. %, nii standardi LMFi kui ka siht-taristute omi.
 % lemmavabadus
 
-Esimene koodi\-generaator integreeris vormi\-sõnastiku eri\-ots\-tarbelisesse grammatikate programmeerimis\-keelde \textit{Grammatical Framework} (GF). Selleks genereeriti vadja morfoloogia- ja leksikoni\-moodulid GFi jaoks. %Esitatud integreerimis\-viis võimaldas tööde jaotust, kus vormisõnastiku kaudu 
+Koodigeneraatorid põhinevad ekstraktmorfoloogial ja ei ole vadja keele spetsiifilised. Genereeritud toetavad ka lemmavormi valimist.
 
-Teine koodi\-generaator integreeris vormi\-sõnastiku Giella taristusse, mis on seni suuremaid arendus\-keskkondi väiksemate keelte keele\-tehnoloogia arendamiseks. Taristus arendatavate keelte hulka kuulub 17 lääne\-mere soome ja saami keelt.
+Esimene koodi\-generaator integreeris vormi\-sõnastiku eri\-ots\-tarbelisesse grammatikate programmeerimis\-keelde \textit{Grammatical Framework} (GF). Selleks genereeritakse programm\-koodi GFi vadja morfoloogia- ja leksikoni\-moodulite jaoks, mis on saadaval internetis\footnote{\url{https://github.com/keeleleek/GF-Votic}}.
 
-Vadja keele integreerimine Giella taristusse võimaldas 
+Esitatud, vormisõnastiku esimene integreerimis\-viis võimaldab tööde jaotust, kus vadja sõnu ja sõnavorme teav kasutaja saab töötada vormisõnastiku kaudu leksikoni ja morfoloogiaga ning arvuti\-lingvist saab luua GFi rakendusi. Seni on katsetatud vadja--vene turismi\-vestmiku koostamist GFiga, mis on internetis saadaval\footnote{\url{https://github.com/keeleleek/GF-Votic-Phrasebook}}.
 
-Vormisõnastiku integreerimine Giella taristuga lisas taristu sihtrühma
+Teine koodi\-generaator integreeris vormi\-sõnastiku Giella taristusse. Giella taristu on seni suurim arendus\-keskkond väikeste keelte keele\-tehnoloogia arendamiseks. Taristus arendatavate keelte hulka kuulub 17 lääne\-mere soome ja saami keelt, 18. keeleks nüüd ka vadja keel.
+
+Giella taristu põhineb reegli\-põhisel formalismil morfoloogia kirjeldamiseks. Magistritöös koostatud programm\-koodi\-generaator loob vajaliku kirjelduse vormisõnastiku tüüpsõnamallide põhjal.
+Seega on vormisõnastiku integreerimine Giella taristuga loonud taristule uut\-moodi kasutajaliidese, mis võimaldab uuel sihtrühmal töötada taristus. Uuelt sihtrühmalt ei ole eeldatud programmeerimis\-oskusi, ainult sõnade ja sõnavormide tundmine.
+
+
+Vadja keele integreerimine Giella taristuga võimaldas kasutada taristu enda automaatikat luua vadja keelele õige\-kirja\-kontrollija Microsofti, LibreOffice'i ja OpenOffice'i kontori\-tark\-varale. Õige\-kirja\-kontrollija on esialgu kärbitud lihtsa\-koeliseks ja märgib ainult vormisõnastikus sisalduvaid sõnu ja sõnavorme õigeteks, kõik ülejäänud märgitakse punase joonega kontori\-tarkvaras sisestatud tekstis. Selline valik tehti innustamaks kasutajaid ise pakkuma täiendusi ja sõna\-loomet vormisõnastikku. Ka lihtsate igapäevaste sõnade lisamine vadja vormi\-sõnastikku märgiks suurt edu\-sammu vadja keele taas\-elustamises. Õigekirja\-kontrollija on kättesaadaval internetis\footnote{\url{https://gtsvn.uit.no/langtech/trunk/langs/vot/tools/spellcheckers/}}.
+
+%Vormisõnastiku integreerimine Giella taristuga on loonud uue kasutajaliidese taristule, mis võimaldab uuel sihtrühmal töötada taristus. Uuelt sihtrühmalt ei ole eeldatud programmeerimis\-oskusi.
 
 
 
