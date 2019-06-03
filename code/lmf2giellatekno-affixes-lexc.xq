@@ -29,11 +29,14 @@ for $pos in $poses
   let $lexc-body :=
       for $paradigm in $lmf//MorphologicalPattern
         let $paradigm-id  := $paradigm/feat[@att="id"]/@val/data()
+        order by $paradigm-id
         let $paradigm-pos := $paradigm/feat[@att="partOfSpeech"]/@val/data()
         let $lexicon-name := giellatekno:paradigm-to-lexc-name($paradigm)
         let $paradigm-tag := giellatekno:paradigm-to-lexc-tag($paradigm)
+        let $upper    := $paradigm-tag
+        let $lower    := "0"
         let $cont-lex := "LEXICON " || $lexicon-name || out:nl() ||
-                         $paradigm-tag || " # ;"
+                         $upper||":"||$lower || " # ;"
         return $cont-lex
   
   let $lexc-pos-pl := lower-case($giellatekno:get-tests-pos($pos)) || "s"
