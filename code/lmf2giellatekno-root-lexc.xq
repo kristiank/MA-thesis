@@ -16,6 +16,11 @@ import module namespace giellatekno = "http://giellatekno.uit.no" at "./giellate
 (: Read in the LMF :)
 let $lmf := doc("../data/lmf.xml")
 
+(: Create the list of characters :)
+let $all-wordforms := ($lmf//WordForm/feat[@att="writtenForm"]/@val/data())
+let $all-chars := ( $all-wordforms ! analyze-string(., "\p{L}\p{M}*")/fn:match/text() )
+                    => distinct-values() => sort()
+
 (: Create the list of tags for the parts of speeches :)
 let $pos-list := 
   for $partofspeech in distinct-values($lmf//MorphologicalPattern/feat[@att="partOfSpeech"]/@val/data())
@@ -23,10 +28,11 @@ let $pos-list :=
 
 (: Create the list of paradigm name tags :)
 let $paradigm-tag-list :=
+  sort(
   distinct-values(
     for $paradigm in $lmf//MorphologicalPattern
       return giellatekno:paradigm-to-lexc-tag($paradigm)
-  )
+  ))
 
 (: Create the Root lexicon :)
 let $root-lexc := string-join((
@@ -52,6 +58,7 @@ let $header := string-join((
 let $lexc := string-join((
   $header,
   "Multichar_Symbols",
+  string-join($all-chars, " "),
   out:nl() || "! Parts of Speeches",
   string-join($pos-list, out:nl()),
   out:nl() || "! Paradigm tags (used in the continuation lexicons)",
