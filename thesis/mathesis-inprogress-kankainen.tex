@@ -9,6 +9,7 @@
 \usepackage{amsmath} % align ja gather
 
 \usepackage{enumerate}
+\usepackage{enumitem}
 
 \usepackage{booktabs}
 
@@ -322,18 +323,18 @@ Vormisõnastiku definitsiooniks magistritöös on võetud Ülle Viksi järgi:
 % TODO lisada ühiskeele murdeline alus on Vaipooli (Li-Lu), sest see on mida "kõneldakse veel". Rohkem on uuritud ja kirjeldatud Kattila(?), mida Ernits on ka soovitanud ühiskeele aluseks valida.
 
 % Selles peatükis seletatakse vadja ühiskeeleks valitud aluseid ning korpuse planeerimise mõistet.
-Vadja keelele ei loodud Nõukogude Liidus 1930.\,aastail ühiskeelt, nagu seda tehti näiteks karjala, vepsa ja isuri keele jaoks. Vadja kirjakeele loomise pürgimistest pärast Nõukogude Liidu lagunemist on kirjutanud lähemalt Enn Ernits (\citeyear{ernits_vadja_2006}) ja vadjalaste keele normi tunnetusest (ilma kirja\-keeleta) on rääkinud Jelena Markus ja Fjodor Rožanski (\cite{markus_concept_2013}). % TODO translitereerimine / transkriptsioon
+Vadja keelele ei loodud Nõukogude Liidus 1930.\,aastail ühiskeelt, nagu seda tehti näiteks karjala, vepsa ja isuri keele jaoks. Vadja kirjakeele loomise pürgimistest pärast Nõukogude Liidu lagunemist on kirjutanud lähemalt Enn Ernits (\citeyear{ernits_vadja_2006}) ja vadjalaste keele normi tunnetusest (ilma kirja\-keeleta) on rääkinud Jelena Markus ja Fjodor Rožanski (\citeyear{markus_concept_2013}). % TODO translitereerimine / transkriptsioon
 
 % korpusplaneerimine on alamosa keeleplaneerimisest?
 %Korpusplaneerimine on mis, miks seda tehakse ja kes seda teevad (kasuta Cooper 1996: 45).
 Korpusplaneerimine on keele\-planeerimise üks osa ja koosneb Klossi (\citeyear{kloss_research_1970}) järgi kolmest osast:
-\spacing{0}
-\begin{enumerate}
+
+\begin{enumerate}[noitemsep]
 \item kirjamine (ingl. \textit{graphization}) ehk kirjaviisi määramine
 \item morfoloogia ühtlustamine ja standardiseerimine
 \item sõnavara moderniseerimine ja rikastamine
 \end{enumerate}
-\spacing{1.5}
+
 
 Neid osi ei pea vaatama järjestikku etappidena keele moderniseerimise poole, Coulmas (\citeyear{coulmas_language_1989}) on nimetanud seda pidevaks adapteerimise protsessiks.
 
@@ -658,7 +659,7 @@ Magistritöös rakendatud ekstrakt\-morfoloogia meetod koosneb sarnastest sõna\
 \section{Vormisõnastiku sisestamine Morfoloogialabori rakenduse abil}
 \label{sec:vormisõnastiku-sisestamine}
 
-Morfoloogialabor\footnote{Morfologilabbet \url{https://spraakbanken.gu.se/morfologilabbet/?lexicon=votiska&lang=eng}} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. Rakendus on loodud prototüübina Språkbanken'i ehk Rootsi keele\-ressursside keskuse juures, et integreerida ekstrakt\-morfoloogia meetodi nende leksikaalsesse taristusse Karp.
+Morfoloogialabor\footnote{(\url{https://spraakbanken.gu.se/morfologilabbet/?lexicon=votiska&lang=eng})} on eraldiseisev veebi\-rakendus morfoloogiliste sõnaraamatute koostamiseks. Rakendus on loodud prototüübina Språkbanken'i ehk Rootsi keele\-ressursside keskuse juures, et integreerida ekstrakt\-morfoloogia meetodi nende leksikaalsesse taristusse Karp.
 
 Morfoloogialabori rakendus kasutab ekstraktmorfoloogia meetodit (mida tutvustatakse peatükis~\ref{sec:ekstraktmorfoloogia-meetod}) ja lihtsustab uute sõnade lisamist vormisõnastikku. Rakendus ennustab sisestatud sõnale sobivaid tüüpsõnu ja moodustab tüüpsõnale vastavalt kõik muutvormid. Kasutaja peab kontrollima, kas kõik moodustatud muutvormid on õiged või valima teise muuttüübi.  Rakendus on ühendatud korpuspäringute süsteemiga KORP ja näitab muutvormi juures kasutajale selle esinemis\-arvu korpustes. Joonisel~\ref{fig:morfologilabbet} näidatakse rakenduse ekraani\-kuva sõna \vadja{čiutto} sisestamise juures.
 
@@ -678,13 +679,13 @@ Siin\-kirjutajal oli au viibida Språkbanken'is morfoloogia\-labori ehitamise aj
 
 
 Magistritöö vadja vormisõnastiku sisestamise töövoog on olnud järgmine:
-\spacing{0}
-\begin{enumerate}
+
+\begin{enumerate}[noitemsep]
 \item sisestada lekseemi põhivorm või teine muutvorm
 \item valida olemasolevatest tüüpsõnadest õige
 \item tüüpsõna puudumisel sisestada lekseemi kõik muutvormid
 \end{enumerate}
-\spacing{1.5}
+
 
 Punkti (3) juhul loob rakendus ekstrakt\-morfoloogia abil uue sõnatüübi, mis on juba järgmise sisestatava lekseemi puhul süsteemi poolt ennustatav ja valitav.
 
@@ -2549,7 +2550,9 @@ Peatükis~3 tutvustati töös loodud süsteemi kasutaja\-liidest Morfoloogia\-la
 
 Kasutaja\-liides on oluliselt lihtsustanud ja kiirendanud 882~sõna kõigi 28~käändevormi lisamist vormi\-sõnastikku. Sisestamise peamiseks töökäiguks oli valida uuele sisestatavale sõnale õige tüüpsõnamall ja selle puudumisel tuli sisestatava sõna käände\-tabel moodustada käsitsi. Käsitsi moodustatud ja sisestatud käändetabeli põhjal õppis süsteem uue tüüpsõna malli, mida järgmise sisestatava sõna juures sai tüüp\-sõna\-malliks valida.
 
-Neljandas peatükis tutvustati ekstrakt\-morfoloogia meetodit lähemalt. Näitlikustati kuidas meetod eraldab (ekstraheerib) tüüpsõna\-malli vadja sõna \vadja{hattu} (ee müts) käände\-tabelist ning kuidas tüüpsõna\-malli järgi saab moodustada teise sõna, \vadja{čiutto} (ee särk) kõik käände\-vormid. % Tüüpsõna\-mall koostatakse kahes etapis, esimese puhul eraldatakse nn  Seejärel kuidas 
+Neljandas peatükis tutvustati ekstrakt\-morfoloogia meetodit lähemalt. Näitlikustati kuidas meetod eraldab (ekstraheerib) sõna \vadja{hattu} (ee müts) käände\-tabelist selle tüüpsõna\-malli ning kuidas tüüpsõna\-malli järgi saab moodustada teise sõna, \vadja{čiutto} (ee särk) kõik käände\-vormid. % Tüüpsõna\-mall koostatakse kahes etapis, esimese puhul eraldatakse nn  Seejärel kuidas
+
+Käändetabelite kaudu tüüpsõnamallide defineerimine (programmeeritud reeglite asemel) moodustab töö tuumiku. % TODO XXX järg
 
 Viiendas peatükis esitati kõik vormisõnastikust eraldatud 231~tüüpsõna\-malli. Ülevaatlikuma esituse huvides jagati tüüpsõnad Ariste (\citeyear{ariste_grammar_1968}) grammatika käänd\-kondade süsteemi järgi. % TODO Magistri\-töö on olnud rakenduslik ja kirjeldav % edaspidine töö käib nende põhjal
 
