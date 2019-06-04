@@ -49,7 +49,8 @@ for $pos in $poses
   (: Put together the whole lexc file :)
   let $lexc := string-join((
                 $lexc-header, out:nl(),
-                string-join(($lexc-body), out:nl()||out:nl())
+                string-join(($lexc-body), out:nl()||out:nl()),
+                ""
                 ),
                 out:nl())
                 
