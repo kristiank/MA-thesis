@@ -216,6 +216,8 @@ Reegli\-põhiseid meetodeid on välditud, kuna reeglite kirjutamine tahest-tahtm
 
 Valitud meetodi kompromissiks on tüüpsõnade paljusus: sõna \vadja{čiutto} (ee särk) käändub tüüpsõna \vadja{hattu} (ee müts) järgi, aga sõna \vadja{rätte} (ee rätt, rätik) käändub hoopis nagu tüüpsõna \vadja{tüttö} (ee tüdruk). Tüüp\-sõnade ainus erinevus on vokaalharmoonias. Ekstrakt\-morfoloogia meetodiga eraldatud tüüpsõnad sarnanevad Eesti leksikograafia\-traditsioonis Elmar Muugi \enquote{Väiksele õigekeelsus-sõnaraamatu} (\citeyear{muuk_vaike_1933}) muuttüüpidele, mille muuttüübistik hõlmab 895~eesti keele noomeni tüüpsõna. Aja jooksul on Eesti leksikograafiline traditsioon leidnud erinevaid viise kompaktsema muuttüübistiku koostamiseks ja Ülle Viks ei ole Muugi muuttüüpe pidanud enam muuttüüpidekski, vaid on nimetanud neid struktuuri\-tüüpideks (\cite[282]{viks_verbide_1976}). Magistritöö jooksul koostatud vadja vormisõnastik hõlmab 231~noomeni tüüpsõna. % TODO kas see on viimane number
 
+Vadja vormisõnastiku tüüpsõnade arv on ehk suur, ent mõistlik, kui arvestada lääne\-mere\-soome keeltega üldiselt. Näiteks on Viitso ja Ernštreiti liivi keele sõnastikus (\citeyear{viitso_livoki-estiki-tkisonarontoz_2012}) loetletud 242 tüüpsõna.
+
 %% Ekstraktmorfoloogia meetod sobitub magistritöö ülesandele hästi mitmel põhjusel:
 %% \begin{itemize}
 %% \item meetod põhineb otse sõnavormidel ja ei vaja reegleid (vadja keelel puudub morfoloogiat piisavalt täpselt kirjeldav grammatika)
@@ -981,6 +983,8 @@ Käändkondadesse klassifitseerimine ei ole olnud range, vaid selle eesmärgiks 
 Need sõnad, mida ei ole suudetud klassifitseerida Ariste käändkondadesse, esitatakse eraldi.
 
 %Peatüki viimases osas analüüsitakse kui hästi \cite{silfverberg_computational_2018} esitatud ekstraktmorfoloogia üldiste muuttüüpide algoritm kajastab käändkondi. %  lisa see osa!
+
+Ekstraktmorfoloogia meetodiga on vormisõnastiku 882~sõnast eraldatud 231~erinevat tüüpsõna. Võrdluses Viitso ja Ernštreiti liivi keele sõnastikus (\citeyear{viitso_livoki-estiki-tkisonarontoz_2012}) loetletud 242 tüüpsõnaga, tundub vadja tüüpsõnade arv mõistlik.
 
 
 %\subsection{Kirjakeele ühtlustamine}
@@ -2576,7 +2580,7 @@ Magistritöö viies peatükis kirjeldati süsteemi kõiki osi ning vormi\-sõnas
 %
 Valikute tegemine on alati seotud suurema kontekstiga, mistõttu anti ülevaade töö asetusest vadja korpuse planeerimise suhtes, s.o kirja\-viisi määramise, morfoloogia ühtlustamise ja sõnavara moderniseerimise suhtes. Töös kasutati Heinsoo kirjaviisi, mis on teisendatav teise, levinud õppematerjalide kirjaviisiks. Morfoloogiat ühtlustati sel määral, et töös järgiti Tsvetkovi sõnastikus antud Jõgõperä\-murdelisi põhivorme, mida püüti ühtlustada Vaipooli murdele iseloomulike joontega. Sõnavara ei moderniseeritud, kõik vormisõnastikku lisatud sõnad on varem avaldatud. Küll aga lisati rohkem kui poole võrra rohkem sõnu Tsvetkovi sõna\-raamatust.
 
-Peatüki lõpus tutvustati magistritöös kasutatud morfeemi definitsiooni ja kirjeldati selle sarnasust klassikalise paradigmaatilise morfoloogiaga. Morfeemi ei käsitletud siin töös väikseima tähendusliku üksusena, vaid kui sõna mistahes fonoloogilist muutust, mis toob kaasa sõna tähenduse muutuse. Morfeemi definitsioon ühtib töös kasutatud metodoloogiaga.
+Peatüki lõpus tutvustati magistritöös kasutatud morfeemi definitsiooni ja kirjeldati selle sarnasust klassikalise paradigmaatilise morfoloogiaga. Morfeemi ei käsitletud siin töös väikseima tähendusliku üksusena, vaid kui sõna mistahes fonoloogilist muutust, mis toob kaasa sõna tähenduse muutuse. Morfeemi definitsioon ühtib töös kasutatud ekstrakt\-morfoloogia metodoloogiaga.
 
 
 Peatükis~3 tutvustati töös loodud süsteemi kasutaja\-liidest Morfoloogia\-laborit (rootsi keeles \textit{Morfologi\-labbet}). Morfoloogia\-labor on Rootsi keele\-ressursside keskuses ehk Språkbanken'is loodud eraldiseisev veebi\-rakendus, mis põhineb ekstrakt\-morfoloogial (tuvtustatud 4.~peatükis). Ekstrakt\-morfoloogia põhjal suudab morfoloogia\-labor moodustada suvalise sõna kõiki käändevorme selleks valitud, olemas\-oleva tüüp\-sõna malli järgi. Uus ja süsteemist puuduv tüüpsõnamall defineeritakse sõna käände\-tabeli sisestamisega süsteemi.
@@ -2587,12 +2591,13 @@ Neljandas peatükis tutvustati ekstrakt\-morfoloogia meetodit lähemalt. Näitli
 %
 Käändetabelite kaudu tüüpsõnamallide defineerimine (reeglite programmeerimise asemel) moodustab töö põhimõttelise tuumiku. % TODO XXX järg
 
-Viiendas peatükis esitati kõik vormisõnastikust eraldatud 231~tüüpsõna\-malli ja nende alla kuuluvaid sõnu. Ülevaatlikuma esituse huvides jagati tüüpsõnad Ariste (\citeyear{ariste_grammar_1968}) grammatika käänd\-kondade süsteemi järgi. Magistri\-töö eesmärk on olnud rakenduslik ja kirjeldav, mistõttu esitatud tüüpsõnade käände\-tabelid ei pürgi lõplikule morfoloogia\-kirjeldusele. %Esitatud tüüpsõnade tabelite parandamine on      % edaspidine töö käib nende põhjal
+Viiendas peatükis esitati kõik vormisõnastikust eraldatud 231~tüüpsõna\-malli ja nende alla kuuluvaid sõnu. Ülevaatlikuma esituse huvides jagati tüüpsõnad Ariste (\citeyear{ariste_grammar_1968}) grammatika käänd\-kondade süsteemi järgi. % Magistri\-töö eesmärk on olnud rakenduslik ja kirjeldav, mistõttu esitatud tüüpsõnade käände\-tabelid ei pürgi lõplikule morfoloogia\-kirjeldusele. %Esitatud tüüpsõnade tabelite parandamine on      % edaspidine töö käib nende põhjal
+Võrdluses Viitso ja Ernštreiti liivi keele sõnastikus (\citeyear{viitso_livoki-estiki-tkisonarontoz_2012}) loetletud 242 tüüpsõnaga, tundub vadja tüüpsõnade arv mõistlik.
 
 Peatükis~6 tutvustati magistritöö tuumosa, programm\-koodi tuletamist. Programm\-koodi tuletamine toodi esile protsessina, kus vormisõnastikku kätketud teadmist, s.o tüüpsõna\-malle, kasutatakse keskse kirjeldusena, mille põhjal genereeritakse automaatselt programm\-koodi. Kirjeldati kuidas vormi\-sõnastiku sõna\-vara ja tüüp\-sõna\-malle kodeeriti keskse kirjelduse vormingusse, milles lähtuti rahvus\-vahelisest standardist \textit{Lexical Markup Framework} (LMF). Seejärel esitati magistritöö kaks programm\-koodi\-tuletajat ehk koodi\-generaatorit. Mõlemad koodi\-generaatorid olid varustatud tõlke\-tabelitega, mistõttu  oli võimalik toetada kõigi taristute, nii standardi LMFi kui ka siht-taristute terminoloogiaid ja traditsioone. %, nii standardi LMFi kui ka siht-taristute omi.
 % lemmavabadus
 
-Programmkoodigeneraatorid põhinesid täielikult LMFi kirjeldusele ja ei olnud vadja keele spetsiifilised. Koodi\-generaatorid toetasid ka lemma\-vormi käände valimist.
+Programmkoodigeneraatorid põhinesid täielikult LMFi kirjeldusele ja ei olnud vadja keele spetsiifilised. Koodi\-generaatorid toetasid ka lemma\-vormi jaoks kasutatud käände valimist.
 
 Esimene koodi\-generaator integreeris vadja vormi\-sõnastiku eri\-ots\-tarbelisesse grammatikate programmeerimis\-keelde \textit{Grammatical Framework} (GF). Selleks genereeriti programm\-koodi GFi vadja morfoloogia- ja leksikoni\-moodulite jaoks. Moodulid on saadaval internetis\footnote{\url{https://github.com/keeleleek/GF-Votic}}.
 
