@@ -42,7 +42,15 @@
 
 % @todo: vormistada kirjanduse loetelu õigesti
 % @done: vormistada tekstis viited õigesti (nt lk kooloni järel jne)
-\usepackage[backend=biber,style=authoryear-ibid]{biblatex}
+\usepackage[backend=biber,
+style=authoryear-ibid,
+isbn=false, % don't print isbn
+doi=false,  % don't print doi
+url=false,  % don't print url
+hyperref=true,
+date=year   % only print the year, not full dates
+]{biblatex}
+
 \addbibresource{bibliography-mathesis.bib}
 
 % muuda tsiteerimisi, et oleks aasta ja leheküljenumbri vahel ainult koolon
@@ -51,6 +59,27 @@
 \DefineBibliographyStrings{estonian}{%
   page = {:~}
 }
+
+\AtEveryBibitem{%
+  % \ifentrytype{article}{%
+  %\clearfield{pages}%
+  \clearfield{pages}%
+  \clearfield{pagetotal}%
+  % }{%
+  % }%
+}
+
+
+\AtBeginBibliography{%
+  \renewcommand*{\bibfont}{\small}
+  \renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
+  \renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
+  \renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
+  \renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
+  \renewcommand{\finentrypunct}{} % remove final punctuation
+%  \DeclareFieldFormat{year}{\textbf{#1}}
+}
+
 
 % Agnese kommentaarid
 % poolituse ette ja taha vähemalt 3 tähte
@@ -2531,7 +2560,7 @@ Automaatselt loodud õige\-kirja\-kontrollija on eesmärgi\-päraselt jäetud li
 \section{Kokkuvõte}
 \label{sec:kokkuvõte}
 
-Magistritöös on loodud arvutisüsteem, mille abil on koostatud vadja noomeni morfoloogiline sõnastik ehk vormisõnastik sellisel kujul, et selles kätketud morfoloogiline informatsioon on integreeritav kahte keeletehnoloogilisse taristusse (Grammatical Framework ja Giella taristu) ning automaatselt teisendatav erinevateks keele\-tehnoloogilisteks rakendusteks (morfoloogiline analüsaator-süntesaator ja õige\-kirja\-kontrollija). Loodud süsteem ei ole vadja keele spetsiifiline, vaid töötab kõigi keelte jaoks, mille morfoloogia on kirjeldatav sõnade kõigi muutvormide loetlemise teel. % TODO Anette toimetada viimane lause
+Magistritöös on loodud arvutisüsteem, mille abil on koostatud vadja noomeni morfoloogiline sõnastik ehk vormisõnastik sellisel kujul, et selles kätketud morfoloogiline informatsioon on automaatselt integreeritav kahte keeletehnoloogilisse taristusse (Grammatical Framework ja Giella taristu) ning samuti automaatselt teisendatav erinevateks keele\-tehnoloogilisteks rakendusteks (morfoloogiline analüsaator-süntesaator ja õige\-kirja\-kontrollija). Loodud süsteem ei ole vadja keele spetsiifiline, vaid töötab kõigi keelte jaoks, mille morfoloogia on kirjeldatav sõnade kõigi muutvormide loetlemise teel. % TODO Anette toimetada viimane lause
 
 Koostatud vormisõnastik ei ole pürginud lõpliku vadja kirjakeele morfoloogia\-kirjelduse poole, vaid loodud süsteemi juures on peetud tähtsaks kasutaja\-sõbralikust, et vormisõnastik oleks täiendatav ilma programmeerimis\-oskusteta --- %.
 %
@@ -2539,22 +2568,26 @@ Koostatud vormisõnastik ei ole pürginud lõpliku vadja kirjakeele morfoloogia\
 % TODO keeleplaneerimisele? keelekorraldamisele?
 et edaspidine vadja keele arendamine võiks toimida teiste eest\-vedamisel, mitte jääda arvutus\-lingvisti või keele\-tehnoloogi taha toppama.
 
-Loodud vadja keele vormisõnastik sisaldab 882~sõna ja automaatselt teisendatud õigekirjakontrollija märgib nende sõnade kõiki 28 käändevormi õigeks kirjutatud arvuti kontoritarkvaras. Vormisõnastikku on lihtne muuta ja ei vaja programmeerimis\-oskusi, muudatused tehakse otse sõna käändevorme muutes või vahetades sõna tüüpsõna. Muudatused viiakse vormisõnastikust automaatselt üle keeletehnoloogilistesse taristutesse ning õigekirjakontrollijasse.
+Loodud vadja keele vormisõnastik sisaldab 882~sõna, millest on automaatsel viisil leitud 231~erinevat tüüpsõna. Automaatselt teisendatud õigekirjakontrollija märgib nende sõnade kõiki 28~käändevormi õigeks kirjutatud arvuti kontoritarkvaras. Vormisõnastikku on lihtne muuta ja ei vaja programmeerimis\-oskusi, muudatused tehakse otse sõna käändevorme muutes või vahetades sõna tüüpsõna. Käändervormide muutmisel puhul võib süsteem tuvastada tüüpsõna või tekkitada uue tüüpsõna. Muudatused viiakse vormisõnastikust automaatselt üle keele\-tehno\-loogilistesse taristutesse ning õige\-kirja\-kontrollijasse.
 
 
-Magistritöö viies peatükis kirjeldati süsteemi kõiki osi ning vormi\-sõnastiku loomise vajalikke etappe. Peatükis~2 kirjeldati vormi\-sõnastiku sõnavara valikut ja käänete valikut ning käände\-vormide moodustamist. Valikutes järgiti levinud vadja õppe\-materjale. Valikute tegemine on alati seotud suurema kontekstiga ja seetõttu anti ülevaade töö asetusest vadja korpuse planeerimise suhtes.
-% Sõnavara valik hõlmab Heinsoo (\citeyear{heinsoo_vaddsonakopittoja_2015}) sõnastikus esitatud nimi\-sõnu ja adjektiive (u~420 sõna). Sõnavara on veel laiendatud autori enda silma järgi Tsvetkovi sõnastikust (\cite{laakso_vatja_1989}) ettesattunuga (u~460 sõna, mh~\vadja{asfal̕tti}, \vadja{bibli} ja \vadja{biblioteekkõ}). Kokku on vormi\-sõnastikku koondatud 882 sõna\-artiklit.
+Magistritöö viies peatükis kirjeldati süsteemi kõiki osi ning vormi\-sõnastiku loomise vajalikke etappe. Peatükis~2 kirjeldati vormi\-sõnastiku sõnavara valikut, käänete valikut ja käände\-vormide moodustamise põhi\-mõtteid. Valikutes järgiti kahte levinud vadja õppe\-materjale.
+%Sõnavara valik hõlmas Heinsoo (\citeyear{heinsoo_vaddsonakopittoja_2015}) sõnastikus esitatud noomeneid (u~420 sõna), millele lisati Tsvetkovi sõnastikust (\cite{laakso_vatja_1989}) ettesattunud (u~460 sõna, mh~\vadja{asfal̕tti}, \vadja{bibli} ja \vadja{biblioteekkõ}). Kokku on vormi\-sõnastikku koondatud 882 sõna\-artiklit.
+%
+Valikute tegemine on alati seotud suurema kontekstiga, mistõttu anti ülevaade töö asetusest vadja korpuse planeerimise suhtes, s.o kirja\-viisi määramise, morfoloogia ühtlustamise ja sõnavara moderniseerimise suhtes. Töös kasutati Heinsoo kirjaviisi, mis on teisendatav teise, levinud õppematerjalide kirjaviisiks. Morfoloogiat ühtlustati sel määral, et töös järgiti Tsvetkovi sõnastikus antud Jõgõperä\-murdelisi põhivorme, mida püüti ühtlustada Vaipooli murdele iseloomulike joontega. Sõnavara ei moderniseeritud, kõik vormisõnastikku lisatud sõnad on varem avaldatud. Küll aga lisati rohkem kui poole võrra rohkem sõnu Tsvetkovi sõna\-raamatust.
+
+Peatüki lõpus tutvustati magistritöös kasutatud morfeemi definitsiooni ja kirjeldati selle sarnasust klassikalise paradigmaatilise morfoloogiaga. Morfeemi ei käsitletud siin töös väikseima tähendusliku üksusena, vaid kui sõna mistahes fonoloogilist muutust, mis toob kaasa sõna tähenduse muutuse. Morfeemi definitsioon ühtib töös kasutatud metodoloogiaga.
 
 
-Peatükis~3 tutvustati töös loodud süsteemi kasutaja\-liidest Morfoloogia\-laborit (\textit{Morfologi\-labbet}). Morfoloogia\-labor on Rootsi keele\-ressursside keskuses ehk Språkbanken'is loodud eraldiseisev veebi\-rakendus, mis põhineb ekstrakt\-morfoloogial (tuvtustatud 4.~peatükis). Ekstrakt\-morfoloogia põhjal suudab morfoloogia\-labor moodustada suvalise sõna kõiki käändevorme valitud olemas\-oleva tüüp\-sõna malli järgi. Uus ja süsteemist puuduv tüüpsõnamall defineeritakse sõna käände\-tabeli sisestamisega süsteemi.
+Peatükis~3 tutvustati töös loodud süsteemi kasutaja\-liidest Morfoloogia\-laborit (rootsi keeles \textit{Morfologi\-labbet}). Morfoloogia\-labor on Rootsi keele\-ressursside keskuses ehk Språkbanken'is loodud eraldiseisev veebi\-rakendus, mis põhineb ekstrakt\-morfoloogial (tuvtustatud 4.~peatükis). Ekstrakt\-morfoloogia põhjal suudab morfoloogia\-labor moodustada suvalise sõna kõiki käändevorme selleks valitud, olemas\-oleva tüüp\-sõna malli järgi. Uus ja süsteemist puuduv tüüpsõnamall defineeritakse sõna käände\-tabeli sisestamisega süsteemi.
 
-Kasutaja\-liides on oluliselt lihtsustanud ja kiirendanud 882~sõna kõigi 28~käändevormi lisamist vormi\-sõnastikku. Sisestamise peamiseks töökäiguks oli valida uuele sisestatavale sõnale õige tüüpsõnamall ja selle puudumisel tuli sisestatava sõna käände\-tabel moodustada käsitsi. Käsitsi moodustatud ja sisestatud käändetabeli põhjal õppis süsteem uue tüüpsõna malli, mida järgmise sisestatava sõna juures sai tüüp\-sõna\-malliks valida.
+Kasutaja\-liides on oluliselt lihtsustanud ja kiirendanud 882~sõna kõigi 28~käändevormi lisamist vormi\-sõnastikku. Sisestamise peamiseks töökäiguks oli kas valida uuele sisestatavale sõnale õige tüüpsõnamall või tüüpsõna puudumisel tuli sisestatava sõna käände\-tabel moodustada käsitsi. Käsitsi moodustatud ja sisestatud käändetabeli põhjal õppis süsteem uue tüüpsõna malli, mida järgmise sisestatava sõna juures sai tüüp\-sõna\-malliks valida.
 
-Neljandas peatükis tutvustati ekstrakt\-morfoloogia meetodit lähemalt. Näitlikustati kuidas meetod eraldab (ekstraheerib) sõna \vadja{hattu} (ee müts) käände\-tabelist selle tüüpsõna\-malli ning kuidas tüüpsõna\-malli järgi saab moodustada teise sõna, \vadja{čiutto} (ee särk) kõik käände\-vormid. % Tüüpsõna\-mall koostatakse kahes etapis, esimese puhul eraldatakse nn  Seejärel kuidas
+Neljandas peatükis tutvustati ekstrakt\-morfoloogia meetodit lähemalt. Näitlikustati kuidas meetod eraldab (ekstraheerib) sõna \vadja{hattu} (ee müts) käände\-tabelist selle tüüp\-sõna\-malli ning kuidas tüüp\-sõna\-malli järgi saab moodustada teise sõna, \vadja{čiutto} (ee särk) kõik käände\-vormid. % Tüüpsõna\-mall koostatakse kahes etapis, esimese puhul eraldatakse nn  Seejärel kuidas
+%
+Käändetabelite kaudu tüüpsõnamallide defineerimine (reeglite programmeerimise asemel) moodustab töö põhimõttelise tuumiku. % TODO XXX järg
 
-Käändetabelite kaudu tüüpsõnamallide defineerimine (programmeeritud reeglite asemel) moodustab töö tuumiku. % TODO XXX järg
-
-Viiendas peatükis esitati kõik vormisõnastikust eraldatud 231~tüüpsõna\-malli. Ülevaatlikuma esituse huvides jagati tüüpsõnad Ariste (\citeyear{ariste_grammar_1968}) grammatika käänd\-kondade süsteemi järgi. % TODO Magistri\-töö on olnud rakenduslik ja kirjeldav % edaspidine töö käib nende põhjal
+Viiendas peatükis esitati kõik vormisõnastikust eraldatud 231~tüüpsõna\-malli ja nende alla kuuluvaid sõnu. Ülevaatlikuma esituse huvides jagati tüüpsõnad Ariste (\citeyear{ariste_grammar_1968}) grammatika käänd\-kondade süsteemi järgi. Magistri\-töö eesmärk on olnud rakenduslik ja kirjeldav, mistõttu esitatud tüüpsõnade käände\-tabelid ei pürgi lõplikule morfoloogia\-kirjeldusele. %Esitatud tüüpsõnade tabelite parandamine on      % edaspidine töö käib nende põhjal
 
 Peatükis~6 tutvustati magistritöö tuumosa, programm\-koodi tuletamist. Programm\-koodi tuletamine toodi esile protsessina, kus vormisõnastikku kätketud teadmist, s.o tüüpsõna\-malle, kasutatakse keskse kirjeldusena, mille põhjal genereeritakse automaatselt programm\-koodi. Kirjeldati kuidas vormi\-sõnastiku sõna\-vara ja tüüp\-sõna\-malle kodeeriti keskse kirjelduse vormingusse, milles lähtuti rahvus\-vahelisest standardist \textit{Lexical Markup Framework} (LMF). Seejärel esitati magistritöö kaks programm\-koodi\-tuletajat ehk koodi\-generaatorit. Mõlemad koodi\-generaatorid olid varustatud tõlke\-tabelitega, mistõttu  oli võimalik toetada kõigi taristute, nii standardi LMFi kui ka siht-taristute terminoloogiaid ja traditsioone. %, nii standardi LMFi kui ka siht-taristute omi.
 % lemmavabadus
@@ -2631,10 +2664,10 @@ Siin loetletakse töös kasutatud mõisted ja lühendid koos nende tähendustega
 \label{sec:kirjandus}
 % @TODO: kuidas määrata biblatex-i keele eesti keelele?
 \spacing{1}
-{
-  \renewcommand*{\bibfont}{\small}
+%{
+%
   \printbibliography[heading=none]
-}
+%}
 \spacing{1.5}
 
 
