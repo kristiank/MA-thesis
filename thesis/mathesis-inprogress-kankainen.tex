@@ -177,7 +177,7 @@ date=year      % only print the year, not full dates
 }
 \newglossaryentry{konkatenatsioon}{
   name=Konkatenatsioon,
-  description={ehk \ensuremath{\oplus} on tähtede ja tähtjärjendite lükkimine teine\-teise järele, et moodustada uus tähtjärjend. Näiteks \textit{aa} \ensuremath{\oplus} \textit{be} moodustab \textit{aabe}.},
+  description={ehk \ensuremath{\oplus} on tähtede ja täht\-koostise kokku\-viimine ehk lükkimine teine\-teise järele, et moodustada uus täht\-koostis. Näiteks \textit{aa} \ensuremath{\oplus} \textit{be} moodustab \textit{aabe}.},
   symbol=ensuremath{\oplus}
 }
 
@@ -875,7 +875,7 @@ Veel ilma detailidesse takerdumata näitlikustatakse siinkohal lugejale meetodi 
       \underline{hat}   \underline{u} ka    & $x_1$ $\oplus$ $x_2$ $\oplus$ ka        & \textsc{sg com} \\
       \underline{hat} t \underline{u} ika   & $x_1$ $\oplus$ t $\oplus$ $x_2$ $\oplus$ ika   & \textsc{pl com} \\
     \end{tabular}
-    \caption{Väljundi tüüpsõnamall (kus\-juures muutujad $x_1 = $ \textit{hat} ja $x_2 = $ \textit{u} vastab sisendist leitud, allajoonitud tehnilisele tüvele). Tähisega $\oplus$ märgitakse teksti\-koostise kokku\-viimist.}
+    \caption{Väljundi tüüpsõnamall (kus\-juures muutujad $x_1 = $ \textit{hat} ja $x_2 = $ \textit{u} vastab sisendist leitud, allajoonitud tehnilisele tüvele). Tähisega $\oplus$ märgitakse täht\-koostiste \glslink{konkatenatsioon}{kokku\-viimist}.}
     \label{tab:väljundtabel-katto}
   \end{minipage}
 \end{table}
@@ -1036,7 +1036,7 @@ Kõikides käändkondades on ühtlustatud peamiselt lõpuvokaali õ:a vaheldumis
 %Noomeni sõnavarast on välja jäetud komparatiivsed vormid (mõlõpi, vanepi). 
 
 % 
-Alljärgnevate kirjelduste juurde on lisatud tüüpsõnade muutvormimallid käände\-tabelina, milles on alla\-joonitud tehniline tüvi. Selline esitus võimaldab lugejal paremini näha läbi ekstrakt\-morfoloogia muutvormimalli funktsioneerimist ja moodustada teiste sama tüüsõna alla kuuluvate sõnade käändvorme. Tähisega $\oplus$ märgitakse teksti\-koostise kokku\-viimist.
+Alljärgnevate kirjelduste juurde on lisatud tüüpsõnade muutvormimallid käände\-tabelina, milles on alla\-joonitud tehniline tüvi. Selline esitus võimaldab lugejal paremini näha läbi ekstrakt\-morfoloogia muutvormimalli funktsioneerimist ja moodustada teiste sama tüüsõna alla kuuluvate sõnade käändvorme. Tähisega $\oplus$ märgitakse täht\-koostiste kokku\-viimist.
 
 \subsection{\RN{1} käändkond}
 
@@ -2221,7 +2221,7 @@ Ekstraktmorfoloogiaga eraldatud tüüpsõnad kirjeldatakse LMFi morfoloogiliste 
 %integrating the lexical resources as a first stage.
 Peale nimetuse ja sõnaliigi kirjeldatakse LMF morfoloogiliste paradigmadega veel kõik ekstraktmorfoloogiaga eraldatud informatsioon: salvestatakse lekseemide tehniliste tüvede muutujad ja muutvormimallid.
 
-Muutvormallid on LMFis kirjeldatud nn transformatsiooni\-elementidega (\textit{TransformSet}), mis koosnevad muutvormi morfoloogilistest tunnustest (\textit{GrammaticalFeatures}) ja muutvormi koostamiseks vajalikest protsessidest (\textit{Process}). Koostamis\-protsessid osundavad lihtsaid järjestatud konkatenatsiooni\-tehteid (\textit{addAfter}), mis liidavad lükkimise teel tehnilise tüve muutujad ja muutvormi ülejäänud tähtkoostised kokku.
+Muutvormallid on LMFis kirjeldatud nn transformatsiooni\-elementidega (\textit{TransformSet}), mis koosnevad muutvormi morfoloogilistest tunnustest (\textit{GrammaticalFeatures}) ja muutvormi koostamiseks vajalikest protsessidest (\textit{Process}). Koostamis\-protsessid osundavad lihtsaid järjestatud \glslink{konkatenatsioon}{konkatenatsiooni\-tehteid} (\textit{addAfter}), mis liidavad lükkimise teel tehnilise tüve muutujad ja muutvormi ülejäänud tähtkoostised kokku.
 
 Andmete struktuuri näitlikustav tüüpsõna on LMFi XML märgendus\-formaadis esitatud joonisel~\ref{code:lmf-paradigmpattern} (lk~\pageref{code:lmf-paradigmpattern}).
 
@@ -2766,7 +2766,7 @@ In this way different terminological traditions have been supported and respecte
 
 Both source code generators have been written in a language independent way and rely only on information existing in the LMF (such as language name and code). The wordform used as dictionary lemma is also factored out and is configured by specifying the case.
 
-Integrating the Votic morphological dictionary into Grammatical Framework, source code generators has been written that implements the Votic lexicon and morphology modules of the GF Resource Grammar Library. The generated source code for the lexicon is shown in figure~\ref{code:gf-lexicon} (p.~\pageref{code:gf-lexicon}) and for the paradigm patterns in figure~\ref{code:gf:morfoloogia} (p.~\ref{code:gf:morfoloogia}). These modules have been made available\footnote{\url{https://github.com/keeleleek/GF-Votic}} and are automatically updated by changes in the dictionary. Based on these modules some initial work has been done on a Votic--Russian GF phrasebook application\footnote{\url{https://github.com/keeleleek/GF-Votic-Phrasebook}}. This initial work has proven the tool developed in this thesis to be useful for quickly adding vocabulary and/or changing incorrect morphological forms.
+Integrating the Votic morphological dictionary into Grammatical Framework, source code generators has been written that implements the Votic lexicon and morphology modules of the GF Resource Grammar Library. The generated source code for the lexicon is shown in figure~\ref{code:gf-lexicon} (p.~\pageref{code:gf-lexicon}) and for the paradigm patterns in figure~\ref{code:gf-morfoloogia} (p.~\ref{code:gf-morfoloogia}). These modules have been made available\footnote{\url{https://github.com/keeleleek/GF-Votic}} and are automatically updated by changes in the dictionary. Based on these modules some initial work has been done on a Votic--Russian GF phrasebook application\footnote{\url{https://github.com/keeleleek/GF-Votic-Phrasebook}}. This initial work has proven the tool developed in this thesis to be useful for quickly adding vocabulary and/or changing incorrect morphological forms.
 
 
 Integration with the Giella infrastructure has been done by generating source code for a Finite State Transducer (FST). The generated FST consists of several parts. A character listing part that defines all the Unicode characters used in the morphological dictionary is generated automatically based on the dictionary's content. The generated FST code for the Votic lexicon is shown in figure~\ref{code:giella-lexicon} (p.~\pageref{code:giella-lexicon}).
