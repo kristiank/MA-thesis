@@ -2097,11 +2097,11 @@ Programmkoodi tuletamise (ingl. \textit{source code generation}) all peetakse si
 
 Üldine kirjeldus (või teisisõnu ontoloogia) kirjeldab faktuaalset \textit{mis}-laadi teadmist ning tuletatud programmkood kirjeldab konkreetselt \textit{kuidas} neid teadmisi rakendada.
 
-Töös kasutatakse keskseks kirjelduseks vormisõnastikku ja sellest ekstrakt\-morfoloogiaga eraldatud tüüpsõna\-malle. Kirjeldus on vormistatud rahvusvahelise standardi \textit{Lexical Markup Framework} (\cite{iso/tc_37/sc_4_language_2007}) järgi leksikaalseks ressurssiks, mis on XML vormingus.
+Töös kasutatakse keskseks kirjelduseks vormisõnastikku ja sellest ekstrakt\-morfo\-loogiaga eraldatud tüüpsõna\-malle. Kirjeldus on vormistatud rahvusvahelise standardi \textit{Lexical Markup Framework} (LMF) (\cite{iso/tc_37/sc_4_language_2007}) järgi leksikaalseks ressurssiks, mis on XML vormingus.
 
 Programmkoodi tuletavad nn generaatorid. Töös esitatakse kaht generaatorit, üks programmeerimiskeele Grammatical Framework jaoks ning teine Giella keeletehnoloogilise taristu integreerimise jaoks. Generaatorid on kirjutatud XQuery programmeerimiskeeles.
 
-Mõlema programmkoodi\-generaatori ühine arhitektuurne omadus on terminite tõlke\-tabelite kasutamine. Tõlke\-tabelite põhjal asendatakse leksikaalses ressursis kasutatud terminid sihtkeeles kasutatud terminitega. See võimaldab järgida ja austada eri taristute terminoloogilisi traditsioone. Näiteks nimetatakse tüüpsõnu LMFis ingliskeelse prefiksiga \textit{as} (kui \textit{asHattu}), aga Grammatical Framework'is eesliitega \textit{mk} (inglis\-keelsest tegusõnast \textit{make}) kui \textit{mkHattu} ja Giella taristus hoopis sõnaliigiga (\textit{N\_HATTU}).
+Mõlema programmkoodi\-generaatori ühine arhitektuurne omadus on terminite tõlke\-tabelite kasutamine. Tõlke\-tabelite põhjal asendatakse leksikaalses ressursis kasutatud terminid vastavalt integreeritavas taristus kasutatud terminitega. See võimaldab järgida ja austada eri taristute terminoloogilisi traditsioone. Näiteks nimetatakse tüüpsõnu LMFis ingliskeelse prefiksiga \textit{as} (kui \textit{asHattu}), aga Grammatical Framework'is eesliitega \textit{mk} (inglis\-keelsest tegusõnast \textit{make}) kui \textit{mkHattu} ja Giella taristus hoopis sõnaliigiga (\textit{N\_HATTU}).
 
 Samuti erinevad eri taristutes kasutatud grammatiliste tunnuste märgendid (nt ainsuse nominatiiv on LMFis ja GFis \textit{singular nominative}, aga Giellas \textit{+SG+NOM}).
 % A shared architectural feature of both code generators is the use of translation
@@ -2223,7 +2223,7 @@ Peale nimetuse ja sõnaliigi kirjeldatakse LMF morfoloogiliste paradigmadega vee
 
 Muutvormallid on LMFis kirjeldatud nn transformatsiooni\-elementidega (\textit{TransformSet}), mis koosnevad muutvormi morfoloogilistest tunnustest (\textit{GrammaticalFeatures}) ja muutvormi koostamiseks vajalikest protsessidest (\textit{Process}). Koostamis\-protsessid osundavad lihtsaid järjestatud \glslink{konkatenatsioon}{konkatenatsiooni\-tehteid} (\textit{addAfter}), mis liidavad lükkimise teel tehnilise tüve muutujad ja muutvormi ülejäänud tähtkoostised kokku.
 
-Andmete struktuuri näitlikustav tüüpsõna on LMFi XML märgendus\-formaadis esitatud joonisel~\ref{code:lmf-paradigmpattern} (lk~\pageref{code:lmf-paradigmpattern}).
+Andmete struktuuri näitlikustav tüüpsõna on LMFi XML märgendus\-formaadis esitatud joonisel~\ref{code:lmf-paradigmpattern}.
 
 \spacing{1}
 \begin{figure}[h]
@@ -2281,7 +2281,7 @@ Andmete struktuuri näitlikustav tüüpsõna on LMFi XML märgendus\-formaadis e
 \end{figure}
 \spacing{1.5}
 
-Morfoloogiliste paradigmade \textit{Process}-elemendid on üks\-üheses vastavuses ekstrakt\-morfoloogia meetodiga eraldatud tüüpsõna\-mallidega.
+LMFis on Morfoloogiliste paradigmade \textit{Process}-elemendid üks\-üheses vastavuses ekstrakt\-morfoloogia meetodiga eraldatud tüüpsõna\-mallidega.
 
 % TODO process elementide processType kirjeldus!
 
@@ -2320,10 +2320,10 @@ Ekstrakt\-morfoloogiaga eraldatud tüüpsõna\-mallide funktsioone on olnud liht
 % To generate the function for an extracted paradigm description, we need to specify its name, interface and body.
 Tüüpsõnamallist paradigmafunktsiooni programmkoodi genereerimiseks on vaja määrata funktsiooni nimi, liides (\textit{interface}) ja keha (\textit{body}). Genereeritud programm\-koodi illustreeritakse joonisel~\ref{code:gf-morfoloogia}. % TODO joonis?
 
-Morfoloogiamooduli failinimi, \textit{MorphoVot}, on koostatud vastavalt vadja keele\-koodile, mis on leksikaalses ressursis antud.
+Programmkoodis on morfoloogiamooduli failinimi, \textit{MorphoVot}, koostatud vastavalt vadja keele\-koodile, mis on leksikaalses ressursis antud.
 
 \spacing{1}
-\begin{figure}[ht]
+\begin{figure}[!ht]
   \center
 \begin{minted}[frame=single,fontsize=\small,framesep=10pt]{haskell}
 resource MorphoVot = {
@@ -2385,7 +2385,7 @@ Kuigi vadja vormisõnastik sisaldab magistritöö valmimise hetkel ainult nimis�
 % many other programming languages. Because of this the expression @(-(_+"t"+_))
 % is appended to the last part of the pattern. This expression is automatically created
 % and makes the `t` match the last letter t in the wordform.
-Võib märkida, et GFi regulaaravaldised töötavad mitte-aplalt (ingl. \textit{non-greedy}), vastupidiselt paljudele teistele programmeerimis\-keeltele. Seetõttu lisatakse nt \textit{@(-(\_+"t"+\_))} avaldisesse, mis muudab \textit{t}-tähega ühtimise aplaks.
+Võib märkida, et GFi regulaaravaldised töötavad mitte-aplalt (ingl. \textit{non-greedy}), vastupidiselt paljudele teistele programmeerimis\-keeltele. Seetõttu lisatakse regulaar\-avaldisele ploki \mbox{\texttt{@(-(\_+"t"+\_))}}, mis muudab avaldises \textit{t}-tähega ühtimise aplaks, s.o ühtimaks viimase \textit{t}-tähega.
 
 % The names of the variables holding the technical stem parts are taken from the
 % paradigm’s name.
@@ -2398,7 +2398,7 @@ Konkreetse funktsiooni nimetuse järele lisatakse \textit{Concrete} ja see funkt
 
 
 
-
+\FloatBarrier
 \subsubsection{Leksikoni moodul}
 \label{sec:gf-leksikon}
 
@@ -2435,7 +2435,7 @@ fun
 
 
 
-
+\FloatBarrier
 \subsection{Integreerimine Giella-taristuga}
 \label{sec:giella}
 % pmst on see 
