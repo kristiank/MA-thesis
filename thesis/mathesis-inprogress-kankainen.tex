@@ -47,11 +47,12 @@
 % @done: vormistada tekstis viited õigesti (nt lk kooloni järel jne)
 \usepackage[backend=biber,
 style=authoryear-ibid-ut,
-isbn=false, % don't print isbn
-doi=false,  % don't print doi
-url=false,  % don't print url
+dashed=false,  % don't dash out repeated author names
+isbn=false,    % don't print isbn
+doi=false,     % don't print doi
+url=false,     % don't print url
 hyperref=true,
-date=year   % only print the year, not full dates
+date=year      % only print the year, not full dates
 ]{biblatex}
 
 \addbibresource{bibliography-mathesis.bib}
