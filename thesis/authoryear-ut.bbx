@@ -58,10 +58,10 @@
   \renewbibmacro*{date+extradate}{%
     \iffieldundef{labelyear}
       {}
-      {\printtext[parens]{%
+      {\printtext{\mkbibbold{%
          \iflabeldateisdate
            {\printdateextra}
-           {\printlabeldateextra}}}}%
+           {\printlabeldateextra}}}}}%
   \renewbibmacro*{bbx:ifmergeddate}{\iflabeldateisdate}%
   \renewbibmacro*{issue+date}{%
     \ifboolexpr{test {\usebibmacro{bbx:ifmergeddate}}
