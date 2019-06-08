@@ -233,9 +233,9 @@
   }
     {\usebibmacro{bbx:dashcheck}
        {\bibnamedash}
-       {\printnames{editor}%
+       {\mkbibbold{\printnames{editor}%
         \setunit{\printdelim{editortypedelim}}%
-        \usebibmacro{bbx:savehash}}%
+        \usebibmacro{bbx:savehash}}}%
      \usebibmacro{#1}%
      \clearname{editor}%
      \setunit{\printdelim{nameyeardelim}}}%
