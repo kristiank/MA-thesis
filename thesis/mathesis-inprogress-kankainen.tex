@@ -49,8 +49,9 @@
 style=authoryear-ibid-ut,
 dashed=false,  % don't dash out repeated author names
 isbn=false,    % don't print isbn
-doi=false,     % don't print doi
-url=false,     % don't print url
+%doi=false,     % don't print doi
+%url=false,     % don't print url
+useeditor=false,
 hyperref=true,
 date=year      % only print the year, not full dates
 ]{biblatex}
@@ -65,22 +66,36 @@ date=year      % only print the year, not full dates
 }
 
 \AtEveryBibitem{%
-  % \ifentrytype{article}{%
-  %\clearfield{pages}%
-  \clearfield{pages}%
-  \clearfield{pagetotal}%
-  % }{%
-  % }%
+  % remove doi and url if not an online resource
+  \ifentrytype{online}
+  {}
+  {
+    \clearfield{doi}
+    \clearfield{url}
+    \clearfield{urldate} % why this doesn't work here?
+  }
+  
+  % do this for all entry types
+  % remove pagetotal
+  \clearfield{pagetotal}
+  % remove page if it is not a range
+  \iffieldnum{pages}
+  {\clearfield{pages}}
+  {}
+  % remove notes
+  \clearfield{note}
+  % clear date when retrieved url
+  \clearfield{urldate}
 }
 
 
 \AtBeginBibliography{%
   \renewcommand*{\bibfont}{\small}
-  \renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
-  \renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
-  \renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
-  \renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
-  \renewcommand{\finentrypunct}{} % remove final punctuation
+%  \renewcommand*{\mkbibnamefirst}[1]{\textbf{#1}}
+%  \renewcommand*{\mkbibnamelast}[1]{\textbf{#1}}
+%  \renewcommand*{\mkbibnameprefix}[1]{\textbf{#1}}
+%  \renewcommand*{\mkbibnameaffix}[1]{\textbf{#1}}
+%  \renewcommand{\finentrypunct}{} % remove final punctuation
 %  \DeclareFieldFormat{year}{\textbf{#1}}
 }
 
@@ -380,7 +395,7 @@ Vormisõnastiku definitsiooniks magistritöös on võetud Ülle Viksi järgi:
 % TODO lisada ühiskeele murdeline alus on Vaipooli (Li-Lu), sest see on mida "kõneldakse veel". Rohkem on uuritud ja kirjeldatud Kattila(?), mida Ernits on ka soovitanud ühiskeele aluseks valida.
 
 % Selles peatükis seletatakse vadja ühiskeeleks valitud aluseid ning korpuse planeerimise mõistet.
-Vadja keelele ei loodud Nõukogude Liidus 1930.\,aastail ühiskeelt, nagu seda tehti näiteks karjala, vepsa ja isuri keele jaoks. Vadja kirjakeele loomise pürgimistest pärast Nõukogude Liidu lagunemist on kirjutanud lähemalt Enn Ernits (\citeyear{ernits_vadja_2006}) ja vadjalaste keele normi tunnetusest (ilma kirja\-keeleta) on rääkinud Jelena Markus ja Fjodor Rožanski (\citeyear{markus_concept_2013}). % TODO translitereerimine / transkriptsioon
+Vadja keelele ei loodud Nõukogude Liidus 1930.\,aastail ühiskeelt, nagu seda tehti näiteks karjala, vepsa ja isuri keele jaoks. Vadja kirjakeele loomise pürgimistest pärast Nõukogude Liidu lagunemist on kirjutanud lähemalt Enn Ernits (\citeyear{ernits_vadja_2006}) ja vadjalaste keele normi tunnetusest (ilma kirja\-keeleta) on rääkinud Elena Markus ja Fedor Rozhanskiy (\citeyear{markus_concept_2013}). % TODO translitereerimine / transkriptsioon
 
 % korpusplaneerimine on alamosa keeleplaneerimisest?
 %Korpusplaneerimine on mis, miks seda tehakse ja kes seda teevad (kasuta Cooper 1996: 45).
@@ -403,12 +418,12 @@ Soodustamaks vadja keeles kirjutamist ja seda\-kaudu vadja keele elavdamist, on 
 % TODO lisada viide kankainen_annõmmõ_2019
 
 % MORFOLOOGIA, seejärel sõnavara rikastamise kohta % TODO rekonstrueerimine????
-Morfoloogia ühtlustamist iseloomustab siinses töös sõnavormide rekonstrueerimine Jõgõperä murdeliste muutvormide põhjal Vaipooli murdealale iseäralikele joontele vastavaks. Rekonstrueerimise kui standardiseerimise suhtes ei võta magistri\-töö süsteemset seisukohta, vaid on oma valikutes pigem kirjeldava iseloomuga. Jõgõperä ja Luuditsa murrete erinevustest on kirjutanud Rožanski ja Markus (\citeyear{rozhanskiy_dialectal_2015}). Morfoloogia ühtlustamist kirjeldatakse lähemalt järgmises alajaotuses.
+Morfoloogia ühtlustamist iseloomustab siinses töös sõnavormide rekonstrueerimine Jõgõperä murdeliste muutvormide põhjal Vaipooli murdealale iseäralikele joontele vastavaks. Rekonstrueerimise kui standardiseerimise suhtes ei võta magistri\-töö süsteemset seisukohta, vaid on oma valikutes pigem kirjeldava iseloomuga. Jõgõperä ja Luuditsa murrete erinevustest on kirjutanud Rozhanskiy ja Markus (\citeyear{rozhanskiy_dialectal_2015}). Morfoloogia ühtlustamist kirjeldatakse lähemalt järgmises alajaotuses.
 
 % SÕNAVARA moderniseerimine ja rikastamine 
 Antud magistritöö ei pürgi vadja keele sõnavara moderniseerimisele ega rikastamisele -- hõlmatud sõnavara on varem avaldatud. Võimalikest vadja kirja\-keele sõnavara rikastamise viisidest on lähemalt kirjutanud Ernits (\citeyear{ernits_vadja_2010}). 
 % TODO tõlgi artikli pealkiri ja kirjuta lahti siin
-Vene laensõnade adapteerimisest Jõgõperä murdes ja selle problemaatikast on lähemalt kirjutanud Rožanski (\citeyear{rozhanskiy_zaimstvovannyje_2009}).
+Vene laensõnade adapteerimisest Jõgõperä murdes ja selle problemaatikast on lähemalt kirjutanud Rozhanskiy (\citeyear{rozhanskiy_zaimstvovannyje_2009}).
 
 % kas see jutt kuulub siia?
 %\spacing{0}
@@ -484,7 +499,7 @@ Käänete valiku ja muutelõppude puhul on järgitud Konkova õpikus (\citeyear[
 Hõlmatud käändeid on seega 24: ainsuse ja mitmuse nominatiiv, genitiiv, partitiiv, illatiiv, inessiiv, elatiiv, allatiiv, adessiiv, ablatiiv, translatiiv, terminatiiv ja komitatiiv.
 
 % mis käänded on välja jäetud
-Välja on jäetud essiivi, abessiivi, ekstsessiivi ja instruktiivi käänded, mida Ariste (\citeyear[17]{ariste_grammar_1968}) on pidanud produktiivseteks kääneteks. Markus ja Rožanski grammatika (\citeyear{__2011}) ei käsitle terminatiivi ja komitatiivi käänetena vaid käände ja järelasendi vahe\-pealsetena, mille analüüsi nad on põhjendanud pikemalt artiklis (\cite{markus_comitative_2014}).
+Välja on jäetud essiivi, abessiivi, ekstsessiivi ja instruktiivi käänded, mida Ariste (\citeyear[17]{ariste_grammar_1968}) on pidanud produktiivseteks kääneteks. Markus ja Rozhanskiy grammatika (\citeyear{markus_sovremennyi_2011}) ei käsitle terminatiivi ja komitatiivi käänetena vaid käände ja järelasendi vahe\-pealsetena, mille analüüsi nad on põhjendanud pikemalt artiklis (\cite{markus_comitative_2014}).
 
 % TODO vaata paragrahv üle
 Alljärgnevalt seletatakse, kuidas Tsvetkovi sõnastikust saadud põhi\-vormid on ühtlustatud ja mille põhjal analoogia\-käänded on moodustatud.
@@ -504,7 +519,7 @@ Tsvetkovi antud vormi lõpuvokaal on ühtlustatud Heinsoo ja Konkova sõnastikel
 
 
 \paragraph*{Illatiiv}
-Loodava kirjakeele ühtlustamise huvides on vormisõnastiku koostamisel eelistatud läbinähtava käändelõpuga vormi \textit{-se/-sõ} lühikese illatiivi asemel. Selline eelistus on mõnevõrra vastu\-olus olukorraga tänapäeva Luuditsa murdes, kus Markuse ja Rožanski (\citeyear[247]{markus_comitative_2014}) järgi esineb tavaliselt lühike vorm ja pikk vorm esineb väga harva. Heinsoo ja Konkova õppe\-materjalides on mõlemad vormid esitatud rööpselt (\cites[88]{heinsoo_vadsonakopittoja_2015}[10]{konkova_vaddceeli_2014}).
+Loodava kirjakeele ühtlustamise huvides on vormisõnastiku koostamisel eelistatud läbinähtava käändelõpuga vormi \textit{-se/-sõ} lühikese illatiivi asemel. Selline eelistus on mõnevõrra vastu\-olus olukorraga tänapäeva Luuditsa murdes, kus Markuse ja Rozhanskiy (\citeyear[247]{markus_comitative_2014}) järgi esineb tavaliselt lühike vorm ja pikk vorm esineb väga harva. Heinsoo ja Konkova õppe\-materjalides on mõlemad vormid esitatud rööpselt (\cites[88]{heinsoo_vadsonakopittoja_2015}[10]{konkova_vaddceeli_2014}).
 
 
 \paragraph*{Inessiiv}
@@ -537,7 +552,7 @@ Translatiiv on analoogiavorm ja selle muutevormid ainsuses on moodustatud \msd{p
 \paragraph*{Terminatiiv}
 Terminatiiv on analoogiavorm ja selle muutevormid ainsuses on moodustatud \msd{sg ine} vormi alusel, kusjuures muutelõpp -\textit{z} on asendatud lõpuga -\textit{ssaa}. Mitmuse vormid on moodustatud \msd{pl ill} põhjal.
 
-Ariste (\citeyear[34]{ariste_grammar_1968}) järgi võib terminatiiv põhineda illatiivi või allatiivi tüvel. Markuse ja Rožanski (\citeyear[247]{markus_comitative_2014}) järgi põhineb see tänapäeva keeles genitiivi tüvel ja harva allatiivi tüvel. Seetõttu võib magistritöös valitud \msd{sg ine} tüve põhjal konstrueeritud muutevorm olla vale, kuigi valik ühtib Konkova ja Heinsoo õppe\-materjalides esitatuga, so tugeva\-astmelise geminaadiga.
+Ariste (\citeyear[34]{ariste_grammar_1968}) järgi võib terminatiiv põhineda illatiivi või allatiivi tüvel. Markuse ja Rozhanskiy (\citeyear[247]{markus_comitative_2014}) järgi põhineb see tänapäeva keeles genitiivi tüvel ja harva allatiivi tüvel. Seetõttu võib magistritöös valitud \msd{sg ine} tüve põhjal konstrueeritud muutevorm olla vale, kuigi valik ühtib Konkova ja Heinsoo õppe\-materjalides esitatuga, so tugeva\-astmelise geminaadiga.
 
 
 \paragraph*{Komitatiiv}
@@ -2281,7 +2296,7 @@ Grammatical Framework (GF) on eriotstarbeline programmeerimis\-keel, mis on lood
 
 Teoreetiliselt on GF formaal\-grammatikana väljendus\-rikkuse poolest ekvivalentne PMCFG tüüpi grammatikaga (\textit{Parallell Multiple Context-Free Grammar}), mis jääb mõõdukalt konteksti\-tundlike (\textit{mildly context-sensitive}) ja täielikult konteksti\-tundlike (\textit{fully context-sensitive}) grammatikate vahele (\cite[10]{ranta_grammatical_2011}).
 
-Grammatical Framework toetab keele\-spetsiifilise koodi eraldamist teekidesse, mida nimetatakse ressursi\-teekideks (\cites{ranta_grammars_2008}[97]{ranta_grammatical_2011}). GFil on üle 32~keele tugi on ressursi\-teegi kujul. Eesti keele ressursi\-teegi on loonud Inari Listenmaa ja Kaarel Kaljurand (\citeyear{listenmaa_computational_2014}). %Teegid võivad ka jagada ühiseid grammatilisi jooni eriti süntaksis. On olemas soome süntaksi 
+Grammatical Framework toetab keele\-spetsiifilise koodi eraldamist teekidesse, mida nimetatakse ressursi\-teekideks (\cites{ranta_grammars_2009}[97]{ranta_grammatical_2011}). GFil on üle 32~keele tugi on ressursi\-teegi kujul. Eesti keele ressursi\-teegi on loonud Inari Listenmaa ja Kaarel Kaljurand (\citeyear{listenmaa_computational_2014}). %Teegid võivad ka jagada ühiseid grammatilisi jooni eriti süntaksis. On olemas soome süntaksi 
 
 Siin esitatud programm\-koodi generaator loob vormisõnastikust automaatselt vadja keele ressursi\-teegi alam\-moodulid morfoloogia ja leksikoni jaoks. Loodud vadja ressursi\-teek on internetis saadaval\footnote{\url{https://github.com/keeleleek/GF-Votic}} ja ressursi\-teegi põhjal on edukalt katsetatud ehitada lihtne vadja--vene turismi\-vestmik\footnote{\url{https://github.com/keeleleek/GF-Votic-Phrasebook}} Grammatical Framework'is.
 
