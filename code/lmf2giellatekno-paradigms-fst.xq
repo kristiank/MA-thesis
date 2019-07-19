@@ -101,10 +101,12 @@ let $fst-paradigm-vars :=
     let $num := $transformset/GrammaticalFeatures/feat[@att = "grammaticalNumber"]/@val/data()
     let $gt-num := '"+' || $giellatekno:get-giella-term($num) || '"'
     return 
-      for $process at $num in $transformset/Process
+      for $process in $transformset/Process
         return
         switch ($process/feat[@att="processType"]/@val/data())
         case "pextractAddVariable" return
+          let $num := $process/feat[@att="variableNum"]/@val/data()
+          return 
           "define " || $fst-paradigm-id || "=var" || $num || " Alph+;"
         default return ()
 
