@@ -4,14 +4,13 @@ define asAapõN=var1 Alph+;
 define asAikõN=var1 Alph+;
 define asPuhazN=var1 Alph+;
 define asPuhazN=var2 Alph+;
-define asPuhazN=var3 Alph+;
 define asAiroN=var1 Alph+;
 define asPal̕l̕õzN=var1 Alph+;
 define asBankN=var1 Alph+;
 define asAitõN=var1 Alph+;
 define asAz̕z̕õN=var1 Alph+;
 define asAlkuN=var1 Alph+;
-define asAlkuN=var3 Alph+;
+define asAlkuN=var2 Alph+;
 define asBagažiN=var1 Alph+;
 define asJalgõzN=var1 Alph+;
 define asAlõinN=var1 Alph+;
@@ -19,42 +18,36 @@ define asHammõzN=var1 Alph+;
 define asAngõriazN=var1 Alph+;
 define asAsfiN=var1 Alph+;
 define asAsfiN=var2 Alph+;
-define asAsfiN=var3 Alph+;
 define asBaldõhinaN=var1 Alph+;
 define asAučiN=var1 Alph+;
-define asAučiN=var3 Alph+;
+define asAučiN=var2 Alph+;
 define asČimolainN=var1 Alph+;
 define asBul̕bukõzN=var1 Alph+;
 define asBiblioteekkõN=var1 Alph+;
 define asDokumenttiN=var1 Alph+;
-define asDokumenttiN=var3 Alph+;
 define asDokumenttiN=var2 Alph+;
 define asBorovikkõN=var1 Alph+;
-define asBašn̕iN=var1 Alph+;
+define asFamil̕iN=var1 Alph+;
 define asGreebeniN=var1 Alph+;
 define asKittsiN=var1 Alph+;
-define asKittsiN=var3 Alph+;
 define asKittsiN=var2 Alph+;
 define asBiskvittõN=var1 Alph+;
 define asMoodnoiN=var1 Alph+;
 define asInostranttsõN=var1 Alph+;
-define asInostranttsõN=var3 Alph+;
 define asInostranttsõN=var2 Alph+;
 define asBukvõN=var1 Alph+;
 define asKlaassõN=var1 Alph+;
 define asPääN=var1 Alph+;
 define asL̕iitkõN=var1 Alph+;
 define asLakoN=var1 Alph+;
-define asLakoN=var3 Alph+;
+define asLakoN=var2 Alph+;
 define asIiriN=var1 Alph+;
 define asČenčeN=var1 Alph+;
 define asFlakkuN=var1 Alph+;
-define asFlakkuN=var3 Alph+;
 define asFlakkuN=var2 Alph+;
 define asPesäN=var1 Alph+;
 define asČevädN=var1 Alph+;
 define asHattuN=var1 Alph+;
-define asHattuN=var3 Alph+;
 define asHattuN=var2 Alph+;
 define asIrviN=var1 Alph+;
 define asČämmelN=var1 Alph+;
@@ -62,7 +55,6 @@ define asNüčüinN=var1 Alph+;
 define asMesiN=var1 Alph+;
 define asČäčüdN=var1 Alph+;
 define asČäčüdN=var2 Alph+;
-define asČäčüdN=var3 Alph+;
 define asEineN=var1 Alph+;
 define asČüläN=var1 Alph+;
 define asČümmeN=var1 Alph+;
@@ -74,34 +66,27 @@ define asRissimäN=var1 Alph+;
 define asEnčiN=var1 Alph+;
 define asPereN=var1 Alph+;
 define asKarjuššiN=var1 Alph+;
-define asKarjuššiN=var3 Alph+;
 define asKarjuššiN=var2 Alph+;
-define asFamil̕N=var1 Alph+;
-define asFraakN=var1 Alph+;
+define asGalstukkiN=var1 Alph+;
+define asGalstukkiN=var2 Alph+;
 define asKand̕idaattõN=var1 Alph+;
-define asKokkiN=var1 Alph+;
-define asKokkiN=var3 Alph+;
-define asKokkiN=var2 Alph+;
 define asMahsuN=var1 Alph+;
-define asMahsuN=var3 Alph+;
+define asMahsuN=var2 Alph+;
 define asHapoN=var1 Alph+;
 define asHapoN=var2 Alph+;
-define asHapoN=var3 Alph+;
 define asKankaN=var1 Alph+;
 define asJuuriN=var1 Alph+;
 define asÕnnõtoN=var1 Alph+;
 define asÕnnõtoN=var2 Alph+;
-define asÕnnõtoN=var3 Alph+;
 define asHäülütüsN=var1 Alph+;
 define asHüppüN=var1 Alph+;
-define asHüppüN=var3 Alph+;
 define asHüppüN=var2 Alph+;
 define asIčäN=var1 Alph+;
 define asPähčenN=var1 Alph+;
 define asLautoN=var1 Alph+;
 define asKompjuteraN=var1 Alph+;
 define asKotkoN=var1 Alph+;
-define asKotkoN=var3 Alph+;
+define asKotkoN=var2 Alph+;
 define asIvusõdN=var1 Alph+;
 define asTarkuzN=var1 Alph+;
 define asMõnikõzN=var1 Alph+;
@@ -110,20 +95,17 @@ define asPropkõN=var1 Alph+;
 define asLakiN=var1 Alph+;
 define asJõutuN=var1 Alph+;
 define asJõutuN=var2 Alph+;
-define asJõutuN=var3 Alph+;
 define asÜlčiN=var1 Alph+;
 define asKerkiäN=var1 Alph+;
 define asVetelüzN=var1 Alph+;
 define asJärčüN=var1 Alph+;
-define asJärčüN=var3 Alph+;
+define asJärčüN=var2 Alph+;
 define asLöülüN=var1 Alph+;
 define asLamppiN=var1 Alph+;
-define asLamppiN=var3 Alph+;
 define asLamppiN=var2 Alph+;
 define asKraaskõN=var1 Alph+;
 define asKaatsõdN=var1 Alph+;
 define asKaatsõdN=var2 Alph+;
-define asKaatsõdN=var3 Alph+;
 define asKahsN=var1 Alph+;
 define asKahõsaN=var1 Alph+;
 define asMaamunaN=var1 Alph+;
@@ -134,35 +116,29 @@ define asKurkiN=var1 Alph+;
 define asKannõlN=var1 Alph+;
 define asPintõN=var1 Alph+;
 define asLentoN=var1 Alph+;
-define asLentoN=var3 Alph+;
+define asLentoN=var2 Alph+;
 define asMussõN=var1 Alph+;
 define asKasõN=var1 Alph+;
 define asKasõN=var2 Alph+;
-define asKasõN=var3 Alph+;
 define asKatõN=var1 Alph+;
 define asKatõN=var2 Alph+;
-define asKatõN=var3 Alph+;
 define asKaunizN=var1 Alph+;
 define asLiippõN=var1 Alph+;
 define asKaõN=var1 Alph+;
 define asLippuN=var1 Alph+;
-define asLippuN=var3 Alph+;
 define asLippuN=var2 Alph+;
 define asKitaiN=var1 Alph+;
 define asKoffiN=var1 Alph+;
-define asKoffiN=var3 Alph+;
 define asKoffiN=var2 Alph+;
-define asKoiN=var1 Alph+;
+define asVõiN=var1 Alph+;
 define asMakuzN=var1 Alph+;
 define asPassiN=var1 Alph+;
-define asPassiN=var3 Alph+;
 define asPassiN=var2 Alph+;
 define asKomit̕etN=var1 Alph+;
 define asKoolludN=var1 Alph+;
 define asKoorrõN=var1 Alph+;
-define asKoorrõN=var3 Alph+;
+define asKoorrõN=var2 Alph+;
 define asMatoN=var1 Alph+;
-define asMatoN=var3 Alph+;
 define asMatoN=var2 Alph+;
 define asMoškõN=var1 Alph+;
 define asKuhaN=var1 Alph+;
@@ -170,18 +146,15 @@ define asKultõN=var1 Alph+;
 define asVimpõN=var1 Alph+;
 define asKurpN=var1 Alph+;
 define asKursiN=var1 Alph+;
-define asKursiN=var3 Alph+;
+define asKursiN=var2 Alph+;
 define asKusiN=var1 Alph+;
 define asKutoN=var1 Alph+;
 define asKutoN=var2 Alph+;
-define asKutoN=var3 Alph+;
-define asKuuN=var1 Alph+;
 define asUusiN=var1 Alph+;
 define asKuusiN=var1 Alph+;
 define asKuuvvaizN=var1 Alph+;
 define asKuõN=var1 Alph+;
 define asKuõN=var2 Alph+;
-define asKuõN=var3 Alph+;
 define asKõikN=var1 Alph+;
 define asKõlmazN=var1 Alph+;
 define asKõlmõdN=var1 Alph+;
@@ -193,35 +166,32 @@ define asUhsiN=var1 Alph+;
 define asLahtiN=var1 Alph+;
 define asPoutõN=var1 Alph+;
 define asSuutoN=var1 Alph+;
-define asSuutoN=var3 Alph+;
 define asSuutoN=var2 Alph+;
 define asLeipeN=var1 Alph+;
 define asSeppeN=var1 Alph+;
 define asLisäN=var1 Alph+;
-define asLisäN=var3 Alph+;
+define asLisäN=var2 Alph+;
 define asLootõN=var1 Alph+;
 define asLuiskõN=var1 Alph+;
 define asLumiN=var1 Alph+;
-define asPihlpuuN=var1 Alph+;
 define asPoikõN=var1 Alph+;
 define asLõunõN=var1 Alph+;
 define asLäheN=var1 Alph+;
 define asLäheN=var2 Alph+;
-define asLäheN=var3 Alph+;
-define asLäikkN=var1 Alph+;
+define asLäikkiN=var1 Alph+;
+define asLäikkiN=var2 Alph+;
 define asSeseN=var1 Alph+;
-define asSeseN=var3 Alph+;
+define asSeseN=var2 Alph+;
 define asLühüdN=var1 Alph+;
 define asMaaN=var1 Alph+;
 define asMahsõN=var1 Alph+;
 define asPeremmeezN=var1 Alph+;
 define asMettseN=var1 Alph+;
-define asMettseN=var3 Alph+;
 define asMettseN=var2 Alph+;
 define asMokomN=var1 Alph+;
 define asSataN=var1 Alph+;
 define asPõltoN=var1 Alph+;
-define asPõltoN=var3 Alph+;
+define asPõltoN=var2 Alph+;
 define asVäčiN=var1 Alph+;
 define asÄrčeN=var1 Alph+;
 define asMärännüN=var1 Alph+;
@@ -230,10 +200,9 @@ define asRapaN=var1 Alph+;
 define asNel̕l̕äzN=var1 Alph+;
 define asNenäN=var1 Alph+;
 define asRätteN=var1 Alph+;
-define asRätteN=var3 Alph+;
 define asRätteN=var2 Alph+;
 define asSisoN=var1 Alph+;
-define asSisoN=var3 Alph+;
+define asSisoN=var2 Alph+;
 define asOludN=var1 Alph+;
 define asOonõN=var1 Alph+;
 define asPahaN=var1 Alph+;
@@ -242,36 +211,32 @@ define asPiiN=var1 Alph+;
 define asPoduškõN=var1 Alph+;
 define asPoolõzN=var1 Alph+;
 define asPortugaalijaN=var1 Alph+;
+define asPuuN=var1 Alph+;
 define asSarviN=var1 Alph+;
 define asPõrzõzN=var1 Alph+;
 define asPõskiN=var1 Alph+;
 define asRuskoN=var1 Alph+;
-define asRuskoN=var3 Alph+;
+define asRuskoN=var2 Alph+;
 define asPühäN=var1 Alph+;
 define asTüüN=var1 Alph+;
 define asPüütöN=var1 Alph+;
-define asPüütöN=var3 Alph+;
+define asPüütöN=var2 Alph+;
 define asRaadioN=var1 Alph+;
 define asRakõN=var1 Alph+;
 define asRakõN=var2 Alph+;
-define asRakõN=var3 Alph+;
 define asRaskõzN=var1 Alph+;
 define asRatizN=var1 Alph+;
 define asRatizN=var2 Alph+;
-define asRatizN=var3 Alph+;
 define asRihenneüzN=var1 Alph+;
 define asRikazN=var1 Alph+;
 define asRikazN=var2 Alph+;
-define asRikazN=var3 Alph+;
 define asRissiN=var1 Alph+;
-define asRissiN=var3 Alph+;
 define asRissiN=var2 Alph+;
 define asTohoN=var1 Alph+;
 define asRooppõN=var1 Alph+;
 define asRäpäleN=var1 Alph+;
 define asRüizN=var1 Alph+;
 define asSeemenN=var1 Alph+;
-define asSeemenN=var3 Alph+;
 define asSeemenN=var2 Alph+;
 define asSelčeN=var1 Alph+;
 define asSiipiN=var1 Alph+;
@@ -283,58 +248,49 @@ define asÕhsõN=var1 Alph+;
 define asSusiN=var1 Alph+;
 define asSääN=var1 Alph+;
 define asSüntiN=var1 Alph+;
-define asSüntiN=var3 Alph+;
+define asSüntiN=var2 Alph+;
 define asSüsiinN=var1 Alph+;
 define asSüäN=var1 Alph+;
 define asSüüččiN=var1 Alph+;
-define asSüüččiN=var3 Alph+;
 define asSüüččiN=var2 Alph+;
 define asVilppiN=var1 Alph+;
-define asVilppiN=var3 Alph+;
 define asVilppiN=var2 Alph+;
 define asŠtanadN=var1 Alph+;
 define asTautiN=var1 Alph+;
 define asTeeN=var1 Alph+;
 define asTerveN=var1 Alph+;
 define asTerveN=var2 Alph+;
-define asTerveN=var3 Alph+;
 define asTuhattõN=var1 Alph+;
 define asVarvõzN=var1 Alph+;
 define asTäiN=var1 Alph+;
 define asTätiN=var1 Alph+;
-define asTätiN=var3 Alph+;
+define asTätiN=var2 Alph+;
 define asTükküN=var1 Alph+;
-define asTükküN=var3 Alph+;
 define asTükküN=var2 Alph+;
 define asTünkeN=var1 Alph+;
 define asTütärN=var1 Alph+;
 define asTütärN=var2 Alph+;
-define asTütärN=var3 Alph+;
 define asUgurittsõN=var1 Alph+;
-define asUgurittsõN=var3 Alph+;
 define asUgurittsõN=var2 Alph+;
 define asUsaN=var1 Alph+;
 define asVahtiN=var1 Alph+;
-define asVahtiN=var3 Alph+;
 define asVahtiN=var2 Alph+;
 define asVakaN=var1 Alph+;
-define asVakaN=var3 Alph+;
+define asVakaN=var2 Alph+;
 define asVarsiN=var1 Alph+;
 define asVihtõN=var1 Alph+;
 define asVikiN=var1 Alph+;
 define asVikiN=var2 Alph+;
-define asVikiN=var3 Alph+;
 define asVipuN=var1 Alph+;
-define asVipuN=var3 Alph+;
-define asVõiN=var1 Alph+;
+define asVipuN=var2 Alph+;
 define asÕgazN=var1 Alph+;
-define asÕgazN=var3 Alph+;
+define asÕgazN=var2 Alph+;
 define asÕjaN=var1 Alph+;
 define asÕmaN=var1 Alph+;
 define asÕmpõlijaN=var1 Alph+;
 define asÕnnõliinN=var1 Alph+;
 define asÕpõinN=var1 Alph+;
-define asÕpõinN=var3 Alph+;
+define asÕpõinN=var2 Alph+;
 define asÄnteN=var1 Alph+;
 define asÜhsN=var1 Alph+;
 define asÜväN=var1 Alph+;
@@ -911,30 +867,30 @@ define asBorovikkõN [0:0] [asBorovikkõN=var1] [{kõ}:{kõ}] 0:["+Paradigm/boro
 [0:0] [asBorovikkõN=var1] [{koika}:{kõ}] 0:["+Paradigm/borovikkõ_N" "+N" "+Pl" "+Com"];
 
 
-define asBašn̕iN [0:0] [asBašn̕iN=var1] [{i}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asBašn̕iN=var1] [{a}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asBašn̕iN=var1] [{a}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Par"] |
-[0:0] [asBašn̕iN=var1] [{asõ}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asBašn̕iN=var1] [{õz}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asBašn̕iN=var1] [{õss}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asBašn̕iN=var1] [{õllõ}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+All"] |
-[0:0] [asBašn̕iN=var1] [{õll}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asBašn̕iN=var1] [{õlt}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asBašn̕iN=var1] [{õssi}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asBašn̕iN=var1] [{õssaa}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asBašn̕iN=var1] [{õka}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Sg" "+Com"] |
-[0:0] [asBašn̕iN=var1] [{õd}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asBašn̕iN=var1] [{ojõ}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asBašn̕iN=var1] [{oit}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Par"] |
-[0:0] [asBašn̕iN=var1] [{oisõ}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asBašn̕iN=var1] [{oiz}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asBašn̕iN=var1] [{oiss}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asBašn̕iN=var1] [{oillõ}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+All"] |
-[0:0] [asBašn̕iN=var1] [{oill}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asBašn̕iN=var1] [{oilt}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asBašn̕iN=var1] [{oissi}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asBašn̕iN=var1] [{oissaa}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asBašn̕iN=var1] [{oika}:{i}] 0:["+Paradigm/bašn̕i_N" "+N" "+Pl" "+Com"];
+define asFamil̕iN [0:0] [asFamil̕iN=var1] [{i}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Nom"] |
+[0:0] [asFamil̕iN=var1] [{a}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Gen"] |
+[0:0] [asFamil̕iN=var1] [{a}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Par"] |
+[0:0] [asFamil̕iN=var1] [{asõ}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Ill"] |
+[0:0] [asFamil̕iN=var1] [{õz}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Ine"] |
+[0:0] [asFamil̕iN=var1] [{õss}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Ela"] |
+[0:0] [asFamil̕iN=var1] [{õllõ}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+All"] |
+[0:0] [asFamil̕iN=var1] [{õll}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Ade"] |
+[0:0] [asFamil̕iN=var1] [{õlt}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Abl"] |
+[0:0] [asFamil̕iN=var1] [{õssi}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Tra"] |
+[0:0] [asFamil̕iN=var1] [{õssaa}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Ter"] |
+[0:0] [asFamil̕iN=var1] [{õka}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Sg" "+Com"] |
+[0:0] [asFamil̕iN=var1] [{õd}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Nom"] |
+[0:0] [asFamil̕iN=var1] [{ojõ}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Gen"] |
+[0:0] [asFamil̕iN=var1] [{oit}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Par"] |
+[0:0] [asFamil̕iN=var1] [{oisõ}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Ill"] |
+[0:0] [asFamil̕iN=var1] [{oiz}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Ine"] |
+[0:0] [asFamil̕iN=var1] [{oiss}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Ela"] |
+[0:0] [asFamil̕iN=var1] [{oillõ}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+All"] |
+[0:0] [asFamil̕iN=var1] [{oill}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Ade"] |
+[0:0] [asFamil̕iN=var1] [{oilt}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Abl"] |
+[0:0] [asFamil̕iN=var1] [{oissi}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Tra"] |
+[0:0] [asFamil̕iN=var1] [{oissaa}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Ter"] |
+[0:0] [asFamil̕iN=var1] [{oika}:{i}] 0:["+Paradigm/famil̕i_N" "+N" "+Pl" "+Com"];
 
 
 define asGreebeniN [0:0] [asGreebeniN=var1] [0:0] 0:["+Paradigm/greebeni_N" "+N" "+Sg" "+Nom"] |
@@ -1769,56 +1725,30 @@ define asKarjuššiN [0:0] [asKarjuššiN=var1] [{š}:{š}] [asKarjuššiN=var2]
 [0:0] [asKarjuššiN=var1] [{š}:{š}] [asKarjuššiN=var2] [{jka}:0] 0:["+Paradigm/karjušši_N" "+N" "+Pl" "+Com"];
 
 
-define asFamil̕N [0:0] [asFamil̕N=var1] [{̕}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asFamil̕N=var1] [{̕a}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asFamil̕N=var1] [{̕a}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Par"] |
-[0:0] [asFamil̕N=var1] [{̕asõ}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asFamil̕N=var1] [{̕õz}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asFamil̕N=var1] [{̕õss}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asFamil̕N=var1] [{̕õllõ}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+All"] |
-[0:0] [asFamil̕N=var1] [{̕õll}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asFamil̕N=var1] [{̕õlt}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asFamil̕N=var1] [{̕õssi}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asFamil̕N=var1] [{̕õssaa}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asFamil̕N=var1] [{̕õka}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Sg" "+Com"] |
-[0:0] [asFamil̕N=var1] [{̕õd}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asFamil̕N=var1] [{ojõ}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asFamil̕N=var1] [{oit}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Par"] |
-[0:0] [asFamil̕N=var1] [{oisõ}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asFamil̕N=var1] [{oiz}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asFamil̕N=var1] [{oiss}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asFamil̕N=var1] [{oillõ}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+All"] |
-[0:0] [asFamil̕N=var1] [{oill}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asFamil̕N=var1] [{oilt}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asFamil̕N=var1] [{oissi}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asFamil̕N=var1] [{oissaa}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asFamil̕N=var1] [{oika}:{̕}] 0:["+Paradigm/famil̕_N" "+N" "+Pl" "+Com"];
-
-
-define asFraakN [0:0] [asFraakN=var1] [0:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asFraakN=var1] [{i}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asFraakN=var1] [{kia}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Par"] |
-[0:0] [asFraakN=var1] [{kisõ}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asFraakN=var1] [{iz}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asFraakN=var1] [{iss}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asFraakN=var1] [{illõ}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+All"] |
-[0:0] [asFraakN=var1] [{ill}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asFraakN=var1] [{ilt}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asFraakN=var1] [{issi}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asFraakN=var1] [{issaa}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asFraakN=var1] [{ika}:0] 0:["+Paradigm/fraak_N" "+N" "+Sg" "+Com"] |
-[0:0] [asFraakN=var1] [{id}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asFraakN=var1] [{kijõ}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asFraakN=var1] [{kiit}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Par"] |
-[0:0] [asFraakN=var1] [{kiisõ}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asFraakN=var1] [{kiiz}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asFraakN=var1] [{kiiss}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asFraakN=var1] [{kiillõ}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+All"] |
-[0:0] [asFraakN=var1] [{kiill}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asFraakN=var1] [{kiilt}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asFraakN=var1] [{kiissi}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asFraakN=var1] [{kiissaa}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asFraakN=var1] [{kijka}:0] 0:["+Paradigm/fraak_N" "+N" "+Pl" "+Com"];
+define asGalstukkiN [0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [0:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Nom"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [0:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Gen"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{a}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Par"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{sõ}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Ill"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{z}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Ine"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [{ss}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Ela"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [{llõ}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+All"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [{ll}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Ade"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [{lt}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Abl"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [{ssi}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Tra"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{ssaa}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Ter"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [{ka}:0] 0:["+Paradigm/galstukki_N" "+N" "+Sg" "+Com"] |
+[0:0] [asGalstukkiN=var1] [0:{k}] [asGalstukkiN=var2] [{d}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Nom"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{jõ}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Gen"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{it}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Par"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{isõ}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Ill"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{iz}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Ine"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{iss}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Ela"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{illõ}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+All"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{ill}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Ade"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{ilt}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Abl"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{issi}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Tra"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{issaa}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Ter"] |
+[0:0] [asGalstukkiN=var1] [{k}:{k}] [asGalstukkiN=var2] [{jka}:0] 0:["+Paradigm/galstukki_N" "+N" "+Pl" "+Com"];
 
 
 define asKand̕idaattõN [0:0] [asKand̕idaattõN=var1] [{tõ}:{tõ}] 0:["+Paradigm/kand̕idaattõ_N" "+N" "+Sg" "+Nom"] |
@@ -1845,32 +1775,6 @@ define asKand̕idaattõN [0:0] [asKand̕idaattõN=var1] [{tõ}:{tõ}] 0:["+Parad
 [0:0] [asKand̕idaattõN=var1] [{toissi}:{tõ}] 0:["+Paradigm/kand̕idaattõ_N" "+N" "+Pl" "+Tra"] |
 [0:0] [asKand̕idaattõN=var1] [{toissaa}:{tõ}] 0:["+Paradigm/kand̕idaattõ_N" "+N" "+Pl" "+Ter"] |
 [0:0] [asKand̕idaattõN=var1] [{toika}:{tõ}] 0:["+Paradigm/kand̕idaattõ_N" "+N" "+Pl" "+Com"];
-
-
-define asKokkiN [0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [0:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [0:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{a}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Par"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{sõ}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{z}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [{ss}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [{llõ}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+All"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [{ll}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [{lt}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [{ssi}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{ssaa}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [{ka}:0] 0:["+Paradigm/kokki_N" "+N" "+Sg" "+Com"] |
-[0:0] [asKokkiN=var1] [0:{k}] [asKokkiN=var2] [{d}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{jõ}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{it}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Par"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{isõ}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{iz}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{iss}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{illõ}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+All"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{ill}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{ilt}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{issi}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{issaa}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asKokkiN=var1] [{k}:{k}] [asKokkiN=var2] [{jka}:0] 0:["+Paradigm/kokki_N" "+N" "+Pl" "+Com"];
 
 
 define asMahsuN [0:0] [asMahsuN=var1] [{s}:{s}] [asMahsuN=var2] [0:0] 0:["+Paradigm/mahsu_N" "+N" "+Sg" "+Nom"] |
@@ -3069,30 +2973,30 @@ define asKoffiN [0:0] [asKoffiN=var1] [{f}:{f}] [asKoffiN=var2] [0:0] 0:["+Parad
 [0:0] [asKoffiN=var1] [{f}:{f}] [asKoffiN=var2] [{jka}:0] 0:["+Paradigm/koffi_N" "+N" "+Pl" "+Com"];
 
 
-define asKoiN [0:0] [asKoiN=var1] [0:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asKoiN=var1] [0:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asKoiN=var1] [{tõ}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Par"] |
-[0:0] [asKoiN=var1] [{hõsõ}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asKoiN=var1] [{z}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asKoiN=var1] [{ss}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asKoiN=var1] [{llõ}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+All"] |
-[0:0] [asKoiN=var1] [{ll}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asKoiN=var1] [{lt}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asKoiN=var1] [{ssi}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asKoiN=var1] [{ssaa}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asKoiN=var1] [{ka}:0] 0:["+Paradigm/koi_N" "+N" "+Sg" "+Com"] |
-[0:0] [asKoiN=var1] [{d}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asKoiN=var1] [{jõ}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asKoiN=var1] [{t}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Par"] |
-[0:0] [asKoiN=var1] [{sõ}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asKoiN=var1] [{z}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asKoiN=var1] [{ss}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asKoiN=var1] [{llõ}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+All"] |
-[0:0] [asKoiN=var1] [{ll}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asKoiN=var1] [{lt}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asKoiN=var1] [{ssi}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asKoiN=var1] [{ssaa}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asKoiN=var1] [{ka}:0] 0:["+Paradigm/koi_N" "+N" "+Pl" "+Com"];
+define asVõiN [0:0] [asVõiN=var1] [0:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Nom"] |
+[0:0] [asVõiN=var1] [0:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Gen"] |
+[0:0] [asVõiN=var1] [{tõ}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Par"] |
+[0:0] [asVõiN=var1] [{sõ}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ill"] |
+[0:0] [asVõiN=var1] [{z}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ine"] |
+[0:0] [asVõiN=var1] [{ss}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ela"] |
+[0:0] [asVõiN=var1] [{llõ}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+All"] |
+[0:0] [asVõiN=var1] [{ll}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ade"] |
+[0:0] [asVõiN=var1] [{lt}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Abl"] |
+[0:0] [asVõiN=var1] [{ssi}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Tra"] |
+[0:0] [asVõiN=var1] [{ssaa}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ter"] |
+[0:0] [asVõiN=var1] [{ka}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Com"] |
+[0:0] [asVõiN=var1] [{d}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Nom"] |
+[0:0] [asVõiN=var1] [{jõ}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Gen"] |
+[0:0] [asVõiN=var1] [{t}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Par"] |
+[0:0] [asVõiN=var1] [{sõ}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ill"] |
+[0:0] [asVõiN=var1] [{z}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ine"] |
+[0:0] [asVõiN=var1] [{ss}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ela"] |
+[0:0] [asVõiN=var1] [{llõ}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+All"] |
+[0:0] [asVõiN=var1] [{ll}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ade"] |
+[0:0] [asVõiN=var1] [{lt}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Abl"] |
+[0:0] [asVõiN=var1] [{ssi}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Tra"] |
+[0:0] [asVõiN=var1] [{ssaa}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ter"] |
+[0:0] [asVõiN=var1] [{ka}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Com"];
 
 
 define asMakuzN [0:0] [asMakuzN=var1] [{z}:{z}] 0:["+Paradigm/makuz_N" "+N" "+Sg" "+Nom"] |
@@ -3457,32 +3361,6 @@ define asKutoN [0:0] [asKutoN=var1] [0:0] [asKutoN=var2] [{o}:{o}] 0:["+Paradigm
 [0:0] [asKutoN=var1] [0:0] [asKutoN=var2] [{tõissi}:{o}] 0:["+Paradigm/kuto_N" "+N" "+Pl" "+Tra"] |
 [0:0] [asKutoN=var1] [0:0] [asKutoN=var2] [{tõissaa}:{o}] 0:["+Paradigm/kuto_N" "+N" "+Pl" "+Ter"] |
 [0:0] [asKutoN=var1] [0:0] [asKutoN=var2] [{tõika}:{o}] 0:["+Paradigm/kuto_N" "+N" "+Pl" "+Com"];
-
-
-define asKuuN [0:0] [asKuuN=var1] [{u}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asKuuN=var1] [{u}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asKuuN=var1] [{utõ}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Par"] |
-[0:0] [asKuuN=var1] [{usõ}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asKuuN=var1] [{uz}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asKuuN=var1] [{uss}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asKuuN=var1] [{ullõ}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+All"] |
-[0:0] [asKuuN=var1] [{ull}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asKuuN=var1] [{ult}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asKuuN=var1] [{ussi}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asKuuN=var1] [{ussaa}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asKuuN=var1] [{uka}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Sg" "+Com"] |
-[0:0] [asKuuN=var1] [{ud}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asKuuN=var1] [{ijõ}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asKuuN=var1] [{it}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Par"] |
-[0:0] [asKuuN=var1] [{isõ}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asKuuN=var1] [{iz}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asKuuN=var1] [{iss}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asKuuN=var1] [{illõ}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+All"] |
-[0:0] [asKuuN=var1] [{ill}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asKuuN=var1] [{ilt}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asKuuN=var1] [{issi}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asKuuN=var1] [{issaa}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asKuuN=var1] [{ika}:{u}] 0:["+Paradigm/kuu_N" "+N" "+Pl" "+Com"];
 
 
 define asUusiN [0:0] [asUusiN=var1] [{si}:{si}] 0:["+Paradigm/uusi_N" "+N" "+Sg" "+Nom"] |
@@ -4031,32 +3909,6 @@ define asLumiN [0:0] [asLumiN=var1] [{mi}:{mi}] 0:["+Paradigm/lumi_N" "+N" "+Sg"
 [0:0] [asLumiN=var1] [{mijka}:{mi}] 0:["+Paradigm/lumi_N" "+N" "+Pl" "+Com"];
 
 
-define asPihlpuuN [0:0] [asPihlpuuN=var1] [{u}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asPihlpuuN=var1] [{u}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asPihlpuuN=var1] [{utõ}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Par"] |
-[0:0] [asPihlpuuN=var1] [{hhu}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asPihlpuuN=var1] [{uz}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asPihlpuuN=var1] [{uss}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asPihlpuuN=var1] [{ullõ}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+All"] |
-[0:0] [asPihlpuuN=var1] [{ull}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asPihlpuuN=var1] [{ult}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asPihlpuuN=var1] [{ussi}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asPihlpuuN=var1] [{ussaa}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asPihlpuuN=var1] [{uka}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Sg" "+Com"] |
-[0:0] [asPihlpuuN=var1] [{ud}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asPihlpuuN=var1] [{ijõ}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asPihlpuuN=var1] [{it}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Par"] |
-[0:0] [asPihlpuuN=var1] [{isõ}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asPihlpuuN=var1] [{iz}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asPihlpuuN=var1] [{iss}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asPihlpuuN=var1] [{illõ}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+All"] |
-[0:0] [asPihlpuuN=var1] [{ill}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asPihlpuuN=var1] [{ilt}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asPihlpuuN=var1] [{issi}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asPihlpuuN=var1] [{issaa}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asPihlpuuN=var1] [{ika}:{u}] 0:["+Paradigm/pihlpuu_N" "+N" "+Pl" "+Com"];
-
-
 define asPoikõN [0:0] [asPoikõN=var1] [{kõ}:{kõ}] 0:["+Paradigm/poikõ_N" "+N" "+Sg" "+Nom"] |
 [0:0] [asPoikõN=var1] [{ga}:{kõ}] 0:["+Paradigm/poikõ_N" "+N" "+Sg" "+Gen"] |
 [0:0] [asPoikõN=var1] [{ka}:{kõ}] 0:["+Paradigm/poikõ_N" "+N" "+Sg" "+Par"] |
@@ -4135,30 +3987,30 @@ define asLäheN [0:0] [asLäheN=var1] [0:0] [asLäheN=var2] [0:0] 0:["+Paradigm/
 [0:0] [asLäheN=var1] [{t}:0] [asLäheN=var2] [{ika}:0] 0:["+Paradigm/lähe_N" "+N" "+Pl" "+Com"];
 
 
-define asLäikkN [0:0] [asLäikkN=var1] [{k}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asLäikkN=var1] [{i}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asLäikkN=var1] [{kiä}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Par"] |
-[0:0] [asLäikkN=var1] [{kise}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asLäikkN=var1] [{kiz}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asLäikkN=var1] [{iss}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asLäikkN=var1] [{ille}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+All"] |
-[0:0] [asLäikkN=var1] [{ill}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asLäikkN=var1] [{ilt}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asLäikkN=var1] [{issi}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asLäikkN=var1] [{kissaa}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asLäikkN=var1] [{ika}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Sg" "+Com"] |
-[0:0] [asLäikkN=var1] [{id}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asLäikkN=var1] [{kije}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asLäikkN=var1] [{keit}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Par"] |
-[0:0] [asLäikkN=var1] [{keise}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asLäikkN=var1] [{keiz}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asLäikkN=var1] [{keiss}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asLäikkN=var1] [{keille}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+All"] |
-[0:0] [asLäikkN=var1] [{keill}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asLäikkN=var1] [{keilt}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asLäikkN=var1] [{keissi}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asLäikkN=var1] [{keissaa}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asLäikkN=var1] [{keika}:{k}] 0:["+Paradigm/läikk_N" "+N" "+Pl" "+Com"];
+define asLäikkiN [0:0] [asLäikkiN=var1] [{k}:{k}] [asLäikkiN=var2] [0:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Nom"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [0:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Gen"] |
+[0:0] [asLäikkiN=var1] [{k}:{k}] [asLäikkiN=var2] [{ä}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Par"] |
+[0:0] [asLäikkiN=var1] [{k}:{k}] [asLäikkiN=var2] [{se}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Ill"] |
+[0:0] [asLäikkiN=var1] [{k}:{k}] [asLäikkiN=var2] [{z}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Ine"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [{ss}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Ela"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [{lle}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+All"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [{ll}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Ade"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [{lt}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Abl"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [{ssi}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Tra"] |
+[0:0] [asLäikkiN=var1] [{k}:{k}] [asLäikkiN=var2] [{ssaa}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Ter"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [{ka}:0] 0:["+Paradigm/läikki_N" "+N" "+Sg" "+Com"] |
+[0:0] [asLäikkiN=var1] [0:{k}] [asLäikkiN=var2] [{d}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Nom"] |
+[0:0] [asLäikkiN=var1] [{k}:{k}] [asLäikkiN=var2] [{je}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Gen"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{t}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Par"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{se}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Ill"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{z}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Ine"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{ss}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Ela"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{lle}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+All"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{ll}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Ade"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{lt}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Abl"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{ssi}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Tra"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{ssaa}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Ter"] |
+[0:0] [asLäikkiN=var1] [{ke}:{k}] [asLäikkiN=var2] [{ka}:0] 0:["+Paradigm/läikki_N" "+N" "+Pl" "+Com"];
 
 
 define asSeseN [0:0] [asSeseN=var1] [{s}:{s}] [asSeseN=var2] [0:0] 0:["+Paradigm/sese_N" "+N" "+Sg" "+Nom"] |
@@ -4835,6 +4687,32 @@ define asPortugaalijaN [0:0] [asPortugaalijaN=var1] [{a}:{a}] 0:["+Paradigm/port
 [0:0] [asPortugaalijaN=var1] [{oissi}:{a}] 0:["+Paradigm/portugaalija_N" "+N" "+Pl" "+Tra"] |
 [0:0] [asPortugaalijaN=var1] [{oissaa}:{a}] 0:["+Paradigm/portugaalija_N" "+N" "+Pl" "+Ter"] |
 [0:0] [asPortugaalijaN=var1] [{oika}:{a}] 0:["+Paradigm/portugaalija_N" "+N" "+Pl" "+Com"];
+
+
+define asPuuN [0:0] [asPuuN=var1] [{u}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Nom"] |
+[0:0] [asPuuN=var1] [{u}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Gen"] |
+[0:0] [asPuuN=var1] [{utõ}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Par"] |
+[0:0] [asPuuN=var1] [{hhu}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Ill"] |
+[0:0] [asPuuN=var1] [{uz}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Ine"] |
+[0:0] [asPuuN=var1] [{uss}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Ela"] |
+[0:0] [asPuuN=var1] [{ullõ}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+All"] |
+[0:0] [asPuuN=var1] [{ull}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Ade"] |
+[0:0] [asPuuN=var1] [{ult}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Abl"] |
+[0:0] [asPuuN=var1] [{ussi}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Tra"] |
+[0:0] [asPuuN=var1] [{ussaa}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Ter"] |
+[0:0] [asPuuN=var1] [{uka}:{u}] 0:["+Paradigm/puu_N" "+N" "+Sg" "+Com"] |
+[0:0] [asPuuN=var1] [{ud}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Nom"] |
+[0:0] [asPuuN=var1] [{ijõ}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Gen"] |
+[0:0] [asPuuN=var1] [{it}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Par"] |
+[0:0] [asPuuN=var1] [{isõ}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Ill"] |
+[0:0] [asPuuN=var1] [{iz}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Ine"] |
+[0:0] [asPuuN=var1] [{iss}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Ela"] |
+[0:0] [asPuuN=var1] [{illõ}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+All"] |
+[0:0] [asPuuN=var1] [{ill}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Ade"] |
+[0:0] [asPuuN=var1] [{ilt}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Abl"] |
+[0:0] [asPuuN=var1] [{issi}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Tra"] |
+[0:0] [asPuuN=var1] [{issaa}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Ter"] |
+[0:0] [asPuuN=var1] [{ika}:{u}] 0:["+Paradigm/puu_N" "+N" "+Pl" "+Com"];
 
 
 define asSarviN [0:0] [asSarviN=var1] [{i}:{i}] 0:["+Paradigm/sarvi_N" "+N" "+Sg" "+Nom"] |
@@ -6189,32 +6067,6 @@ define asVipuN [0:0] [asVipuN=var1] [{p}:{p}] [asVipuN=var2] [0:0] 0:["+Paradigm
 [0:0] [asVipuN=var1] [{p}:{p}] [asVipuN=var2] [{ika}:0] 0:["+Paradigm/vipu_N" "+N" "+Pl" "+Com"];
 
 
-define asVõiN [0:0] [asVõiN=var1] [0:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Nom"] |
-[0:0] [asVõiN=var1] [0:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Gen"] |
-[0:0] [asVõiN=var1] [{tõ}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Par"] |
-[0:0] [asVõiN=var1] [{sõ}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ill"] |
-[0:0] [asVõiN=var1] [{z}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ine"] |
-[0:0] [asVõiN=var1] [{ss}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ela"] |
-[0:0] [asVõiN=var1] [{llõ}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+All"] |
-[0:0] [asVõiN=var1] [{ll}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ade"] |
-[0:0] [asVõiN=var1] [{lt}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Abl"] |
-[0:0] [asVõiN=var1] [{ssi}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Tra"] |
-[0:0] [asVõiN=var1] [{ssaa}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Ter"] |
-[0:0] [asVõiN=var1] [{ka}:0] 0:["+Paradigm/või_N" "+N" "+Sg" "+Com"] |
-[0:0] [asVõiN=var1] [{d}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Nom"] |
-[0:0] [asVõiN=var1] [{jõ}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Gen"] |
-[0:0] [asVõiN=var1] [{t}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Par"] |
-[0:0] [asVõiN=var1] [{sõ}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ill"] |
-[0:0] [asVõiN=var1] [{z}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ine"] |
-[0:0] [asVõiN=var1] [{ss}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ela"] |
-[0:0] [asVõiN=var1] [{llõ}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+All"] |
-[0:0] [asVõiN=var1] [{ll}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ade"] |
-[0:0] [asVõiN=var1] [{lt}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Abl"] |
-[0:0] [asVõiN=var1] [{ssi}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Tra"] |
-[0:0] [asVõiN=var1] [{ssaa}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Ter"] |
-[0:0] [asVõiN=var1] [{ka}:0] 0:["+Paradigm/või_N" "+N" "+Pl" "+Com"];
-
-
 define asÕgazN [0:0] [asÕgazN=var1] [{g}:{g}] [asÕgazN=var2] [{z}:{z}] 0:["+Paradigm/õgaz_N" "+N" "+Sg" "+Nom"] |
 [0:0] [asÕgazN=var1] [{kk}:{g}] [asÕgazN=var2] [0:{z}] 0:["+Paradigm/õgaz_N" "+N" "+Sg" "+Gen"] |
 [0:0] [asÕgazN=var1] [{g}:{g}] [asÕgazN=var2] [{ssõ}:{z}] 0:["+Paradigm/õgaz_N" "+N" "+Sg" "+Par"] |
@@ -6450,6 +6302,6 @@ define asÜväN [0:0] [asÜväN=var1] [{ä}:{ä}] 0:["+Paradigm/üvä_N" "+N" "+
 
 
 
-define Gconstrained asAapõN | asAikõN | asPuhazN | asAiroN | asPal̕l̕õzN | asBankN | asAitõN | asAz̕z̕õN | asAlkuN | asBagažiN | asJalgõzN | asAlõinN | asHammõzN | asAngõriazN | asAsfiN | asBaldõhinaN | asAučiN | asČimolainN | asBul̕bukõzN | asBiblioteekkõN | asDokumenttiN | asBorovikkõN | asBašn̕iN | asGreebeniN | asKittsiN | asBiskvittõN | asMoodnoiN | asInostranttsõN | asBukvõN | asKlaassõN | asPääN | asL̕iitkõN | asLakoN | asIiriN | asČenčeN | asFlakkuN | asPesäN | asČevädN | asHattuN | asIrviN | asČämmelN | asNüčüinN | asMesiN | asČäčüdN | asEineN | asČüläN | asČümmeN | asČümmenäzN | asDovariššõN | asLäkineN | asEntinN | asRissimäN | asEnčiN | asPereN | asKarjuššiN | asFamil̕N | asFraakN | asKand̕idaattõN | asKokkiN | asMahsuN | asHapoN | asKankaN | asJuuriN | asÕnnõtoN | asHäülütüsN | asHüppüN | asIčäN | asPähčenN | asLautoN | asKompjuteraN | asKotkoN | asIvusõdN | asTarkuzN | asMõnikõzN | asMurhõN | asPropkõN | asLakiN | asJõutuN | asÜlčiN | asKerkiäN | asVetelüzN | asJärčüN | asLöülüN | asLamppiN | asKraaskõN | asKaatsõdN | asKahsN | asKahõsaN | asMaamunaN | asKallizN | asKoivuinN | asKangõzN | asKurkiN | asKannõlN | asPintõN | asLentoN | asMussõN | asKasõN | asKatõN | asKaunizN | asLiippõN | asKaõN | asLippuN | asKitaiN | asKoffiN | asKoiN | asMakuzN | asPassiN | asKomit̕etN | asKoolludN | asKoorrõN | asMatoN | asMoškõN | asKuhaN | asKultõN | asVimpõN | asKurpN | asKursiN | asKusiN | asKutoN | asKuuN | asUusiN | asKuusiN | asKuuvvaizN | asKuõN | asKõikN | asKõlmazN | asKõlmõdN | asPartõN | asKõvaN | asLäsijäN | asLafkõN | asUhsiN | asLahtiN | asPoutõN | asSuutoN | asLeipeN | asSeppeN | asLisäN | asLootõN | asLuiskõN | asLumiN | asPihlpuuN | asPoikõN | asLõunõN | asLäheN | asLäikkN | asSeseN | asLühüdN | asMaaN | asMahsõN | asPeremmeezN | asMettseN | asMokomN | asSataN | asPõltoN | asVäčiN | asÄrčeN | asMärännüN | asMätäN | asRapaN | asNel̕l̕äzN | asNenäN | asRätteN | asSisoN | asOludN | asOonõN | asPahaN | asPoštaljonN | asPiiN | asPoduškõN | asPoolõzN | asPortugaalijaN | asSarviN | asPõrzõzN | asPõskiN | asRuskoN | asPühäN | asTüüN | asPüütöN | asRaadioN | asRakõN | asRaskõzN | asRatizN | asRihenneüzN | asRikazN | asRissiN | asTohoN | asRooppõN | asRäpäleN | asRüizN | asSeemenN | asSelčeN | asSiipiN | asSikaN | asSiltõN | asSlonaN | asSooN | asÕhsõN | asSusiN | asSääN | asSüntiN | asSüsiinN | asSüäN | asSüüččiN | asVilppiN | asŠtanadN | asTautiN | asTeeN | asTerveN | asTuhattõN | asVarvõzN | asTäiN | asTätiN | asTükküN | asTünkeN | asTütärN | asUgurittsõN | asUsaN | asVahtiN | asVakaN | asVarsiN | asVihtõN | asVikiN | asVipuN | asVõiN | asÕgazN | asÕjaN | asÕmaN | asÕmpõlijaN | asÕnnõliinN | asÕpõinN | asÄnteN | asÜhsN | asÜväN;
+define Gconstrained asAapõN | asAikõN | asPuhazN | asAiroN | asPal̕l̕õzN | asBankN | asAitõN | asAz̕z̕õN | asAlkuN | asBagažiN | asJalgõzN | asAlõinN | asHammõzN | asAngõriazN | asAsfiN | asBaldõhinaN | asAučiN | asČimolainN | asBul̕bukõzN | asBiblioteekkõN | asDokumenttiN | asBorovikkõN | asFamil̕iN | asGreebeniN | asKittsiN | asBiskvittõN | asMoodnoiN | asInostranttsõN | asBukvõN | asKlaassõN | asPääN | asL̕iitkõN | asLakoN | asIiriN | asČenčeN | asFlakkuN | asPesäN | asČevädN | asHattuN | asIrviN | asČämmelN | asNüčüinN | asMesiN | asČäčüdN | asEineN | asČüläN | asČümmeN | asČümmenäzN | asDovariššõN | asLäkineN | asEntinN | asRissimäN | asEnčiN | asPereN | asKarjuššiN | asGalstukkiN | asKand̕idaattõN | asMahsuN | asHapoN | asKankaN | asJuuriN | asÕnnõtoN | asHäülütüsN | asHüppüN | asIčäN | asPähčenN | asLautoN | asKompjuteraN | asKotkoN | asIvusõdN | asTarkuzN | asMõnikõzN | asMurhõN | asPropkõN | asLakiN | asJõutuN | asÜlčiN | asKerkiäN | asVetelüzN | asJärčüN | asLöülüN | asLamppiN | asKraaskõN | asKaatsõdN | asKahsN | asKahõsaN | asMaamunaN | asKallizN | asKoivuinN | asKangõzN | asKurkiN | asKannõlN | asPintõN | asLentoN | asMussõN | asKasõN | asKatõN | asKaunizN | asLiippõN | asKaõN | asLippuN | asKitaiN | asKoffiN | asVõiN | asMakuzN | asPassiN | asKomit̕etN | asKoolludN | asKoorrõN | asMatoN | asMoškõN | asKuhaN | asKultõN | asVimpõN | asKurpN | asKursiN | asKusiN | asKutoN | asUusiN | asKuusiN | asKuuvvaizN | asKuõN | asKõikN | asKõlmazN | asKõlmõdN | asPartõN | asKõvaN | asLäsijäN | asLafkõN | asUhsiN | asLahtiN | asPoutõN | asSuutoN | asLeipeN | asSeppeN | asLisäN | asLootõN | asLuiskõN | asLumiN | asPoikõN | asLõunõN | asLäheN | asLäikkiN | asSeseN | asLühüdN | asMaaN | asMahsõN | asPeremmeezN | asMettseN | asMokomN | asSataN | asPõltoN | asVäčiN | asÄrčeN | asMärännüN | asMätäN | asRapaN | asNel̕l̕äzN | asNenäN | asRätteN | asSisoN | asOludN | asOonõN | asPahaN | asPoštaljonN | asPiiN | asPoduškõN | asPoolõzN | asPortugaalijaN | asPuuN | asSarviN | asPõrzõzN | asPõskiN | asRuskoN | asPühäN | asTüüN | asPüütöN | asRaadioN | asRakõN | asRaskõzN | asRatizN | asRihenneüzN | asRikazN | asRissiN | asTohoN | asRooppõN | asRäpäleN | asRüizN | asSeemenN | asSelčeN | asSiipiN | asSikaN | asSiltõN | asSlonaN | asSooN | asÕhsõN | asSusiN | asSääN | asSüntiN | asSüsiinN | asSüäN | asSüüččiN | asVilppiN | asŠtanadN | asTautiN | asTeeN | asTerveN | asTuhattõN | asVarvõzN | asTäiN | asTätiN | asTükküN | asTünkeN | asTütärN | asUgurittsõN | asUsaN | asVahtiN | asVakaN | asVarsiN | asVihtõN | asVikiN | asVipuN | asÕgazN | asÕjaN | asÕmaN | asÕmpõlijaN | asÕnnõliinN | asÕpõinN | asÄnteN | asÜhsN | asÜväN;
 regex Gconstrained;
 invert
